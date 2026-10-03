@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ポケポケ ★2サポート 需給ランキング</title>
-  <meta name="description" content="公開Xポストからポケポケ★2サポートのトレード需要・供給を集計するランキング" />
+  <title>ポケポケ☆2サポートX自動集計ランキング(β)</title>
+  <meta name="description" content="公開Xポストを自動集計し、ポケポケ☆2サポートのトレード需要・供給をランキング表示するβ版サイト" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
@@ -12,7 +12,7 @@
     <header class="hero">
       <div>
         <p class="eyebrow">POKÉMON TCG POCKET · PUBLIC X TRADE SIGNALS</p>
-        <h1>★2サポート<br><span>需給ランキング</span></h1>
+        <h1>ポケポケ☆2サポート<br><span>X自動集計ランキング(β)</span></h1>
         <p class="lead">公開Xポストの「求 / 譲・出」を数え、初回から現在より前の直近7日も遡って、需要供給比を24時間・48時間・1週間で比較します。</p>
       </div>
       <div class="live-card">
@@ -20,6 +20,16 @@
         <div><small>最終集計</small><strong id="updated">読み込み中…</strong></div>
       </div>
     </header>
+
+    <!-- NINJA_ADMAX_TOP_START -->
+    <aside class="ad-slot ad-slot-top" aria-label="広告">
+      <div class="ad-label">広告</div>
+      <div class="ad-placeholder">
+        <strong>広告スペース</strong>
+        <small>忍者AdMaxの広告タグを設定するとここに表示できます</small>
+      </div>
+    </aside>
+    <!-- NINJA_ADMAX_TOP_END -->
 
     <section class="toolbar" aria-label="表示期間">
       <div class="tabs" id="tabs">
@@ -57,6 +67,16 @@
       <div class="empty" id="empty" hidden>条件に一致するカードがありません。</div>
     </section>
 
+    <!-- NINJA_ADMAX_BOTTOM_START -->
+    <aside class="ad-slot ad-slot-bottom" aria-label="広告">
+      <div class="ad-label">広告</div>
+      <div class="ad-placeholder">
+        <strong>広告スペース</strong>
+        <small>忍者AdMaxの広告タグを設定するとここに表示できます</small>
+      </div>
+    </aside>
+    <!-- NINJA_ADMAX_BOTTOM_END -->
+
     <section class="method">
       <div>
         <h2>集計方法</h2>
@@ -72,8 +92,13 @@
       <p class="caution" id="sourceNote"></p>
     </section>
 
-    <footer>集計対象は公開投稿のみ。初回実行時から直近7日を遡りますが、検索に出ない投稿・非公開投稿・取得できない画像・OCRで判別できない画像は含まれません。</footer>
+    <footer>集計対象は公開投稿のみ。データはGitHub上の最新集計JSONを直接読み込むため、30分ごとのデータ更新だけではNetlifyを再デプロイしません。</footer>
   </main>
+
+  <!-- NINJA_ADMAX_AUTO_TAG_START -->
+  <!-- 忍者AdMax「全自動広告枠」のタグをこの2行の間に貼り付け -->
+  <!-- NINJA_ADMAX_AUTO_TAG_END -->
+
   <script src="./app.js" type="module"></script>
 </body>
 </html>

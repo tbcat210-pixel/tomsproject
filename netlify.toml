@@ -1,5 +1,6 @@
 [build]
   publish = "docs"
+  ignore = "node scripts/netlify-ignore.mjs"
 
 [[headers]]
   for = "/data/*"

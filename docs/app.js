@@ -4,11 +4,29 @@ const fmt=n=>new Intl.NumberFormat('ja-JP').format(n??0);
 const dt=s=>s?new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}).format(new Date(s)):'—';
 const span=(a,b)=>{if(!a||!b)return '未取得';const h=Math.max(0,(new Date(b)-new Date(a))/36e5);return h<48?`${Math.round(h)}時間`:`${(h/24).toFixed(1)}日`;};
 
+const LIVE_DATA_URL='https://raw.githubusercontent.com/tbcat210-pixel/tomsproject/main/docs/data/rankings.json';
+
+async function fetchRankings(){
+  const urls=[
+    `${LIVE_DATA_URL}?t=${Date.now()}`,
+    `./data/rankings.json?t=${Date.now()}`
+  ];
+  let lastError=null;
+  for(const url of urls){
+    try{
+      const res=await fetch(url,{cache:'no-store'});
+      if(!res.ok)throw new Error(`HTTP ${res.status}`);
+      return await res.json();
+    }catch(e){
+      lastError=e;
+    }
+  }
+  throw lastError ?? new Error('ranking data unavailable');
+}
+
 async function load(){
   try{
-    const res=await fetch(`./data/rankings.json?t=${Date.now()}`,{cache:'no-store'});
-    if(!res.ok)throw new Error(`HTTP ${res.status}`);
-    state.data=await res.json();
+    state.data=await fetchRankings();
     $('#updated').textContent=dt(state.data.generatedAt)+' JST';
     $('#storedPosts').textContent=fmt(state.data.coverage.storedPosts);
     $('#cardCount').textContent=fmt(state.data.cards.count);
@@ -33,13 +51,14 @@ async function load(){
     $('#sourceNote').textContent=state.data.source.note;
     render();
   }catch(e){
-    $('#updated').textContent='データ未生成';
-    $('#sourceNote').textContent='GitHub Actions の「Collect X trade data」を1回実行すると、現在より前の直近7日も遡って集計します。';
+    $('#updated').textContent='データ未取得';
+    $('#sourceNote').textContent='GitHub上の最新ランキングデータを取得できませんでした。しばらくしてから再読み込みしてください。';
     console.error(e);
   }
 }
 
 function render(){
+  if(!state.data)return;
   const w=state.data.windows[state.window];
   $('#periodTitle').textContent=`${w.label}ランキング`;
   $('#stats').innerHTML=`
@@ -65,3 +84,4 @@ document.querySelectorAll('[data-window]').forEach(b=>b.addEventListener('click'
 $('#search').addEventListener('input',e=>{state.query=e.target.value;render();});
 $('#minCount').addEventListener('change',e=>{state.min=Number(e.target.value);render();});
 load();
+setInterval(load,10*60*1000);
