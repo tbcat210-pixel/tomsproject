@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T12:08:28.466Z",
+  "generatedAt": "2026-10-03T14:48:59.740Z",
   "source": {
     "platform": "X",
     "discovery": "Yahoo!リアルタイム検索（公開Xポスト）",
@@ -17,9 +17,9 @@
   "coverage": {
     "firstSuccessfulCollectionAt": "2026-10-03T03:26:18.391Z",
     "oldestPostAt": "2026-09-25T23:07:05.000Z",
-    "newestPostAt": "2026-10-03T11:22:21.000Z",
-    "storedPosts": 710,
-    "discoveredThisRun": 0,
+    "newestPostAt": "2026-10-03T14:48:51.000Z",
+    "storedPosts": 759,
+    "discoveredThisRun": 52,
     "queryCount": 8,
     "errors": [],
     "history": {
@@ -42,138 +42,138 @@
       "enabled": true,
       "cacheVersion": 3,
       "newImages": 60,
-      "cacheHits": 497,
+      "cacheHits": 394,
       "recognizedImages": 60,
       "failedImages": 0,
-      "postsFromImages": 20,
+      "postsFromImages": 11,
       "candidatePasses": 360,
       "maxNewImagesPerRun": 60,
       "maxCandidatePasses": 6,
-      "lastRunAt": "2026-10-03T11:17:35.057Z"
+      "lastRunAt": "2026-10-03T14:48:59.740Z"
     }
   },
   "windows": {
     "24h": {
       "label": "24時間",
       "hours": 24,
-      "posts": 462,
-      "totalDemand": 640,
-      "totalSupply": 555,
+      "posts": 492,
+      "totalDemand": 685,
+      "totalSupply": 586,
       "totalRatio": {
-        "ratio": 1.1531531531531531,
-        "ratioDisplay": "1.15",
-        "ratioSort": 1.1531531531531531
+        "ratio": 1.1689419795221843,
+        "ratioDisplay": "1.17",
+        "ratioSort": 1.1689419795221843
       },
       "rankings": [
         {
           "rank": 1,
           "name": "モノマネむすめ",
-          "demand": 123,
-          "supply": 53,
-          "ratio": 2.3207547169811322,
+          "demand": 132,
+          "supply": 57,
+          "ratio": 2.3157894736842106,
           "ratioDisplay": "2.32",
-          "ratioSort": 2.3207547169811322,
-          "imbalance": 70
+          "ratioSort": 2.3157894736842106,
+          "imbalance": 75
         },
         {
           "rank": 2,
           "name": "アイリス",
-          "demand": 45,
-          "supply": 96,
-          "ratio": 0.46875,
+          "demand": 47,
+          "supply": 100,
+          "ratio": 0.47,
           "ratioDisplay": "0.47",
-          "ratioSort": 0.46875,
-          "imbalance": -51
+          "ratioSort": 0.47,
+          "imbalance": -53
         },
         {
           "rank": 3,
           "name": "ナツメ",
-          "demand": 43,
-          "supply": 28,
-          "ratio": 1.5357142857142858,
-          "ratioDisplay": "1.54",
-          "ratioSort": 1.5357142857142858,
-          "imbalance": 15
+          "demand": 45,
+          "supply": 29,
+          "ratio": 1.5517241379310345,
+          "ratioDisplay": "1.55",
+          "ratioSort": 1.5517241379310345,
+          "imbalance": 16
         },
         {
           "rank": 4,
-          "name": "カミツレ",
-          "demand": 40,
-          "supply": 34,
-          "ratio": 1.1764705882352942,
-          "ratioDisplay": "1.18",
-          "ratioSort": 1.1764705882352942,
-          "imbalance": 6
+          "name": "マーズ",
+          "demand": 42,
+          "supply": 13,
+          "ratio": 3.230769230769231,
+          "ratioDisplay": "3.23",
+          "ratioSort": 3.230769230769231,
+          "imbalance": 29
         },
         {
           "rank": 5,
-          "name": "マーズ",
-          "demand": 38,
-          "supply": 11,
-          "ratio": 3.4545454545454546,
-          "ratioDisplay": "3.45",
-          "ratioSort": 3.4545454545454546,
-          "imbalance": 27
+          "name": "カミツレ",
+          "demand": 42,
+          "supply": 37,
+          "ratio": 1.135135135135135,
+          "ratioDisplay": "1.14",
+          "ratioSort": 1.135135135135135,
+          "imbalance": 5
         },
         {
           "rank": 6,
           "name": "レッド",
-          "demand": 29,
+          "demand": 32,
           "supply": 0,
           "ratio": null,
           "ratioDisplay": "∞",
-          "ratioSort": 1000000029,
-          "imbalance": 29
+          "ratioSort": 1000000032,
+          "imbalance": 32
         },
         {
           "rank": 7,
-          "name": "コルニ",
-          "demand": 29,
-          "supply": 2,
-          "ratio": 14.5,
-          "ratioDisplay": "14.50",
-          "ratioSort": 14.5,
-          "imbalance": 27
+          "name": "サカキ",
+          "demand": 31,
+          "supply": 0,
+          "ratio": null,
+          "ratioDisplay": "∞",
+          "ratioSort": 1000000031,
+          "imbalance": 31
         },
         {
           "rank": 8,
-          "name": "サカキ",
-          "demand": 28,
+          "name": "ヒカリ",
+          "demand": 31,
           "supply": 0,
           "ratio": null,
           "ratioDisplay": "∞",
-          "ratioSort": 1000000028,
-          "imbalance": 28
+          "ratioSort": 1000000031,
+          "imbalance": 31
         },
         {
           "rank": 9,
-          "name": "ヒカリ",
-          "demand": 28,
-          "supply": 0,
-          "ratio": null,
-          "ratioDisplay": "∞",
-          "ratioSort": 1000000028,
-          "imbalance": 28
+          "name": "カキ",
+          "demand": 31,
+          "supply": 7,
+          "ratio": 4.428571428571429,
+          "ratioDisplay": "4.43",
+          "ratioSort": 4.428571428571429,
+          "imbalance": 24
         },
         {
           "rank": 10,
-          "name": "カキ",
-          "demand": 28,
-          "supply": 7,
-          "ratio": 4,
-          "ratioDisplay": "4.00",
-          "ratioSort": 4,
-          "imbalance": 21
+          "name": "コルニ",
+          "demand": 30,
+          "supply": 2,
+          "ratio": 15,
+          "ratioDisplay": "15.00",
+          "ratioSort": 15,
+          "imbalance": 28
         },
         {
           "rank": 11,
           "name": "博士の研究",
-          "demand": 21,
+          "demand": 22,
           "supply": 4,
-          "ratio": 5.25,
-          "ratioDisplay": "5.25",
-          "ratioSort": 5.25,
-          "imbalance": 17
+          "ratio": 5.5,
+          "ratioDisplay": "5.50",
+          "ratioSort": 5.5,
+          "imbalance": 18
         },
         {
           "rank": 12,
@@ -188,15 +188,45 @@
         {
           "rank": 13,
           "name": "リーリエ",
-          "demand": 16,
+          "demand": 17,
           "supply": 19,
-          "ratio": 0.8421052631578947,
-          "ratioDisplay": "0.84",
-          "ratioSort": 0.8421052631578947,
-          "imbalance": -3
+          "ratio": 0.8947368421052632,
+          "ratioDisplay": "0.89",
+          "ratioSort": 0.8947368421052632,
+          "imbalance": -2
         },
         {
           "rank": 14,
+          "name": "かんこうきゃく",
+          "demand": 16,
+          "supply": 2,
+          "ratio": 8,
+          "ratioDisplay": "8.00",
+          "ratioSort": 8,
+          "imbalance": 14
+        },
+        {
+          "rank": 15,
+          "name": "カルム",
+          "demand": 15,
+          "supply": 11,
+          "ratio": 1.3636363636363635,
+          "ratioDisplay": "1.36",
+          "ratioSort": 1.3636363636363635,
+          "imbalance": 4
+        },
+        {
+          "rank": 16,
+          "name": "アカギ",
+          "demand": 15,
+          "supply": 17,
+          "ratio": 0.8823529411764706,
+          "ratioDisplay": "0.88",
+          "ratioSort": 0.8823529411764706,
+          "imbalance": -2
+        },
+        {
+          "rank": 17,
           "name": "カイ",
           "demand": 15,
           "supply": 19,
@@ -206,54 +236,24 @@
           "imbalance": -4
         },
         {
-          "rank": 15,
-          "name": "かんこうきゃく",
-          "demand": 14,
-          "supply": 2,
-          "ratio": 7,
-          "ratioDisplay": "7.00",
-          "ratioSort": 7,
-          "imbalance": 12
-        },
-        {
-          "rank": 16,
-          "name": "カルム",
-          "demand": 14,
-          "supply": 10,
-          "ratio": 1.4,
-          "ratioDisplay": "1.40",
-          "ratioSort": 1.4,
-          "imbalance": 4
-        },
-        {
-          "rank": 17,
-          "name": "アカギ",
-          "demand": 14,
-          "supply": 17,
-          "ratio": 0.8235294117647058,
-          "ratioDisplay": "0.82",
-          "ratioSort": 0.8235294117647058,
-          "imbalance": -3
-        },
-        {
           "rank": 18,
           "name": "リーフ",
           "demand": 12,
-          "supply": 7,
-          "ratio": 1.7142857142857142,
-          "ratioDisplay": "1.71",
-          "ratioSort": 1.7142857142857142,
-          "imbalance": 5
+          "supply": 8,
+          "ratio": 1.5,
+          "ratioDisplay": "1.50",
+          "ratioSort": 1.5,
+          "imbalance": 4
         },
         {
           "rank": 19,
           "name": "フウロ",
           "demand": 11,
-          "supply": 1,
-          "ratio": 11,
-          "ratioDisplay": "11.00",
-          "ratioSort": 11,
-          "imbalance": 10
+          "supply": 3,
+          "ratio": 3.6666666666666665,
+          "ratioDisplay": "3.67",
+          "ratioSort": 3.6666666666666665,
+          "imbalance": 8
         },
         {
           "rank": 20,
@@ -269,11 +269,11 @@
           "rank": 21,
           "name": "エリカ",
           "demand": 9,
-          "supply": 16,
-          "ratio": 0.5625,
-          "ratioDisplay": "0.56",
-          "ratioSort": 0.5625,
-          "imbalance": -7
+          "supply": 18,
+          "ratio": 0.5,
+          "ratioDisplay": "0.50",
+          "ratioSort": 0.5,
+          "imbalance": -9
         },
         {
           "rank": 22,
@@ -307,13 +307,13 @@
         },
         {
           "rank": 25,
-          "name": "カスミ",
+          "name": "ポケモンセンターのお姉さん",
           "demand": 5,
-          "supply": 3,
-          "ratio": 1.6666666666666667,
-          "ratioDisplay": "1.67",
-          "ratioSort": 1.6666666666666667,
-          "imbalance": 2
+          "supply": 7,
+          "ratio": 0.7142857142857143,
+          "ratioDisplay": "0.71",
+          "ratioSort": 0.7142857142857143,
+          "imbalance": -2
         },
         {
           "rank": 26,
@@ -327,26 +327,36 @@
         },
         {
           "rank": 27,
-          "name": "セレナ",
+          "name": "ルチア",
           "demand": 5,
-          "supply": 26,
-          "ratio": 0.19230769230769232,
-          "ratioDisplay": "0.19",
-          "ratioSort": 0.19230769230769232,
-          "imbalance": -21
+          "supply": 14,
+          "ratio": 0.35714285714285715,
+          "ratioDisplay": "0.36",
+          "ratioSort": 0.35714285714285715,
+          "imbalance": -9
         },
         {
           "rank": 28,
-          "name": "ポケモンセンターのお姉さん",
-          "demand": 4,
-          "supply": 7,
-          "ratio": 0.5714285714285714,
-          "ratioDisplay": "0.57",
-          "ratioSort": 0.5714285714285714,
-          "imbalance": -3
+          "name": "セレナ",
+          "demand": 5,
+          "supply": 29,
+          "ratio": 0.1724137931034483,
+          "ratioDisplay": "0.17",
+          "ratioSort": 0.1724137931034483,
+          "imbalance": -24
         },
         {
           "rank": 29,
+          "name": "カスミ",
+          "demand": 4,
+          "supply": 3,
+          "ratio": 1.3333333333333333,
+          "ratioDisplay": "1.33",
+          "ratioSort": 1.3333333333333333,
+          "imbalance": 1
+        },
+        {
+          "rank": 30,
           "name": "ロケット団のボス",
           "demand": 4,
           "supply": 10,
@@ -356,7 +366,27 @@
           "imbalance": -6
         },
         {
-          "rank": 30,
+          "rank": 31,
+          "name": "ジュン",
+          "demand": 4,
+          "supply": 17,
+          "ratio": 0.23529411764705882,
+          "ratioDisplay": "0.24",
+          "ratioSort": 0.23529411764705882,
+          "imbalance": -13
+        },
+        {
+          "rank": 32,
+          "name": "ハルカ",
+          "demand": 3,
+          "supply": 3,
+          "ratio": 1,
+          "ratioDisplay": "1.00",
+          "ratioSort": 1,
+          "imbalance": 0
+        },
+        {
+          "rank": 33,
           "name": "イツキ",
           "demand": 3,
           "supply": 4,
@@ -366,17 +396,7 @@
           "imbalance": -1
         },
         {
-          "rank": 31,
-          "name": "ジュン",
-          "demand": 3,
-          "supply": 12,
-          "ratio": 0.25,
-          "ratioDisplay": "0.25",
-          "ratioSort": 0.25,
-          "imbalance": -9
-        },
-        {
-          "rank": 32,
+          "rank": 34,
           "name": "アオイ",
           "demand": 3,
           "supply": 13,
@@ -386,17 +406,7 @@
           "imbalance": -10
         },
         {
-          "rank": 33,
-          "name": "ルチア",
-          "demand": 3,
-          "supply": 14,
-          "ratio": 0.21428571428571427,
-          "ratioDisplay": "0.21",
-          "ratioSort": 0.21428571428571427,
-          "imbalance": -11
-        },
-        {
-          "rank": 34,
+          "rank": 35,
           "name": "アセロラ",
           "demand": 1,
           "supply": 0,
@@ -406,7 +416,7 @@
           "imbalance": 1
         },
         {
-          "rank": 35,
+          "rank": 36,
           "name": "ハラ",
           "demand": 1,
           "supply": 0,
@@ -416,7 +426,17 @@
           "imbalance": 1
         },
         {
-          "rank": 36,
+          "rank": 37,
+          "name": "デンジ",
+          "demand": 1,
+          "supply": 1,
+          "ratio": 1,
+          "ratioDisplay": "1.00",
+          "ratioSort": 1,
+          "imbalance": 0
+        },
+        {
+          "rank": 38,
           "name": "パラソルおねえさん",
           "demand": 1,
           "supply": 7,
@@ -426,17 +446,17 @@
           "imbalance": -6
         },
         {
-          "rank": 37,
+          "rank": 39,
           "name": "ペパー",
           "demand": 1,
-          "supply": 17,
-          "ratio": 0.058823529411764705,
-          "ratioDisplay": "0.06",
-          "ratioSort": 0.058823529411764705,
-          "imbalance": -16
+          "supply": 20,
+          "ratio": 0.05,
+          "ratioDisplay": "0.05",
+          "ratioSort": 0.05,
+          "imbalance": -19
         },
         {
-          "rank": 38,
+          "rank": 40,
           "name": "オーリム博士",
           "demand": 0,
           "supply": 1,
@@ -446,7 +466,7 @@
           "imbalance": -1
         },
         {
-          "rank": 39,
+          "rank": 41,
           "name": "カンナギタウンの長老",
           "demand": 0,
           "supply": 1,
@@ -456,7 +476,7 @@
           "imbalance": -1
         },
         {
-          "rank": 40,
+          "rank": 42,
           "name": "キョウ",
           "demand": 0,
           "supply": 1,
@@ -466,7 +486,7 @@
           "imbalance": -1
         },
         {
-          "rank": 41,
+          "rank": 43,
           "name": "こいぬ大好きガール",
           "demand": 0,
           "supply": 1,
@@ -476,7 +496,7 @@
           "imbalance": -1
         },
         {
-          "rank": 42,
+          "rank": 44,
           "name": "タクシードライバー",
           "demand": 0,
           "supply": 1,
@@ -486,7 +506,7 @@
           "imbalance": -1
         },
         {
-          "rank": 43,
+          "rank": 45,
           "name": "マオ",
           "demand": 0,
           "supply": 1,
@@ -496,38 +516,18 @@
           "imbalance": -1
         },
         {
-          "rank": 44,
-          "name": "シャガ",
-          "demand": 0,
-          "supply": 2,
-          "ratio": 0,
-          "ratioDisplay": "0.00",
-          "ratioSort": 0,
-          "imbalance": -2
-        },
-        {
-          "rank": 45,
-          "name": "ジャグラー",
-          "demand": 0,
-          "supply": 2,
-          "ratio": 0,
-          "ratioDisplay": "0.00",
-          "ratioSort": 0,
-          "imbalance": -2
-        },
-        {
           "rank": 46,
-          "name": "ハルカ",
+          "name": "ロケット団の研究員",
           "demand": 0,
-          "supply": 2,
+          "supply": 1,
           "ratio": 0,
           "ratioDisplay": "0.00",
           "ratioSort": 0,
-          "imbalance": -2
+          "imbalance": -1
         },
         {
           "rank": 47,
-          "name": "メリッサ",
+          "name": "シャガ",
           "demand": 0,
           "supply": 2,
           "ratio": 0,
@@ -547,26 +547,6 @@
         },
         {
           "rank": 49,
-          "name": "ロケット団の研究員",
-          "demand": 0,
-          "supply": 3,
-          "ratio": 0,
-          "ratioDisplay": "0.00",
-          "ratioSort": 0,
-          "imbalance": -3
-        },
-        {
-          "rank": 50,
-          "name": "イリマ",
-          "demand": 0,
-          "supply": 7,
-          "ratio": 0,
-          "ratioDisplay": "0.00",
-          "ratioSort": 0,
-          "imbalance": -7
-        },
-        {
-          "rank": 51,
           "name": "かけだし調査員",
           "demand": 0,
           "supply": 7,
@@ -576,7 +556,7 @@
           "imbalance": -7
         },
         {
-          "rank": 52,
+          "rank": 50,
           "name": "カツラ",
           "demand": 0,
           "supply": 7,
@@ -586,7 +566,7 @@
           "imbalance": -7
         },
         {
-          "rank": 53,
+          "rank": 51,
           "name": "フトゥー博士",
           "demand": 0,
           "supply": 7,
@@ -596,8 +576,18 @@
           "imbalance": -7
         },
         {
-          "rank": 54,
-          "name": "ネズ",
+          "rank": 52,
+          "name": "ボタン",
+          "demand": 0,
+          "supply": 7,
+          "ratio": 0,
+          "ratioDisplay": "0.00",
+          "ratioSort": 0,
+          "imbalance": -7
+        },
+        {
+          "rank": 53,
+          "name": "イリマ",
           "demand": 0,
           "supply": 8,
           "ratio": 0,
@@ -606,7 +596,7 @@
           "imbalance": -8
         },
         {
-          "rank": 55,
+          "rank": 54,
           "name": "ミカン",
           "demand": 0,
           "supply": 8,
@@ -616,27 +606,7 @@
           "imbalance": -8
         },
         {
-          "rank": 56,
-          "name": "ボタン",
-          "demand": 0,
-          "supply": 9,
-          "ratio": 0,
-          "ratioDisplay": "0.00",
-          "ratioSort": 0,
-          "imbalance": -9
-        },
-        {
-          "rank": 57,
-          "name": "タケシ",
-          "demand": 0,
-          "supply": 10,
-          "ratio": 0,
-          "ratioDisplay": "0.00",
-          "ratioSort": 0,
-          "imbalance": -10
-        },
-        {
-          "rank": 58,
+          "rank": 55,
           "name": "ナンジャモ",
           "demand": 0,
           "supply": 10,
@@ -644,140 +614,160 @@
           "ratioDisplay": "0.00",
           "ratioSort": 0,
           "imbalance": -10
+        },
+        {
+          "rank": 56,
+          "name": "タケシ",
+          "demand": 0,
+          "supply": 11,
+          "ratio": 0,
+          "ratioDisplay": "0.00",
+          "ratioSort": 0,
+          "imbalance": -11
+        },
+        {
+          "rank": 57,
+          "name": "ネズ",
+          "demand": 0,
+          "supply": 12,
+          "ratio": 0,
+          "ratioDisplay": "0.00",
+          "ratioSort": 0,
+          "imbalance": -12
         }
       ]
     },
     "48h": {
       "label": "48時間",
       "hours": 48,
-      "posts": 596,
-      "totalDemand": 844,
-      "totalSupply": 855,
+      "posts": 601,
+      "totalDemand": 871,
+      "totalSupply": 812,
       "totalRatio": {
-        "ratio": 0.9871345029239766,
-        "ratioDisplay": "0.99",
-        "ratioSort": 0.9871345029239766
+        "ratio": 1.0726600985221675,
+        "ratioDisplay": "1.07",
+        "ratioSort": 1.0726600985221675
       },
       "rankings": [
         {
           "rank": 1,
           "name": "モノマネむすめ",
-          "demand": 185,
-          "supply": 85,
-          "ratio": 2.176470588235294,
-          "ratioDisplay": "2.18",
-          "ratioSort": 2.176470588235294,
-          "imbalance": 100
+          "demand": 197,
+          "supply": 61,
+          "ratio": 3.2295081967213113,
+          "ratioDisplay": "3.23",
+          "ratioSort": 3.2295081967213113,
+          "imbalance": 136
         },
         {
           "rank": 2,
           "name": "カミツレ",
-          "demand": 84,
-          "supply": 58,
-          "ratio": 1.4482758620689655,
-          "ratioDisplay": "1.45",
-          "ratioSort": 1.4482758620689655,
-          "imbalance": 26
+          "demand": 88,
+          "supply": 61,
+          "ratio": 1.4426229508196722,
+          "ratioDisplay": "1.44",
+          "ratioSort": 1.4426229508196722,
+          "imbalance": 27
         },
         {
           "rank": 3,
-          "name": "博士の研究",
-          "demand": 64,
-          "supply": 5,
-          "ratio": 12.8,
-          "ratioDisplay": "12.80",
-          "ratioSort": 12.8,
-          "imbalance": 59
+          "name": "ナツメ",
+          "demand": 47,
+          "supply": 31,
+          "ratio": 1.5161290322580645,
+          "ratioDisplay": "1.52",
+          "ratioSort": 1.5161290322580645,
+          "imbalance": 16
         },
         {
           "rank": 4,
           "name": "アイリス",
-          "demand": 45,
-          "supply": 103,
-          "ratio": 0.4368932038834951,
+          "demand": 47,
+          "supply": 106,
+          "ratio": 0.44339622641509435,
           "ratioDisplay": "0.44",
-          "ratioSort": 0.4368932038834951,
-          "imbalance": -58
+          "ratioSort": 0.44339622641509435,
+          "imbalance": -59
         },
         {
           "rank": 5,
-          "name": "ナツメ",
+          "name": "マーズ",
           "demand": 44,
-          "supply": 58,
-          "ratio": 0.7586206896551724,
-          "ratioDisplay": "0.76",
-          "ratioSort": 0.7586206896551724,
-          "imbalance": -14
+          "supply": 14,
+          "ratio": 3.142857142857143,
+          "ratioDisplay": "3.14",
+          "ratioSort": 3.142857142857143,
+          "imbalance": 30
         },
         {
           "rank": 6,
-          "name": "マーズ",
-          "demand": 40,
-          "supply": 12,
-          "ratio": 3.3333333333333335,
-          "ratioDisplay": "3.33",
-          "ratioSort": 3.3333333333333335,
-          "imbalance": 28
+          "name": "博士の研究",
+          "demand": 39,
+          "supply": 5,
+          "ratio": 7.8,
+          "ratioDisplay": "7.80",
+          "ratioSort": 7.8,
+          "imbalance": 34
         },
         {
           "rank": 7,
           "name": "レッド",
-          "demand": 30,
+          "demand": 33,
           "supply": 6,
-          "ratio": 5,
-          "ratioDisplay": "5.00",
-          "ratioSort": 5,
-          "imbalance": 24
+          "ratio": 5.5,
+          "ratioDisplay": "5.50",
+          "ratioSort": 5.5,
+          "imbalance": 27
         },
         {
           "rank": 8,
-          "name": "コルニ",
-          "demand": 30,
-          "supply": 7,
-          "ratio": 4.285714285714286,
-          "ratioDisplay": "4.29",
-          "ratioSort": 4.285714285714286,
-          "imbalance": 23
-        },
-        {
-          "rank": 9,
           "name": "ヒカリ",
-          "demand": 28,
+          "demand": 31,
           "supply": 0,
           "ratio": null,
           "ratioDisplay": "∞",
-          "ratioSort": 1000000028,
-          "imbalance": 28
+          "ratioSort": 1000000031,
+          "imbalance": 31
+        },
+        {
+          "rank": 9,
+          "name": "サカキ",
+          "demand": 31,
+          "supply": 1,
+          "ratio": 31,
+          "ratioDisplay": "31.00",
+          "ratioSort": 31,
+          "imbalance": 30
         },
         {
           "rank": 10,
-          "name": "サカキ",
-          "demand": 28,
-          "supply": 1,
-          "ratio": 28,
-          "ratioDisplay": "28.00",
-          "ratioSort": 28,
-          "imbalance": 27
+          "name": "コルニ",
+          "demand": 31,
+          "supply": 7,
+          "ratio": 4.428571428571429,
+          "ratioDisplay": "4.43",
+          "ratioSort": 4.428571428571429,
+          "imbalance": 24
         },
         {
           "rank": 11,
           "name": "カキ",
-          "demand": 28,
+          "demand": 31,
           "supply": 8,
-          "ratio": 3.5,
-          "ratioDisplay": "3.50",
-          "ratioSort": 3.5,
-          "imbalance": 20
+          "ratio": 3.875,
+          "ratioDisplay": "3.88",
+          "ratioSort": 3.875,
+          "imbalance": 23
         },
         {
           "rank": 12,
           "name": "アカギ",
-          "demand": 27,
-          "supply": 48,
-          "ratio": 0.5625,
-          "ratioDisplay": "0.56",
-          "ratioSort": 0.5625,
-          "imbalance": -21
+          "demand": 29,
+          "supply": 20,
+          "ratio": 1.45,
+          "ratioDisplay": "1.45",
+          "ratioSort": 1.45,
+          "imbalance": 9
         },
         {
           "rank": 13,
@@ -792,62 +782,62 @@
         {
           "rank": 14,
           "name": "かんこうきゃく",
-          "demand": 16,
+          "demand": 18,
           "supply": 2,
-          "ratio": 8,
-          "ratioDisplay": "8.00",
-          "ratioSort": 8,
-          "imbalance": 14
+          "ratio": 9,
+          "ratioDisplay": "9.00",
+          "ratioSort": 9,
+          "imbalance": 16
         },
         {
           "rank": 15,
           "name": "リーリエ",
-          "demand": 16,
-          "supply": 21,
-          "ratio": 0.7619047619047619,
-          "ratioDisplay": "0.76",
-          "ratioSort": 0.7619047619047619,
-          "imbalance": -5
+          "demand": 17,
+          "supply": 20,
+          "ratio": 0.85,
+          "ratioDisplay": "0.85",
+          "ratioSort": 0.85,
+          "imbalance": -3
         },
         {
           "rank": 16,
           "name": "カイ",
-          "demand": 15,
+          "demand": 16,
           "supply": 20,
-          "ratio": 0.75,
-          "ratioDisplay": "0.75",
-          "ratioSort": 0.75,
-          "imbalance": -5
+          "ratio": 0.8,
+          "ratioDisplay": "0.80",
+          "ratioSort": 0.8,
+          "imbalance": -4
         },
         {
           "rank": 17,
           "name": "カルム",
-          "demand": 14,
-          "supply": 47,
-          "ratio": 0.2978723404255319,
-          "ratioDisplay": "0.30",
-          "ratioSort": 0.2978723404255319,
-          "imbalance": -33
+          "demand": 15,
+          "supply": 52,
+          "ratio": 0.28846153846153844,
+          "ratioDisplay": "0.29",
+          "ratioSort": 0.28846153846153844,
+          "imbalance": -37
         },
         {
           "rank": 18,
           "name": "リーフ",
           "demand": 13,
-          "supply": 14,
-          "ratio": 0.9285714285714286,
-          "ratioDisplay": "0.93",
-          "ratioSort": 0.9285714285714286,
-          "imbalance": -1
+          "supply": 15,
+          "ratio": 0.8666666666666667,
+          "ratioDisplay": "0.87",
+          "ratioSort": 0.8666666666666667,
+          "imbalance": -2
         },
         {
           "rank": 19,
           "name": "フウロ",
           "demand": 12,
-          "supply": 2,
-          "ratio": 6,
-          "ratioDisplay": "6.00",
-          "ratioSort": 6,
-          "imbalance": 10
+          "supply": 4,
+          "ratio": 3,
+          "ratioDisplay": "3.00",
+          "ratioSort": 3,
+          "imbalance": 8
         },
         {
           "rank": 20,
@@ -863,11 +853,11 @@
           "rank": 21,
           "name": "エリカ",
           "demand": 11,
-          "supply": 16,
-          "ratio": 0.6875,
-          "ratioDisplay": "0.69",
-          "ratioSort": 0.6875,
-          "imbalance": -5
+          "supply": 18,
+          "ratio": 0.6111111111111112,
+          "ratioDisplay": "0.61",
+          "ratioSort": 0.6111111111111112,
+          "imbalance": -7
         },
         {
           "rank": 22,
@@ -892,15 +882,25 @@
         {
           "rank": 24,
           "name": "ロケット団の大作戦",
-          "demand": 8,
+          "demand": 7,
           "supply": 1,
-          "ratio": 8,
-          "ratioDisplay": "8.00",
-          "ratioSort": 8,
-          "imbalance": 7
+          "ratio": 7,
+          "ratioDisplay": "7.00",
+          "ratioSort": 7,
+          "imbalance": 6
         },
         {
           "rank": 25,
+          "name": "ルチア",
+          "demand": 6,
+          "supply": 15,
+          "ratio": 0.4,
+          "ratioDisplay": "0.40",
+          "ratioSort": 0.4,
+          "imbalance": -9
+        },
+        {
+          "rank": 26,
           "name": "セキ",
           "demand": 5,
           "supply": 0,
@@ -910,17 +910,17 @@
           "imbalance": 5
         },
         {
-          "rank": 26,
+          "rank": 27,
           "name": "ハンサム",
           "demand": 5,
-          "supply": 1,
-          "ratio": 5,
-          "ratioDisplay": "5.00",
-          "ratioSort": 5,
-          "imbalance": 4
+          "supply": 0,
+          "ratio": null,
+          "ratioDisplay": "∞",
+          "ratioSort": 1000000005,
+          "imbalance": 5
         },
         {
-          "rank": 27,
+          "rank": 28,
           "name": "シトロン",
           "demand": 5,
           "supply": 2,
@@ -930,7 +930,17 @@
           "imbalance": 3
         },
         {
-          "rank": 28,
+          "rank": 29,
+          "name": "ポケモンセンターのお姉さん",
+          "demand": 5,
+          "supply": 7,
+          "ratio": 0.7142857142857143,
+          "ratioDisplay": "0.71",
+          "ratioSort": 0.7142857142857143,
+          "imbalance": -2
+        },
+        {
+          "rank": 30,
           "name": "ルザミーネ",
           "demand": 5,
           "supply": 8,
@@ -940,7 +950,7 @@
           "imbalance": -3
         },
         {
-          "rank": 29,
+          "rank": 31,
           "name": "カスミ",
           "demand": 5,
           "supply": 10,
@@ -950,37 +960,37 @@
           "imbalance": -5
         },
         {
-          "rank": 30,
+          "rank": 32,
           "name": "セレナ",
           "demand": 5,
-          "supply": 37,
-          "ratio": 0.13513513513513514,
-          "ratioDisplay": "0.14",
-          "ratioSort": 0.13513513513513514,
-          "imbalance": -32
-        },
-        {
-          "rank": 31,
-          "name": "ポケモンセンターのお姉さん",
-          "demand": 4,
-          "supply": 7,
-          "ratio": 0.5714285714285714,
-          "ratioDisplay": "0.57",
-          "ratioSort": 0.5714285714285714,
-          "imbalance": -3
-        },
-        {
-          "rank": 32,
-          "name": "ルチア",
-          "demand": 4,
-          "supply": 15,
-          "ratio": 0.26666666666666666,
-          "ratioDisplay": "0.27",
-          "ratioSort": 0.26666666666666666,
-          "imbalance": -11
+          "supply": 40,
+          "ratio": 0.125,
+          "ratioDisplay": "0.13",
+          "ratioSort": 0.125,
+          "imbalance": -35
         },
         {
           "rank": 33,
+          "name": "ハルカ",
+          "demand": 4,
+          "supply": 4,
+          "ratio": 1,
+          "ratioDisplay": "1.00",
+          "ratioSort": 1,
+          "imbalance": 0
+        },
+        {
+          "rank": 34,
+          "name": "ジュン",
+          "demand": 4,
+          "supply": 17,
+          "ratio": 0.23529411764705882,
+          "ratioDisplay": "0.24",
+          "ratioSort": 0.23529411764705882,
+          "imbalance": -13
+        },
+        {
+          "rank": 35,
           "name": "イツキ",
           "demand": 3,
           "supply": 4,
@@ -990,17 +1000,7 @@
           "imbalance": -1
         },
         {
-          "rank": 34,
-          "name": "ジュン",
-          "demand": 3,
-          "supply": 12,
-          "ratio": 0.25,
-          "ratioDisplay": "0.25",
-          "ratioSort": 0.25,
-          "imbalance": -9
-        },
-        {
-          "rank": 35,
+          "rank": 36,
           "name": "アオイ",
           "demand": 3,
           "supply": 23,
@@ -1010,17 +1010,17 @@
           "imbalance": -20
         },
         {
-          "rank": 36,
+          "rank": 37,
           "name": "ペパー",
           "demand": 2,
-          "supply": 29,
-          "ratio": 0.06896551724137931,
-          "ratioDisplay": "0.07",
-          "ratioSort": 0.06896551724137931,
-          "imbalance": -27
+          "supply": 32,
+          "ratio": 0.0625,
+          "ratioDisplay": "0.06",
+          "ratioSort": 0.0625,
+          "imbalance": -30
         },
         {
-          "rank": 37,
+          "rank": 38,
           "name": "アカネ",
           "demand": 1,
           "supply": 0,
@@ -1030,7 +1030,7 @@
           "imbalance": 1
         },
         {
-          "rank": 38,
+          "rank": 39,
           "name": "コトネ",
           "demand": 1,
           "supply": 0,
@@ -1040,7 +1040,7 @@
           "imbalance": 1
         },
         {
-          "rank": 39,
+          "rank": 40,
           "name": "ハラ",
           "demand": 1,
           "supply": 0,
@@ -1050,7 +1050,7 @@
           "imbalance": 1
         },
         {
-          "rank": 40,
+          "rank": 41,
           "name": "アセロラ",
           "demand": 1,
           "supply": 1,
@@ -1060,17 +1060,17 @@
           "imbalance": 0
         },
         {
-          "rank": 41,
-          "name": "ハルカ",
+          "rank": 42,
+          "name": "デンジ",
           "demand": 1,
-          "supply": 3,
-          "ratio": 0.3333333333333333,
-          "ratioDisplay": "0.33",
-          "ratioSort": 0.3333333333333333,
-          "imbalance": -2
+          "supply": 1,
+          "ratio": 1,
+          "ratioDisplay": "1.00",
+          "ratioSort": 1,
+          "imbalance": 0
         },
         {
-          "rank": 42,
+          "rank": 43,
           "name": "ロケット団の研究員",
           "demand": 1,
           "supply": 4,
@@ -1080,7 +1080,7 @@
           "imbalance": -3
         },
         {
-          "rank": 43,
+          "rank": 44,
           "name": "パラソルおねえさん",
           "demand": 1,
           "supply": 7,
@@ -1090,7 +1090,7 @@
           "imbalance": -6
         },
         {
-          "rank": 44,
+          "rank": 45,
           "name": "ミカン",
           "demand": 1,
           "supply": 10,
@@ -1100,7 +1100,7 @@
           "imbalance": -9
         },
         {
-          "rank": 45,
+          "rank": 46,
           "name": "オーリム博士",
           "demand": 0,
           "supply": 1,
@@ -1110,18 +1110,8 @@
           "imbalance": -1
         },
         {
-          "rank": 46,
-          "name": "グリーン",
-          "demand": 0,
-          "supply": 1,
-          "ratio": 0,
-          "ratioDisplay": "0.00",
-          "ratioSort": 0,
-          "imbalance": -1
-        },
-        {
           "rank": 47,
-          "name": "サイキッカー",
+          "name": "グリーン",
           "demand": 0,
           "supply": 1,
           "ratio": 0,
@@ -1171,16 +1161,6 @@
         },
         {
           "rank": 52,
-          "name": "やまおとこ",
-          "demand": 0,
-          "supply": 1,
-          "ratio": 0,
-          "ratioDisplay": "0.00",
-          "ratioSort": 0,
-          "imbalance": -1
-        },
-        {
-          "rank": 53,
           "name": "釣り人",
           "demand": 0,
           "supply": 1,
@@ -1190,7 +1170,7 @@
           "imbalance": -1
         },
         {
-          "rank": 54,
+          "rank": 53,
           "name": "旅の行商人",
           "demand": 0,
           "supply": 1,
@@ -1200,7 +1180,7 @@
           "imbalance": -1
         },
         {
-          "rank": 55,
+          "rank": 54,
           "name": "カンナギタウンの長老",
           "demand": 0,
           "supply": 2,
@@ -1210,7 +1190,7 @@
           "imbalance": -2
         },
         {
-          "rank": 56,
+          "rank": 55,
           "name": "キョウ",
           "demand": 0,
           "supply": 2,
@@ -1220,8 +1200,18 @@
           "imbalance": -2
         },
         {
-          "rank": 57,
+          "rank": 56,
           "name": "こいぬ大好きガール",
+          "demand": 0,
+          "supply": 2,
+          "ratio": 0,
+          "ratioDisplay": "0.00",
+          "ratioSort": 0,
+          "imbalance": -2
+        },
+        {
+          "rank": 57,
+          "name": "シャガ",
           "demand": 0,
           "supply": 2,
           "ratio": 0,
@@ -1251,16 +1241,6 @@
         },
         {
           "rank": 60,
-          "name": "シャガ",
-          "demand": 0,
-          "supply": 3,
-          "ratio": 0,
-          "ratioDisplay": "0.00",
-          "ratioSort": 0,
-          "imbalance": -3
-        },
-        {
-          "rank": 61,
           "name": "シロナ",
           "demand": 0,
           "supply": 3,
@@ -1270,17 +1250,7 @@
           "imbalance": -3
         },
         {
-          "rank": 62,
-          "name": "イリマ",
-          "demand": 0,
-          "supply": 7,
-          "ratio": 0,
-          "ratioDisplay": "0.00",
-          "ratioSort": 0,
-          "imbalance": -7
-        },
-        {
-          "rank": 63,
+          "rank": 61,
           "name": "カツラ",
           "demand": 0,
           "supply": 7,
@@ -1290,7 +1260,7 @@
           "imbalance": -7
         },
         {
-          "rank": 64,
+          "rank": 62,
           "name": "フトゥー博士",
           "demand": 0,
           "supply": 7,
@@ -1300,7 +1270,17 @@
           "imbalance": -7
         },
         {
-          "rank": 65,
+          "rank": 63,
+          "name": "イリマ",
+          "demand": 0,
+          "supply": 8,
+          "ratio": 0,
+          "ratioDisplay": "0.00",
+          "ratioSort": 0,
+          "imbalance": -8
+        },
+        {
+          "rank": 64,
           "name": "かけだし調査員",
           "demand": 0,
           "supply": 8,
@@ -1310,17 +1290,7 @@
           "imbalance": -8
         },
         {
-          "rank": 66,
-          "name": "ネズ",
-          "demand": 0,
-          "supply": 8,
-          "ratio": 0,
-          "ratioDisplay": "0.00",
-          "ratioSort": 0,
-          "imbalance": -8
-        },
-        {
-          "rank": 67,
+          "rank": 65,
           "name": "ボタン",
           "demand": 0,
           "supply": 9,
@@ -1330,198 +1300,208 @@
           "imbalance": -9
         },
         {
-          "rank": 68,
+          "rank": 66,
           "name": "タケシ",
           "demand": 0,
-          "supply": 10,
+          "supply": 11,
           "ratio": 0,
           "ratioDisplay": "0.00",
           "ratioSort": 0,
-          "imbalance": -10
+          "imbalance": -11
         },
         {
-          "rank": 69,
-          "name": "ナンジャモ",
+          "rank": 67,
+          "name": "ネズ",
           "demand": 0,
-          "supply": 58,
+          "supply": 12,
           "ratio": 0,
           "ratioDisplay": "0.00",
           "ratioSort": 0,
-          "imbalance": -58
+          "imbalance": -12
+        },
+        {
+          "rank": 68,
+          "name": "ナンジャモ",
+          "demand": 0,
+          "supply": 62,
+          "ratio": 0,
+          "ratioDisplay": "0.00",
+          "ratioSort": 0,
+          "imbalance": -62
         }
       ]
     },
     "168h": {
       "label": "1週間",
       "hours": 168,
-      "posts": 690,
-      "totalDemand": 1107,
-      "totalSupply": 989,
+      "posts": 737,
+      "totalDemand": 1191,
+      "totalSupply": 1055,
       "totalRatio": {
-        "ratio": 1.1193124368048535,
-        "ratioDisplay": "1.12",
-        "ratioSort": 1.1193124368048535
+        "ratio": 1.128909952606635,
+        "ratioDisplay": "1.13",
+        "ratioSort": 1.128909952606635
       },
       "rankings": [
         {
           "rank": 1,
           "name": "モノマネむすめ",
-          "demand": 224,
-          "supply": 112,
-          "ratio": 2,
-          "ratioDisplay": "2.00",
-          "ratioSort": 2,
-          "imbalance": 112
+          "demand": 241,
+          "supply": 121,
+          "ratio": 1.9917355371900827,
+          "ratioDisplay": "1.99",
+          "ratioSort": 1.9917355371900827,
+          "imbalance": 120
         },
         {
           "rank": 2,
           "name": "カミツレ",
-          "demand": 94,
-          "supply": 67,
-          "ratio": 1.4029850746268657,
-          "ratioDisplay": "1.40",
-          "ratioSort": 1.4029850746268657,
-          "imbalance": 27
+          "demand": 101,
+          "supply": 71,
+          "ratio": 1.4225352112676057,
+          "ratioDisplay": "1.42",
+          "ratioSort": 1.4225352112676057,
+          "imbalance": 30
         },
         {
           "rank": 3,
           "name": "ナツメ",
-          "demand": 74,
-          "supply": 65,
-          "ratio": 1.1384615384615384,
-          "ratioDisplay": "1.14",
-          "ratioSort": 1.1384615384615384,
-          "imbalance": 9
+          "demand": 80,
+          "supply": 69,
+          "ratio": 1.1594202898550725,
+          "ratioDisplay": "1.16",
+          "ratioSort": 1.1594202898550725,
+          "imbalance": 11
         },
         {
           "rank": 4,
           "name": "博士の研究",
-          "demand": 72,
+          "demand": 78,
           "supply": 8,
-          "ratio": 9,
-          "ratioDisplay": "9.00",
-          "ratioSort": 9,
-          "imbalance": 64
+          "ratio": 9.75,
+          "ratioDisplay": "9.75",
+          "ratioSort": 9.75,
+          "imbalance": 70
         },
         {
           "rank": 5,
           "name": "コルニ",
-          "demand": 52,
+          "demand": 55,
           "supply": 7,
-          "ratio": 7.428571428571429,
-          "ratioDisplay": "7.43",
-          "ratioSort": 7.428571428571429,
-          "imbalance": 45
+          "ratio": 7.857142857142857,
+          "ratioDisplay": "7.86",
+          "ratioSort": 7.857142857142857,
+          "imbalance": 48
         },
         {
           "rank": 6,
           "name": "サカキ",
-          "demand": 47,
+          "demand": 52,
           "supply": 3,
-          "ratio": 15.666666666666666,
-          "ratioDisplay": "15.67",
-          "ratioSort": 15.666666666666666,
-          "imbalance": 44
+          "ratio": 17.333333333333332,
+          "ratioDisplay": "17.33",
+          "ratioSort": 17.333333333333332,
+          "imbalance": 49
         },
         {
           "rank": 7,
           "name": "カキ",
-          "demand": 47,
+          "demand": 52,
           "supply": 10,
-          "ratio": 4.7,
-          "ratioDisplay": "4.70",
-          "ratioSort": 4.7,
-          "imbalance": 37
+          "ratio": 5.2,
+          "ratioDisplay": "5.20",
+          "ratioSort": 5.2,
+          "imbalance": 42
         },
         {
           "rank": 8,
-          "name": "アイリス",
-          "demand": 45,
-          "supply": 106,
-          "ratio": 0.42452830188679247,
-          "ratioDisplay": "0.42",
-          "ratioSort": 0.42452830188679247,
-          "imbalance": -61
+          "name": "マーズ",
+          "demand": 47,
+          "supply": 14,
+          "ratio": 3.357142857142857,
+          "ratioDisplay": "3.36",
+          "ratioSort": 3.357142857142857,
+          "imbalance": 33
         },
         {
           "rank": 9,
-          "name": "マーズ",
-          "demand": 43,
-          "supply": 12,
-          "ratio": 3.5833333333333335,
-          "ratioDisplay": "3.58",
-          "ratioSort": 3.5833333333333335,
-          "imbalance": 31
+          "name": "アイリス",
+          "demand": 47,
+          "supply": 112,
+          "ratio": 0.41964285714285715,
+          "ratioDisplay": "0.42",
+          "ratioSort": 0.41964285714285715,
+          "imbalance": -65
         },
         {
           "rank": 10,
           "name": "レッド",
-          "demand": 30,
+          "demand": 33,
           "supply": 6,
-          "ratio": 5,
-          "ratioDisplay": "5.00",
-          "ratioSort": 5,
-          "imbalance": 24
+          "ratio": 5.5,
+          "ratioDisplay": "5.50",
+          "ratioSort": 5.5,
+          "imbalance": 27
         },
         {
           "rank": 11,
           "name": "アカギ",
-          "demand": 30,
-          "supply": 62,
-          "ratio": 0.4838709677419355,
+          "demand": 32,
+          "supply": 66,
+          "ratio": 0.48484848484848486,
           "ratioDisplay": "0.48",
-          "ratioSort": 0.4838709677419355,
-          "imbalance": -32
+          "ratioSort": 0.48484848484848486,
+          "imbalance": -34
         },
         {
           "rank": 12,
           "name": "ヒカリ",
-          "demand": 28,
+          "demand": 31,
           "supply": 0,
           "ratio": null,
           "ratioDisplay": "∞",
-          "ratioSort": 1000000028,
-          "imbalance": 28
+          "ratioSort": 1000000031,
+          "imbalance": 31
         },
         {
           "rank": 13,
           "name": "ポケモンセンターのお姉さん",
-          "demand": 25,
+          "demand": 28,
           "supply": 7,
-          "ratio": 3.5714285714285716,
-          "ratioDisplay": "3.57",
-          "ratioSort": 3.5714285714285716,
-          "imbalance": 18
+          "ratio": 4,
+          "ratioDisplay": "4.00",
+          "ratioSort": 4,
+          "imbalance": 21
         },
         {
           "rank": 14,
           "name": "ルザミーネ",
-          "demand": 24,
+          "demand": 26,
           "supply": 9,
-          "ratio": 2.6666666666666665,
-          "ratioDisplay": "2.67",
-          "ratioSort": 2.6666666666666665,
-          "imbalance": 15
+          "ratio": 2.888888888888889,
+          "ratioDisplay": "2.89",
+          "ratioSort": 2.888888888888889,
+          "imbalance": 17
         },
         {
           "rank": 15,
           "name": "アオイ",
-          "demand": 22,
+          "demand": 24,
           "supply": 23,
-          "ratio": 0.9565217391304348,
-          "ratioDisplay": "0.96",
-          "ratioSort": 0.9565217391304348,
-          "imbalance": -1
+          "ratio": 1.0434782608695652,
+          "ratioDisplay": "1.04",
+          "ratioSort": 1.0434782608695652,
+          "imbalance": 1
         },
         {
           "rank": 16,
           "name": "アセロラ",
-          "demand": 20,
+          "demand": 22,
           "supply": 1,
-          "ratio": 20,
-          "ratioDisplay": "20.00",
-          "ratioSort": 20,
-          "imbalance": 19
+          "ratio": 22,
+          "ratioDisplay": "22.00",
+          "ratioSort": 22,
+          "imbalance": 21
         },
         {
           "rank": 17,
@@ -1536,62 +1516,62 @@
         {
           "rank": 18,
           "name": "カイ",
-          "demand": 19,
+          "demand": 20,
           "supply": 21,
-          "ratio": 0.9047619047619048,
-          "ratioDisplay": "0.90",
-          "ratioSort": 0.9047619047619048,
-          "imbalance": -2
+          "ratio": 0.9523809523809523,
+          "ratioDisplay": "0.95",
+          "ratioSort": 0.9523809523809523,
+          "imbalance": -1
         },
         {
           "rank": 19,
           "name": "かんこうきゃく",
-          "demand": 17,
+          "demand": 19,
           "supply": 2,
-          "ratio": 8.5,
-          "ratioDisplay": "8.50",
-          "ratioSort": 8.5,
-          "imbalance": 15
+          "ratio": 9.5,
+          "ratioDisplay": "9.50",
+          "ratioSort": 9.5,
+          "imbalance": 17
         },
         {
           "rank": 20,
-          "name": "リーフ",
-          "demand": 16,
-          "supply": 14,
-          "ratio": 1.1428571428571428,
-          "ratioDisplay": "1.14",
-          "ratioSort": 1.1428571428571428,
-          "imbalance": 2
+          "name": "リーリエ",
+          "demand": 17,
+          "supply": 22,
+          "ratio": 0.7727272727272727,
+          "ratioDisplay": "0.77",
+          "ratioSort": 0.7727272727272727,
+          "imbalance": -5
         },
         {
           "rank": 21,
-          "name": "リーリエ",
+          "name": "リーフ",
           "demand": 16,
-          "supply": 22,
-          "ratio": 0.7272727272727273,
-          "ratioDisplay": "0.73",
-          "ratioSort": 0.7272727272727273,
-          "imbalance": -6
+          "supply": 15,
+          "ratio": 1.0666666666666667,
+          "ratioDisplay": "1.07",
+          "ratioSort": 1.0666666666666667,
+          "imbalance": 1
         },
         {
           "rank": 22,
           "name": "フウロ",
           "demand": 15,
-          "supply": 3,
-          "ratio": 5,
-          "ratioDisplay": "5.00",
-          "ratioSort": 5,
-          "imbalance": 12
+          "supply": 5,
+          "ratio": 3,
+          "ratioDisplay": "3.00",
+          "ratioSort": 3,
+          "imbalance": 10
         },
         {
           "rank": 23,
           "name": "カルム",
-          "demand": 14,
-          "supply": 48,
-          "ratio": 0.2916666666666667,
-          "ratioDisplay": "0.29",
-          "ratioSort": 0.2916666666666667,
-          "imbalance": -34
+          "demand": 15,
+          "supply": 53,
+          "ratio": 0.2830188679245283,
+          "ratioDisplay": "0.28",
+          "ratioSort": 0.2830188679245283,
+          "imbalance": -38
         },
         {
           "rank": 24,
@@ -1607,11 +1587,11 @@
           "rank": 25,
           "name": "エリカ",
           "demand": 11,
-          "supply": 16,
-          "ratio": 0.6875,
-          "ratioDisplay": "0.69",
-          "ratioSort": 0.6875,
-          "imbalance": -5
+          "supply": 18,
+          "ratio": 0.6111111111111112,
+          "ratioDisplay": "0.61",
+          "ratioSort": 0.6111111111111112,
+          "imbalance": -7
         },
         {
           "rank": 26,
@@ -1656,11 +1636,11 @@
         {
           "rank": 30,
           "name": "ルチア",
-          "demand": 7,
-          "supply": 34,
-          "ratio": 0.20588235294117646,
-          "ratioDisplay": "0.21",
-          "ratioSort": 0.20588235294117646,
+          "demand": 9,
+          "supply": 36,
+          "ratio": 0.25,
+          "ratioDisplay": "0.25",
+          "ratioSort": 0.25,
           "imbalance": -27
         },
         {
@@ -1697,11 +1677,11 @@
           "rank": 34,
           "name": "セレナ",
           "demand": 5,
-          "supply": 39,
-          "ratio": 0.1282051282051282,
-          "ratioDisplay": "0.13",
-          "ratioSort": 0.1282051282051282,
-          "imbalance": -34
+          "supply": 42,
+          "ratio": 0.11904761904761904,
+          "ratioDisplay": "0.12",
+          "ratioSort": 0.11904761904761904,
+          "imbalance": -37
         },
         {
           "rank": 35,
@@ -1715,6 +1695,26 @@
         },
         {
           "rank": 36,
+          "name": "ジュン",
+          "demand": 4,
+          "supply": 17,
+          "ratio": 0.23529411764705882,
+          "ratioDisplay": "0.24",
+          "ratioSort": 0.23529411764705882,
+          "imbalance": -13
+        },
+        {
+          "rank": 37,
+          "name": "ハルカ",
+          "demand": 4,
+          "supply": 25,
+          "ratio": 0.16,
+          "ratioDisplay": "0.16",
+          "ratioSort": 0.16,
+          "imbalance": -21
+        },
+        {
+          "rank": 38,
           "name": "パラソルおねえさん",
           "demand": 3,
           "supply": 9,
@@ -1724,27 +1724,17 @@
           "imbalance": -6
         },
         {
-          "rank": 37,
-          "name": "ジュン",
-          "demand": 3,
-          "supply": 12,
-          "ratio": 0.25,
-          "ratioDisplay": "0.25",
-          "ratioSort": 0.25,
-          "imbalance": -9
-        },
-        {
-          "rank": 38,
+          "rank": 39,
           "name": "ペパー",
           "demand": 2,
-          "supply": 29,
-          "ratio": 0.06896551724137931,
-          "ratioDisplay": "0.07",
-          "ratioSort": 0.06896551724137931,
-          "imbalance": -27
+          "supply": 32,
+          "ratio": 0.0625,
+          "ratioDisplay": "0.06",
+          "ratioSort": 0.0625,
+          "imbalance": -30
         },
         {
-          "rank": 39,
+          "rank": 40,
           "name": "アカネ",
           "demand": 1,
           "supply": 0,
@@ -1754,7 +1744,7 @@
           "imbalance": 1
         },
         {
-          "rank": 40,
+          "rank": 41,
           "name": "グズマ",
           "demand": 1,
           "supply": 0,
@@ -1764,7 +1754,7 @@
           "imbalance": 1
         },
         {
-          "rank": 41,
+          "rank": 42,
           "name": "コトネ",
           "demand": 1,
           "supply": 0,
@@ -1774,7 +1764,7 @@
           "imbalance": 1
         },
         {
-          "rank": 42,
+          "rank": 43,
           "name": "ハラ",
           "demand": 1,
           "supply": 0,
@@ -1784,7 +1774,7 @@
           "imbalance": 1
         },
         {
-          "rank": 43,
+          "rank": 44,
           "name": "ロケット団のしたっぱ",
           "demand": 1,
           "supply": 0,
@@ -1794,7 +1784,7 @@
           "imbalance": 1
         },
         {
-          "rank": 44,
+          "rank": 45,
           "name": "シルバー",
           "demand": 1,
           "supply": 1,
@@ -1804,7 +1794,17 @@
           "imbalance": 0
         },
         {
-          "rank": 45,
+          "rank": 46,
+          "name": "デンジ",
+          "demand": 1,
+          "supply": 1,
+          "ratio": 1,
+          "ratioDisplay": "1.00",
+          "ratioSort": 1,
+          "imbalance": 0
+        },
+        {
+          "rank": 47,
           "name": "マオ",
           "demand": 1,
           "supply": 2,
@@ -1814,7 +1814,7 @@
           "imbalance": -1
         },
         {
-          "rank": 46,
+          "rank": 48,
           "name": "こいぬ大好きガール",
           "demand": 1,
           "supply": 3,
@@ -1824,7 +1824,7 @@
           "imbalance": -2
         },
         {
-          "rank": 47,
+          "rank": 49,
           "name": "ロケット団の研究員",
           "demand": 1,
           "supply": 6,
@@ -1834,7 +1834,7 @@
           "imbalance": -5
         },
         {
-          "rank": 48,
+          "rank": 50,
           "name": "ミカン",
           "demand": 1,
           "supply": 10,
@@ -1844,27 +1844,17 @@
           "imbalance": -9
         },
         {
-          "rank": 49,
-          "name": "ハルカ",
-          "demand": 1,
-          "supply": 22,
-          "ratio": 0.045454545454545456,
-          "ratioDisplay": "0.05",
-          "ratioSort": 0.045454545454545456,
-          "imbalance": -21
-        },
-        {
-          "rank": 50,
+          "rank": 51,
           "name": "ナンジャモ",
           "demand": 1,
-          "supply": 59,
-          "ratio": 0.01694915254237288,
+          "supply": 63,
+          "ratio": 0.015873015873015872,
           "ratioDisplay": "0.02",
-          "ratioSort": 0.01694915254237288,
-          "imbalance": -58
+          "ratioSort": 0.015873015873015872,
+          "imbalance": -62
         },
         {
-          "rank": 51,
+          "rank": 52,
           "name": "オーリム博士",
           "demand": 0,
           "supply": 1,
@@ -1874,7 +1864,7 @@
           "imbalance": -1
         },
         {
-          "rank": 52,
+          "rank": 53,
           "name": "グラジオ",
           "demand": 0,
           "supply": 1,
@@ -1884,7 +1874,7 @@
           "imbalance": -1
         },
         {
-          "rank": 53,
+          "rank": 54,
           "name": "スイレン",
           "demand": 0,
           "supply": 1,
@@ -1894,7 +1884,7 @@
           "imbalance": -1
         },
         {
-          "rank": 54,
+          "rank": 55,
           "name": "マチス",
           "demand": 0,
           "supply": 1,
@@ -1904,7 +1894,7 @@
           "imbalance": -1
         },
         {
-          "rank": 55,
+          "rank": 56,
           "name": "やまおとこ",
           "demand": 0,
           "supply": 1,
@@ -1914,7 +1904,7 @@
           "imbalance": -1
         },
         {
-          "rank": 56,
+          "rank": 57,
           "name": "釣り人",
           "demand": 0,
           "supply": 1,
@@ -1924,7 +1914,7 @@
           "imbalance": -1
         },
         {
-          "rank": 57,
+          "rank": 58,
           "name": "旅の行商人",
           "demand": 0,
           "supply": 1,
@@ -1934,7 +1924,7 @@
           "imbalance": -1
         },
         {
-          "rank": 58,
+          "rank": 59,
           "name": "カンナギタウンの長老",
           "demand": 0,
           "supply": 2,
@@ -1944,7 +1934,7 @@
           "imbalance": -2
         },
         {
-          "rank": 59,
+          "rank": 60,
           "name": "キョウ",
           "demand": 0,
           "supply": 2,
@@ -1954,7 +1944,7 @@
           "imbalance": -2
         },
         {
-          "rank": 60,
+          "rank": 61,
           "name": "グリーン",
           "demand": 0,
           "supply": 2,
@@ -1964,7 +1954,7 @@
           "imbalance": -2
         },
         {
-          "rank": 61,
+          "rank": 62,
           "name": "サイキッカー",
           "demand": 0,
           "supply": 2,
@@ -1974,7 +1964,7 @@
           "imbalance": -2
         },
         {
-          "rank": 62,
+          "rank": 63,
           "name": "ジャグラー",
           "demand": 0,
           "supply": 2,
@@ -1984,7 +1974,7 @@
           "imbalance": -2
         },
         {
-          "rank": 63,
+          "rank": 64,
           "name": "タクシードライバー",
           "demand": 0,
           "supply": 2,
@@ -1994,7 +1984,7 @@
           "imbalance": -2
         },
         {
-          "rank": 64,
+          "rank": 65,
           "name": "チェレン",
           "demand": 0,
           "supply": 2,
@@ -2004,7 +1994,7 @@
           "imbalance": -2
         },
         {
-          "rank": 65,
+          "rank": 66,
           "name": "メリッサ",
           "demand": 0,
           "supply": 2,
@@ -2014,7 +2004,7 @@
           "imbalance": -2
         },
         {
-          "rank": 66,
+          "rank": 67,
           "name": "シャガ",
           "demand": 0,
           "supply": 3,
@@ -2024,7 +2014,7 @@
           "imbalance": -3
         },
         {
-          "rank": 67,
+          "rank": 68,
           "name": "シロナ",
           "demand": 0,
           "supply": 3,
@@ -2032,16 +2022,6 @@
           "ratioDisplay": "0.00",
           "ratioSort": 0,
           "imbalance": -3
-        },
-        {
-          "rank": 68,
-          "name": "イリマ",
-          "demand": 0,
-          "supply": 7,
-          "ratio": 0,
-          "ratioDisplay": "0.00",
-          "ratioSort": 0,
-          "imbalance": -7
         },
         {
           "rank": 69,
@@ -2055,7 +2035,7 @@
         },
         {
           "rank": 70,
-          "name": "かけだし調査員",
+          "name": "イリマ",
           "demand": 0,
           "supply": 8,
           "ratio": 0,
@@ -2065,7 +2045,7 @@
         },
         {
           "rank": 71,
-          "name": "ネズ",
+          "name": "かけだし調査員",
           "demand": 0,
           "supply": 8,
           "ratio": 0,
@@ -2097,11 +2077,21 @@
           "rank": 74,
           "name": "タケシ",
           "demand": 0,
-          "supply": 10,
+          "supply": 11,
           "ratio": 0,
           "ratioDisplay": "0.00",
           "ratioSort": 0,
-          "imbalance": -10
+          "imbalance": -11
+        },
+        {
+          "rank": 75,
+          "name": "ネズ",
+          "demand": 0,
+          "supply": 12,
+          "ratio": 0,
+          "ratioDisplay": "0.00",
+          "ratioSort": 0,
+          "imbalance": -12
         }
       ]
     }
