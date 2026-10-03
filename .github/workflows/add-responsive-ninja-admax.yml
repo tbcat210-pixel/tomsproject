@@ -36,7 +36,6 @@ jobs:
 
           start_marker = "    <!-- NINJA_ADMAX_TOP_START -->"
           end_marker = "    <!-- NINJA_ADMAX_TOP_END -->"
-
           start = html.find(start_marker)
           end = html.find(end_marker)
 
@@ -45,21 +44,24 @@ jobs:
 
           end += len(end_marker)
 
-          block = '''    <!-- NINJA_ADMAX_TOP_START -->
-    <aside class="ad-slot ad-slot-top" aria-label="広告">
-      <div class="ad-label">広告</div>
-      <div class="ad-content">
-        <script>
-          (function () {
-            var src = window.matchMedia('(min-width: 801px)').matches
-              ? 'https://adm.shinobi.jp/s/891413778dbbe3905885fbf094055738'
-              : 'https://adm.shinobi.jp/s/dd5fcd83c989bbef642b0009c2e6a71b';
-            document.write('<script src="' + src + '"><\\/script>');
-          })();
-        </script>
-      </div>
-    </aside>
-    <!-- NINJA_ADMAX_TOP_END -->'''
+          lines = [
+              "    <!-- NINJA_ADMAX_TOP_START -->",
+              '    <aside class="ad-slot ad-slot-top" aria-label="広告">',
+              '      <div class="ad-label">広告</div>',
+              '      <div class="ad-content">',
+              '        <script>',
+              '          (function () {',
+              "            var src = window.matchMedia('(min-width: 801px)').matches",
+              "              ? 'https://adm.shinobi.jp/s/891413778dbbe3905885fbf094055738'",
+              "              : 'https://adm.shinobi.jp/s/dd5fcd83c989bbef642b0009c2e6a71b';",
+              '''            document.write('<script src="' + src + '"><\\/script>');''',
+              '          })();',
+              '        </script>',
+              '      </div>',
+              '    </aside>',
+              '    <!-- NINJA_ADMAX_TOP_END -->',
+          ]
+          block = "\n".join(lines)
 
           html = html[:start] + block + html[end:]
           p.write_text(html, encoding="utf-8")
