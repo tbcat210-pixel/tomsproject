@@ -10,3 +10,33 @@
 .ad-placeholder small{font-size:11px}
 @media(max-width:520px){.ad-placeholder{min-height:72px}}
 /* NINJA_ADMAX_SLOTS_END */
+
+
+/* NINJA_ADMAX_TOP_LIVE_START */
+.ad-slot-top{
+  background:transparent;
+  border:0;
+  padding:0;
+  margin:18px 0 22px;
+  text-align:center;
+}
+.ad-slot-top .ad-label{
+  text-align:center;
+  margin:0 0 6px;
+  color:var(--muted);
+  opacity:.72;
+}
+.ad-content{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  max-width:100%;
+  overflow:hidden;
+  text-align:center;
+}
+.ad-slot-bottom{display:none}
+@media(max-width:520px){
+  .ad-slot-top{margin:14px 0 18px}
+  .ad-content{max-width:100%}
+}
+/* NINJA_ADMAX_TOP_LIVE_END */
