@@ -1,5 +1,96 @@
 [
   {
+    "id": "2106238119813222872",
+    "url": "https://x.com/sbqml0/status/2106238119813222872",
+    "author": "sbqml0",
+    "createdAt": "2026-10-03T04:21:14.000Z",
+    "demand": [
+      "かんこうきゃく"
+    ],
+    "supply": [
+      "アイリス"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106238011008766199",
+    "url": "https://x.com/xf3cy/status/2106238011008766199",
+    "author": "xf3cy",
+    "createdAt": "2026-10-03T04:20:48.000Z",
+    "demand": [
+      "かんこうきゃく"
+    ],
+    "supply": [
+      "アイリス"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106237625480950072",
+    "url": "https://x.com/_nyannyan_002/status/2106237625480950072",
+    "author": "_nyannyan_002",
+    "createdAt": "2026-10-03T04:19:16.000Z",
+    "demand": [
+      "ルチア"
+    ],
+    "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 1
+  },
+  {
+    "id": "2106235471752020459",
+    "url": "https://x.com/CHABINfnrh/status/2106235471752020459",
+    "author": "CHABINfnrh",
+    "createdAt": "2026-10-03T04:10:43.000Z",
+    "demand": [
+      "ロケット団のボス",
+      "モノマネむすめ"
+    ],
+    "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106235314985685284",
+    "url": "https://x.com/sbqml0/status/2106235314985685284",
+    "author": "sbqml0",
+    "createdAt": "2026-10-03T04:10:05.000Z",
+    "demand": [
+      "リーリエ",
+      "コルニ",
+      "カイ"
+    ],
+    "supply": [
+      "アイリス"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106234428506956088",
+    "url": "https://x.com/xf3cy/status/2106234428506956088",
+    "author": "xf3cy",
+    "createdAt": "2026-10-03T04:06:34.000Z",
+    "demand": [
+      "リーリエ",
+      "コルニ",
+      "カイ"
+    ],
+    "supply": [
+      "アイリス"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
     "id": "2106233791488590166",
     "url": "https://x.com/suzuk_macho/status/2106233791488590166",
     "author": "suzuk_macho",
@@ -102,6 +193,19 @@
     ],
     "query": "#ポケポケトレード",
     "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106224782941540501",
+    "url": "https://x.com/Koooheiii2/status/2106224782941540501",
+    "author": "Koooheiii2",
+    "createdAt": "2026-10-03T03:28:14.000Z",
+    "demand": [
+      "ハラ"
+    ],
+    "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "image",
     "imageCount": 2
   },
   {
