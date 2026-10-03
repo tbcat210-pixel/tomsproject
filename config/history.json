@@ -12,7 +12,7 @@
   "imageOcrMaxImagesPerPost": 4,
   "imageOcrMaxNewImagesPerRun": 60,
   "imageOcrTimeoutMs": 30000,
-  "imageOcrCacheHours": 720,
+  "imageOcrCacheHours": 216,
   "imageOcrMaxCandidatePasses": 6,
   "imageOcrUpscaleMinWidth": 1500,
   "imageOcrUpscaleMaxWidth": 2600,

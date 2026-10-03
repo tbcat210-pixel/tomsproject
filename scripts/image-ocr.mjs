@@ -251,6 +251,17 @@ export async function createTradeImageOcr({
   const cache = await readJson(cachePath, {});
   let worker = null;
   let dirty = false;
+
+  // Prevent ocr-cache.json from growing forever.
+  // Remove records older than cacheHours or from an old cache version.
+  const cacheCutoff = Date.now() - cacheHours * 3600_000;
+  for (const [url, item] of Object.entries(cache)) {
+    const checkedAt = item?.checkedAt ? new Date(item.checkedAt).getTime() : 0;
+    if (!checkedAt || checkedAt < cacheCutoff || item?.cacheVersion !== cacheVersion) {
+      delete cache[url];
+      dirty = true;
+    }
+  }
   let newImages = 0;
   let cacheHits = 0;
   let failedImages = 0;
