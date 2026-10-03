@@ -1,0 +1,21 @@
+{
+  "name": "pokepoke-x-trade-rank",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "collect": "node scripts/collect.mjs",
+    "backfill": "node scripts/backfill.mjs",
+    "rebuild": "node scripts/rebuild.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "precollect": "npm install --no-audit --no-fund",
+    "prebackfill": "npm install --no-audit --no-fund"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "sharp": "^0.34.3",
+    "tesseract.js": "^7.0.0"
+  }
+}
