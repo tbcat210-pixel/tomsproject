@@ -1,0 +1,60 @@
+name: Sort ranking by demand
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/sort-ranking-by-demand.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pokepoke-data-write
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Sort rankings by demand count
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo 'ZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCgpsaWJfcGF0aCA9IFBhdGgoInNjcmlwdHMvbGliLm1qcyIpCnMgPSBsaWJfcGF0aC5yZWFkX3RleHQoZW5jb2Rpbmc9InV0Zi04IikKCm9sZF9zb3J0ID0gIiIiLnNvcnQoKGEsIGIpID0+IGIucmF0aW9Tb3J0IC0gYS5yYXRpb1NvcnQgfHwgYi5kZW1hbmQgLSBhLmRlbWFuZCB8fCBhLnN1cHBseSAtIGIuc3VwcGx5IHx8IGEubmFtZS5sb2NhbGVDb21wYXJlKGIubmFtZSwgJ2phJykpIiIiCm5ld19zb3J0ID0gIiIiLnNvcnQoKGEsIGIpID0+IGIuZGVtYW5kIC0gYS5kZW1hbmQgfHwgYS5zdXBwbHkgLSBiLnN1cHBseSB8fCBiLnJhdGlvU29ydCAtIGEucmF0aW9Tb3J0IHx8IGEubmFtZS5sb2NhbGVDb21wYXJlKGIubmFtZSwgJ2phJykpIiIiCgppZiBvbGRfc29ydCBub3QgaW4gczoKICAgIGlmIG5ld19zb3J0IG5vdCBpbiBzOgogICAgICAgIHJhaXNlIFN5c3RlbUV4aXQoIkV4cGVjdGVkIHJhbmtpbmcgc29ydCB3YXMgbm90IGZvdW5kIikKZWxzZToKICAgIHMgPSBzLnJlcGxhY2Uob2xkX3NvcnQsIG5ld19zb3J0LCAxKQoKbGliX3BhdGgud3JpdGVfdGV4dChzLCBlbmNvZGluZz0idXRmLTgiKQoKaW5kZXhfcGF0aCA9IFBhdGgoImRvY3MvaW5kZXguaHRtbCIpCmh0bWwgPSBpbmRleF9wYXRoLnJlYWRfdGV4dChlbmNvZGluZz0idXRmLTgiKQoKb2xkX3RleHQgPSAn6ZyA6KaB5L6b57Wm5q+UID0g6ZyA6KaBIMO3IOS+m+e1puOAguS+m+e1pjDjgafpnIDopoHjgYLjgorjga/jgIziiJ7jgI3jgILlkIznjofmmYLjga/pnIDopoHku7bmlbDjgpLlhKrlhYjjgIInCm5ld190ZXh0ID0gJ+mcgOimgeS7tuaVsOOBjOWkmuOBhOmghuOBq+ihqOekuuOAgumcgOimgeOBjOWQjOaVsOOBruWgtOWQiOOBr+S+m+e1puOBjOWwkeOBquOBhOOCq+ODvOODieOCkuWEquWFiOOBl+OBvuOBmeOAgicKCmlmIG9sZF90ZXh0IGluIGh0bWw6CiAgICBodG1sID0gaHRtbC5yZXBsYWNlKG9sZF90ZXh0LCBuZXdfdGV4dCwgMSkKZWxpZiBuZXdfdGV4dCBub3QgaW4gaHRtbDoKICAgIHJhaXNlIFN5c3RlbUV4aXQoIkV4cGVjdGVkIHJhbmtpbmcgZGVzY3JpcHRpb24gd2FzIG5vdCBmb3VuZCIpCgppbmRleF9wYXRoLndyaXRlX3RleHQoaHRtbCwgZW5jb2Rpbmc9InV0Zi04IikK' | base64 -d > /tmp/sort_by_demand.py
+          python3 /tmp/sort_by_demand.py
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Run tests
+        run: npm test
+
+      - name: Rebuild ranking JSON
+        run: node scripts/rebuild.mjs
+
+      - name: Commit ranking order
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/lib.mjs docs/index.html docs/data/rankings.json
+          if git diff --cached --quiet; then
+            echo "No changes needed."
+            exit 0
+          fi
+          git commit -m "feat: sort rankings by demand"
+          git pull --rebase origin main
+          git push origin HEAD:main
