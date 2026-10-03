@@ -23,12 +23,17 @@
 
     <!-- NINJA_ADMAX_TOP_START -->
     <aside class="ad-slot ad-slot-top" aria-label="広告">
-<div class="ad-label">広告</div>
-<div class="ad-content">
-  <!-- admax -->
-  <script src="https://adm.shinobi.jp/s/dd5fcd83c989bbef642b0009c2e6a71b"></script>
-  <!-- admax -->
-</div>
+      <div class="ad-label">広告</div>
+      <div class="ad-content">
+        <script>
+          (function () {
+            var src = window.matchMedia('(min-width: 801px)').matches
+              ? 'https://adm.shinobi.jp/s/891413778dbbe3905885fbf094055738'
+              : 'https://adm.shinobi.jp/s/dd5fcd83c989bbef642b0009c2e6a71b';
+            document.write('<script src="' + src + '"><\/script>');
+          })();
+        </script>
+      </div>
     </aside>
     <!-- NINJA_ADMAX_TOP_END -->
 
