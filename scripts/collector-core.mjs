@@ -22,29 +22,11 @@ export async function loadConfig() {
 }
 
 export function mergePosts(oldPosts, discovered, now, storageHorizonHours = 192) {
-  const byOccurrence = new Map();
-
-  for (const p of [...oldPosts, ...discovered]) {
-    if (!p?.id || !p?.createdAt) continue;
-
-    // Duplicate-counting mode:
-    // the same X status can be counted again when it was found by
-    // another search query. Repeated collection of the same
-    // status+query pair is still merged so scheduled runs do not
-    // inflate the numbers indefinitely.
-    const occurrenceKey = `${p.id}::${p.query ?? ''}`;
-    const existing = byOccurrence.get(occurrenceKey);
-    const score = (p.demand?.length ?? 0) + (p.supply?.length ?? 0);
-    const oldScore = (existing?.demand?.length ?? 0) + (existing?.supply?.length ?? 0);
-
-    if (!existing || score > oldScore) {
-      byOccurrence.set(occurrenceKey, p);
-    }
-  }
-
   const cutoff = now.getTime() - storageHorizonHours * 3600_000;
-  return [...byOccurrence.values()]
+
+  return [...oldPosts, ...discovered]
     .filter(p => {
+      if (!p?.id || !p?.createdAt) return false;
       const t = new Date(p.createdAt).getTime();
       return Number.isFinite(t) && t >= cutoff && t <= now.getTime() + 3600_000;
     })
