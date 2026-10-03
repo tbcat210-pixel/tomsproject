@@ -20,7 +20,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
+
+      - name: Sync latest main
+        shell: bash
+        run: |
+          git fetch origin main
+          git checkout main
+          git reset --hard origin/main
 
       - uses: actions/setup-node@v4
         with:
@@ -44,6 +52,5 @@ jobs:
           git add docs/data
           if ! git diff --cached --quiet; then
             git commit -m "chore: update X trade data"
-            git pull --rebase origin "${GITHUB_REF_NAME}"
-            git push origin HEAD:"${GITHUB_REF_NAME}"
+            git push origin HEAD:main
           fi
