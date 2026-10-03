@@ -49,8 +49,33 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data
-          if ! git diff --cached --quiet; then
+
+          rm -rf /tmp/collected-data
+          mkdir -p /tmp/collected-data
+          cp -a docs/data/. /tmp/collected-data/
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+
+            rm -rf docs/data
+            mkdir -p docs/data
+            cp -a /tmp/collected-data/. docs/data/
+
+            git add docs/data
+            if git diff --cached --quiet; then
+              echo "No data changes to save."
+              exit 0
+            fi
+
             git commit -m "chore: update X trade data"
-            git push origin HEAD:main
-          fi
+
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            echo "Push raced with another commit; retrying..."
+          done
+
+          echo "Failed to save collected data after 3 attempts."
+          exit 1
