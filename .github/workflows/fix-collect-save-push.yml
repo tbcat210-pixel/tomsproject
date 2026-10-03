@@ -1,0 +1,42 @@
+name: Fix collect save push
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/fix-collect-save-push.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Replace collect workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo 'bmFtZTogQ29sbGVjdCBYIHRyYWRlIGRhdGEKCm9uOgogIHdvcmtmbG93X2Rpc3BhdGNoOgogIHNjaGVkdWxlOgogICAgLSBjcm9uOiAnMTcsNDcgKiAqICogKicKCnBlcm1pc3Npb25zOgogIGNvbnRlbnRzOiB3cml0ZQoKY29uY3VycmVuY3k6CiAgZ3JvdXA6IHBva2Vwb2tlLWRhdGEtd3JpdGUKICBjYW5jZWwtaW4tcHJvZ3Jlc3M6IGZhbHNlCgpqb2JzOgogIGNvbGxlY3Q6CiAgICBydW5zLW9uOiB1YnVudHUtbGF0ZXN0CiAgICB0aW1lb3V0LW1pbnV0ZXM6IDYwCgogICAgc3RlcHM6CiAgICAgIC0gdXNlczogYWN0aW9ucy9jaGVja291dEB2NAogICAgICAgIHdpdGg6CiAgICAgICAgICByZWY6IG1haW4KICAgICAgICAgIGZldGNoLWRlcHRoOiAwCgogICAgICAtIG5hbWU6IFN5bmMgbGF0ZXN0IG1haW4KICAgICAgICBzaGVsbDogYmFzaAogICAgICAgIHJ1bjogfAogICAgICAgICAgZ2l0IGZldGNoIG9yaWdpbiBtYWluCiAgICAgICAgICBnaXQgY2hlY2tvdXQgbWFpbgogICAgICAgICAgZ2l0IHJlc2V0IC0taGFyZCBvcmlnaW4vbWFpbgoKICAgICAgLSB1c2VzOiBhY3Rpb25zL3NldHVwLW5vZGVAdjQKICAgICAgICB3aXRoOgogICAgICAgICAgbm9kZS12ZXJzaW9uOiAyMAoKICAgICAgLSBuYW1lOiBJbnN0YWxsIGRlcGVuZGVuY2llcwogICAgICAgIHJ1bjogbnBtIGluc3RhbGwgLS1uby1hdWRpdCAtLW5vLWZ1bmQKCiAgICAgIC0gbmFtZTogUnVuIHRlc3RzCiAgICAgICAgcnVuOiBucG0gdGVzdAoKICAgICAgLSBuYW1lOiBDb2xsZWN0IHJlY2VudCBkYXRhIGFuZCByb2xsaW5nIDctZGF5IGJhY2tmaWxsCiAgICAgICAgcnVuOiBub2RlIHNjcmlwdHMvY29sbGVjdC5tanMKCiAgICAgIC0gbmFtZTogU2F2ZSBjb2xsZWN0ZWQgZGF0YQogICAgICAgIHNoZWxsOiBiYXNoCiAgICAgICAgcnVuOiB8CiAgICAgICAgICBzZXQgLWV1byBwaXBlZmFpbAogICAgICAgICAgZ2l0IGNvbmZpZyB1c2VyLm5hbWUgImdpdGh1Yi1hY3Rpb25zW2JvdF0iCiAgICAgICAgICBnaXQgY29uZmlnIHVzZXIuZW1haWwgIjQxODk4MjgyK2dpdGh1Yi1hY3Rpb25zW2JvdF1AdXNlcnMubm9yZXBseS5naXRodWIuY29tIgoKICAgICAgICAgIHJtIC1yZiAvdG1wL2NvbGxlY3RlZC1kYXRhCiAgICAgICAgICBta2RpciAtcCAvdG1wL2NvbGxlY3RlZC1kYXRhCiAgICAgICAgICBjcCAtYSBkb2NzL2RhdGEvLiAvdG1wL2NvbGxlY3RlZC1kYXRhLwoKICAgICAgICAgIGZvciBhdHRlbXB0IGluIDEgMiAzOyBkbwogICAgICAgICAgICBnaXQgZmV0Y2ggb3JpZ2luIG1haW4KICAgICAgICAgICAgZ2l0IHJlc2V0IC0taGFyZCBvcmlnaW4vbWFpbgoKICAgICAgICAgICAgcm0gLXJmIGRvY3MvZGF0YQogICAgICAgICAgICBta2RpciAtcCBkb2NzL2RhdGEKICAgICAgICAgICAgY3AgLWEgL3RtcC9jb2xsZWN0ZWQtZGF0YS8uIGRvY3MvZGF0YS8KCiAgICAgICAgICAgIGdpdCBhZGQgZG9jcy9kYXRhCiAgICAgICAgICAgIGlmIGdpdCBkaWZmIC0tY2FjaGVkIC0tcXVpZXQ7IHRoZW4KICAgICAgICAgICAgICBlY2hvICJObyBkYXRhIGNoYW5nZXMgdG8gc2F2ZS4iCiAgICAgICAgICAgICAgZXhpdCAwCiAgICAgICAgICAgIGZpCgogICAgICAgICAgICBnaXQgY29tbWl0IC1tICJjaG9yZTogdXBkYXRlIFggdHJhZGUgZGF0YSIKCiAgICAgICAgICAgIGlmIGdpdCBwdXNoIG9yaWdpbiBIRUFEOm1haW47IHRoZW4KICAgICAgICAgICAgICBleGl0IDAKICAgICAgICAgICAgZmkKCiAgICAgICAgICAgIGVjaG8gIlB1c2ggcmFjZWQgd2l0aCBhbm90aGVyIGNvbW1pdDsgcmV0cnlpbmcuLi4iCiAgICAgICAgICBkb25lCgogICAgICAgICAgZWNobyAiRmFpbGVkIHRvIHNhdmUgY29sbGVjdGVkIGRhdGEgYWZ0ZXIgMyBhdHRlbXB0cy4iCiAgICAgICAgICBleGl0IDEK' | base64 -d > .github/workflows/collect.yml
+
+      - name: Commit fix
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/workflows/collect.yml
+          if git diff --cached --quiet; then
+            echo "No changes needed."
+            exit 0
+          fi
+          git commit -m "fix: make collect data save resilient"
+          git pull --rebase origin main
+          git push origin HEAD:main
