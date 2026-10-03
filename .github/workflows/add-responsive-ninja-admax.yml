@@ -1,0 +1,81 @@
+name: Add responsive Ninja AdMax
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/add-responsive-ninja-admax.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-layout-write
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Use PC ad on desktop and mobile ad on phones
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          p = Path("docs/index.html")
+          html = p.read_text(encoding="utf-8")
+
+          start_marker = "    <!-- NINJA_ADMAX_TOP_START -->"
+          end_marker = "    <!-- NINJA_ADMAX_TOP_END -->"
+
+          start = html.find(start_marker)
+          end = html.find(end_marker)
+
+          if start == -1 or end == -1 or end < start:
+              raise SystemExit("Ninja AdMax top markers were not found")
+
+          end += len(end_marker)
+
+          block = '''    <!-- NINJA_ADMAX_TOP_START -->
+    <aside class="ad-slot ad-slot-top" aria-label="広告">
+      <div class="ad-label">広告</div>
+      <div class="ad-content">
+        <script>
+          (function () {
+            var src = window.matchMedia('(min-width: 801px)').matches
+              ? 'https://adm.shinobi.jp/s/891413778dbbe3905885fbf094055738'
+              : 'https://adm.shinobi.jp/s/dd5fcd83c989bbef642b0009c2e6a71b';
+            document.write('<script src="' + src + '"><\\/script>');
+          })();
+        </script>
+      </div>
+    </aside>
+    <!-- NINJA_ADMAX_TOP_END -->'''
+
+          html = html[:start] + block + html[end:]
+          p.write_text(html, encoding="utf-8")
+          PY
+
+      - name: Commit responsive ad
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/index.html
+          if git diff --cached --quiet; then
+            echo "No changes needed."
+            exit 0
+          fi
+          git commit -m "feat: add desktop Ninja AdMax banner"
+          git pull --rebase origin main
+          git push origin HEAD:main
