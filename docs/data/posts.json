@@ -1,5 +1,95 @@
 [
   {
+    "id": "2106233791488590166",
+    "url": "https://x.com/suzuk_macho/status/2106233791488590166",
+    "author": "suzuk_macho",
+    "createdAt": "2026-10-03T04:04:02.000Z",
+    "demand": [],
+    "supply": [
+      "かんこうきゃく",
+      "シャガ",
+      "ミツル",
+      "カスミ"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "image",
+    "imageCount": 4
+  },
+  {
+    "id": "2106232792376107338",
+    "url": "https://x.com/szu81861992/status/2106232792376107338",
+    "author": "szu81861992",
+    "createdAt": "2026-10-03T04:00:04.000Z",
+    "demand": [],
+    "supply": [
+      "ジュン",
+      "イツキ"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "image",
+    "imageCount": 2
+  },
+  {
+    "id": "2106231511284621376",
+    "url": "https://x.com/chyannii012/status/2106231511284621376",
+    "author": "chyannii012",
+    "createdAt": "2026-10-03T03:54:58.000Z",
+    "demand": [],
+    "supply": [
+      "かんこうきゃく",
+      "シャガ",
+      "ミツル",
+      "カスミ"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "image",
+    "imageCount": 3
+  },
+  {
+    "id": "2106231285085884879",
+    "url": "https://x.com/greran4126/status/2106231285085884879",
+    "author": "greran4126",
+    "createdAt": "2026-10-03T03:54:04.000Z",
+    "demand": [],
+    "supply": [
+      "カミツレ",
+      "アオイ"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "image",
+    "imageCount": 2
+  },
+  {
+    "id": "2106230691436572699",
+    "url": "https://x.com/ponpa08/status/2106230691436572699",
+    "author": "ponpa08",
+    "createdAt": "2026-10-03T03:51:43.000Z",
+    "demand": [
+      "リーリエ"
+    ],
+    "supply": [
+      "タケシ",
+      "マーズ",
+      "カルム"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text+image",
+    "imageCount": 2
+  },
+  {
+    "id": "2106228517885390958",
+    "url": "https://x.com/qpqp_051/status/2106228517885390958",
+    "author": "qpqp_051",
+    "createdAt": "2026-10-03T03:43:05.000Z",
+    "demand": [
+      "パラソルおねえさん"
+    ],
+    "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "image",
+    "imageCount": 3
+  },
+  {
     "id": "2106228046072275137",
     "url": "https://x.com/hai_massiro/status/2106228046072275137",
     "author": "hai_massiro",
