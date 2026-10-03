@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-10-02T23:54:59.353Z",
+  "source": {
+    "platform": "X",
+    "discovery": "Yahoo!リアルタイム検索（公開Xポスト）",
+    "xApiUsed": false,
+    "historicalBackfill": true,
+    "scope": "取得できた公開Xポストのうち、本文に「求/希望」と「譲/出/提供」が明示された投稿",
+    "note": "初回から直近7日を遡って取得し、その後も定期更新・日次補完します。ただしYahoo!リアルタイム検索に出ない投稿、非公開投稿、画像内だけにカード名がある投稿は含まれないため、X全体の完全総数ではありません。"
+  },
+  "cards": {
+    "count": 82,
+    "rarity": "★2",
+    "type": "サポート",
+    "updatedAt": "2026-10-03"
+  },
+  "coverage": {
+    "firstSuccessfulCollectionAt": null,
+    "oldestPostAt": null,
+    "newestPostAt": null,
+    "storedPosts": 0,
+    "discoveredThisRun": 0,
+    "queryCount": 8,
+    "errors": [],
+    "history": null
+  },
+  "windows": {
+    "24h": {
+      "label": "24時間",
+      "hours": 24,
+      "posts": 0,
+      "totalDemand": 0,
+      "totalSupply": 0,
+      "totalRatio": {
+        "ratio": 0,
+        "ratioDisplay": "0.00",
+        "ratioSort": 0
+      },
+      "rankings": []
+    },
+    "48h": {
+      "label": "48時間",
+      "hours": 48,
+      "posts": 0,
+      "totalDemand": 0,
+      "totalSupply": 0,
+      "totalRatio": {
+        "ratio": 0,
+        "ratioDisplay": "0.00",
+        "ratioSort": 0
+      },
+      "rankings": []
+    },
+    "168h": {
+      "label": "1週間",
+      "hours": 168,
+      "posts": 0,
+      "totalDemand": 0,
+      "totalSupply": 0,
+      "totalRatio": {
+        "ratio": 0,
+        "ratioDisplay": "0.00",
+        "ratioSort": 0
+      },
+      "rankings": []
+    }
+  }
+}

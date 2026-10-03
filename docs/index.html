@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ポケポケ ★2サポート 需給ランキング</title>
+  <meta name="description" content="公開Xポストからポケポケ★2サポートのトレード需要・供給を集計するランキング" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">POKÉMON TCG POCKET · PUBLIC X TRADE SIGNALS</p>
+        <h1>★2サポート<br><span>需給ランキング</span></h1>
+        <p class="lead">公開Xポストの「求 / 譲・出」を数え、初回から現在より前の直近7日も遡って、需要供給比を24時間・48時間・1週間で比較します。</p>
+      </div>
+      <div class="live-card">
+        <span class="pulse"></span>
+        <div><small>最終集計</small><strong id="updated">読み込み中…</strong></div>
+      </div>
+    </header>
+
+    <section class="toolbar" aria-label="表示期間">
+      <div class="tabs" id="tabs">
+        <button data-window="24h" class="active">24時間</button>
+        <button data-window="48h">48時間</button>
+        <button data-window="168h">1週間</button>
+      </div>
+      <div class="filters">
+        <input id="search" type="search" placeholder="カード名を検索" autocomplete="off" />
+        <select id="minCount" aria-label="最低件数">
+          <option value="0">全件表示</option>
+          <option value="2">合計2件以上</option>
+          <option value="5">合計5件以上</option>
+          <option value="10">合計10件以上</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="stats" id="stats"></section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <h2 id="periodTitle">24時間ランキング</h2>
+          <p>需要供給比 = 需要 ÷ 供給。供給0で需要ありは「∞」。同率時は需要件数を優先。</p>
+        </div>
+        <div class="legend"><span class="need-dot"></span>需要 <span class="supply-dot"></span>供給</div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>カード</th><th>需要</th><th>供給</th><th>需要/供給</th><th>需給差</th><th>バランス</th></tr></thead>
+          <tbody id="ranking"></tbody>
+        </table>
+      </div>
+      <div class="empty" id="empty" hidden>条件に一致するカードがありません。</div>
+    </section>
+
+    <section class="method">
+      <div>
+        <h2>集計方法</h2>
+        <p>Yahoo!リアルタイム検索で取得できる公開Xポストをページ送りし、初回から直近7日を遡及収集します。本文に加えて、GameWithなどのトレード画像メーカー画像も日本語OCRで解析します。小さいカード画像が複数並ぶメーカー画像に対応するため、拡大・二値化・分割OCRを行います。「欲しいカード / 求」を需要、「出せるカード / 譲」を供給として★2サポート名を照合し、同じXポストはIDで重複排除します。通常は30分ごとに新着を取り込み、約24時間ごとに7日分を再走査して取りこぼしを補完します。</p>
+      </div>
+      <div class="method-grid">
+        <article><strong id="storedPosts">—</strong><span>保存中の募集投稿</span></article>
+        <article><strong id="cardCount">—</strong><span>対象★2サポート</span></article>
+        <article><strong id="coverage">—</strong><span>保存データの時間幅</span></article>
+        <article><strong id="historyStatus">—</strong><span>過去データ遡及</span></article>
+        <article><strong id="ocrStatus">—</strong><span>画像OCR</span></article>
+      </div>
+      <p class="caution" id="sourceNote"></p>
+    </section>
+
+    <footer>集計対象は公開投稿のみ。初回実行時から直近7日を遡りますが、検索に出ない投稿・非公開投稿・取得できない画像・OCRで判別できない画像は含まれません。</footer>
+  </main>
+  <script src="./app.js" type="module"></script>
+</body>
+</html>

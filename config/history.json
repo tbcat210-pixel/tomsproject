@@ -1,0 +1,20 @@
+{
+  "rankingHorizonHours": 168,
+  "storageHorizonHours": 192,
+  "autoBackfillEveryHours": 24,
+  "recentPagesPerQuery": 3,
+  "broadBackfillPagesPerQuery": 30,
+  "cardBackfillPagesPerQuery": 10,
+  "resultsPerPage": 40,
+  "throttleMs": 450,
+  "retryCount": 2,
+  "imageOcrEnabled": true,
+  "imageOcrMaxImagesPerPost": 4,
+  "imageOcrMaxNewImagesPerRun": 200,
+  "imageOcrTimeoutMs": 30000,
+  "imageOcrCacheHours": 720,
+  "imageOcrMaxCandidatePasses": 10,
+  "imageOcrUpscaleMinWidth": 1500,
+  "imageOcrUpscaleMaxWidth": 2600,
+  "imageOcrCacheVersion": 3
+}
