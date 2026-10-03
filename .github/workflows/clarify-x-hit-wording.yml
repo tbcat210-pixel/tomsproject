@@ -1,0 +1,90 @@
+name: Clarify X hit counting wording
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/clarify-x-hit-wording.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-wording-write
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Update public wording
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          # Public page: remove the prominent "duplicate" wording while keeping
+          # the methodology accurate by describing counts as search hits.
+          p = Path("docs/index.html")
+          s = p.read_text(encoding="utf-8")
+
+          s = s.replace(
+              '公開Xポストを自動集計し、ポケポケ☆2サポートのトレード需要・供給をランキング表示するβ版サイト',
+              '公開X検索ヒットを自動集計し、ポケポケ☆2サポートのトレード需要・供給をランキング表示するβ版サイト'
+          )
+
+          s = s.replace(
+              '公開Xポストの「求 / 譲・出」を数え、初回から現在より前の直近7日も遡って、需要供給比を24時間・48時間・1週間で比較します。',
+              '公開X検索で見つかった「求 / 譲・出」を集計し、初回から現在より前の直近7日も遡って、需要供給比を24時間・48時間・1週間で比較します。'
+          )
+
+          s = s.replace(
+              '同じXポストでも別の検索クエリで見つかった場合は、それぞれ1件として重複を許して集計します。',
+              'Yahoo!リアルタイム検索で取得した検索ヒットを基準に集計します。'
+          )
+
+          s = s.replace(
+              '<span>保存中の募集投稿</span>',
+              '<span>保存中の検索ヒット</span>'
+          )
+
+          p.write_text(s, encoding="utf-8")
+
+          # JSON source note shown on the site: keep it accurate without
+          # foregrounding the implementation detail.
+          p = Path("scripts/collector-core.mjs")
+          s = p.read_text(encoding="utf-8")
+
+          old_scope = "scope: '取得できた公開X検索ヒットのうち、本文またはトレード画像から「求/希望」と「譲/出/提供」を判定できたもの。同じXポストでも別の検索クエリで見つかった場合はそれぞれ集計',"
+          new_scope = "scope: '取得できた公開X検索ヒットのうち、本文またはトレード画像から「求/希望」と「譲/出/提供」を判定できたもの',"
+          s = s.replace(old_scope, new_scope)
+
+          old_note = "note: '初回から直近7日を遡って取得し、その後も定期更新・日次補完します。本文に加えてGameWith等のトレード画像メーカー画像もOCR解析します。同一Xポストが複数の検索クエリに該当した場合は検索ヒットごとに重複を許して集計するため、件数はユニークなXポスト数ではありません。Yahoo!リアルタイム検索に出ない投稿、非公開投稿、取得できない画像、OCRで判別できない画像は含まれません。'"
+          new_note = "note: '初回から直近7日を遡って取得し、その後も定期更新・日次補完します。本文に加えてGameWith等のトレード画像メーカー画像もOCR解析します。件数はYahoo!リアルタイム検索で取得した検索ヒットベースであり、X全体のユニーク投稿総数を表すものではありません。Yahoo!リアルタイム検索に出ない投稿、非公開投稿、取得できない画像、OCRで判別できない画像は含まれません。'"
+          s = s.replace(old_note, new_note)
+
+          p.write_text(s, encoding="utf-8")
+          PY
+
+      - name: Commit wording update
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/index.html scripts/collector-core.mjs
+          if git diff --cached --quiet; then
+            echo "No changes needed."
+            exit 0
+          fi
+          git commit -m "chore: clarify search-hit counting wording"
+          git pull --rebase origin main
+          git push origin HEAD:main
