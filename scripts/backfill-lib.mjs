@@ -68,7 +68,7 @@ export async function runHistoricalBackfill({
     queriesCapped: cappedQueries,
     oldestSeenAt,
     completeWithinSearchResults: errors.length === 0 && cappedQueries === 0,
-    discoveredPosts: new Set(discovered.map(p => p.id)).size
+    discoveredPosts: discovered.length
   };
   return { discovered, errors, stats, backfill };
 }

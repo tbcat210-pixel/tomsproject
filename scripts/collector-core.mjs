@@ -22,16 +22,28 @@ export async function loadConfig() {
 }
 
 export function mergePosts(oldPosts, discovered, now, storageHorizonHours = 192) {
-  const byId = new Map();
+  const byOccurrence = new Map();
+
   for (const p of [...oldPosts, ...discovered]) {
     if (!p?.id || !p?.createdAt) continue;
-    const existing = byId.get(p.id);
+
+    // Duplicate-counting mode:
+    // the same X status can be counted again when it was found by
+    // another search query. Repeated collection of the same
+    // status+query pair is still merged so scheduled runs do not
+    // inflate the numbers indefinitely.
+    const occurrenceKey = `${p.id}::${p.query ?? ''}`;
+    const existing = byOccurrence.get(occurrenceKey);
     const score = (p.demand?.length ?? 0) + (p.supply?.length ?? 0);
     const oldScore = (existing?.demand?.length ?? 0) + (existing?.supply?.length ?? 0);
-    if (!existing || score > oldScore) byId.set(p.id, p);
+
+    if (!existing || score > oldScore) {
+      byOccurrence.set(occurrenceKey, p);
+    }
   }
+
   const cutoff = now.getTime() - storageHorizonHours * 3600_000;
-  return [...byId.values()]
+  return [...byOccurrence.values()]
     .filter(p => {
       const t = new Date(p.createdAt).getTime();
       return Number.isFinite(t) && t >= cutoff && t <= now.getTime() + 3600_000;
@@ -61,8 +73,8 @@ export async function saveSnapshot({
       discovery: 'Yahoo!リアルタイム検索（公開Xポスト）',
       xApiUsed: false,
       historicalBackfill: true,
-      scope: '取得できた公開Xポストのうち、本文またはトレード画像から「求/希望」と「譲/出/提供」を判定できた投稿',
-      note: '初回から直近7日を遡って取得し、その後も定期更新・日次補完します。本文に加えてGameWith等のトレード画像メーカー画像もOCR解析します。ただしYahoo!リアルタイム検索に出ない投稿、非公開投稿、取得できない画像、OCRで判別できない画像は含まれないため、X全体の完全総数ではありません。'
+      scope: '取得できた公開X検索ヒットのうち、本文またはトレード画像から「求/希望」と「譲/出/提供」を判定できたもの。同じXポストでも別の検索クエリで見つかった場合はそれぞれ集計',
+      note: '初回から直近7日を遡って取得し、その後も定期更新・日次補完します。本文に加えてGameWith等のトレード画像メーカー画像もOCR解析します。同一Xポストが複数の検索クエリに該当した場合は検索ヒットごとに重複を許して集計するため、件数はユニークなXポスト数ではありません。Yahoo!リアルタイム検索に出ない投稿、非公開投稿、取得できない画像、OCRで判別できない画像は含まれません。'
     },
     cards: {
       count: cardsConfig.cards.length,

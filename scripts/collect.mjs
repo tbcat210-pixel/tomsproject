@@ -67,6 +67,6 @@ const posts = mergePosts(oldPosts, discovered, now, historyConfig.storageHorizon
 const ocrStats = imageOcr.getStats();
 await imageOcr.finalize();
 const nextState = { ...state, lastBackfill, imageOcr: { ...ocrStats, lastRunAt: now.toISOString() } };
-await saveSnapshot({ now, posts, cardsConfig, queryConfig, state: nextState, discoveredThisRun: new Set(discovered.map(p => p.id)).size, errors, backfill: lastBackfill });
-await writeJson(paths.state, { ...nextState, firstSuccessfulCollectionAt: nextState.firstSuccessfulCollectionAt || (posts.length ? now.toISOString() : null), lastRunAt: now.toISOString(), lastRunDiscovered: new Set(discovered.map(p => p.id)).size, lastRunErrors: errors });
+await saveSnapshot({ now, posts, cardsConfig, queryConfig, state: nextState, discoveredThisRun: discovered.length, errors, backfill: lastBackfill });
+await writeJson(paths.state, { ...nextState, firstSuccessfulCollectionAt: nextState.firstSuccessfulCollectionAt || (posts.length ? now.toISOString() : null), lastRunAt: now.toISOString(), lastRunDiscovered: discovered.length, lastRunErrors: errors });
 console.log(`stored=${posts.length} ocrNew=${ocrStats.newImages} ocrPosts=${ocrStats.postsFromImages}`);
