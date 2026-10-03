@@ -28,13 +28,18 @@ test('snowflake conversion returns ISO', () => {
   assert.match(snowflakeToIso('2000000000000000000'), /^202/);
 });
 
-test('ranking sorts zero-supply demand first', () => {
+test('ranking sorts by demand desc, then supply asc', () => {
   const now = new Date('2026-10-03T00:00:00Z');
   const posts = [
-    { createdAt: '2026-10-02T23:00:00Z', demand: ['ナツメ'], supply: [] },
-    { createdAt: '2026-10-02T22:00:00Z', demand: ['アカギ'], supply: ['アカギ'] }
+    { createdAt: '2026-10-02T23:00:00Z', demand: ['ナツメ', 'ナツメ'], supply: ['ナツメ'] },
+    { createdAt: '2026-10-02T22:00:00Z', demand: ['アカギ', 'アカギ'], supply: [] },
+    { createdAt: '2026-10-02T21:00:00Z', demand: ['カスミ'], supply: [] }
   ];
   const r = buildRankings(posts, config.cards, now)['24h'].rankings;
-  assert.equal(r[0].name, 'ナツメ');
-  assert.equal(r[0].ratioDisplay, '∞');
+  assert.equal(r[0].name, 'アカギ');
+  assert.equal(r[0].demand, 2);
+  assert.equal(r[0].supply, 0);
+  assert.equal(r[1].name, 'ナツメ');
+  assert.equal(r[1].demand, 2);
+  assert.equal(r[1].supply, 1);
 });

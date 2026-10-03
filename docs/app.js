@@ -68,7 +68,9 @@ function render(){
     <article class="stat"><span>解析投稿数</span><strong>${fmt(w.posts)}</strong><small>投稿ID重複排除後</small></article>`;
 
   const q=state.query.trim().toLowerCase();
-  const rows=w.rankings.filter(x=>(!q||x.name.toLowerCase().includes(q))&&(x.demand+x.supply>=state.min));
+  const rows=w.rankings
+  .filter(x=>(!q||x.name.toLowerCase().includes(q))&&(x.demand+x.supply>=state.min))
+  .sort((a,b)=>b.demand-a.demand||a.supply-b.supply||a.name.localeCompare(b.name,'ja'));
   const max=Math.max(1,...rows.map(x=>Math.max(x.demand,x.supply)));
   $('#ranking').innerHTML=rows.map((x,i)=>`<tr>
     <td class="rank">${i+1}</td><td class="card-name">${escapeHtml(x.name)}</td>

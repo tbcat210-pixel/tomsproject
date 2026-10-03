@@ -145,7 +145,7 @@ export function buildRankings(posts, cards, now = new Date()) {
     const rankings = [...map.values()]
       .filter(x => x.demand > 0 || x.supply > 0)
       .map(x => ({ ...x, ...ratioData(x.demand, x.supply), imbalance: x.demand - x.supply }))
-      .sort((a, b) => b.ratioSort - a.ratioSort || b.demand - a.demand || a.supply - b.supply || a.name.localeCompare(b.name, 'ja'))
+      .sort((a, b) => b.demand - a.demand || a.supply - b.supply || a.name.localeCompare(b.name, 'ja'))
       .map((x, i) => ({ rank: i + 1, ...x }));
 
     out[w.key] = {
