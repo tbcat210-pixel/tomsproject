@@ -1,9 +1,620 @@
 [
   {
+    "id": "2106277845387632669",
+    "url": "https://x.com/szu81861992/status/2106277845387632669",
+    "author": "szu81861992",
+    "createdAt": "2026-10-03T06:59:05.000Z",
+    "demand": [
+      "ジュン",
+      "イツキ"
+    ],
+    "supply": [
+      "ジュン",
+      "イツキ",
+      "ペパー",
+      "アオイ"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "image",
+    "imageCount": 2
+  },
+  {
+    "id": "2106276977053454643",
+    "url": "https://x.com/_s2_it_/status/2106276977053454643",
+    "author": "_s2_it_",
+    "createdAt": "2026-10-03T06:55:38.000Z",
+    "demand": [
+      "シトロン",
+      "ハンサム"
+    ],
+    "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "image",
+    "imageCount": 2
+  },
+  {
+    "id": "2106276970430689483",
+    "url": "https://x.com/club_typhoon/status/2106276970430689483",
+    "author": "club_typhoon",
+    "createdAt": "2026-10-03T06:55:37.000Z",
+    "demand": [
+      "コルニ",
+      "レッド"
+    ],
+    "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "image",
+    "imageCount": 2
+  },
+  {
+    "id": "2106276083696095320",
+    "url": "https://x.com/hc3llza90886/status/2106276083696095320",
+    "author": "hc3llza90886",
+    "createdAt": "2026-10-03T06:52:05.000Z",
+    "demand": [
+      "カルム",
+      "アイリス"
+    ],
+    "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text+image",
+    "imageCount": 2
+  },
+  {
+    "id": "2106276083696095320",
+    "url": "https://x.com/hc3llza90886/status/2106276083696095320",
+    "author": "hc3llza90886",
+    "createdAt": "2026-10-03T06:52:05.000Z",
+    "demand": [
+      "カルム",
+      "アイリス"
+    ],
+    "supply": [],
+    "query": "ポケポケ トレード 求 出",
+    "parsedFrom": "text+image",
+    "imageCount": 2
+  },
+  {
+    "id": "2106275670506819843",
+    "url": "https://x.com/poke_3695/status/2106275670506819843",
+    "author": "poke_3695",
+    "createdAt": "2026-10-03T06:50:27.000Z",
+    "demand": [
+      "ミツル"
+    ],
+    "supply": [
+      "アイリス"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106274854324634021",
+    "url": "https://x.com/nunsub_/status/2106274854324634021",
+    "author": "nunsub_",
+    "createdAt": "2026-10-03T06:47:12.000Z",
+    "demand": [],
+    "supply": [
+      "モノマネむすめ"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "image",
+    "imageCount": 4
+  },
+  {
+    "id": "2106274470541558021",
+    "url": "https://x.com/Nun_973/status/2106274470541558021",
+    "author": "Nun_973",
+    "createdAt": "2026-10-03T06:45:41.000Z",
+    "demand": [],
+    "supply": [
+      "モノマネむすめ"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "image",
+    "imageCount": 3
+  },
+  {
+    "id": "2106272583587127603",
+    "url": "https://x.com/ranposedo/status/2106272583587127603",
+    "author": "ranposedo",
+    "createdAt": "2026-10-03T06:38:11.000Z",
+    "demand": [
+      "モノマネむすめ",
+      "セレナ"
+    ],
+    "supply": [
+      "アイリス"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 1
+  },
+  {
+    "id": "2106270783471505637",
+    "url": "https://x.com/xf3cy/status/2106270783471505637",
+    "author": "xf3cy",
+    "createdAt": "2026-10-03T06:31:02.000Z",
+    "demand": [
+      "アイリス"
+    ],
+    "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 1
+  },
+  {
+    "id": "2106270719218958396",
+    "url": "https://x.com/denshakiraida/status/2106270719218958396",
+    "author": "denshakiraida",
+    "createdAt": "2026-10-03T06:30:46.000Z",
+    "demand": [
+      "モノマネむすめ"
+    ],
+    "supply": [
+      "リーリエ"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 1
+  },
+  {
+    "id": "2106270634053652592",
+    "url": "https://x.com/xf3cy/status/2106270634053652592",
+    "author": "xf3cy",
+    "createdAt": "2026-10-03T06:30:26.000Z",
+    "demand": [
+      "アイリス"
+    ],
+    "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 1
+  },
+  {
+    "id": "2106270422589407712",
+    "url": "https://x.com/sbqml0/status/2106270422589407712",
+    "author": "sbqml0",
+    "createdAt": "2026-10-03T06:29:36.000Z",
+    "demand": [
+      "アイリス"
+    ],
+    "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 1
+  },
+  {
+    "id": "2106269992094446000",
+    "url": "https://x.com/sbqml0/status/2106269992094446000",
+    "author": "sbqml0",
+    "createdAt": "2026-10-03T06:27:53.000Z",
+    "demand": [
+      "アイリス"
+    ],
+    "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 1
+  },
+  {
+    "id": "2106268739146817620",
+    "url": "https://x.com/D60922893/status/2106268739146817620",
+    "author": "D60922893",
+    "createdAt": "2026-10-03T06:22:54.000Z",
+    "demand": [
+      "カミツレ",
+      "カミツレ"
+    ],
+    "supply": [
+      "モノマネむすめ",
+      "アカギ",
+      "カイ"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106265851062313140",
+    "url": "https://x.com/MoSho3_DGMN/status/2106265851062313140",
+    "author": "MoSho3_DGMN",
+    "createdAt": "2026-10-03T06:11:26.000Z",
+    "demand": [],
+    "supply": [
+      "アイリス"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "image",
+    "imageCount": 3
+  },
+  {
+    "id": "2106265851062313140",
+    "url": "https://x.com/MoSho3_DGMN/status/2106265851062313140",
+    "author": "MoSho3_DGMN",
+    "createdAt": "2026-10-03T06:11:26.000Z",
+    "demand": [],
+    "supply": [
+      "アイリス"
+    ],
+    "query": "ポケポケ ★2 トレード",
+    "parsedFrom": "image",
+    "imageCount": 3
+  },
+  {
+    "id": "2106265851062313140",
+    "url": "https://x.com/MoSho3_DGMN/status/2106265851062313140",
+    "author": "MoSho3_DGMN",
+    "createdAt": "2026-10-03T06:11:26.000Z",
+    "demand": [],
+    "supply": [
+      "アイリス"
+    ],
+    "query": "ポケポケ ☆2 トレード",
+    "parsedFrom": "image",
+    "imageCount": 3
+  },
+  {
+    "id": "2106265851062313140",
+    "url": "https://x.com/MoSho3_DGMN/status/2106265851062313140",
+    "author": "MoSho3_DGMN",
+    "createdAt": "2026-10-03T06:11:26.000Z",
+    "demand": [],
+    "supply": [
+      "アイリス"
+    ],
+    "query": "ポケポケ サポート トレード",
+    "parsedFrom": "image",
+    "imageCount": 3
+  },
+  {
+    "id": "2106263773602529314",
+    "url": "https://x.com/buchiii_withU/status/2106263773602529314",
+    "author": "buchiii_withU",
+    "createdAt": "2026-10-03T06:03:10.000Z",
+    "demand": [
+      "カミツレ"
+    ],
+    "supply": [
+      "ペパー"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106263736696852495",
+    "url": "https://x.com/papipap1papiko/status/2106263736696852495",
+    "author": "papipap1papiko",
+    "createdAt": "2026-10-03T06:03:01.000Z",
+    "demand": [],
+    "supply": [
+      "かけだし調査員",
+      "ナンジャモ",
+      "ルザミーネ",
+      "カツラ",
+      "ボタン",
+      "ミカン",
+      "セレナ",
+      "カキ"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106257254945354065",
+    "url": "https://x.com/sera_syumiaka/status/2106257254945354065",
+    "author": "sera_syumiaka",
+    "createdAt": "2026-10-03T05:37:16.000Z",
+    "demand": [
+      "リーリエ"
+    ],
+    "supply": [
+      "ロケット団のボス"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106255009214308631",
+    "url": "https://x.com/_RHINOTAIL_/status/2106255009214308631",
+    "author": "_RHINOTAIL_",
+    "createdAt": "2026-10-03T05:28:21.000Z",
+    "demand": [
+      "モノマネむすめ"
+    ],
+    "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106255009214308631",
+    "url": "https://x.com/_RHINOTAIL_/status/2106255009214308631",
+    "author": "_RHINOTAIL_",
+    "createdAt": "2026-10-03T05:28:21.000Z",
+    "demand": [
+      "モノマネむすめ"
+    ],
+    "supply": [],
+    "query": "ポケポケ トレード 求 譲",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106255009214308631",
+    "url": "https://x.com/_RHINOTAIL_/status/2106255009214308631",
+    "author": "_RHINOTAIL_",
+    "createdAt": "2026-10-03T05:28:21.000Z",
+    "demand": [
+      "モノマネむすめ"
+    ],
+    "supply": [],
+    "query": "ポケポケ ★2 トレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106255009214308631",
+    "url": "https://x.com/_RHINOTAIL_/status/2106255009214308631",
+    "author": "_RHINOTAIL_",
+    "createdAt": "2026-10-03T05:28:21.000Z",
+    "demand": [
+      "モノマネむすめ"
+    ],
+    "supply": [],
+    "query": "ポケポケ ☆2 トレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106255009214308631",
+    "url": "https://x.com/_RHINOTAIL_/status/2106255009214308631",
+    "author": "_RHINOTAIL_",
+    "createdAt": "2026-10-03T05:28:21.000Z",
+    "demand": [
+      "モノマネむすめ"
+    ],
+    "supply": [],
+    "query": "ポケポケ サポート トレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106254486574706915",
+    "url": "https://x.com/poooookeee1/status/2106254486574706915",
+    "author": "poooookeee1",
+    "createdAt": "2026-10-03T05:26:16.000Z",
+    "demand": [
+      "カスミ"
+    ],
+    "supply": [
+      "ナンジャモ",
+      "シロナ"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106253946520289533",
+    "url": "https://x.com/poooookeee1/status/2106253946520289533",
+    "author": "poooookeee1",
+    "createdAt": "2026-10-03T05:24:07.000Z",
+    "demand": [
+      "博士の研究"
+    ],
+    "supply": [
+      "モノマネむすめ"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106252692167487556",
+    "url": "https://x.com/sbqml0/status/2106252692167487556",
+    "author": "sbqml0",
+    "createdAt": "2026-10-03T05:19:08.000Z",
+    "demand": [
+      "アイリス"
+    ],
+    "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 1
+  },
+  {
+    "id": "2106252592443769220",
+    "url": "https://x.com/xf3cy/status/2106252592443769220",
+    "author": "xf3cy",
+    "createdAt": "2026-10-03T05:18:44.000Z",
+    "demand": [
+      "アイリス"
+    ],
+    "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 1
+  },
+  {
+    "id": "2106252236456345728",
+    "url": "https://x.com/e1lux__/status/2106252236456345728",
+    "author": "e1lux__",
+    "createdAt": "2026-10-03T05:17:20.000Z",
+    "demand": [],
+    "supply": [
+      "アカギ"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 1
+  },
+  {
+    "id": "2106252161537769542",
+    "url": "https://x.com/xf3cy/status/2106252161537769542",
+    "author": "xf3cy",
+    "createdAt": "2026-10-03T05:17:02.000Z",
+    "demand": [
+      "かんこうきゃく",
+      "コルニ",
+      "ミクリ",
+      "フウロ",
+      "ミツル"
+    ],
+    "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106252064032788952",
+    "url": "https://x.com/sbqml0/status/2106252064032788952",
+    "author": "sbqml0",
+    "createdAt": "2026-10-03T05:16:38.000Z",
+    "demand": [
+      "かんこうきゃく",
+      "コルニ",
+      "ミクリ",
+      "フウロ",
+      "ミツル"
+    ],
+    "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106251528009093518",
+    "url": "https://x.com/e0vvu/status/2106251528009093518",
+    "author": "e0vvu",
+    "createdAt": "2026-10-03T05:14:31.000Z",
+    "demand": [
+      "コルニ"
+    ],
+    "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106251254611714056",
+    "url": "https://x.com/xf3cy/status/2106251254611714056",
+    "author": "xf3cy",
+    "createdAt": "2026-10-03T05:13:26.000Z",
+    "demand": [
+      "コルニ"
+    ],
+    "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106251172046926016",
+    "url": "https://x.com/sbqml0/status/2106251172046926016",
+    "author": "sbqml0",
+    "createdAt": "2026-10-03T05:13:06.000Z",
+    "demand": [
+      "コルニ"
+    ],
+    "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106250586060710284",
+    "url": "https://x.com/benzen_rokuinn/status/2106250586060710284",
+    "author": "benzen_rokuinn",
+    "createdAt": "2026-10-03T05:10:46.000Z",
+    "demand": [
+      "ポケモンセンターのお姉さん",
+      "ロケット団のボス",
+      "アオイ"
+    ],
+    "supply": [
+      "モノマネむすめ",
+      "アイリス"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106249935545151644",
+    "url": "https://x.com/xf3cy/status/2106249935545151644",
+    "author": "xf3cy",
+    "createdAt": "2026-10-03T05:08:11.000Z",
+    "demand": [
+      "かんこうきゃく",
+      "ミクリ",
+      "フウロ",
+      "ミツル"
+    ],
+    "supply": [
+      "アイリス"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106249854192435601",
+    "url": "https://x.com/sbqml0/status/2106249854192435601",
+    "author": "sbqml0",
+    "createdAt": "2026-10-03T05:07:52.000Z",
+    "demand": [
+      "かんこうきゃく",
+      "ミクリ",
+      "フウロ",
+      "ミツル"
+    ],
+    "supply": [
+      "アイリス"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
     "id": "2106238119813222872",
     "url": "https://x.com/sbqml0/status/2106238119813222872",
     "author": "sbqml0",
     "createdAt": "2026-10-03T04:21:14.000Z",
+    "demand": [
+      "かんこうきゃく"
+    ],
+    "supply": [
+      "アイリス"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106238119813222872",
+    "url": "https://x.com/sbqml0/status/2106238119813222872",
+    "author": "sbqml0",
+    "createdAt": "2026-10-03T04:21:14.000Z",
+    "demand": [
+      "かんこうきゃく"
+    ],
+    "supply": [
+      "アイリス"
+    ],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106238011008766199",
+    "url": "https://x.com/xf3cy/status/2106238011008766199",
+    "author": "xf3cy",
+    "createdAt": "2026-10-03T04:20:48.000Z",
     "demand": [
       "かんこうきゃく"
     ],
@@ -43,6 +654,19 @@
     "imageCount": 1
   },
   {
+    "id": "2106237625480950072",
+    "url": "https://x.com/_nyannyan_002/status/2106237625480950072",
+    "author": "_nyannyan_002",
+    "createdAt": "2026-10-03T04:19:16.000Z",
+    "demand": [
+      "ルチア"
+    ],
+    "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 1
+  },
+  {
     "id": "2106235471752020459",
     "url": "https://x.com/CHABINfnrh/status/2106235471752020459",
     "author": "CHABINfnrh",
@@ -52,6 +676,37 @@
       "モノマネむすめ"
     ],
     "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106235471752020459",
+    "url": "https://x.com/CHABINfnrh/status/2106235471752020459",
+    "author": "CHABINfnrh",
+    "createdAt": "2026-10-03T04:10:43.000Z",
+    "demand": [
+      "ロケット団のボス",
+      "モノマネむすめ"
+    ],
+    "supply": [],
+    "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106235314985685284",
+    "url": "https://x.com/sbqml0/status/2106235314985685284",
+    "author": "sbqml0",
+    "createdAt": "2026-10-03T04:10:05.000Z",
+    "demand": [
+      "リーリエ",
+      "コルニ",
+      "カイ"
+    ],
+    "supply": [
+      "アイリス"
+    ],
     "query": "#ポケポケトレード",
     "parsedFrom": "text",
     "imageCount": 2
@@ -168,6 +823,23 @@
     "imageCount": 2
   },
   {
+    "id": "2106230691436572699",
+    "url": "https://x.com/ponpa08/status/2106230691436572699",
+    "author": "ponpa08",
+    "createdAt": "2026-10-03T03:51:43.000Z",
+    "demand": [
+      "リーリエ"
+    ],
+    "supply": [
+      "タケシ",
+      "マーズ",
+      "カルム"
+    ],
+    "query": "ポケポケ トレード 求 譲",
+    "parsedFrom": "text+image",
+    "imageCount": 2
+  },
+  {
     "id": "2106228517885390958",
     "url": "https://x.com/qpqp_051/status/2106228517885390958",
     "author": "qpqp_051",
@@ -237,6 +909,32 @@
     "imageCount": 4
   },
   {
+    "id": "2106221846320517285",
+    "url": "https://x.com/nisikorisikori/status/2106221846320517285",
+    "author": "nisikorisikori",
+    "createdAt": "2026-10-03T03:16:34.000Z",
+    "demand": [
+      "リーフ"
+    ],
+    "supply": [],
+    "query": "ポケポケ ★2 トレード",
+    "parsedFrom": "image",
+    "imageCount": 4
+  },
+  {
+    "id": "2106221846320517285",
+    "url": "https://x.com/nisikorisikori/status/2106221846320517285",
+    "author": "nisikorisikori",
+    "createdAt": "2026-10-03T03:16:34.000Z",
+    "demand": [
+      "リーフ"
+    ],
+    "supply": [],
+    "query": "ポケポケ ☆2 トレード",
+    "parsedFrom": "image",
+    "imageCount": 4
+  },
+  {
     "id": "2106212916114628770",
     "url": "https://x.com/hai_massiro/status/2106212916114628770",
     "author": "hai_massiro",
@@ -274,6 +972,22 @@
     "query": "#ポケポケトレード",
     "parsedFrom": "text",
     "imageCount": 1
+  },
+  {
+    "id": "2106198293395243060",
+    "url": "https://x.com/LuJxuFkpvX85173/status/2106198293395243060",
+    "author": "LuJxuFkpvX85173",
+    "createdAt": "2026-10-03T01:42:59.000Z",
+    "demand": [
+      "カミツレ",
+      "マーズ"
+    ],
+    "supply": [
+      "ペパー"
+    ],
+    "query": "ポケポケ トレード 求 出",
+    "parsedFrom": "text",
+    "imageCount": 2
   },
   {
     "id": "2106198293395243060",
@@ -383,6 +1097,19 @@
     "imageCount": 2
   },
   {
+    "id": "2106170497088282632",
+    "url": "https://x.com/k06789870/status/2106170497088282632",
+    "author": "k06789870",
+    "createdAt": "2026-10-02T23:52:31.000Z",
+    "demand": [
+      "カミツレ"
+    ],
+    "supply": [],
+    "query": "#ポケポケ交換",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
     "id": "2106164044373913760",
     "url": "https://x.com/hoshi_aimyon/status/2106164044373913760",
     "author": "hoshi_aimyon",
@@ -411,6 +1138,22 @@
       "セレナ"
     ],
     "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106150407189962811",
+    "url": "https://x.com/haseovan/status/2106150407189962811",
+    "author": "haseovan",
+    "createdAt": "2026-10-02T22:32:42.000Z",
+    "demand": [
+      "コルニ",
+      "カイ"
+    ],
+    "supply": [
+      "モノマネむすめ"
+    ],
+    "query": "#ポケポケ交換",
     "parsedFrom": "text",
     "imageCount": 2
   },
@@ -539,6 +1282,60 @@
     ],
     "supply": [],
     "query": "ポケポケ トレード 求 譲",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106071585581142350",
+    "url": "https://x.com/quokka_0303/status/2106071585581142350",
+    "author": "quokka_0303",
+    "createdAt": "2026-10-02T17:19:29.000Z",
+    "demand": [
+      "サカキ",
+      "ナツメ",
+      "ヒカリ",
+      "マーズ",
+      "レッド",
+      "カキ"
+    ],
+    "supply": [],
+    "query": "ポケポケ トレード 求 譲",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106071585581142350",
+    "url": "https://x.com/quokka_0303/status/2106071585581142350",
+    "author": "quokka_0303",
+    "createdAt": "2026-10-02T17:19:29.000Z",
+    "demand": [
+      "サカキ",
+      "ナツメ",
+      "ヒカリ",
+      "マーズ",
+      "レッド",
+      "カキ"
+    ],
+    "supply": [],
+    "query": "ポケポケ ★2 トレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2106071585581142350",
+    "url": "https://x.com/quokka_0303/status/2106071585581142350",
+    "author": "quokka_0303",
+    "createdAt": "2026-10-02T17:19:29.000Z",
+    "demand": [
+      "サカキ",
+      "ナツメ",
+      "ヒカリ",
+      "マーズ",
+      "レッド",
+      "カキ"
+    ],
+    "supply": [],
+    "query": "ポケポケ ☆2 トレード",
     "parsedFrom": "text",
     "imageCount": 2
   },
@@ -1003,6 +1800,21 @@
     "imageCount": 1
   },
   {
+    "id": "2105859133987795425",
+    "url": "https://x.com/4stars_com/status/2105859133987795425",
+    "author": "4stars_com",
+    "createdAt": "2026-10-02T03:15:17.000Z",
+    "demand": [
+      "マツバ"
+    ],
+    "supply": [
+      "ペパー"
+    ],
+    "query": "#ポケポケ交換",
+    "parsedFrom": "text",
+    "imageCount": 1
+  },
+  {
     "id": "2105855510637576280",
     "url": "https://x.com/GamEroaccount/status/2105855510637576280",
     "author": "GamEroaccount",
@@ -1016,6 +1828,74 @@
       "カルム"
     ],
     "query": "ポケポケ トレード 求 譲",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2105855510637576280",
+    "url": "https://x.com/GamEroaccount/status/2105855510637576280",
+    "author": "GamEroaccount",
+    "createdAt": "2026-10-02T03:00:53.000Z",
+    "demand": [
+      "モノマネむすめ",
+      "カミツレ"
+    ],
+    "supply": [
+      "ナンジャモ",
+      "カルム"
+    ],
+    "query": "ポケポケ トレード 求 譲",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2105855510637576280",
+    "url": "https://x.com/GamEroaccount/status/2105855510637576280",
+    "author": "GamEroaccount",
+    "createdAt": "2026-10-02T03:00:53.000Z",
+    "demand": [
+      "モノマネむすめ",
+      "カミツレ"
+    ],
+    "supply": [
+      "ナンジャモ",
+      "カルム"
+    ],
+    "query": "ポケポケ ★2 トレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2105855510637576280",
+    "url": "https://x.com/GamEroaccount/status/2105855510637576280",
+    "author": "GamEroaccount",
+    "createdAt": "2026-10-02T03:00:53.000Z",
+    "demand": [
+      "モノマネむすめ",
+      "カミツレ"
+    ],
+    "supply": [
+      "ナンジャモ",
+      "カルム"
+    ],
+    "query": "ポケポケ ☆2 トレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2105855510637576280",
+    "url": "https://x.com/GamEroaccount/status/2105855510637576280",
+    "author": "GamEroaccount",
+    "createdAt": "2026-10-02T03:00:53.000Z",
+    "demand": [
+      "モノマネむすめ",
+      "カミツレ"
+    ],
+    "supply": [
+      "ナンジャモ",
+      "カルム"
+    ],
+    "query": "ポケポケ 星2 トレード",
     "parsedFrom": "text",
     "imageCount": 2
   },
@@ -1085,6 +1965,22 @@
     "imageCount": 2
   },
   {
+    "id": "2105822763445617053",
+    "url": "https://x.com/Vaa1y5QX1E78884/status/2105822763445617053",
+    "author": "Vaa1y5QX1E78884",
+    "createdAt": "2026-10-02T00:50:45.000Z",
+    "demand": [],
+    "supply": [
+      "ナンジャモ",
+      "カミツレ",
+      "セレナ",
+      "アオイ"
+    ],
+    "query": "ポケポケ トレード 求 譲",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
     "id": "2105807430982799789",
     "url": "https://x.com/xf3cy/status/2105807430982799789",
     "author": "xf3cy",
@@ -1096,6 +1992,23 @@
       "ペパー"
     ],
     "query": "#ポケポケトレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2105804618127249595",
+    "url": "https://x.com/chaekab5/status/2105804618127249595",
+    "author": "chaekab5",
+    "createdAt": "2026-10-01T23:38:39.000Z",
+    "demand": [
+      "モノマネむすめ",
+      "博士の研究",
+      "アカギ"
+    ],
+    "supply": [
+      "カミツレ"
+    ],
+    "query": "ポケポケ トレード 求 譲",
     "parsedFrom": "text",
     "imageCount": 2
   },
@@ -1143,6 +2056,38 @@
       "カスミ",
       "リーフ",
       "レッド"
+    ],
+    "query": "#ポケポケ交換",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2105800424704102741",
+    "url": "https://x.com/saikyo3018/status/2105800424704102741",
+    "author": "saikyo3018",
+    "createdAt": "2026-10-01T23:21:59.000Z",
+    "demand": [
+      "ロケット団の大作戦"
+    ],
+    "supply": [
+      "カスミ",
+      "リーフ",
+      "レッド"
+    ],
+    "query": "#ポケポケ交換",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2105798525414170896",
+    "url": "https://x.com/saikyo3018/status/2105798525414170896",
+    "author": "saikyo3018",
+    "createdAt": "2026-10-01T23:14:26.000Z",
+    "demand": [
+      "ロケット団のボス"
+    ],
+    "supply": [
+      "コルニ"
     ],
     "query": "#ポケポケ交換",
     "parsedFrom": "text",
@@ -1229,6 +2174,57 @@
       "アカギ"
     ],
     "query": "ポケポケ トレード 求 出",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2105648267589722165",
+    "url": "https://x.com/qlict_q9/status/2105648267589722165",
+    "author": "qlict_q9",
+    "createdAt": "2026-10-01T13:17:22.000Z",
+    "demand": [
+      "博士の研究"
+    ],
+    "supply": [
+      "モノマネむすめ",
+      "ナツメ",
+      "アカギ"
+    ],
+    "query": "ポケポケ トレード 求 出",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2105648267589722165",
+    "url": "https://x.com/qlict_q9/status/2105648267589722165",
+    "author": "qlict_q9",
+    "createdAt": "2026-10-01T13:17:22.000Z",
+    "demand": [
+      "博士の研究"
+    ],
+    "supply": [
+      "モノマネむすめ",
+      "ナツメ",
+      "アカギ"
+    ],
+    "query": "ポケポケ ★2 トレード",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2105648267589722165",
+    "url": "https://x.com/qlict_q9/status/2105648267589722165",
+    "author": "qlict_q9",
+    "createdAt": "2026-10-01T13:17:22.000Z",
+    "demand": [
+      "博士の研究"
+    ],
+    "supply": [
+      "モノマネむすめ",
+      "ナツメ",
+      "アカギ"
+    ],
+    "query": "ポケポケ ☆2 トレード",
     "parsedFrom": "text",
     "imageCount": 2
   },
@@ -1729,6 +2725,23 @@
     "imageCount": 2
   },
   {
+    "id": "2105266965665435666",
+    "url": "https://x.com/VCrVtnfBpYU46pV/status/2105266965665435666",
+    "author": "VCrVtnfBpYU46pV",
+    "createdAt": "2026-09-30T12:02:13.000Z",
+    "demand": [
+      "ナツメ"
+    ],
+    "supply": [
+      "モノマネむすめ",
+      "ハルカ",
+      "ルチア"
+    ],
+    "query": "ポケポケ トレード 求 譲",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
     "id": "2105251902711795971",
     "url": "https://x.com/uma_hamutaro/status/2105251902711795971",
     "author": "uma_hamutaro",
@@ -1942,6 +2955,23 @@
     "imageCount": 2
   },
   {
+    "id": "2105135831883391118",
+    "url": "https://x.com/VCrVtnfBpYU46pV/status/2105135831883391118",
+    "author": "VCrVtnfBpYU46pV",
+    "createdAt": "2026-09-30T03:21:08.000Z",
+    "demand": [
+      "ナツメ"
+    ],
+    "supply": [
+      "モノマネむすめ",
+      "ハルカ",
+      "ルチア"
+    ],
+    "query": "ポケポケ トレード 求 譲",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
     "id": "2105124708706607168",
     "url": "https://x.com/tetotetonight41/status/2105124708706607168",
     "author": "tetotetonight41",
@@ -2015,6 +3045,21 @@
     "imageCount": 2
   },
   {
+    "id": "2104163069291282821",
+    "url": "https://x.com/wari_na0_10/status/2104163069291282821",
+    "author": "wari_na0_10",
+    "createdAt": "2026-09-27T10:55:43.000Z",
+    "demand": [
+      "ナツメ"
+    ],
+    "supply": [
+      "アカギ"
+    ],
+    "query": "ポケポケ トレード 求 出",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
     "id": "2104110955349352498",
     "url": "https://x.com/r2twi/status/2104110955349352498",
     "author": "r2twi",
@@ -2031,6 +3076,46 @@
     ],
     "supply": [],
     "query": "ポケポケ トレード 求 出",
+    "parsedFrom": "text",
+    "imageCount": 1
+  },
+  {
+    "id": "2104110955349352498",
+    "url": "https://x.com/r2twi/status/2104110955349352498",
+    "author": "r2twi",
+    "createdAt": "2026-09-27T07:28:38.000Z",
+    "demand": [
+      "ポケモンセンターのお姉さん",
+      "モノマネむすめ",
+      "ルザミーネ",
+      "アセロラ",
+      "サカキ",
+      "コルニ",
+      "アオイ",
+      "カキ"
+    ],
+    "supply": [],
+    "query": "ポケポケ トレード 求 出",
+    "parsedFrom": "text",
+    "imageCount": 1
+  },
+  {
+    "id": "2104110955349352498",
+    "url": "https://x.com/r2twi/status/2104110955349352498",
+    "author": "r2twi",
+    "createdAt": "2026-09-27T07:28:38.000Z",
+    "demand": [
+      "ポケモンセンターのお姉さん",
+      "モノマネむすめ",
+      "ルザミーネ",
+      "アセロラ",
+      "サカキ",
+      "コルニ",
+      "アオイ",
+      "カキ"
+    ],
+    "supply": [],
+    "query": "ポケポケ 星2 トレード",
     "parsedFrom": "text",
     "imageCount": 1
   },
@@ -2108,6 +3193,41 @@
       "博士の研究"
     ],
     "query": "#ポケポケ交換",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2103755348603781465",
+    "url": "https://x.com/shikinami_game/status/2103755348603781465",
+    "author": "shikinami_game",
+    "createdAt": "2026-09-26T07:55:35.000Z",
+    "demand": [
+      "ナツメ",
+      "アカギ"
+    ],
+    "supply": [
+      "博士の研究"
+    ],
+    "query": "ポケポケ トレード 求 譲",
+    "parsedFrom": "text",
+    "imageCount": 2
+  },
+  {
+    "id": "2103745969808654829",
+    "url": "https://x.com/uytg71265078/status/2103745969808654829",
+    "author": "uytg71265078",
+    "createdAt": "2026-09-26T07:18:19.000Z",
+    "demand": [
+      "ヒカリ",
+      "ルチア",
+      "アオイ"
+    ],
+    "supply": [
+      "ルザミーネ",
+      "マーズ",
+      "コトネ"
+    ],
+    "query": "ポケポケ トレード 求 譲",
     "parsedFrom": "text",
     "imageCount": 2
   },
