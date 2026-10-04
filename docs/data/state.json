@@ -1,7 +1,7 @@
 {
   "firstSuccessfulCollectionAt": "2026-10-03T03:26:18.391Z",
-  "lastRunAt": "2026-10-03T19:42:17.600Z",
-  "lastRunDiscovered": 51,
+  "lastRunAt": "2026-10-04T01:10:21.676Z",
+  "lastRunDiscovered": 59,
   "lastRunErrors": [],
   "lastBackfill": {
     "mode": "rolling-7d",
@@ -23,13 +23,13 @@
     "enabled": true,
     "cacheVersion": 3,
     "newImages": 60,
-    "cacheHits": 448,
-    "recognizedImages": 60,
-    "failedImages": 0,
-    "postsFromImages": 13,
-    "candidatePasses": 360,
+    "cacheHits": 437,
+    "recognizedImages": 58,
+    "failedImages": 2,
+    "postsFromImages": 11,
+    "candidatePasses": 348,
     "maxNewImagesPerRun": 60,
     "maxCandidatePasses": 6,
-    "lastRunAt": "2026-10-03T19:42:17.600Z"
+    "lastRunAt": "2026-10-04T01:10:21.676Z"
   }
 }
