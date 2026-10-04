@@ -343,3 +343,30 @@ button,input,select{min-height:44px}
   tbody td:nth-child(6){text-align:right!important}
 }
 /* MOBILE_UI_V2_END */
+
+/* COPYRIGHT_FOOTER_START */
+.site-footer{
+  color:#637086;
+  font-size:11px;
+  text-align:center;
+  padding:24px 8px 0;
+  line-height:1.75;
+}
+.site-footer .footer-existing{
+  margin:0 0 14px;
+}
+.site-footer .copyright-block{
+  max-width:920px;
+  margin:0 auto;
+  padding-top:14px;
+  border-top:1px solid var(--line);
+}
+.site-footer .copyright-block p{
+  margin:4px 0;
+}
+.site-footer .copyright-main{
+  color:#8f9bad;
+  font-weight:800;
+  letter-spacing:.02em;
+}
+/* COPYRIGHT_FOOTER_END */
