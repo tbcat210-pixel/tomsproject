@@ -2,11 +2,17 @@ name: Collect X trade data
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/collect.yml'
   schedule:
     - cron: '17,47 * * * *'
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: pokepoke-data-write
@@ -18,6 +24,10 @@ jobs:
     timeout-minutes: 60
 
     steps:
+      - name: Record run start
+        shell: bash
+        run: echo "COLLECT_STARTED_AT=$(date -u +%s)" >> "$GITHUB_ENV"
+
       - uses: actions/checkout@v4
         with:
           ref: main
@@ -78,4 +88,54 @@ jobs:
           done
 
           echo "Failed to save collected data after 3 attempts."
+          exit 1
+
+      - name: Keep 30-minute collection chain alive
+        if: ${{ always() }}
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -u
+
+          now="$(date -u +%s)"
+          target="$((COLLECT_STARTED_AT + 1800))"
+          wait_seconds="$((target - now))"
+
+          if [ "$wait_seconds" -gt 0 ]; then
+            echo "Waiting $wait_seconds seconds so runs stay about 30 minutes apart."
+            sleep "$wait_seconds"
+          fi
+
+          # If GitHub's scheduled trigger already queued the next run,
+          # do not create a duplicate. Otherwise start the next run ourselves.
+          runs_json="$(curl -fsSL             -H "Authorization: Bearer $GH_TOKEN"             -H "Accept: application/vnd.github+json"             -H "X-GitHub-Api-Version: 2022-11-28"             "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/runs?per_page=100" || true)"
+
+          pending_count=0
+          if [ -n "$runs_json" ] && echo "$runs_json" | jq -e . >/dev/null 2>&1; then
+            pending_count="$(echo "$runs_json" | jq --argjson current "$GITHUB_RUN_ID" '
+              [.workflow_runs[]
+                | select(.id != $current)
+                | select(.path == ".github/workflows/collect.yml")
+                | select(.status == "queued" or .status == "in_progress")
+              ] | length
+            ')"
+          fi
+
+          if [ "$pending_count" -gt 0 ]; then
+            echo "Another collector run is already queued or running; no self-dispatch needed."
+            exit 0
+          fi
+
+          echo "No next collector run found. Dispatching one now."
+          for attempt in 1 2 3; do
+            if curl -fsSL -X POST               -H "Authorization: Bearer $GH_TOKEN"               -H "Accept: application/vnd.github+json"               -H "X-GitHub-Api-Version: 2022-11-28"               "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/workflows/collect.yml/dispatches"               -d '{"ref":"main"}'; then
+              echo "Next collector run dispatched."
+              exit 0
+            fi
+            echo "Dispatch attempt $attempt failed; retrying in 20 seconds."
+            sleep 20
+          done
+
+          echo "Could not self-dispatch. The normal cron schedule remains as a fallback."
           exit 1
