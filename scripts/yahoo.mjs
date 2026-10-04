@@ -4,10 +4,8 @@ import { mergeMentionCounts } from './image-ocr.mjs';
 export const YAHOO_TIMELINE_ENDPOINT = 'https://search.yahoo.co.jp/realtime/api/v1/pagination';
 
 const DEFAULT_HEADERS = {
-  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36',
   'accept': 'application/json, text/plain, */*',
   'accept-language': 'ja,en-US;q=0.8,en;q=0.6',
-  'referer': 'https://search.yahoo.co.jp/realtime/search'
 };
 
 export function stripYahooHighlight(value = '') {
@@ -110,7 +108,7 @@ export function parseYahooTimelineResponse(data, query, cards, aliases = {}) {
 export async function fetchYahooTimelinePage(query, {
   cursor = null,
   results = 40,
-  retryCount = 2,
+  retryCount = 0,
   timeoutMs = 20_000,
   fetchImpl = fetch
 } = {}) {
@@ -126,10 +124,12 @@ export async function fetchYahooTimelinePage(query, {
         redirect: 'follow',
         signal: AbortSignal.timeout(timeoutMs)
       });
+      if (res.status === 403 || res.status === 429) throw new Error(`ACCESS_BLOCKED HTTP ${res.status}`);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       return await res.json();
     } catch (err) {
       lastError = err;
+      if (String(err?.message ?? err).includes('ACCESS_BLOCKED')) throw err;
       if (attempt >= retryCount) break;
       await sleep(1200 * (attempt + 1));
     }
@@ -145,7 +145,7 @@ export async function collectYahooQuery({
   maxPages = 3,
   resultsPerPage = 40,
   throttleMs = 450,
-  retryCount = 2,
+  retryCount = 0,
   fetchImpl = fetch,
   onPage = null,
   imageOcr = null

@@ -350,8 +350,7 @@ export async function createTradeImageOcr({
         explicit,
         demand,
         supply,
-        candidatePasses: candidates.length,
-        textPreview: summarizeTextPreviews(previews)
+        candidatePasses: candidates.length
       };
       cache[url] = item;
       dirty = true;

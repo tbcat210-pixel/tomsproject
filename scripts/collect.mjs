@@ -25,7 +25,7 @@ const imageOcr = await createTradeImageOcr({
   cacheVersion: historyConfig.imageOcrCacheVersion ?? 3
 });
 
-const recentSince = new Date(now.getTime() - 72 * 3600_000);
+const recentSince = new Date(now.getTime() - 24 * 3600_000);
 for (const query of queryConfig.queries) {
   try {
     const result = await collectYahooQuery({
@@ -42,15 +42,17 @@ for (const query of queryConfig.queries) {
     });
     discovered.push(...result.posts);
   } catch (err) {
-    errors.push({ mode: 'recent', query, message: String(err?.message ?? err) });
-    console.error(`[recent error] ${query}: ${String(err?.message ?? err)}`);
+    const message = String(err?.message ?? err);
+    errors.push({ mode: 'recent', query, message });
+    console.error(`[recent error] ${query}: ${message}`);
+    if (message.includes('ACCESS_BLOCKED')) break;
   }
   await sleep(historyConfig.throttleMs ?? 450);
 }
 
 const dueHours = historyConfig.autoBackfillEveryHours ?? 24;
 const lastBackfillMs = state.lastBackfill?.completedAt ? new Date(state.lastBackfill.completedAt).getTime() : 0;
-const backfillDue = !lastBackfillMs || now.getTime() - lastBackfillMs >= dueHours * 3600_000;
+const backfillDue = false;
 
 let lastBackfill = state.lastBackfill ?? null;
 if (backfillDue) {
@@ -60,7 +62,7 @@ if (backfillDue) {
   errors.push(...history.errors.map(e => ({ mode: 'history', ...e })));
   lastBackfill = history.backfill;
 } else {
-  console.log(`Historical backfill skipped; last completed at ${state.lastBackfill.completedAt}`);
+  console.log('Historical bulk backfill disabled; recent catch-up collection only.');
 }
 
 const posts = mergePosts(oldPosts, discovered, now, historyConfig.storageHorizonHours ?? 192);

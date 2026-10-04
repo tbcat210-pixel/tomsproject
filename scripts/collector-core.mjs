@@ -5,10 +5,10 @@ import { buildRankings, readJson, writeJson } from './lib.mjs';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const root = path.resolve(__dirname, '..');
 export const paths = {
-  posts: path.join(root, 'docs/data/posts.json'),
+  posts: path.join(root, '.collector-data/posts.json'),
   rankings: path.join(root, 'docs/data/rankings.json'),
-  state: path.join(root, 'docs/data/state.json'),
-  ocrCache: path.join(root, 'docs/data/ocr-cache.json'),
+  state: path.join(root, '.collector-data/state.json'),
+  ocrCache: path.join(root, '.collector-data/ocr-cache.json'),
   cards: path.join(root, 'config/cards.json'),
   queries: path.join(root, 'config/queries.json'),
   history: path.join(root, 'config/history.json')
@@ -78,7 +78,13 @@ export async function saveSnapshot({
     windows
   };
 
-  await writeJson(paths.posts, posts);
+  const storedPosts = posts.map(p => ({
+  id: p.id,
+  createdAt: p.createdAt,
+  demand: p.demand ?? [],
+  supply: p.supply ?? []
+}));
+await writeJson(paths.posts, storedPosts);
   await writeJson(paths.rankings, rankings);
   await writeJson(paths.state, { ...state, firstSuccessfulCollectionAt, lastRunAt: now.toISOString(), lastRunDiscovered: discoveredThisRun, lastRunErrors: errors });
   return rankings;
