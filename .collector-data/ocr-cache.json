@@ -20063,5 +20063,829 @@
     "demand": [],
     "supply": [],
     "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-RGRkgEc93sZUofmQFSRA12RCf24F2tGe0E1Bx5hJUE6eT-szqn9gK3a8xCw-FFkELKu99iAyfIaz0_NCQKkM9srwCjE1UsYyKcO-WXG13smAJYwpYXK1IKRqjF4rhOEfUT0wxZqF3BpqTl6uPGPH7Q==": {
+    "checkedAt": "2026-10-05T04:31:59.399Z",
+    "cacheVersion": 3,
+    "explicit": true,
+    "demand": [
+      "カミツレ"
+    ],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-qKiNNHiLoR3SkToRi-K4630mkUVgRCLhG3bER0um91dh8Udfanp2WNBFXpwpfLklSnvDDdVKQqc5KfP4gv1BurF6C93IIkVygx27udjN1D_Du12vkO89gk9sCOLx247-BVhDAnB0vdjJ99tQiHpz9g==": {
+    "checkedAt": "2026-10-05T04:32:39.914Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-6NgVQln288NQFIF-gyeR6YMUJ6kkk6d8b3YNgKqk9Fv8K2_AVEh3EpMlScclKVrrEAzeQusZfQrqYTk8HcFJSLms_1-qqc8ot1WERS_sEmsg6hMJhMLmdjWCovfCRQ1H9aez4__WVnJzAyDifbArqw==": {
+    "checkedAt": "2026-10-05T04:32:53.467Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-u_ejJ1DCHgMHz__qQVKwTe-uT0wf2r5fKglnpIi7ScnYc1iF7ED44WuTKvEvo3ywXtspVryENVrBZCVdDAEfxZo7KZ8i9AJfFkdOEU1DGt31sR0PmJ_REFrraGSXPo3aUGRnkdJ5xvi__B_MnSzy_Q==": {
+    "checkedAt": "2026-10-05T04:33:07.472Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-53bYt0vOxKBqNZ9Ue4htFX4OJx-JBwoDNVmsXeN2QTEDwzIne0LI9Oaph0umK2nUJMMTzLq8OT1uX_yHfTgGsFFNVy9UHyubmOnJ0ABkEXz0b2CKAAVpN04ItDBD4yE0FVOQK5zn11DT7mjVflWf_g==": {
+    "checkedAt": "2026-10-05T04:33:20.162Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-5UAOwVtkL7FH8QClHdcBtv53SqsHO65L5Lv5l2GHXYX5fZa0np-HPXqI8paURsgRLWFt9fAFNb1NaRxEhSDhtqEoMHuNM6MDIT2QJrvruZ6Ez8VxZD_CZ8BnRtN-jC4OFVMYGT2tB2WofUuXbNHsTQ==": {
+    "checkedAt": "2026-10-05T04:34:05.542Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-EcV9SoQg_HiUacz_8Lku7n9XS8JCVFRgBxTJQsbLGUsniUWrZVC-0iLP40NktEZBs3OGoTnZPRb8YnriGB86r6HasAfiz0clUZ-d-9DQELaA1IlqYdRRxYhGvOboElsZmUnL6uasUn8e3Q6fhBiUyw==": {
+    "checkedAt": "2026-10-05T04:35:22.983Z",
+    "cacheVersion": 3,
+    "explicit": true,
+    "demand": [],
+    "supply": [
+      "かんこうきゃく",
+      "シャガ",
+      "ミツル",
+      "カスミ"
+    ],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLLv9HYRM2O3FSm08GNxstEu2_J2oQ8Hz1xwzGHVV3jydXJMphETZ7juEqlgqywaV4gsA3M4LwYVNjjxeTnyIjHyabqvX1h6QBtsHrfI5a8w-CkKJqt5Q9jsfvrNLQUvu3MGe9SIq6hSMgyVyawqw4ZosDdPFtcVImQ0q6oQ5UDjdpBg_DVFbrOIGIdLq57s7J": {
+    "checkedAt": "2026-10-05T04:35:26.219Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-thu3tPUXUiR-Uvav5QUpjF2Nk8ULR-LRnpqJiVPfCb01O5GZfmYp4b59yaYcm6x15q7s4JmfQiFPwngaa24iuj2WTBwVL9JlgC1f8Qvd3Z_T0vp5Ssp7uUTgnZroXqdPDfWA_hNB5y9h_QKg8Vj9sg==": {
+    "checkedAt": "2026-10-05T04:35:35.953Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-0xYnZsxfstc0SfDnOBX7ZgFRz121xQoB0mXfyXAfnITbSrUVD4IIBHuQxR0CDetiuywU0UbEx9renivyopGIgVP2OLX8R-QVKjNiMy-blu1p5Pl9EwW1DFraO5CdLoV1dOCDaTNQIVDWSLfLCkOwLQ==": {
+    "checkedAt": "2026-10-05T04:35:48.121Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-m5w5mvEVc68IfjgGUN62fTeVXKLutSy5QItk_KM8S4W574CjjF7Ndrkl9r39XiKdEz_RO3q-7G04j0ZTbTnm9dVCWDDNXcx1_xZTvB9v8BUb3HCBSwwiajiW0lBXY3bkCxbUi-Z6Unj_LFPlIgmTEw==": {
+    "checkedAt": "2026-10-05T04:36:01.714Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-4cyCItqRSOcA5jU1xW0epL-ZR0p571aZouYYD_035OAEvsQLpzbP0Nk1oVgQZoIV-AeuOSZ8C6PqcjOr4vT4gFrjaU9sJO59Mn8hId-RH95S6UyUYtF9JAX2xBY5CVeJ8SGNw3ETuE4cR-OfbET5Tw==": {
+    "checkedAt": "2026-10-05T04:36:08.277Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-QHwnxyxmyoq9Sc1rFSJJvK-rrTVwDf0XQWPCKbUdsOLrCQ2CkwLJ1usHS0AP6aPknLfeEeSKQ-CQPZQUAd-arqpxcZf9J5fxiLLB-MB0sqy0ViVlTDroITGVehGCvspyinTrWX3DtHA2T8AHW_6aJg==": {
+    "checkedAt": "2026-10-05T04:36:30.197Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-vsYIg8Y5aS686VdcjkwpREuWzPV9JKVVMPvbfzw7953fPtbxHdtYUnVKZsJHQrt-bqXwlbII5LfWr5cdxvS7_8rhu7kxPWYGQEAePCN7mRck3IjMODF5ANZvgm69OdGosKPCFwAY9A-NJd8yHEB0jA==": {
+    "checkedAt": "2026-10-05T04:37:12.892Z",
+    "cacheVersion": 3,
+    "explicit": true,
+    "demand": [
+      "モノマネむすめ"
+    ],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-DZbc5zct6h6LXsWPEf3oIFfellwj4nENdGpPDK8N4Nf6O3xLY8ipIckSHCivlPvgwbfgDdTH-wLo-U66LJEdW8E_dBgyNZme79q01caqKsy2LvuZrjbbbb6qH7LS_tE7QobfW9ycl20k1fZuYcAtOQ==": {
+    "checkedAt": "2026-10-05T04:37:15.823Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-lhi8LOD2KszDXoyXakp-e3ykIk3KWZRgmMeKximmRis9CYd13EayW4lE14hFh5w5egKFh3i7bOYqcoEwUwhdlOXhGLhVPNEYk-7rEXuabiQ2K4g9t17W8PuJwI_QWSW2tNyK8TNmr0G8WelQ1V10sA==": {
+    "checkedAt": "2026-10-05T04:37:37.093Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-MZwxANpTYYVvdbetYJ99RZ6JJt25tL9aHwbMb-IufqfYZlCiTxZnwdj49EhCyeRhQXDLGnnFfBqjdkcBWam5sohA_4VUZkU-f5M6cU2a0woJ8jhPEZrL4Avxp-KSi9X4NujwsSwOdM-FFOqnHeEK-Q==": {
+    "checkedAt": "2026-10-05T04:37:50.810Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLojDks1VOXENZyFz17bGoRF8aNUfw0C4hcA16Z3oh5R3eck2VIyGIMEawaiIL5fKwophCFfF0ajIASHQSEc4R2SGQ_RMdQ0fJ68HcZbi4TEirc07ZRH3bnUR8I6CyLbLVeGpfy-KvcriO3DZ6hKMLyZ7lcdQ-Ldkbm7bWaGdQx_mdo2u0d92lyoGSo-ZLLZSD": {
+    "checkedAt": "2026-10-05T04:37:54.962Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-UHpP6ekiAbXKYRdnyJFhjRnk9p0w3rdrSO330QEi8PXSIwFS4CC-LnbyxSP3X1KEk3YTeoQASl6EmGxpJu2LZERQZnzg8fKmyNg4RPK2zvBcAKWQN79EE89iYqBQ6MfDc-GipiS5KhFGGdGkVRx1fw==": {
+    "checkedAt": "2026-10-05T04:39:04.165Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-NEIgsCEC1R7d4xAGSgNvFYYO-KH0lA2iV3cOhHsozprAn3PkcvkSOpND4t8xa5AOr1HMzS6_z1zzn4v8Wy7Sb2_YVlz_i_jZYbs7jK8oYYuqLtbBAnF_125D7Xoe26QcmjvUfd25MmKHFsZ5874lQQ==": {
+    "checkedAt": "2026-10-05T04:39:34.187Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLGEj0cg1-RMHS2VyYNcgPHiU-8gR9oZgz1C5QV8bzVM--FdYr6tq_VN-FpgOtQ4i-VMjTVPhHzTKMDDtlfAjevfWN28QUXAarxW0Fvw2zNh509YCGdSNdxf87cLdT_G0tvxuZvIGBrgCzZoaMIwhQOt-PkZnxS0f_9_DcGdR8gntrn6HS8hTqU58wGLVL81n-": {
+    "checkedAt": "2026-10-05T04:39:36.687Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-I9xVHeGT7cXJn86AI3tUDoc2h_0BRKHF8faL7_M4IUa_-AvFyA6LRGf_l1OwTgEYegPz7vnQfb4pebUQAreMQlbPgqqWwsZbSis-vb4OzfI5xXbetvWWfb_mWc7UPyIbs55L8UP9u7Z5E2MnO0U71A==": {
+    "checkedAt": "2026-10-05T04:39:49.830Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-E5Bv_InMG2fSsWi44Mo2u2VITQCQIqm5qutzfYe7GtwvIp0UHvvxUjU9UXR_6qoVx4ByS_MzHV67zdHeZUUqBv03Hw8y8AREpvhVBZLv8DNQkcCHO17SsLzBR175GBQDwEuBiWlFprkbmlTIuZtbYQ==": {
+    "checkedAt": "2026-10-05T04:40:54.406Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLqonEAggq_gVSvXsQG5rneyOBaqeBcU-E1JRGGwlmMRRIfLvcdukoTZcpAMLNjbTujkZ3dFcb-EzsBgLEI_pFhG8gUazdkoEiRPVWBclrztiuRkFI8Jn61jk9qRtLVg18o8yK8xe7-l7UXLqEkQc5Jp7MBHq98_9mpLHeaXn5Gu4oUEF5cg5PfKt64p8lyXO6": {
+    "checkedAt": "2026-10-05T04:40:57.358Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-Mz0svmziuIFkSWX-jIfHTJkTxrn49tzMLs7ysC4VAdEgtwjpdfMLLSJuF4goR9sZYJIxYa0ZaPH2knP68Dby8qbheRQ7NHba3ucl7f-eqhYzP8V0Pf9oONQrCdsF5Edss8nSnP89ZNYSPTrjsqmYBg==": {
+    "checkedAt": "2026-10-05T04:42:03.222Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-skKJp7FwQA7-CwfqY-XwvWOKGjY5v6pTGQhevMpZfAbrCq1CHvLkG3NUKap66Z8ugUmYaHyimrs27L04ObqAw_SOPEFvWbY6rC-fytCCAtZ5fjNrCeCT1VSa9CVWED8bE7NUFCkjsvwCikvj5G5Cnw==": {
+    "checkedAt": "2026-10-05T04:42:14.038Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-xlqhlI1-KuYk6RIP1wMnRgEV1YTuvUqdTiJGP__zFf_9f4FI91Ra3Si8CSBdLPzhm_yqKa21vsBwNwSSxRnIaUocFy3U1SSy5tIMHUu2ezREzgtCZNOE45HemMcWMqtktmxYuJiN-9wdGQhELk4rxw==": {
+    "checkedAt": "2026-10-05T04:43:34.674Z",
+    "cacheVersion": 3,
+    "explicit": true,
+    "demand": [
+      "コトネ"
+    ],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-GzY_D0-aWPDBs9PqegzJY8yPRnEX55F-3bmYNAgST61OxUjxkctoEX6z1c7081S1HNF5lqyS0m13DkEHhilu_lfXadEk4K7RSuQBa7K_WORllHrb3bVD5vrobvtUSFIc6KPZlij0UUG7w4APjh5KAw==": {
+    "checkedAt": "2026-10-05T04:44:44.772Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLSiZQ6XfYoPPo2AIMNd_lGGNr0I_JCMQlzwptVvcmZJ_PQDCVC5-EGexJJB4GxhEN_qV4NVY-sJxsKwh6CObc6EQ6_kqkOF4YFraRidWv6pCin5Dspt8H_RgD173PjToFSCe0lTGa00ZCWegsvhpkv1jbCoptE3BHMPtVlOduBHkihmx-1jya2GFkhvlXc7Ze": {
+    "checkedAt": "2026-10-05T04:44:49.072Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-1_kvqpci-15hq_q5vCkgclyQFQg-VBlx68DdobWSvy6oGt-Kn4IDF5x9yHaSfErfCkrp0Z9VzGRCdsaiOJGAoj2iGvg7K5mIsl0hcijXZjVNYdSa67wGO0KXoMyrTQ4Y8b7c5KYu-ldflCOXe5Hn2Q==": {
+    "checkedAt": "2026-10-05T04:45:09.120Z",
+    "cacheVersion": 3,
+    "explicit": true,
+    "demand": [],
+    "supply": [
+      "ネモ"
+    ],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OL552Fn0BYEp1F_F7AVyfNAcwUjbBNbIZh5JKTHZwcLc1vUg0urjwX22fRHwHT2bXceyOsnClsWBx_gq0v-8nx7OAtT_6Po6CN9-H8ZhMixb9Fpi5SaCECPqggbpmgfNL8696jaccjKfhVyq-KPqsbToTpbwTguWvHCM9rd3b2kTApQQaH77t4O55ZyCraf-pA": {
+    "checkedAt": "2026-10-05T04:45:14.756Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-nPBnfCg2-kzSTcXGgMcAoLKIuGPwB62_ohndewm-0FkJiAx8HESiJoZzWVprkrRtx2VaQBVkZQE3fylCH7pQAxQ5ZcZ-R5DTTZoC9Qfcjqk3s6vkmKY-CYbvoXV2zyTt2cG-0lK15FxpEHEeo6MxIw==": {
+    "checkedAt": "2026-10-05T04:46:07.155Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLg6pu3vGHKXYTmOraHvQbISOV7DwWdWNlpAGSuK1eAcjvbZ2CR8BnZu-aLFqcndQsT-FS-OKjRT7ESz2T9tVrzZ4xBZYB22HOdrOn7yDfWVL_ic-F43hZGJ2ydm5n7Z9LJBc2rXbIzEZFym8xhF8GpeIbor-6Qheu-TWOI75NVc_pSdHQJ_O_Pe4VFDSE_UVE": {
+    "checkedAt": "2026-10-05T04:46:09.333Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne--TaXHBxLKRXFuPFMHncQLwKMGMxiVUZDIlJ9e8xWERUk7HXWs5h7-nDbpbt5O4OJG34ZvMBis29LhuJGCKp31vt9_tB94z3dRgebzN03-UkNBSOUInc3dXl3lQLAEtsVUsRWLXSjKe9zHucVaJdyKA==": {
+    "checkedAt": "2026-10-05T04:46:23.278Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLMiQvIrXcjuqIE4EcnF5BM7MBIXump8w2fDC9lnl0zCeTu17AVadqv2AF1glaQ5gENlJQ5HcYpN0FadKQhUshvd3aP-93OxI1kpb81YRgCKDoYiz4sotgcXSJ3OHoSH2v9Td5udh7dipog-HP9v1N7rvBkd5oEqnS61_FTx5BhseIXxUnJyRKQVfcUsnSrMpc": {
+    "checkedAt": "2026-10-05T04:46:26.347Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-yZF6BiuS0EtnsrtoUWN-sIjLs8impGZZIK18_8CYAebEi_nHr3vh2DCZ1YFnu17h-wGODT8-jamCnmsStophWrqjmeVBIYlMge8qn694x_R7dr1QPDG3apZFKhVNBVeH-KkxUrK0tygz3DBPx-FoHQ==": {
+    "checkedAt": "2026-10-05T04:47:26.938Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-CB6SROzRGWAKCzpWXbmIUkUUxZ1HfLgi09bmxSc_bM5g7wHJ3Qkqf5q5aWnDrEjWnqnkpDEUfokvz80BQm_KLMWfSNv8BdEpPYlgCNDc6v_oSGKGT8gqjAvAbUz6y5xpMvXwSrtfxT8E9-5GqqjjVg==": {
+    "checkedAt": "2026-10-05T04:48:19.419Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLvCIaR88T1Fg7F6xmRs0-VHn3TBUBtVVZSKSpatP2KyT7P7lGEF10YaGQs78BP_MRcF746gdFUWlvze2Tnf88TvV6m_0H40j3X-_FaPL8FrBfUPPyX4xIpQnciQ0rJL-NovC1MO2tEA7faJW3z0WGKD-0kfv663q0uXuCavDnMzNEOcT2CNNYykPzyuR_AeRX": {
+    "checkedAt": "2026-10-05T04:48:22.496Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-oSLET51eMlNqmgwEzvuzvJbT1wk_GbdKuNwddj6IA97gm6KzCyzwVizqWII7CaaD5wG6uZRyy0F1kiZGcz-SQ6v3u-thbeXeuR6JUkuiFJb2QdrhnzQ7WIpaUx8Vj7AFir6-M6_STdMKiP8xZdAbYQ==": {
+    "checkedAt": "2026-10-05T04:48:26.603Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLOTn-WldiYzrHXWagAZUddwSmBym7KeiPkqz5IoGy1eOaCNoJ_OkbauRBJ8kmTU9mhThPhBLCBK5PTjvB47dG_5ImGLCNy2hncBJIUjTCvU2YvHNhZWwYTBy-o8a3iErf7_X6_ejjAZJhRurDrsjhiEbaDSov7sPfO0hvIzFuzodoTME8OQ3zZnS53u_2XB9k": {
+    "checkedAt": "2026-10-05T04:48:27.830Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-MvDP9Xr_yqSAfe0ir4yvp0GSJFIMGO4gbnQKi6KB47ICis0T0iAj6YKGZ-yeLTt74LMS89is4atJk-SDoE2F1XuowizeS7riDnIWna22VdRwmhaVSZo5VIw9dR9LsmBIsrM--7-nYCSNc4anfuaTbg==": {
+    "checkedAt": "2026-10-05T04:48:33.738Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLT2Wt8HMSelIlepx86OA040S_ZzJMd95zQEcRLjgxZGhF1P4VGwprz_tr5B4Og7T3LJ8pQBbnbv-Ud3fLEbzl--SdxhWHRrU0z86kH5ihjaYXIdJXm2cm-5a5QS9j5RSRYHw1Hyi3H_1K_j7AqXSgerc6Hl5jZgWsSYQS116KKIGgrIWxmHoYDFK1AkBnAGSU": {
+    "checkedAt": "2026-10-05T04:48:37.967Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-mGBiM5jDAC3Cvj1P8yAgCncV8nxUt1umxVyGp_BIDscVSm244gLXZY0LKmnC_V9K-wK-v6ddio9L5rcYy0m2UMO3CQ0OIY4MDHFShUwvYexmtWXjzTuBW26pC29ji6cYUEWkwKCyDQXWPh4WnHJ7dw==": {
+    "checkedAt": "2026-10-05T04:49:37.099Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-Y0-Vq5GCtslymKs7eaktb-jTt7hYmd1mfK8Da9krz5IEOaJ6IFXOzRHNmRjrY38jc4K80rAZMyAxdC2qx3t133BrQXqd_zC1tzR2jpFAjVWhk8jf5-FzwBkw8C9C3PfKFrlFqzJOPPo_e2y29pDHPg==": {
+    "checkedAt": "2026-10-05T04:50:00.167Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-qG94lbCshVcLLVjO_9cK5X8Ynw7NJxN-RYM5A9gU0vnlYuRTXBtopyfE5vPg2PTERR41G6aWFvRoGzCmc0TvWXvXvgivKsHcRxczWtYX8NwfrTl4CU66r60z0BH_0yqdd5sdPtKYOp9sF5VbxpE9aw==": {
+    "checkedAt": "2026-10-05T04:50:41.319Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-NAZk5FPCPTKDzC4zfuply3_KsObOYTrmBPystO6BNm3lzn-8nwcdM4w4U-OBMelcznpr8Qp2ior0iJGiqbKoRKgsAw0ZXozHxocmYmleZyAUxBTFnru0eWO_zcwNo4uo_RqsPmhMiXzgsRYCuj5IgA==": {
+    "checkedAt": "2026-10-05T04:51:30.905Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-eOOulD_g0ZpaJ2UnD0HF97rsImm0CKKnb__H0IZLwAvoVqY0ZdkLMC3XIRjUhaasHVCS3wmEDXP1xTm1bcCpM3-2dqln21SMg56HoAzrz_xgz7MSFgUEGb2VSbRAg9triOnwgTSczQGQwukMLpdbAw==": {
+    "checkedAt": "2026-10-05T04:52:22.840Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-FoAFqhod-gMMQ-wix6Qo8B8I1QwQTUyiPsNLxos4g1CKYFLW9o7Y91fpAwCiDLxsrbLdXgMyINtlZWyRmOgc2TGlf5NSLqKcTY2Z2MbOmuWSfr3GE8ylnzRrENYK1O4DMBs4FZHZdPaDlkF0x_wpNA==": {
+    "checkedAt": "2026-10-05T04:53:39.467Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OL_Vo0va2TZZEZjSIYpW16e61zf_jG8QUErydquWiZHggli1b7UfGnvHt1aMItHZBBEzJ66thqPwrZtLPXrKeSrZ3piT-8-9NigD8CvRZ9Zp7itdOwaxI48YSZuFj0ZZuvemUCr1oNSbtPyndPby7RZ11Iqo5RhsDbtvEZUHait2xuZg1_aEmvzxlngzWbA1bD": {
+    "checkedAt": "2026-10-05T04:53:42.561Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-3Sh9HP2Y0nhAJwzzcl2dGpXGJ1uaMX6_DOv_LE7qYPLPr2QHlvdvcuo9IOzDVei56wsU0uiJBAc8X7GthxJ9QBBRKfInHuLyzYqPUNpBHhn2QlMP8bxBP7cReMhNxDYWX4x7kJc_6BwL1Q6ZFM3hdQ==": {
+    "checkedAt": "2026-10-05T04:54:21.191Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLx5utzOKwk4qIVRW_7giLl8KQDifk2SFW8TSQfxPpP8nNkSmRQlrfQci0lbcDOgOEv-yW4OKSQhwSuEtYTw7Vx7p9G9XJZf825f2v9qf-aYntKEWSLlu1NOPX1kjbnF3HFwHoJEXJB-X9wQcP3QFKdmUjkHhDN8RvqCfWsRauWUmm6XJ_NArHy4VO_zVf9LeW": {
+    "checkedAt": "2026-10-05T04:54:23.539Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-VpsO8cnGIMvlcQTlsmhap7aeBkCWcH8NkdzOt9hhxKOz83RAAKyPlDEZob64P33oVNE4L1XFRZFJbtLBnwR4x8_3WSoLgsoRt5XSBkwsI9R8Va-HkNnd02tLrvCHh1JPaTkdydciRwIyVioPUp1Oig==": {
+    "checkedAt": "2026-10-05T04:54:37.366Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-NJetpLINJ64s62qKaQzE_yuYLGebhG5e7uE9D3IBcxPMYxffOXplrH41frjyKFW8BOxQNtFo3vochA3gZPAibo0X-0fHY1P5kffRIJJKDlmePvdm7lhhPJXsIZLbd899VyuoabJg3oc3iZB2t_CZ3A==": {
+    "checkedAt": "2026-10-05T04:54:53.488Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-Dqk4qYCnc5RzOHOfYvHaCJkQaxzGejuV4-eJySW73Wt_dl9vYGd9FaJAKynW1kyvoOO6S1WEBy-FbhpOIPAsMuyzDH6X-s96y7r8ELVSKMUs8jIvN6rQP_-WfhGyzoHRc9LBlNlus0NmZouyYtlcuA==": {
+    "checkedAt": "2026-10-05T04:55:22.853Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLw6NTprYPM5BGsfOvUNXyTZuODZaqZ7D_9UxfVQjAaEXgM7XA_vsHLXUxfq5CM9r0qsftOf9smX1xfiNBNrYUSBmHTqo6Z1G-VUnJVqkKmAXRRB3XDAIkNGSMFhMPJL8K4OigNeGbX0E2KzFm_JJRQGZJL9hCyj03aYM3W1C7Nt1qDr-1cgngSgutIgPoVytj": {
+    "checkedAt": "2026-10-05T04:55:25.565Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-A4UnFOACHlXIKE5K-EqXI_jRqt_bW7Vu4PiPx70CIlwJdzMZPy5bEWlZysBHOq8DdK5eMuc39rpE-sPkvRqNpmei8I_C8Wno5ENWddZZcWgGdgTmZtjg26Xvozye--XNaBh4nbdZhMSaH4kVCOjYfg==": {
+    "checkedAt": "2026-10-05T04:55:41.659Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-L0ZTYYl3xXH5u0_-I7SXrOPWzCU_fUE8mTtMoNZy97c6n5FOaDrs2VHOcJ__hw_5HxznnXJKpwtkDE7jDuoLef-BoMRAgJQDoATE9RNWp6J1AoROM7cmxwFElYFLzvXaOo1CxQ9AcbaFCgLT7gNB0w==": {
+    "checkedAt": "2026-10-05T04:56:43.290Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-fidb-aZdkyd2yQ2wIef6XezglUhKd_BsW8_zGIfHyTa2Xmfbaui5fL6AZ7NkAAACAhmx7FDcLoWLTeMy0ymdcUuFSga_yiYv61OCsnpi641hmUzuwzKCN8DXyi_Q1FjRTSoT2fAet0mPeqTOoZrAFw==": {
+    "checkedAt": "2026-10-05T04:56:55.391Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-QfFiBkY8phdTSTvpZX9xqruvYSAq3ExdrLQ3tKFtjY97ShU5UwJ24AjOEDGKVpyYsacMVlpywA3GhzyBmWCuoFWeTL7rYTbunIh7kp6ReN_jZwwpkI3OIRPPWiHkr_B3TVZY4f7xhRRHTAkUrc1GFQ==": {
+    "checkedAt": "2026-10-05T04:57:03.387Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-QqIc9BbTaQ2CljIn1bQBMIRoHW9B-KYOSl9V86WxLdJ9r6uuK7Y018lClpX2_h4Yk9AwjMvgOksgYn2QmDBIO08otPtyQWPU-fp4nP_6vyJRz1fo8ti2ObXTzBPHwZuNqfL8B63hR-3xrr_p34LJJQ==": {
+    "checkedAt": "2026-10-05T04:58:20.294Z",
+    "cacheVersion": 3,
+    "explicit": true,
+    "demand": [],
+    "supply": [
+      "モノマネむすめ",
+      "モノマネむすめ",
+      "ナツメ"
+    ],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-QxSp5p1ebq3UYSphPyL9VNh-MRoc7uDt5BTAlvY5-wwS-T6ii-0a76rMSKMiQpfZHijCCnhca6yTTt35sWzlsIWU3AKkSdd8bhEmT9ELTqeKh4DCqGSCGhWunLwzS9LAjv3TJ3rViu2ps7AursWBcQ==": {
+    "checkedAt": "2026-10-05T04:58:42.958Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-cO8xmApJJrHUlVTqptgm-YvXnMKRA0BYnv_EymwpgpoD-gb80iaMbhifMilzLKSdk5SUGwynJa5AxCY1N1vpR1IP_NJknDe2FqnbbN2HY4azAFxeP4OSfK0Af-uQrgiayRgeTmQCTSn2ecmHiKLF9g==": {
+    "checkedAt": "2026-10-05T04:58:57.381Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-qwDaDB_GWMXmYoePx5Cad4jrirZNIwB1b5wZIS-N0LLGmt7OSrHtaLmvwjtBNZV-7nTQFS5aC8WhFYCdPv4KS66AugoBXEcHerhewyW2s1Llr-PbeNGkE5CGaoxi3IIQ7oaPecxVSx9zXac7MyW51A==": {
+    "checkedAt": "2026-10-05T04:59:30.364Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLtx8320Ee3_7TFniO0hDTFlnPUULUJJYaN0mjjSEvRTdY_rwNovV4dizyszAg6zntdlJ8qXGfI7qVHVLFtYc6vvI_S1JhPTRdOltn5f3GKbC-mxHEtRQYvmBLSfRGE9UcKrYFJuRPvRnHau79ap5sZ77fy-M1aMS0ePZU9_vPSPUHDBrAQ9azoQizuCvweMAz": {
+    "checkedAt": "2026-10-05T04:59:37.376Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-ZXmITKJPUTDU5DJHy6awY7K-hO3JjyQfQNN1bidt4P4aHFWymIL_BA6eMa2yjWcnpinzMYG6RDJ5eoFJN7tIAxWnD5USewNx7V2c09TMNntPITWkLCb_oIyp2_I4GdVr5zIzb7tq6KnsKCzFAWVIaQ==": {
+    "checkedAt": "2026-10-05T04:59:46.055Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-rRfsN6XtJim-2g49fvfUOv8wP2WVVMbeFOMICho5JExsA-zlD64Itdog_uRzgR_nR6EEiMz5ttt8eLzpK5LK2KRC8BYNASUXUHFvDCsq9a1DMv3jNNBhY0B01i2th2iCUhaX7pRTBhG-xkruprJs8g==": {
+    "checkedAt": "2026-10-05T05:00:26.397Z",
+    "cacheVersion": 3,
+    "explicit": true,
+    "demand": [],
+    "supply": [
+      "グリーン"
+    ],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-jXDGMwns0niSFLPN2HdPm8Hs09Qz87zYVSkDdDFnlDPPLGintUKHtYknhN2VEGmyHZaHD763_bWaFtS2E8J1MvaqnF8Kt9HveNLwv-E0cQGE2bnA7PYo4mfZVk6GwDe_i4fa4C82x4YzxYDMX0QwoA==": {
+    "checkedAt": "2026-10-05T05:01:19.939Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-fhJWnTj0LzEY5iCPQQCymVcLpn44tEtoz4JMI7sxOHhJjlRmb8eTkWdSRImg9jU6eiIonbuy_AkiablNLzOCxWCbXmA7tu4JY5TP-VofbL1SfJavReQ3PitvHWTFUP1pHxwgqcVMtdvptkvea4geQQ==": {
+    "checkedAt": "2026-10-05T05:02:32.633Z",
+    "cacheVersion": 3,
+    "explicit": true,
+    "demand": [
+      "コルニ"
+    ],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLkC6fysE8AArqFMOw1BRkhjcWGp8ksjDJFdVtCWTVzk6_8RFrg_hhvpm5Nv51Pli5orAtOYd__QJu1Ht8YnrlDXBZJLHTBMH2wQU_Aef28_9cc--SAo745IhYVbt-iVN3AsaUBIyO4mIjiBIXj-4HruoAzJ6gslgxlyJeJIEVGLgBqTkBHkgOAtR8GbG09YNe": {
+    "checkedAt": "2026-10-05T05:02:34.692Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-JYeC3mtKLJxxBfn50AL8EXRmzBuvFuIquIz0mMFX8HQKpYFT7rn7PcujRfycRpQUeHUODa82vAlxcUt6J3L3Ci1FNttIwXaPgrm6qIAxmqx4hDfoGyqsDKvMwkwtl2yi-clzOSw6IV06jub1JaQ7sQ==": {
+    "checkedAt": "2026-10-05T05:03:32.603Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-xbJ6_YLjCxz4aU54kBWPy7udqcW5jS5bhKDCjhYqGazbE7JIg0Orj8f86RWEKuDY76b25jZIiSuAktcB-tfs4nw3BrZMiBI1D32MKLkFa_Wo9_ScBnci4AWlGIGiBA5StZy3cAmN5nK9qxgc2NWpTw==": {
+    "checkedAt": "2026-10-05T05:03:48.001Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLlzd4UNi7Ws7GKxoxjz_cfiVt2_G8ipir4Npn3elC0aV1s8-ekN94vz6bw3qiEVFFxj_OyJBakgE9RzYQrMiim0haPoQ9B1DmMyaUTTyhY4sQfI4jeDnQs-WS-pCBARpmYNbWA3g9fmR1cdOgWmDhxkToFDV5-XdeCujFIEBChq65TYeWH7xuTEo-pSFKwpWX": {
+    "checkedAt": "2026-10-05T05:03:51.381Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-42YAZIki0ZvKJaYzL0l88fyUifuaK6WhM5G4H5uCO90bPtmm800UB2zQUiNiOeEBKlmfKvBgu5AvNbdxAqq9M2W-Kc04XomJjw8HC4BIV6Jw9I8aQfxLH51NlZTlnJg9TWqK2zYY5plGyMwGCZB_tg==": {
+    "checkedAt": "2026-10-05T05:04:30.318Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-69_M2ALGJcmxpv6GkSzcCw8ocLZ33qfJ8DpgOic7P8l4b2F3f9byS9m77BO3IJNHr0l4RkVdrsK1r03HmqPeNdk6pcTyTMSBjpU_BSaXCJo3FrOGu8R9z_J78UFVKwiEg0b395C3PY9UmpU7RJD4-A==": {
+    "checkedAt": "2026-10-05T05:05:38.536Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-msFSybIro_7EhuH2H3atKOyjSUv9-5j-EIEpJnZz2PF2PrLoUU0uH1ONtvypUI14VcwEo27C2kk97hNUs8Nn690znNS7pAiW5MMfWsN0yhnbrySNEiCVQPK1ATciO3H8igneKFTuLYvkl8io5Yo71g==": {
+    "checkedAt": "2026-10-05T05:06:47.136Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-FNGLNbJS6mK0OISZl6o3TV9H0Gk3RcaZkyI2ktU9ZsX3uDhKdgMIIwMita5rbwP-XfpzrXFVGhV8jiCAv8K_51f598gvzR9dKFgS6O7EoY_ibCEb8wjSA8s8Z5LMk_LxG3tNVdjoygnjQXHxaNzMFA==": {
+    "checkedAt": "2026-10-05T05:07:54.356Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLYdyhc1t0FPzgNwofnNDezO-D6rsImTXV-B6wQ_suXliBfjxY6I0v-67rLi7YnafoexEBKrYcg4xRNby0GjYMPw3qyuPcLKME1u5M8Ybwyg_FtEpGq_IlEVoDXtJil9AaRfLkPuDLOQyAc5wj7i0Aq9z3DD1M8dDyqMdPzFnPDBuYt5tOiAYGfphW7zAQanM2": {
+    "checkedAt": "2026-10-05T05:07:58.082Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OL8eDnES5IrFEKTt3Do8yK07HbUOb5Cium13JUGC6jRL-MI1ytqgOi0V6sECGSsh0leIXnKGwxpq51h_2mhTnLdHKsRDrDOFTWLLdDX92pp7FtAjsRsNRFGuxuQh75HBNu5SeRK7NOs5AF2SAUu0i6s9iI_b6CGZB567UQcJ87hc6KNJgQHGVMPPYVDB8q-cYO": {
+    "checkedAt": "2026-10-05T05:08:01.791Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-n5xeDAr90IA4ENhyMdDLr1CflQTwXiJtuXbuyWEsQt4WBIFaWqH-JFCh8V2nYsEHiUEm4XtP8pqGnJZB1m2Aypisd57LVVugg9WEemzE_8Atw1g1eWtj6MvealLg69nhTHpFsi7wsZstOYSljm_bXw==": {
+    "checkedAt": "2026-10-05T05:08:09.172Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-zAr5SssafKLQgl6ulrquq8gfnFS6v4aG8zQFtvGf-2FObjweBjIYqMFSSzy5AagkiKdoIaKNHvNX3RvBJM3ClrXU41J6cy4h1CR86PJp16wnotWePpx3AueYnpvFiNtsABUwwSgwbXG-KO_91_qPHA==": {
+    "checkedAt": "2026-10-05T05:09:25.061Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OL4hNWKbcwv2NJ_IQUWx23deeOeR-Hq-EaLETKhXB-cGfgsk0iYVoDjV578qTujB2XSZxLGyGLHTzniOSlkkJ56O-hUsJ79Y8BL9tbEfyA1QnZYsfkMR4RDh7Xp3msgAQnHxs-t5us_l5ZWqZjXWqyZ5XbPB-6IaruYpJxoGq-JrBFZ2n-NUel2s5sY9lyskpq": {
+    "checkedAt": "2026-10-05T05:09:29.588Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-F3J5ZqKvImBbuncO27qQFsoP5xtu6LleHECjhikyK0K45fYy29WwoOMFOOmy2_ke-d8ID87Miu4_yhquuSZGUwaBesh0yu6i3GdxXcTQ1e-HFHpAHZ88peFuT-YOVUCV9bpo_t37dHppwVgsPzhHuQ==": {
+    "checkedAt": "2026-10-05T05:09:42.739Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-ynuPmN_gKMbxWgCdv92p8fNMY1XbAseMysIC1T5r_C5jwPNJKIAXXx8F0X2dgc7Sv-XgfpTTsv3pdtlVBeg1eE6xYejDlJIfwdCLo6uDqx8k0nCOXWmLhawiGJAh0rQ_U_u1r4tIAO_Cd0du91aCkw==": {
+    "checkedAt": "2026-10-05T05:09:54.292Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-hMTXopKIYr14BC3QCZ8d8n3Zny-3GwTNryM7Z95ZRD7s4UIgLaRhWxYKYHSiMS6EHjqw4578ghoH3TE7SMW0STgnxkq0dtRwmDMCSKAQmobJpdxuT6quveiEpiBv7zzJokYzsyapWR_VKozxs-dRCA==": {
+    "checkedAt": "2026-10-05T05:10:07.896Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-TSJcv_zExxIfJE5qIceZKJv_7Hzb6EsIaqhjLYwDbW75QHcBViSXd1vNB6Xl4zegztytozHiRu27dLhm0Qdue_j5dL1WsMocx335sKN9ZhTgisaXL4q2F0ITUV--xU___c7OSnIzYs1mAPaXtr5k4A==": {
+    "checkedAt": "2026-10-05T05:10:15.673Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-UPHqqUixunTbW3m8PlIYTogb4YLVivBh1STZ4IzHDWHOGMXA9mAgAWAxHN-TF8MUXWJQcqpkiDwz2Yj-TCLU8ZNYdL5VP6jgGx3b1scB9i9QsYbrvUGYuphd4w8SsxksuJ4_thdodPGYryVcxXWNaA==": {
+    "checkedAt": "2026-10-05T05:10:26.524Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-2Xof4D2gTTU9mNA6MMPHYymVm443jjzVaLgw-F7oBToo5xaJn8wBpQ6RcN_UDBJMi3bBGnsnEyvu8WrAtPepf8xks_M9BMFGU0H0iyZuzm5xKNZL6KZeA1d5Ew5xrvairJrndSdkzDcl89Zp8K48oA==": {
+    "checkedAt": "2026-10-05T05:10:48.987Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-XWjWfcu6qSmIgTN_szrIWtwuugZgT218IZb5iJx4-YJZfZ4WqzqGAKRKnYF0qsrhwQQJ3HDDXxY3XG_ovmvShvb2cLCfxjxq4mwFsYniUHoHaplhCblgFCxtegY5vFcnb7sz13ZAxCHOTM81EcsCGA==": {
+    "checkedAt": "2026-10-05T05:10:53.647Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-q_sl2RSjnUiLrhvHfkwTEpIh88v0j0Ufz9M5lRlx7nW8t62gHV2d8EpVg4pmQfqOTrR4sO04CnlksbAtwKtTXp6aFq2CvuiTSTxFGLc1tAi_RaVA04XWLnMPyuDTDdK19eTv9eWyj0Yh6qI9OI4Mtg==": {
+    "checkedAt": "2026-10-05T05:11:04.071Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-GztRGcEVNeZf7w2Aetej60brqcmrpk0i8vokNfpAXQVZ3e1p0AI2ymVcW3VYurkFWtYH6q27hdC-_PfKZDGSUwgSBYoPQtBdW-oBH-hqG0QpFdGBgPnQaWfguiwDW51Ij1AcXP_T2jVM31c3umSUhg==": {
+    "checkedAt": "2026-10-05T05:12:10.180Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-wjKVD9mawyBO6wWCyZQa1_2R0KAJrhYV3tfTP06gosSCHvvjk73ElPgCdB-7SOzALurMWjMruDNTiyfqsFcDgtQAEgoY2qTxG0V3vDo7lD8XInXvdi9ygGFIJlt9fn2L1Tv58o0i_fJn2ycjjptFVA==": {
+    "checkedAt": "2026-10-05T05:12:34.844Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-klhfm0G9OMxbgO_Ae9Y90cgfRhNy1pvEFCi5VgnMlW9K14LEwBgDfVXtxn8spe2ddy4jj2-hDAi7whzDSYTMWfYrRItQO33eedQQJfn2ec7isLnX7Qqb30bpIjMHLrO0DEHPTL5Qpuy70RFBgkZISw==": {
+    "checkedAt": "2026-10-05T05:13:10.514Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OL6H1_maAeO0bYGFsvflsYVaAan-juQyiihfUaPR0LyU_JABU2FjFCwIYXgmqfCGiPalS8oOkEC6RYSVWfbTiNa1KvF61MHDl3er55jCx7S4Rgx_cKrNT7qD7qc0t_kFKX9AqbR851OGZ5B1ufjn5lLRb493n06r8oJaigSdiRAGpVrZdhCWyEeJLxSf1Mb5Kr": {
+    "checkedAt": "2026-10-05T05:13:14.167Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-NXaT_Rw1vo3DMWw6DGlRGmamLl2_7HSPQFKUA9PuuMg6nW2YbJuJP9c6Bai1Uzy7oFYXtILvBqCTvQAoPSxXm3-eqHJgmIV1jThvDHD6NLXSWSwwEoZ44e2yWgFmWLSJEuLnnyA2953U0lAxg1-szQ==": {
+    "checkedAt": "2026-10-05T05:13:27.879Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-3vBiwCiBKDiIj7tHwAunkbNfg-JEA6ByLHa7nrdQj4y2_Tn47oRflOhfP0j0sZ2tz96-sd12c-EYUyMaqo712EnvOEwcKtWdGckjAvykyEticu6eQcrZ0gauFAI7d4V8peoi9G2TdLby8ys7M3y3rg==": {
+    "checkedAt": "2026-10-05T05:13:33.546Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OL4tYss9Jwv5RLNZPaghJGVzgWFAUFNn_Mc2VNE-0AQzfzPOI1lW56IyA6Z4RUoRQBRB4ORRfPAs_yZRIXvaOiOQBDS4wAraNfRfUTW-0UUBgZMk6816nn9IIUkTXW6DfNntT7qtTNdzloVMCdFOBysDEsSLtDIYJrrOL10hx9a-jwv8PvVCpxAGflZbyncq2p": {
+    "checkedAt": "2026-10-05T05:13:35.890Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-0_8zNniV-7brPKQun4fhDqvOeOsUOCPtFEhZdoYmNTa9PyDbc00OeGH_q_SHHph6tUJh3YxCi-StesM4q5SlbvxG-TF0P_ORbIlWMKwly-v7kVkdUuYKwIR7uR3Qa_tAG07eHEY0Cj8SIbE4DVS6ow==": {
+    "checkedAt": "2026-10-05T05:14:06.989Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-UKmg-X85IG4Y5MKns9_mvyvPzC4cCX2fWraFiXlycJbDN7UP9D8Kk4bmkH-KHaONalpOfVgAWbmRsMynUxyMf1CMKs-OS39VyT7g_K7KEjJPz2uVSxwcjkG0gHNZo4504ciLgdhOQPfGy4VsjRnKNQ==": {
+    "checkedAt": "2026-10-05T05:14:19.023Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-urCsuhFzXN6drbsS76aPvOBHEWZhjjBFfZ43zIHj8roKBz2uCIWk4ZvKdzjvCj_chch2uyiGjFVGllUqiCgzovZMeKDUnWQKrvv6EbC2S-shg_9epiM0IzpQhE9bjkFiHiTVB_hLWKMD1g3-I7wxNw==": {
+    "checkedAt": "2026-10-05T05:15:22.912Z",
+    "cacheVersion": 3,
+    "explicit": false,
+    "demand": [],
+    "supply": [],
+    "candidatePasses": 6
+  },
+  "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i6hjVpND1OjWZ7RVcmujne-iVv_ZMk4YgWB3E6lT8MFrXvyu1WDEK90xfVpF1kdH1jV417TSaRN6SLcIDAtsuZ2k4D2X8F7-4XU4UK-EdKc11zR7kqXP6etE2QiFFFW_E9oXg4deVIPknZO4rxghlwP3Mq9K022uUmQmxY1Z9wiNg==": {
+    "checkedAt": "2026-10-05T05:16:14.222Z",
+    "cacheVersion": 3,
+    "explicit": true,
+    "demand": [
+      "カルネ",
+      "ミクリ"
+    ],
+    "supply": [],
+    "candidatePasses": 6
   }
 }
