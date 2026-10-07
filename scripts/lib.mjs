@@ -65,8 +65,6 @@ export function extractCardMentions(segment, cards, aliases = {}) {
   const names = [...cards].sort((a, b) => b.length - a.length);
 
   for (const name of names) {
-    // A negative Japanese-character look-ahead prevents short supporter names
-    // such as 「カイ」「ハラ」 from matching Pokémon like カイリュー/ハラバリー.
     const re = new RegExp(`${escapeRegExp(name)}(?![ぁ-んァ-ヶー一-龠々])`, 'g');
     for (const match of text.matchAll(re)) {
       const tail = text.slice((match.index ?? 0) + match[0].length, (match.index ?? 0) + match[0].length + 12);
@@ -116,6 +114,7 @@ export function ratioData(demand, supply) {
 
 export function buildRankings(posts, cards, now = new Date()) {
   const windows = [
+    { key: '12h', hours: 12, label: '12時間' },
     { key: '24h', hours: 24, label: '24時間' },
     { key: '48h', hours: 48, label: '48時間' },
     { key: '168h', hours: 168, label: '1週間' }

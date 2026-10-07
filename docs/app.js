@@ -1,4 +1,4 @@
-const state={data:null,window:'24h',query:'',min:0,sources:null,sourcesOpen:false,sourceLimit:100,sourceCard:null};
+const state={data:null,window:'12h',query:'',min:0,sources:null,sourcesOpen:false,sourceLimit:100,sourceCard:null};
 const $=s=>document.querySelector(s);
 const fmt=n=>new Intl.NumberFormat('ja-JP').format(n??0);
 const dt=s=>s?new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}).format(new Date(s)):'—';
@@ -115,6 +115,10 @@ function renderSources(){
 async function load(){
   try{
     state.data=await fetchRankings();
+    if(!state.data.windows?.[state.window]){
+      state.window=state.data.windows?.['24h']?'24h':Object.keys(state.data.windows??{})[0];
+      document.querySelectorAll('[data-window]').forEach(x=>x.classList.toggle('active',x.dataset.window===state.window));
+    }
     $('#updated').textContent=dt(state.data.generatedAt)+' JST';
     $('#storedPosts').textContent=fmt(state.data.coverage.storedPosts);
     $('#cardCount').textContent=fmt(state.data.cards.count);
@@ -172,7 +176,7 @@ function render(){
 }
 function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));}
 
-document.querySelectorAll('[data-window]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-window]').forEach(x=>x.classList.remove('active'));b.classList.add('active');state.window=b.dataset.window;state.sourceLimit=100;render();}));
+document.querySelectorAll('[data-window]').forEach(b=>b.addEventListener('click',()=>{if(!state.data?.windows?.[b.dataset.window])return;document.querySelectorAll('[data-window]').forEach(x=>x.classList.remove('active'));b.classList.add('active');state.window=b.dataset.window;state.sourceLimit=100;render();}));
 $('#search').addEventListener('input',e=>{state.query=e.target.value;state.sourceLimit=100;render();});
 $('#minCount').addEventListener('change',e=>{state.min=Number(e.target.value);render();});
 $('#toggleSources').addEventListener('click',async()=>{

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ポケポケ☆2サポートX自動集計ランキング(β)</title>
   <meta name="description" content="公開X検索ヒットを自動集計し、ポケポケ☆2サポートのトレード需要・供給をランキング表示するβ版サイト" />
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles.css?v=20261007-12h" />
 </head>
 <body>
   <main class="shell">
@@ -13,7 +13,7 @@
       <div>
         <p class="eyebrow">POKÉMON TCG POCKET · PUBLIC X TRADE SIGNALS</p>
         <h1>ポケポケ☆2サポート<br><span>X自動集計ランキング(β)</span></h1>
-        <p class="lead">公開X検索で見つかった「求 / 譲・出」を定期的に集計し、需要供給比を24時間・48時間・1週間で比較します。8つの検索条件と画像OCRを維持し、不要な大量再取得だけを減らしています。</p>
+        <p class="lead">公開X検索で見つかった「求 / 譲・出」を定期的に集計し、需要供給比を12時間・24時間・48時間・1週間で比較します。8つの検索条件と画像OCRを維持し、不要な大量再取得だけを減らしています。</p>
       </div>
       <div class="live-card">
         <span class="pulse"></span>
@@ -39,7 +39,8 @@
 
     <section class="toolbar" aria-label="表示期間">
       <div class="tabs" id="tabs">
-        <button data-window="24h" class="active">24時間</button>
+        <button data-window="12h" class="active">12時間</button>
+        <button data-window="24h">24時間</button>
         <button data-window="48h">48時間</button>
         <button data-window="168h">1週間</button>
       </div>
@@ -59,7 +60,7 @@
     <section class="panel">
       <div class="panel-head">
         <div>
-          <h2 id="periodTitle">24時間ランキング</h2>
+          <h2 id="periodTitle">12時間ランキング</h2>
           <p>需要数が多い順に表示し、需要数が同じ場合は供給数が少ないカードを上位にします。</p>
         </div>
         <div class="legend"><span class="need-dot"></span>需要 <span class="supply-dot"></span>供給</div>
@@ -135,6 +136,6 @@
   <!-- 忍者AdMax「全自動広告枠」のタグをこの2行の間に貼り付け -->
   <!-- NINJA_ADMAX_AUTO_TAG_END -->
 
-  <script src="./app.js" type="module"></script>
+  <script src="./app.js?v=20261007-12h" type="module"></script>
 </body>
 </html>
