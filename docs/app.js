@@ -1,4 +1,4 @@
-const state={data:null,window:'24h',query:'',min:0,sources:null,sourcesOpen:false,sourceLimit:100};
+const state={data:null,window:'24h',query:'',min:0,sources:null,sourcesOpen:false,sourceLimit:100,sourceCard:null};
 const $=s=>document.querySelector(s);
 const fmt=n=>new Intl.NumberFormat('ja-JP').format(n??0);
 const dt=s=>s?new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}).format(new Date(s)):'—';
@@ -54,6 +54,7 @@ function getVisibleSources(){
   const end=new Date(state.data.generatedAt).getTime();
   const start=end-windowData.hours*3600_000;
   const q=state.query.trim().toLowerCase();
+  const selectedCard=state.sourceCard;
   const unique=new Map();
 
   for(const post of state.sources){
@@ -63,7 +64,13 @@ function getVisibleSources(){
 
     const demand=Array.isArray(post.demand)?post.demand:[];
     const supply=Array.isArray(post.supply)?post.supply:[];
-    if(q&&![...demand,...supply].some(name=>String(name).toLowerCase().includes(q)))continue;
+    const all=[...demand,...supply];
+
+    if(selectedCard){
+      if(!all.some(name=>String(name)===selectedCard))continue;
+    }else if(q&& !all.some(name=>String(name).toLowerCase().includes(q))){
+      continue;
+    }
 
     const id=String(post.id);
     if(!unique.has(id)){
@@ -82,6 +89,10 @@ function renderSources(){
   if(!state.sourcesOpen||!state.sources)return;
   const posts=getVisibleSources();
   const shown=posts.slice(0,state.sourceLimit);
+  $('#sourcesTitle').textContent=state.sourceCard?`${state.sourceCard} の参照元ポスト`:'参照元ポスト';
+  $('#sourcesDescription').textContent=state.sourceCard
+    ? `現在選択中の${state.data.windows[state.window].label}に「${state.sourceCard}」が求または譲として含まれた公開Xポストです。`
+    : '現在選択中の期間にランキング集計へ使われた公開Xポストへのリンクです。カード名検索にも連動し、同じ投稿IDは1件にまとめます。';
   $('#sourceCount').textContent=`${fmt(posts.length)}件（投稿ID重複除外）`;
   $('#sourceList').innerHTML=shown.map(post=>{
     const demand=[...post.demand].map(x=>escapeHtml(String(x))).join('、')||'—';
@@ -154,6 +165,7 @@ function render(){
     <td class="need">${fmt(x.demand)}</td><td class="supply">${fmt(x.supply)}</td>
     <td class="ratio">${x.ratioDisplay}</td><td class="imbalance ${x.imbalance>0?'pos':x.imbalance<0?'neg':''}">${x.imbalance>0?'+':''}${fmt(x.imbalance)}</td>
     <td><div class="bars"><div class="bar needbar"><i style="width:${x.demand/max*100}%"></i></div><div class="bar supplybar"><i style="width:${x.supply/max*100}%"></i></div></div></td>
+    <td class="source-cell"><button type="button" class="card-source-btn" data-card="${encodeURIComponent(x.name)}">参照元</button></td>
   </tr>`).join('');
   $('#empty').hidden=rows.length>0;
   if(state.sourcesOpen)renderSources();
@@ -164,11 +176,27 @@ document.querySelectorAll('[data-window]').forEach(b=>b.addEventListener('click'
 $('#search').addEventListener('input',e=>{state.query=e.target.value;state.sourceLimit=100;render();});
 $('#minCount').addEventListener('change',e=>{state.min=Number(e.target.value);render();});
 $('#toggleSources').addEventListener('click',async()=>{
+  if(!state.sourcesOpen){
+    state.sourceCard=null;
+    state.sourceLimit=100;
+  }
   state.sourcesOpen=!state.sourcesOpen;
   $('#sourcesBody').hidden=!state.sourcesOpen;
   $('#toggleSources').textContent=state.sourcesOpen?'一覧を閉じる':'一覧を表示';
   $('#toggleSources').setAttribute('aria-expanded',String(state.sourcesOpen));
   if(state.sourcesOpen)await ensureSources();
+});
+$('#ranking').addEventListener('click',async e=>{
+  const button=e.target.closest('.card-source-btn');
+  if(!button)return;
+  state.sourceCard=decodeURIComponent(button.dataset.card);
+  state.sourceLimit=100;
+  state.sourcesOpen=true;
+  $('#sourcesBody').hidden=false;
+  $('#toggleSources').textContent='一覧を閉じる';
+  $('#toggleSources').setAttribute('aria-expanded','true');
+  await ensureSources();
+  $('#sourcesTitle').scrollIntoView({behavior:'smooth',block:'start'});
 });
 $('#moreSources').addEventListener('click',()=>{state.sourceLimit+=100;renderSources();});
 load();
