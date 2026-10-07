@@ -1,7 +1,7 @@
 {
   "firstSuccessfulCollectionAt": "2026-10-03T03:26:18.391Z",
-  "lastRunAt": "2026-10-07T13:30:06.635Z",
-  "lastRunDiscovered": 65,
+  "lastRunAt": "2026-10-07T18:32:27.522Z",
+  "lastRunDiscovered": 81,
   "lastRunErrors": [],
   "lastBackfill": {
     "mode": "rolling-7d",
@@ -23,14 +23,14 @@
     "enabled": true,
     "cacheVersion": 5,
     "newImages": 100,
-    "cacheHits": 312,
-    "recognizedImages": 100,
-    "failedImages": 0,
-    "postsFromImages": 24,
-    "candidatePasses": 640,
-    "gameWithImages": 40,
+    "cacheHits": 400,
+    "recognizedImages": 97,
+    "failedImages": 3,
+    "postsFromImages": 28,
+    "candidatePasses": 664,
+    "gameWithImages": 28,
     "maxNewImagesPerRun": 100,
     "maxCandidatePasses": 8,
-    "lastRunAt": "2026-10-07T13:30:06.635Z"
+    "lastRunAt": "2026-10-07T18:32:27.522Z"
   }
 }
