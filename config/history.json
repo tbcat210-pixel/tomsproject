@@ -17,5 +17,5 @@
   "imageOcrMaxCandidatePasses": 8,
   "imageOcrUpscaleMinWidth": 1800,
   "imageOcrUpscaleMaxWidth": 3200,
-  "imageOcrCacheVersion": 4
+  "imageOcrCacheVersion": 5
 }

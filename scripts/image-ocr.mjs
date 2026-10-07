@@ -3,7 +3,7 @@ import { readJson, writeJson, extractCardMentions, cleanText } from './lib.mjs';
 const IMAGE_KEY_RE = /(image|img|photo|media|thumbnail|picture|large|orig)/i;
 const IMAGE_URL_RE = /\.(?:jpe?g|png|webp)(?:[?#].*)?$/i;
 const IMAGE_HOST_RE = /(?:pbs\.twimg\.com|twimg\.com|img\.gamewith\.jp|yimg\.jp)/i;
-const DEFAULT_CACHE_VERSION = 4;
+const DEFAULT_CACHE_VERSION = 5;
 
 export function extractImageUrlsFromEntry(entry = {}) {
   const out = new Set();
@@ -148,6 +148,345 @@ export function mergeMentionGroups(groups = []) {
   return merged;
 }
 
+function normalizeCardTitleText(value = '') {
+  return String(value)
+    .normalize('NFKC')
+    .replace(/[―−‐‑–—]/g, 'ー')
+    .replace(/[｜|¦]/g, '')
+    .replace(/[\s・･·•●★☆※:：/／\\()[\]{}【】「」『』<>＜＞"'`´^~_+=*×xX0-9A-Za-z]+/g, '')
+    .replace(/[^ぁ-んァ-ヶー一-龠々]/g, '');
+}
+
+function levenshteinDistance(a, b) {
+  const aa = [...a];
+  const bb = [...b];
+  if (!aa.length) return bb.length;
+  if (!bb.length) return aa.length;
+  const prev = Array.from({ length: bb.length + 1 }, (_, i) => i);
+  for (let i = 0; i < aa.length; i++) {
+    let diag = prev[0];
+    prev[0] = i + 1;
+    for (let j = 0; j < bb.length; j++) {
+      const old = prev[j + 1];
+      prev[j + 1] = Math.min(
+        prev[j + 1] + 1,
+        prev[j] + 1,
+        diag + (aa[i] === bb[j] ? 0 : 1)
+      );
+      diag = old;
+    }
+  }
+  return prev[bb.length];
+}
+
+function minSubstringDistance(text, target) {
+  if (!text || !target) return Infinity;
+  if (text.includes(target)) return 0;
+  const chars = [...text];
+  const targetLen = [...target].length;
+  let best = Infinity;
+  const minLen = Math.max(1, targetLen - 1);
+  const maxLen = Math.min(chars.length, targetLen + 1);
+  for (let len = minLen; len <= maxLen; len++) {
+    for (let i = 0; i + len <= chars.length; i++) {
+      const d = levenshteinDistance(chars.slice(i, i + len).join(''), target);
+      if (d < best) best = d;
+      if (best === 0) return 0;
+    }
+  }
+  return best;
+}
+
+export function extractGameWithCardMentions(rawText, cards, aliases = {}) {
+  const normalized = normalizeOcrTradeText(rawText);
+  if (!normalized) return [];
+
+  // Exact matches are always preferred. The regular matcher already blocks
+  // short supporter names from matching inside longer Japanese card names.
+  const exact = extractCardMentions(normalized, cards, aliases);
+  const out = [...exact];
+  const already = new Set(exact);
+
+  const variants = [];
+  for (const name of cards) variants.push([name, name]);
+  for (const [alias, canonical] of Object.entries(aliases)) {
+    if (cards.includes(canonical)) variants.push([alias, canonical]);
+  }
+
+  // The GameWith title sheet places one card crop per line. Do fuzzy
+  // correction line-by-line and accept at most one canonical card per line.
+  // This prevents a noisy OCR blob from spuriously matching many supporters.
+  const lines = String(rawText)
+    .split(/\r?\n/)
+    .map(x => normalizeCardTitleText(x))
+    .filter(x => [...x].length >= 3);
+
+  for (const line of lines) {
+    const matches = [];
+    for (const [variantRaw, canonical] of variants) {
+      if (already.has(canonical)) continue;
+      const variant = normalizeCardTitleText(variantRaw);
+      const length = [...variant].length;
+
+      // Very short names are easy to confuse with Pokémon names and remain
+      // exact-only.
+      if (length < 4) continue;
+
+      const distance = minSubstringDistance(line, variant);
+      const allowed = length >= 8 ? 2 : 1;
+      if (distance > allowed) continue;
+      const score = 1 - distance / Math.max(1, length);
+      if (score < 0.82) continue;
+      matches.push({ canonical, distance, score, length });
+    }
+
+    matches.sort((a, b) =>
+      a.distance - b.distance ||
+      b.score - a.score ||
+      b.length - a.length ||
+      a.canonical.localeCompare(b.canonical, 'ja')
+    );
+    const best = matches[0];
+    const second = matches[1];
+    if (!best) continue;
+
+    // If two different cards are essentially tied, do not guess.
+    const ambiguous = second &&
+      second.canonical !== best.canonical &&
+      second.distance === best.distance &&
+      Math.abs(second.score - best.score) < 0.06;
+    if (ambiguous) continue;
+
+    out.push(best.canonical);
+    already.add(best.canonical);
+  }
+
+  return out;
+}
+
+function contiguousRuns(scores, minScore = 0.40, minRows = 5) {
+  const out = [];
+  let start = -1;
+  for (let i = 0; i <= scores.length; i++) {
+    const hit = i < scores.length && scores[i] >= minScore;
+    if (hit && start < 0) start = i;
+    if ((!hit || i === scores.length) && start >= 0) {
+      const end = i - 1;
+      if (end - start + 1 >= minRows) {
+        const slice = scores.slice(start, end + 1);
+        out.push({
+          start,
+          end,
+          score: slice.reduce((a, b) => a + b, 0) / slice.length
+        });
+      }
+      start = -1;
+    }
+  }
+  return out;
+}
+
+export async function detectGameWithTradeLayout(bytes) {
+  const { default: sharp } = await import('sharp');
+  const meta = await sharp(bytes, { failOn: 'none', limitInputPixels: 80_000_000 }).metadata();
+  if (!meta.width || !meta.height) return null;
+
+  const analysisWidth = Math.min(900, meta.width);
+  const { data, info } = await sharp(bytes, { failOn: 'none', limitInputPixels: 80_000_000 })
+    .resize({ width: analysisWidth, withoutEnlargement: true, fastShrinkOnLoad: false })
+    .removeAlpha()
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+
+  const { width, height, channels } = info;
+  if (channels < 3 || width < 240 || height < 180) return null;
+
+  const pinkScores = new Array(height).fill(0);
+  const blueScores = new Array(height).fill(0);
+  const darkScores = new Array(height).fill(0);
+  const step = width > 700 ? 2 : 1;
+  const sampled = Math.ceil(width / step);
+
+  for (let y = 0; y < height; y++) {
+    let pink = 0;
+    let blue = 0;
+    let dark = 0;
+    for (let x = 0; x < width; x += step) {
+      const i = (y * width + x) * channels;
+      const r = data[i];
+      const g = data[i + 1];
+      const b = data[i + 2];
+
+      // GameWith maker header bands span nearly the whole width.
+      // Pink ranges from coral-pink to magenta.
+      if (r >= 175 && r - g >= 25 && b >= 65 && ((r + b) / 2 - g) >= 18) pink++;
+      // Blue ranges from cyan to bright blue.
+      if (b >= 145 && g >= 90 && b - r >= 35 && g - r >= 25) blue++;
+      if (r <= 28 && g <= 28 && b <= 28) dark++;
+    }
+    pinkScores[y] = pink / sampled;
+    blueScores[y] = blue / sampled;
+    darkScores[y] = dark / sampled;
+  }
+
+  const minRows = Math.max(5, Math.round(height * 0.005));
+  const pinkRuns = contiguousRuns(pinkScores, 0.36, minRows);
+  const blueRuns = contiguousRuns(blueScores, 0.36, minRows);
+  let best = null;
+
+  for (const pink of pinkRuns) {
+    for (const blue of blueRuns) {
+      if (blue.start <= pink.end) continue;
+      const gap = blue.start - pink.end;
+      if (gap < height * 0.05 || gap > height * 0.72) continue;
+      const score = pink.score + blue.score;
+      if (!best || score > best.score) best = { pink, blue, score };
+    }
+  }
+  if (!best) return null;
+
+  // X's image viewer screenshots can contain a large black letterbox below
+  // the maker image. Direct pbs/Yahoo images normally do not, but detecting
+  // the boundary makes the layout parser robust in either case.
+  const darkRuns = contiguousRuns(darkScores, 0.88, Math.max(8, Math.round(height * 0.01)));
+  const lowerBlack = darkRuns.find(run => run.start > best.blue.end + height * 0.08);
+  const contentBottom = lowerBlack ? lowerBlack.start / height : 1;
+
+  return {
+    type: 'gamewith-trade-maker',
+    confidence: Math.min(1, best.score / 1.5),
+    pinkTop: best.pink.start / height,
+    pinkBottom: (best.pink.end + 1) / height,
+    blueTop: best.blue.start / height,
+    blueBottom: (best.blue.end + 1) / height,
+    contentBottom
+  };
+}
+
+export async function buildGameWithTitleSheets(bytes, layout, {
+  maxCandidatePasses = 8,
+  upscaleMinWidth = 1800,
+  upscaleMaxWidth = 3200
+} = {}) {
+  const { default: sharp } = await import('sharp');
+  const source = sharp(bytes, { failOn: 'none', limitInputPixels: 80_000_000 });
+  const meta = await source.metadata();
+  const sourceWidth = meta.width ?? 0;
+  const sourceHeight = meta.height ?? 0;
+  if (!sourceWidth || !sourceHeight) return [];
+
+  const targetWidth = Math.min(
+    upscaleMaxWidth,
+    sourceWidth < upscaleMinWidth ? Math.max(sourceWidth * 2, upscaleMinWidth) : sourceWidth
+  );
+
+  const prepared = await sharp(bytes, { failOn: 'none', limitInputPixels: 80_000_000 })
+    .resize({ width: targetWidth, withoutEnlargement: false, fastShrinkOnLoad: false })
+    .png()
+    .toBuffer();
+  const preparedMeta = await sharp(prepared).metadata();
+  const w = preparedMeta.width ?? targetWidth;
+  const h = preparedMeta.height ?? Math.round(sourceHeight * targetWidth / sourceWidth);
+
+  const demandTop = Math.round(layout.pinkBottom * h);
+  const demandBottom = Math.round(layout.blueTop * h);
+  const supplyTop = Math.round(layout.blueBottom * h);
+  const supplyBottom = Math.max(supplyTop + 1, Math.round((layout.contentBottom ?? 1) * h));
+
+  const colPitch = w / 8;
+  const rowPitch = colPitch * 1.36;
+  const inferRows = (top, bottom) => {
+    const sectionHeight = Math.max(0, bottom - top);
+    return clamp(Math.round(sectionHeight / rowPitch), 1, 6);
+  };
+
+  const buildSheet = async (kind, sectionTop, sectionBottom, rows) => {
+    const cellWidth = 720;
+    const cellHeight = 118;
+    const gap = 20;
+    const sheetWidth = cellWidth + 40;
+    const cells = [];
+
+    for (let row = 0; row < rows; row++) {
+      const titleY = Math.round(sectionTop + colPitch * 0.08 + row * rowPitch);
+      const titleHeight = Math.max(22, Math.round(colPitch * 0.16));
+      if (titleY + titleHeight > sectionBottom + 2) continue;
+
+      for (let col = 0; col < 8; col++) {
+        const left = Math.max(0, Math.round(col * colPitch + colPitch * 0.08));
+        const width = Math.max(40, Math.min(
+          w - left,
+          Math.round(colPitch * 0.84)
+        ));
+        if (left + width > w || width < 40) continue;
+
+        const rawCell = await sharp(prepared)
+          .extract({ left, top: titleY, width, height: titleHeight })
+          .grayscale()
+          .png()
+          .toBuffer();
+
+        const stats = await sharp(rawCell).stats();
+        const channel = stats.channels?.[0];
+        // Empty maker slots are almost flat pale backgrounds. Skip them
+        // before normalization, which would otherwise amplify tiny JPEG noise.
+        if ((stats.entropy ?? 0) < 2.2 || (channel?.stdev ?? 0) < 10) continue;
+
+        const cell = await sharp(rawCell)
+          .normalize()
+          .sharpen({ sigma: 0.7 })
+          .resize({ width: cellWidth, height: cellHeight, fit: 'fill', kernel: 'lanczos3' })
+          .extend({ top: 4, bottom: 4, left: 4, right: 4, background: '#ffffff' })
+          .png()
+          .toBuffer();
+
+        cells.push(cell);
+      }
+    }
+
+    if (!cells.length) return [];
+    const sheetHeight = cells.length * (cellHeight + gap) + 20;
+    const composites = cells.map((cell, index) => ({
+      input: cell,
+      left: 16,
+      top: 10 + index * (cellHeight + gap)
+    }));
+    const normal = await sharp({
+      create: {
+        width: sheetWidth,
+        height: sheetHeight,
+        channels: 3,
+        background: { r: 255, g: 255, b: 255 }
+      }
+    })
+      .composite(composites)
+      .png()
+      .toBuffer();
+
+    // A second binary view often helps with tiny black title text on bright
+    // card headers. Both represent the same cells, so their results are
+    // merged by max-count instead of being added twice.
+    const binary = await sharp(normal)
+      .normalize()
+      .threshold(178)
+      .png()
+      .toBuffer();
+
+    return [
+      { label: `gamewith-${kind}-titles-normal`, kind, psm: '6', bytes: normal },
+      { label: `gamewith-${kind}-titles-binary`, kind, psm: '6', bytes: binary }
+    ];
+  };
+
+  const demandRows = inferRows(demandTop, demandBottom);
+  const supplyRows = inferRows(supplyTop, supplyBottom);
+  const candidates = [
+    ...await buildSheet('demand', demandTop, demandBottom, demandRows),
+    ...await buildSheet('supply', supplyTop, supplyBottom, supplyRows)
+  ];
+  return candidates.slice(0, Math.max(1, maxCandidatePasses));
+}
+
 function likelyTradeImagePost(body = '', urls = []) {
   const clue = String(body || '');
   if (/(ポケポケ|pokemon|tcg|トレードメーカー|trade)/i.test(clue) && /(トレード|交換|求|譲|画像|サポート)/i.test(clue)) return true;
@@ -273,6 +612,7 @@ export async function createTradeImageOcr({
   let recognizedImages = 0;
   let postsFromImages = 0;
   let candidatePasses = 0;
+  let gameWithImages = 0;
 
   const freshEnough = item => {
     const t = item?.checkedAt ? new Date(item.checkedAt).getTime() : 0;
@@ -330,6 +670,51 @@ export async function createTradeImageOcr({
       if (contentType && !contentType.startsWith('image/')) throw new Error(`not image: ${contentType}`);
 
       const w = await ensureWorker();
+      const gameWithLayout = await detectGameWithTradeLayout(bytes);
+
+      if (gameWithLayout) {
+        gameWithImages++;
+        const candidates = await buildGameWithTitleSheets(bytes, gameWithLayout, {
+          maxCandidatePasses,
+          upscaleMinWidth,
+          upscaleMaxWidth
+        });
+        const demandGroups = [];
+        const supplyGroups = [];
+
+        for (const candidate of candidates) {
+          candidatePasses++;
+          const psm = candidate.psm === '6' ? psmValues.SINGLE_BLOCK : psmValues.SPARSE_TEXT;
+          await w.setParameters({
+            preserve_interword_spaces: '1',
+            user_defined_dpi: '300',
+            tessedit_pageseg_mode: psm
+          });
+
+          const { data } = await w.recognize(candidate.bytes);
+          const mentions = extractGameWithCardMentions(data?.text ?? '', cards, aliases);
+          (candidate.kind === 'demand' ? demandGroups : supplyGroups).push(mentions);
+        }
+
+        const demand = mergeMentionGroups(demandGroups);
+        const supply = mergeMentionGroups(supplyGroups);
+        const explicit = demand.length > 0 || supply.length > 0;
+        const item = {
+          checkedAt: new Date().toISOString(),
+          cacheVersion,
+          explicit,
+          demand,
+          supply,
+          candidatePasses: candidates.length,
+          layout: 'gamewith-grid-v1',
+          layoutConfidence: gameWithLayout.confidence
+        };
+        cache[url] = item;
+        dirty = true;
+        recognizedImages++;
+        return item;
+      }
+
       const candidates = await buildOcrCandidates(bytes, { maxCandidatePasses, upscaleMinWidth, upscaleMaxWidth });
       const demandGroups = [];
       const supplyGroups = [];
@@ -371,7 +756,8 @@ export async function createTradeImageOcr({
         explicit,
         demand,
         supply,
-        candidatePasses: candidates.length
+        candidatePasses: candidates.length,
+        layout: 'generic'
       };
       cache[url] = item;
       dirty = true;
@@ -429,6 +815,7 @@ export async function createTradeImageOcr({
     failedImages,
     postsFromImages,
     candidatePasses,
+    gameWithImages,
     maxNewImagesPerRun,
     maxCandidatePasses
   });
