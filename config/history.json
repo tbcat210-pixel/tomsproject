@@ -6,15 +6,16 @@
   "broadBackfillPagesPerQuery": 30,
   "cardBackfillPagesPerQuery": 10,
   "resultsPerPage": 40,
-  "throttleMs": 3000,
+  "throttleMs": 90000,
+  "queryThrottleMs": 180000,
   "retryCount": 0,
   "imageOcrEnabled": true,
   "imageOcrMaxImagesPerPost": 4,
   "imageOcrMaxNewImagesPerRun": 100,
   "imageOcrTimeoutMs": 30000,
   "imageOcrCacheHours": 216,
-  "imageOcrMaxCandidatePasses": 6,
-  "imageOcrUpscaleMinWidth": 1500,
-  "imageOcrUpscaleMaxWidth": 2600,
-  "imageOcrCacheVersion": 3
+  "imageOcrMaxCandidatePasses": 8,
+  "imageOcrUpscaleMinWidth": 1800,
+  "imageOcrUpscaleMaxWidth": 3200,
+  "imageOcrCacheVersion": 4
 }

@@ -17,16 +17,20 @@ const imageOcr = await createTradeImageOcr({
   enabled: historyConfig.imageOcrEnabled ?? true,
   maxImagesPerPost: historyConfig.imageOcrMaxImagesPerPost ?? 4,
   maxNewImagesPerRun: historyConfig.imageOcrMaxNewImagesPerRun ?? 200,
-  maxCandidatePasses: historyConfig.imageOcrMaxCandidatePasses ?? 10,
-  upscaleMinWidth: historyConfig.imageOcrUpscaleMinWidth ?? 1500,
-  upscaleMaxWidth: historyConfig.imageOcrUpscaleMaxWidth ?? 2600,
+  maxCandidatePasses: historyConfig.imageOcrMaxCandidatePasses ?? 8,
+  upscaleMinWidth: historyConfig.imageOcrUpscaleMinWidth ?? 1800,
+  upscaleMaxWidth: historyConfig.imageOcrUpscaleMaxWidth ?? 3200,
   timeoutMs: historyConfig.imageOcrTimeoutMs ?? 30_000,
   cacheHours: historyConfig.imageOcrCacheHours ?? 720,
-  cacheVersion: historyConfig.imageOcrCacheVersion ?? 3
+  cacheVersion: historyConfig.imageOcrCacheVersion ?? 4
 });
 
 const recentSince = new Date(now.getTime() - 24 * 3600_000);
-for (const query of queryConfig.queries) {
+const pageThrottleMs = historyConfig.throttleMs ?? 90_000;
+const queryThrottleMs = historyConfig.queryThrottleMs ?? 180_000;
+
+for (let i = 0; i < queryConfig.queries.length; i++) {
+  const query = queryConfig.queries[i];
   try {
     const result = await collectYahooQuery({
       query,
@@ -35,9 +39,10 @@ for (const query of queryConfig.queries) {
       since: recentSince,
       maxPages: historyConfig.recentPagesPerQuery ?? 3,
       resultsPerPage: historyConfig.resultsPerPage ?? 40,
-      throttleMs: historyConfig.throttleMs ?? 450,
-      retryCount: historyConfig.retryCount ?? 2,
-      onPage: ({ page, entries, parsedPosts }) => console.log(`[recent] page=${page} entries=${entries} parsed=${parsedPosts} :: ${query}`),
+      throttleMs: pageThrottleMs,
+      retryCount: historyConfig.retryCount ?? 0,
+      onPage: ({ page, entries, parsedPosts }) =>
+        console.log(`[recent] page=${page} entries=${entries} parsed=${parsedPosts} :: ${query}`),
       imageOcr
     });
     discovered.push(...result.posts);
@@ -45,9 +50,15 @@ for (const query of queryConfig.queries) {
     const message = String(err?.message ?? err);
     errors.push({ mode: 'recent', query, message });
     console.error(`[recent error] ${query}: ${message}`);
+    // Respect Yahoo's rate-limit/access-block signals immediately.
     if (message.includes('ACCESS_BLOCKED')) break;
   }
-  await sleep(historyConfig.throttleMs ?? 450);
+
+  // Keep separate searches well apart too. The final query needs no wait.
+  if (i < queryConfig.queries.length - 1 && queryThrottleMs > 0) {
+    console.log(`[gentle] waiting ${Math.round(queryThrottleMs / 1000)}s before next Yahoo search`);
+    await sleep(queryThrottleMs);
+  }
 }
 
 const dueHours = historyConfig.autoBackfillEveryHours ?? 24;
@@ -69,6 +80,22 @@ const posts = mergePosts(oldPosts, discovered, now, historyConfig.storageHorizon
 const ocrStats = imageOcr.getStats();
 await imageOcr.finalize();
 const nextState = { ...state, lastBackfill, imageOcr: { ...ocrStats, lastRunAt: now.toISOString() } };
-await saveSnapshot({ now, posts, cardsConfig, queryConfig, state: nextState, discoveredThisRun: discovered.length, errors, backfill: lastBackfill });
-await writeJson(paths.state, { ...nextState, firstSuccessfulCollectionAt: nextState.firstSuccessfulCollectionAt || (posts.length ? now.toISOString() : null), lastRunAt: now.toISOString(), lastRunDiscovered: discovered.length, lastRunErrors: errors });
+await saveSnapshot({
+  now,
+  posts,
+  cardsConfig,
+  queryConfig,
+  state: nextState,
+  discoveredThisRun: discovered.length,
+  errors,
+  backfill: lastBackfill
+});
+await writeJson(paths.state, {
+  ...nextState,
+  firstSuccessfulCollectionAt:
+    nextState.firstSuccessfulCollectionAt || (posts.length ? now.toISOString() : null),
+  lastRunAt: now.toISOString(),
+  lastRunDiscovered: discovered.length,
+  lastRunErrors: errors
+});
 console.log(`stored=${posts.length} ocrNew=${ocrStats.newImages} ocrPosts=${ocrStats.postsFromImages}`);

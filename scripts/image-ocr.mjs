@@ -3,7 +3,7 @@ import { readJson, writeJson, extractCardMentions, cleanText } from './lib.mjs';
 const IMAGE_KEY_RE = /(image|img|photo|media|thumbnail|picture|large|orig)/i;
 const IMAGE_URL_RE = /\.(?:jpe?g|png|webp)(?:[?#].*)?$/i;
 const IMAGE_HOST_RE = /(?:pbs\.twimg\.com|twimg\.com|img\.gamewith\.jp|yimg\.jp)/i;
-const DEFAULT_CACHE_VERSION = 3;
+const DEFAULT_CACHE_VERSION = 4;
 
 export function extractImageUrlsFromEntry(entry = {}) {
   const out = new Set();
@@ -17,7 +17,7 @@ export function extractImageUrlsFromEntry(entry = {}) {
         try {
           const u = new URL(s);
           if (u.hostname === 'pbs.twimg.com' && u.searchParams.get('format')) {
-            u.searchParams.set('name', 'large');
+            u.searchParams.set('name', 'orig');
           }
           out.add(u.toString());
         } catch {
@@ -42,7 +42,11 @@ export function extractImageUrlsFromEntry(entry = {}) {
 export function normalizeOcrTradeText(value = '') {
   return cleanText(String(value)
     .normalize('NFKC')
-    .replace(/[｜|]/g, ' ')
+    .replace(/[カ力][一ー―−-]ド/g, 'カード')
+    .replace(/欲し[ぃい]/g, '欲しい')
+    .replace(/出せ[るろ]/g, '出せる')
+    .replace(/譲れ[るろ]/g, '譲れる')
+    .replace(/[｜|¦]/g, ' ')
     .replace(/[：﹕]/g, ':')
     .replace(/[／]/g, '/')
     .replace(/[・•●]/g, ' ')
@@ -150,86 +154,87 @@ function likelyTradeImagePost(body = '', urls = []) {
   return urls.some(u => /gamewith|pbs\.twimg\.com|twimg\.com/i.test(u));
 }
 
+function clamp(n, min, max) {
+  return Math.max(min, Math.min(max, n));
+}
+
 async function buildOcrCandidates(bytes, {
   maxCandidatePasses = 10,
-  upscaleMinWidth = 1500,
-  upscaleMaxWidth = 2600
+  upscaleMinWidth = 1800,
+  upscaleMaxWidth = 3200
 } = {}) {
   const { default: sharp } = await import('sharp');
-  const base = sharp(bytes, { failOn: 'none', limitInputPixels: 80_000_000 });
-  const meta = await base.metadata();
+  const source = sharp(bytes, { failOn: 'none', limitInputPixels: 80_000_000 });
+  const meta = await source.metadata();
   const width = meta.width ?? 0;
   const height = meta.height ?? 0;
-  if (!width || !height) return [{ label: 'full-original', bytes }];
+  if (!width || !height) return [{ label: 'full-original', bytes, psm: '11' }];
 
-  const targetWidth = Math.min(upscaleMaxWidth, width < upscaleMinWidth ? Math.max(width * 2, upscaleMinWidth) : width);
-  const preparedBuf = await sharp(bytes, { failOn: 'none', limitInputPixels: 80_000_000 })
+  const targetWidth = Math.min(
+    upscaleMaxWidth,
+    width < upscaleMinWidth ? Math.max(width * 2, upscaleMinWidth) : width
+  );
+
+  const resized = await sharp(bytes, { failOn: 'none', limitInputPixels: 80_000_000 })
     .resize({ width: targetWidth, withoutEnlargement: false, fastShrinkOnLoad: false })
     .grayscale()
     .normalize()
-    .sharpen()
+    .sharpen({ sigma: 1 })
     .png()
     .toBuffer();
 
-  const thresholdBuf = await sharp(preparedBuf).threshold(168).png().toBuffer();
-  const thresholdStrongBuf = await sharp(preparedBuf).threshold(200).png().toBuffer();
+  const clahe = await sharp(resized)
+    .clahe({ width: 3, height: 3, maxSlope: 3 })
+    .sharpen({ sigma: 0.8 })
+    .png()
+    .toBuffer();
 
-  const fullMeta = await sharp(preparedBuf).metadata();
+  const stats = await sharp(resized).stats();
+  const mean = stats.channels?.[0]?.mean ?? 180;
+  const thresholdA = clamp(Math.round(mean * 0.86), 135, 190);
+  const thresholdB = clamp(thresholdA + 35, 170, 220);
+
+  const thresholdSoft = await sharp(resized).threshold(thresholdA).png().toBuffer();
+  const thresholdStrong = await sharp(resized).threshold(thresholdB).png().toBuffer();
+  const inverted = await sharp(resized).negate().normalize().png().toBuffer();
+
+  const fullMeta = await sharp(resized).metadata();
   const w = fullMeta.width ?? width;
   const h = fullMeta.height ?? height;
 
-  const specs = [];
-  const addSpec = (label, left, top, width, height) => {
+  const crop = async (buffer, label, left, top, cw, ch, psm = '6') => {
     const l = Math.max(0, Math.min(w - 1, Math.round(left)));
     const t = Math.max(0, Math.min(h - 1, Math.round(top)));
-    const ww = Math.max(120, Math.min(w - l, Math.round(width)));
-    const hh = Math.max(120, Math.min(h - t, Math.round(height)));
-    specs.push({ label, left: l, top: t, width: ww, height: hh });
+    const ww = Math.max(120, Math.min(w - l, Math.round(cw)));
+    const hh = Math.max(120, Math.min(h - t, Math.round(ch)));
+    return {
+      label,
+      psm,
+      bytes: await sharp(buffer)
+        .extract({ left: l, top: t, width: ww, height: hh })
+        .png()
+        .toBuffer()
+    };
   };
 
-  addSpec('top', 0, 0, w, h * 0.58);
-  addSpec('bottom', 0, h * 0.42, w, h * 0.58);
-  addSpec('left', 0, 0, w * 0.58, h);
-  addSpec('right', w * 0.42, 0, w * 0.58, h);
-  addSpec('top-left', 0, 0, w * 0.56, h * 0.56);
-  addSpec('top-right', w * 0.44, 0, w * 0.56, h * 0.56);
-  addSpec('bottom-left', 0, h * 0.44, w * 0.56, h * 0.56);
-  addSpec('bottom-right', w * 0.44, h * 0.44, w * 0.56, h * 0.56);
-  addSpec('center-band', w * 0.08, h * 0.20, w * 0.84, h * 0.60);
-  addSpec('middle-third', 0, h * 0.24, w, h * 0.52);
-
   const candidates = [
-    { label: 'full-prepared', bytes: preparedBuf },
-    { label: 'full-threshold', bytes: thresholdBuf },
-    { label: 'full-threshold-strong', bytes: thresholdStrongBuf }
+    { label: 'full-prepared', bytes: resized, psm: '11' },
+    await crop(resized, 'crop-left', 0, 0, w * 0.58, h, '6'),
+    await crop(resized, 'crop-right', w * 0.42, 0, w * 0.58, h, '6'),
+    await crop(resized, 'crop-top', 0, 0, w, h * 0.58, '6'),
+    await crop(resized, 'crop-bottom', 0, h * 0.42, w, h * 0.58, '6'),
+    { label: 'full-clahe', bytes: clahe, psm: '11' },
+    { label: `full-threshold-${thresholdA}`, bytes: thresholdSoft, psm: '11' },
+    { label: 'full-inverted', bytes: inverted, psm: '11' },
+    await crop(clahe, 'crop-center-clahe', w * 0.08, h * 0.18, w * 0.84, h * 0.64, '6'),
+    { label: `full-threshold-${thresholdB}`, bytes: thresholdStrong, psm: '11' },
+    await crop(clahe, 'crop-top-left', 0, 0, w * 0.56, h * 0.56, '6'),
+    await crop(clahe, 'crop-top-right', w * 0.44, 0, w * 0.56, h * 0.56, '6'),
+    await crop(clahe, 'crop-bottom-left', 0, h * 0.44, w * 0.56, h * 0.56, '6'),
+    await crop(clahe, 'crop-bottom-right', w * 0.44, h * 0.44, w * 0.56, h * 0.56, '6')
   ];
 
-  for (const spec of specs) {
-    const crop = await sharp(preparedBuf)
-      .extract({ left: spec.left, top: spec.top, width: spec.width, height: spec.height })
-      .png()
-      .toBuffer();
-    candidates.push({ label: `crop-${spec.label}`, bytes: crop });
-  }
-
-  const unique = [];
-  const seen = new Set();
-  for (const c of candidates) {
-    const key = `${c.label}:${c.bytes.byteLength}`;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    unique.push(c);
-    if (unique.length >= maxCandidatePasses) break;
-  }
-  return unique;
-}
-
-function summarizeTextPreviews(items = []) {
-  return items
-    .filter(Boolean)
-    .map(x => `${x.label}: ${normalizeOcrTradeText(x.text).slice(0, 220)}`)
-    .join('\n---\n')
-    .slice(0, 2500);
+  return candidates.slice(0, Math.max(1, maxCandidatePasses));
 }
 
 export async function createTradeImageOcr({
@@ -240,8 +245,8 @@ export async function createTradeImageOcr({
   maxImagesPerPost = 4,
   maxNewImagesPerRun = 200,
   maxCandidatePasses = 10,
-  upscaleMinWidth = 1500,
-  upscaleMaxWidth = 2600,
+  upscaleMinWidth = 1800,
+  upscaleMaxWidth = 3200,
   timeoutMs = 30_000,
   cacheHours = 720,
   cacheVersion = DEFAULT_CACHE_VERSION,
@@ -250,10 +255,9 @@ export async function createTradeImageOcr({
 }) {
   const cache = await readJson(cachePath, {});
   let worker = null;
+  let psmValues = { AUTO: '3', SINGLE_BLOCK: '6', SPARSE_TEXT: '11' };
   let dirty = false;
 
-  // Prevent ocr-cache.json from growing forever.
-  // Remove records older than cacheHours or from an old cache version.
   const cacheCutoff = Date.now() - cacheHours * 3600_000;
   for (const [url, item] of Object.entries(cache)) {
     const checkedAt = item?.checkedAt ? new Date(item.checkedAt).getTime() : 0;
@@ -262,6 +266,7 @@ export async function createTradeImageOcr({
       dirty = true;
     }
   }
+
   let newImages = 0;
   let cacheHits = 0;
   let failedImages = 0;
@@ -276,7 +281,15 @@ export async function createTradeImageOcr({
 
   const ensureWorker = async () => {
     if (worker) return worker;
-    const { createWorker } = await import('tesseract.js');
+    const tesseract = await import('tesseract.js');
+    const { createWorker, PSM } = tesseract;
+    if (PSM) {
+      psmValues = {
+        AUTO: String(PSM.AUTO ?? '3'),
+        SINGLE_BLOCK: String(PSM.SINGLE_BLOCK ?? '6'),
+        SPARSE_TEXT: String(PSM.SPARSE_TEXT ?? '11')
+      };
+    }
     worker = await createWorker(['jpn', 'eng'], 1, {
       logger: m => {
         if (m?.status === 'recognizing text' && Number.isFinite(m.progress)) {
@@ -285,7 +298,10 @@ export async function createTradeImageOcr({
         }
       }
     });
-    await worker.setParameters({ preserve_interword_spaces: '1' });
+    await worker.setParameters({
+      preserve_interword_spaces: '1',
+      user_defined_dpi: '300'
+    });
     return worker;
   };
 
@@ -317,14 +333,19 @@ export async function createTradeImageOcr({
       const candidates = await buildOcrCandidates(bytes, { maxCandidatePasses, upscaleMinWidth, upscaleMaxWidth });
       const demandGroups = [];
       const supplyGroups = [];
-      const previews = [];
       let explicit = false;
 
       for (const candidate of candidates) {
         candidatePasses++;
+        const psm = candidate.psm === '6' ? psmValues.SINGLE_BLOCK : psmValues.SPARSE_TEXT;
+        await w.setParameters({
+          preserve_interword_spaces: '1',
+          user_defined_dpi: '300',
+          tessedit_pageseg_mode: psm
+        });
+
         const { data } = await w.recognize(candidate.bytes);
         const text = data?.text ?? '';
-        previews.push({ label: candidate.label, text });
 
         const dual = parseTradeImageText(text, cards, aliases);
         if (dual.explicit && (dual.demand.length || dual.supply.length)) {
