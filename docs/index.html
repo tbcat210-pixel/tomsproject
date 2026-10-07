@@ -73,6 +73,26 @@
       <div class="empty" id="empty" hidden>条件に一致するカードがありません。</div>
     </section>
 
+    <section class="sources-panel" aria-labelledby="sourcesTitle">
+      <div class="sources-head">
+        <div>
+          <h2 id="sourcesTitle">参照元ポスト</h2>
+          <p>現在選択中の期間にランキング集計へ使われた公開Xポストへのリンクです。カード名検索にも連動し、同じ投稿IDは1件にまとめます。</p>
+        </div>
+        <button id="toggleSources" class="sources-toggle" type="button" aria-expanded="false">一覧を表示</button>
+      </div>
+      <div id="sourcesBody" hidden>
+        <div class="sources-summary">
+          <strong id="sourceCount">—</strong>
+          <span id="sourceStatus"></span>
+        </div>
+        <ol id="sourceList" class="source-list"></ol>
+        <div id="sourceEmpty" class="empty" hidden>条件に一致する参照元ポストがありません。</div>
+        <button id="moreSources" class="more-sources" type="button" hidden>さらに表示</button>
+        <p class="sources-note">リンク先の投稿は削除・非公開化などにより閲覧できない場合があります。投稿本文や画像は当サイト上へ転載せず、Xへのリンクのみ表示します。</p>
+      </div>
+    </section>
+
     <!-- NINJA_ADMAX_BOTTOM_START -->
     <aside class="ad-slot ad-slot-bottom" aria-label="広告">
       <div class="ad-label">広告</div>

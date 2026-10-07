@@ -1,10 +1,11 @@
-const state={data:null,window:'24h',query:'',min:0};
+const state={data:null,window:'24h',query:'',min:0,sources:null,sourcesOpen:false,sourceLimit:100};
 const $=s=>document.querySelector(s);
 const fmt=n=>new Intl.NumberFormat('ja-JP').format(n??0);
 const dt=s=>s?new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}).format(new Date(s)):'—';
 const span=(a,b)=>{if(!a||!b)return '未取得';const h=Math.max(0,(new Date(b)-new Date(a))/36e5);return h<48?`${Math.round(h)}時間`:`${(h/24).toFixed(1)}日`;};
 
 const LIVE_DATA_URL='https://raw.githubusercontent.com/tbcat210-pixel/tomsproject/main/docs/data/rankings.json';
+const LIVE_POSTS_URL='https://raw.githubusercontent.com/tbcat210-pixel/tomsproject/main/.collector-data/posts.json';
 
 async function fetchRankings(){
   const urls=[
@@ -22,6 +23,82 @@ async function fetchRankings(){
     }
   }
   throw lastError ?? new Error('ranking data unavailable');
+}
+
+async function fetchSourcePosts(){
+  const res=await fetch(`${LIVE_POSTS_URL}?t=${Date.now()}`,{cache:'no-store'});
+  if(!res.ok)throw new Error(`HTTP ${res.status}`);
+  return await res.json();
+}
+
+async function ensureSources(){
+  if(state.sources){
+    renderSources();
+    return;
+  }
+  const status=$('#sourceStatus');
+  status.textContent='参照元を読み込み中…';
+  try{
+    state.sources=await fetchSourcePosts();
+    status.textContent='';
+    renderSources();
+  }catch(e){
+    status.textContent='参照元ポストを読み込めませんでした。しばらくしてから再度お試しください。';
+    console.error(e);
+  }
+}
+
+function getVisibleSources(){
+  if(!state.data||!state.sources)return [];
+  const windowData=state.data.windows[state.window];
+  const end=new Date(state.data.generatedAt).getTime();
+  const start=end-windowData.hours*3600_000;
+  const q=state.query.trim().toLowerCase();
+  const unique=new Map();
+
+  for(const post of state.sources){
+    if(!post?.id||!post?.createdAt)continue;
+    const t=new Date(post.createdAt).getTime();
+    if(!Number.isFinite(t)||t<start||t>end+3600_000)continue;
+
+    const demand=Array.isArray(post.demand)?post.demand:[];
+    const supply=Array.isArray(post.supply)?post.supply:[];
+    if(q&&![...demand,...supply].some(name=>String(name).toLowerCase().includes(q)))continue;
+
+    const id=String(post.id);
+    if(!unique.has(id)){
+      unique.set(id,{id,createdAt:post.createdAt,demand:new Set(demand),supply:new Set(supply)});
+    }else{
+      const item=unique.get(id);
+      demand.forEach(name=>item.demand.add(name));
+      supply.forEach(name=>item.supply.add(name));
+    }
+  }
+
+  return [...unique.values()].sort((a,b)=>new Date(b.createdAt)-new Date(a.createdAt));
+}
+
+function renderSources(){
+  if(!state.sourcesOpen||!state.sources)return;
+  const posts=getVisibleSources();
+  const shown=posts.slice(0,state.sourceLimit);
+  $('#sourceCount').textContent=`${fmt(posts.length)}件（投稿ID重複除外）`;
+  $('#sourceList').innerHTML=shown.map(post=>{
+    const demand=[...post.demand].map(x=>escapeHtml(String(x))).join('、')||'—';
+    const supply=[...post.supply].map(x=>escapeHtml(String(x))).join('、')||'—';
+    const url=`https://x.com/i/web/status/${encodeURIComponent(post.id)}`;
+    return `<li class="source-item">
+      <div class="source-item-main">
+        <time datetime="${escapeHtml(post.createdAt)}">${escapeHtml(dt(post.createdAt))} JST</time>
+        <div class="source-tags"><span><b>求</b> ${demand}</span><span><b>譲</b> ${supply}</span></div>
+      </div>
+      <a class="source-link" href="${url}" target="_blank" rel="noopener noreferrer nofollow">Xの元ポストを開く ↗</a>
+    </li>`;
+  }).join('');
+  $('#sourceEmpty').hidden=posts.length>0;
+  const more=$('#moreSources');
+  more.hidden=shown.length>=posts.length;
+  more.textContent=`さらに表示（残り ${fmt(posts.length-shown.length)}件）`;
 }
 
 async function load(){
@@ -79,11 +156,20 @@ function render(){
     <td><div class="bars"><div class="bar needbar"><i style="width:${x.demand/max*100}%"></i></div><div class="bar supplybar"><i style="width:${x.supply/max*100}%"></i></div></div></td>
   </tr>`).join('');
   $('#empty').hidden=rows.length>0;
+  if(state.sourcesOpen)renderSources();
 }
 function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));}
 
-document.querySelectorAll('[data-window]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-window]').forEach(x=>x.classList.remove('active'));b.classList.add('active');state.window=b.dataset.window;render();}));
-$('#search').addEventListener('input',e=>{state.query=e.target.value;render();});
+document.querySelectorAll('[data-window]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-window]').forEach(x=>x.classList.remove('active'));b.classList.add('active');state.window=b.dataset.window;state.sourceLimit=100;render();}));
+$('#search').addEventListener('input',e=>{state.query=e.target.value;state.sourceLimit=100;render();});
 $('#minCount').addEventListener('change',e=>{state.min=Number(e.target.value);render();});
+$('#toggleSources').addEventListener('click',async()=>{
+  state.sourcesOpen=!state.sourcesOpen;
+  $('#sourcesBody').hidden=!state.sourcesOpen;
+  $('#toggleSources').textContent=state.sourcesOpen?'一覧を閉じる':'一覧を表示';
+  $('#toggleSources').setAttribute('aria-expanded',String(state.sourcesOpen));
+  if(state.sourcesOpen)await ensureSources();
+});
+$('#moreSources').addEventListener('click',()=>{state.sourceLimit+=100;renderSources();});
 load();
 setInterval(load,10*60*1000);

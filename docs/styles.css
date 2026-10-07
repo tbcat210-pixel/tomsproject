@@ -11,7 +11,6 @@
 @media(max-width:520px){.ad-placeholder{min-height:72px}}
 /* NINJA_ADMAX_SLOTS_END */
 
-
 /* NINJA_ADMAX_TOP_LIVE_START */
 .ad-slot-top{
   background:transparent;
@@ -370,3 +369,123 @@ button,input,select{min-height:44px}
   letter-spacing:.02em;
 }
 /* COPYRIGHT_FOOTER_END */
+
+/* SOURCE_POST_LINKS_START */
+.sources-panel{
+  margin-top:18px;
+  padding:22px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:rgba(16,21,33,.92);
+}
+.sources-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+.sources-head h2{
+  margin:0 0 6px;
+  font-size:20px;
+}
+.sources-head p{
+  margin:0;
+  max-width:760px;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.65;
+}
+.sources-toggle,.more-sources{
+  border:1px solid var(--line);
+  background:var(--text);
+  color:var(--bg);
+  border-radius:12px;
+  padding:10px 16px;
+  font-weight:800;
+  cursor:pointer;
+  white-space:nowrap;
+}
+.sources-summary{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  margin:18px 0 10px;
+  color:var(--muted);
+  font-size:12px;
+}
+.sources-summary strong{color:var(--text)}
+.source-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  border-top:1px solid var(--line);
+}
+.source-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+  padding:14px 2px;
+  border-bottom:1px solid var(--line);
+}
+.source-item-main{min-width:0}
+.source-item time{
+  display:block;
+  color:var(--muted);
+  font-size:11px;
+  margin-bottom:7px;
+}
+.source-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px 14px;
+  font-size:13px;
+  line-height:1.5;
+}
+.source-tags span{overflow-wrap:anywhere}
+.source-tags b{color:var(--accent)}
+.source-link{
+  flex:0 0 auto;
+  color:var(--blue);
+  font-size:13px;
+  font-weight:800;
+  text-decoration:none;
+}
+.source-link:hover{text-decoration:underline}
+.more-sources{
+  display:block;
+  margin:14px auto 0;
+  background:var(--panel2);
+  color:var(--text);
+}
+.sources-note{
+  margin:14px 0 0;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.65;
+}
+@media(max-width:640px){
+  .sources-panel{
+    margin-top:12px;
+    padding:15px;
+    border-radius:16px;
+  }
+  .sources-head{
+    align-items:stretch;
+    flex-direction:column;
+    gap:12px;
+  }
+  .sources-head h2{font-size:18px}
+  .sources-toggle{width:100%}
+  .source-item{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:9px;
+  }
+  .source-link{
+    display:inline-flex;
+    min-height:44px;
+    align-items:center;
+  }
+}
+/* SOURCE_POST_LINKS_END */
