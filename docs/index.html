@@ -13,11 +13,11 @@
       <div>
         <p class="eyebrow">POKÉMON TCG POCKET · PUBLIC X TRADE SIGNALS</p>
         <h1>ポケポケ☆2サポート<br><span>X自動集計ランキング(β)</span></h1>
-        <p class="lead">公開X検索で見つかった「求 / 譲・出」を低頻度で集計し、需要供給比を24時間・48時間・1週間で比較します。8つの検索条件と画像OCRを維持し、不要な大量再取得だけを減らしています。</p>
+        <p class="lead">公開X検索で見つかった「求 / 譲・出」を定期的に集計し、需要供給比を24時間・48時間・1週間で比較します。8つの検索条件と画像OCRを維持し、不要な大量再取得だけを減らしています。</p>
       </div>
       <div class="live-card">
         <span class="pulse"></span>
-        <div><small>最終集計</small><strong id="updated">読み込み中…</strong></div>
+        <div><small>最終更新</small><strong id="updated">逐一更新</strong></div>
       </div>
     </header>
 
@@ -106,7 +106,6 @@
     <section class="method">
       <div>
         <h2>集計方法</h2>
-        <p>Yahoo!リアルタイム検索の8つの公開検索条件を約6時間ごとに確認し、Yahooへの連続アクセスを避けるためページ間隔を約90秒、検索条件の切替を約180秒空けながら、必要に応じて各検索最大10ページまで取得します。本文に加えてトレード画像も日本語OCRで解析します。24時間分を再確認できる設定にして、短時間の実行失敗後も取りこぼしを補いやすくしています。過去7日分の大量一括再走査とカード別大量検索は行いません。403/429が返った場合は、その実行の残りの取得を停止します。</p>
       </div>
       <div class="method-grid">
         <article><strong id="storedPosts">—</strong><span>保存中の検索ヒット</span></article>

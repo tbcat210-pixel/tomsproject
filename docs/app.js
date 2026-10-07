@@ -115,7 +115,6 @@ function renderSources(){
 async function load(){
   try{
     state.data=await fetchRankings();
-    $('#updated').textContent=dt(state.data.generatedAt)+' JST';
     $('#storedPosts').textContent=fmt(state.data.coverage.storedPosts);
     $('#cardCount').textContent=fmt(state.data.cards.count);
     $('#coverage').textContent=span(state.data.coverage.oldestPostAt,state.data.coverage.newestPostAt);
@@ -139,7 +138,6 @@ async function load(){
     $('#sourceNote').textContent=state.data.source.note;
     render();
   }catch(e){
-    $('#updated').textContent='データ未取得';
     $('#sourceNote').textContent='GitHub上の最新ランキングデータを取得できませんでした。しばらくしてから再読み込みしてください。';
     console.error(e);
   }
