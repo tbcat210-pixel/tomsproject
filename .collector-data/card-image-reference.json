@@ -1,0 +1,997 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-08T11:15:37.522Z",
+  "source": "PocketDecks/pokemon-tcg-pocket-cards v5",
+  "references": [
+    {
+      "id": "a1-266",
+      "englishName": "Erika",
+      "canonical": "エリカ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a1/266.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "y9Dc4OLf3t+bUzE7XazU1dfNwsLJycnPzsnFxb25vlIDABoiEB2Yr6iyvc/PxMCs1dTV08nNfwwWF0ZGOygwu9zKusm31cituc77++zANSodGCoYGicAU9W6raqy0N+xvtv6+eCfEBITFUUrc2IyAJHYuru0t9+/5cXl3NeHABMSOCys6nJGABDN19LQ0OP719fdy9VdABYMT2nu3GpFABqh7svI3uroyN7cz85kEwMFSefc3OJHAFXC587Ex8ev0Nve3c20MwUAAKru4qxQhr3Z4+bw2Le14Nzu6s7npWx2ISuxuo3E9uLU3vb/+s7N8e7r3df27u7ejXVlmOP35tzQwevx2N/r++jd1ePi2fHHy9Krh7fS8vfi0+rZv9vrv7e6zt/g1OjS1dTbtK+s1P/15+7byd7nlp+738fP8tPS29nU2cnEpd3w8ObUva/S02yq29m7ysLTytjZ08rIr8//6tPVyp/T3n260tvQur3b0tLZ3c2/zqrcz8/d07nc24PQ1dnXzsHJzcvb1c2okFJsxd3Y19vS05vX29nYztXjx21XZlc9KisuVNnZ19y+2K/Y29vb0t310jgqHBkaMiAgZNTZ2ePO5rvb2NvZ2cvcuUJSJicdJRgMYtLV3/rn18vc293c3c7fgD9WHCQgHysSSNDP2eDb0Mfczc3S1MjSYYSEJTo5PDozUsHB1NvYuqOrvrS1upqoZX9zTlZgUj1UZpSsxNvdv6yHpd7ezZTJNyZBLTYwLjA8SWW1yNm5",
+        "color": "7ta69tDF/Na/zr2gZmZkaUhRjmp06cDD98TJ7MnK7M/U8MHO+86k/+fQ9tGbZ2BOPjI3fjpNbB83lWVw/8rM/62v/8K8/7m1/NK///be27qaQDs9R0NCgH10pZuMPDc0s5OE/8y6+sS1/eHX+9W+/9rHxaCRKigqU0pI6tfF59PBRTo3nYV4/+PV+8vE/tHP/eCq/ubH7NCugYFkTk5LwKSU4sq1wrGe9tLC/ufd/Ozo9cK1+fTU8eei+ei5+vbE1NGatZt4y7mS+fe9/uPO/d7J/uHT8+u+1bif4NGM7+GZ8uHK7OOY7uSX2siAws6q9/Xg/+7Y78y17tiy27CH3sV76eCV3M6O6NqK8eua8u6Z0c6M4+Ct9Ouw49aL3dKd3sGW49mJ7eOV6NmM6duQy6BzzpVvvGlUqUZO2LmC8euV5duZ5Nmg6OGR7+eV8+ia49aWnTdKkgc2kA06gwA1yZRu9fWf7OSs6dir6NuR49uY5+CVwa5/r29nnytNnydLjx5HvpRz6OOX9OicxsCslcGn39aW2MqWt4mJoEtYsDddqjJYqDdfum1z3s2D1tyV"
+      }
+    },
+    {
+      "id": "a1-267",
+      "englishName": "Misty",
+      "canonical": "カスミ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a1/267.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "i5qboLm+qKqaiKKWhKyvvryto6WYmp+UQyw/NjWLYkNPSFp7YI2YmJp9aIl+a0snIjuJu5B1gW5je1pwe3t9ztSAU315YiktfYHr/7dzYFhabWh2joR7dZSfeW6nY089sqDQ55RPTy04bX2jpZuQYkWqdS1ro3BzbYOaknaUcCpIXXZaeYZuTwZcUSw7iJqYaKOsopStVY1+R5KDS1NTQ0VjNTxlpa95X5S1v6yqrcuWlPbNC3BIF3i+c3KNyb6NbYit0NXYucnJvN++deNdQIa1lojQ//a1X36it/H60t/dTku58d2Lm7u+qoDU//XIdd/jxqOjpcHcuY3V0Ju3vtDSqIGLzb68hLnd6RgnwcOqkpR9gM3QyNjNyISBrJuwrZSWvHiD9dBjhKitoMbG6+3cyIGNlJ2oiJSosNqLy8GB2MRXXJja89/SqIOOlruniIuUu6Ical1RTh5F48afmKqtlJK1zsSOg6OyznkABjVLPSm38Ou3vr+in6rd16qDmMGqmIQAAAALIh5jlundwdDGyNLJqqdzvK/EpctdAAAAAABL3Mnp0MTS1MmvpdCsuZ2S0N3uv0UDADD1/+TE7eTk7uO8oMS5sHOO5snJ4+vanbDa1OO11OTQyOfSmJSBmn6OoKrJubm0o36/sLWysLy0sqy3iYiW1YmGr5SstNC7tGWBzbfLsKC72ImjkmqbrHiBlHtHjca0fQ8An7Ksu6Wva0mlmI2UnZ2QfZJIR0hCPEALU76+zcGln6B9iImU",
+        "color": "VqTWX6jVZ8XucMLija2sx6puwbZ6mt3UcNLnZsXOecDNdqnMM5/drd/0acDihpB13YEW5pcZ7aUMvL9oqceRvp89qKdpHYi+c8nypOL6fL3KunA7zXwy5Z8v9LE34ooG14QV+WkBlqF0VMbdYbbrmdT0dNTxf8fWrb211sKgnI1r2GwOqJdrZZeKXs/MmtO4YLXntuDux/X8nvX/5MrD48HD49fJzKGDkNncKtjmrfT/3PDFs8rQ8d7QsKulyd3ZysnM7q+T1tW/nu35qPX9SdTnSNXiouSsa8vwfNfokcfI5dPIu77CybSnk8HKqvb/vvX1RtTlRs2zodamYsXTa+nbQJnNZ3uodJnIg5zC9N7Sld3oet3jdtW6werNgsvwrtyYdejsZ5jDCzSIAD6gXnum8OrU6Ofenez3kfL7eeb/ZNL0f9C4e9nu7/Hix8TKeIGfqsXT0fXz7N7P5+vjwPL3qNrjk83lfc7AhcjVyc3L8+XV9tq+sLm3xN/jy9XR4tHFzMvJxcW9prW4iNGzbsfWgKfDl6a+kqS/TG+ilsHOxeXmwdLTvbSr2bCQwrmr"
+      }
+    },
+    {
+      "id": "a1-268",
+      "englishName": "Blaine",
+      "canonical": "カツラ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a1/268.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "oK3Nzb/FwL2tp7S6tc/r5M+9paannqavRmCQgmlxandyg5iirWus6PKyaXZriZJbS1h4oLGQgomKqbq5oBwWbTZXiXOGxZdjV1hzzf+liZWcr8appb+pZjFOgGKlkGBtfoNpibmHlZ+Xyt+UrbJ3j714X2p4bXJmcnaDk5d9j5KGn6+Yj1AAGKeSaXJzd3Zjbn2am5R8fYaBfYegfcKvknd2gH5xbWpufJKPn5iGd5OyraVYIFV9TDd8l3yMh3V2hpeXpbLV06/W9ZclSUEYATm+zdvKppBzb3GDppWv9u3ftEl9Y0tCgZjJko+98t+Mdm91mpe94ci5NHeURUx+/uPWjGqM3uuXh4F1j6/MubQ4VqA4O1DQ3s3Qd358jY9+dbnu8d6xg3UuwHggOYDdstexfKOYiX12ZZPVpoCClE9vrVUTCIKgnMZ4kJiSg6+XdW6Fqqmp52mBxVYBAF3evtuJlJOCk8Syl4eNu8CqgUSc0j0AAF7/57GXkpeck5qXiZKUlJu/SiOTvlMbAFb514B4mK+tl6J9iYmKeoyJLCJqh1MrAzHv9teKg5N+hp56npR3l7mUJiRYZisFAwCF9vz03b+ytruifHOFxZc8CDgrAAAAAAAeirLI3t3Q1u7yc3aTY0RPR0QvMSURFCxTdmpuhYxzZ21rOz5JVVNQSlBTdX11QTiDn5qnqqOclYlvT11XWF1EPkBub3N4ZTZ1mqKco7mifniHc2dLT1JdRkxtcWeJj0dSu9K1yv/bg25y",
+        "color": "8WdU9rNY+Z5Q9J1e7p9U77tSzLaX3tLR59HD5JZS3aeA4KKC/hwA/ZU+/LdE/YQA/6sF+Mgdt6WVnZKQnIZ16XYd0qeUu4p7+3A4/I85/KQp/JMB/awL9sIcxbCimYqcwKKQ8mkMw411pY+N/YQF+6gH95Ee+IoL/6UV1ZcupYpqnIeMwYRH/5MYvpRpiJi0/H4G/JsA7cB17+LD3t+VmZGIlmlednRxqa61x8rQ2dfSsL/T+3gU/pEZ7cVwytn0nZOXw4dfg4B51tnf5+jxjaLDq8LirsLew6aR1Nvmusjfjpywz5Zlo2hNc32D0NTdusfhtamM2585y6NZzJRQ1K+Q3MO7rJ6e8rJqblpJYGlz3+PvtrrC7Z4X/5wi/qti/pcL/5Am+KcyjGNI+JBbhGlYXGVt7/P+z7yt6aZF7K1a+Ysj/4UY/J0Dy5QhYlpqkVlcUUBEMj1Foqm54+by0Nbjx83N3s+4tHNPnJOBeH6fcHWecnqZcnOMYWN2npJ1u6Zzz7JZwKd0v5+CgoW7e3+igIGgeHqYm5Wwq6XCiIq0waZN+MoX7thp87BD+XMJ"
+      }
+    },
+    {
+      "id": "a1-269",
+      "englishName": "Koga",
+      "canonical": "キョウ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a1/269.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "ppap17bCvL2noKeboqektr2vqKSiqsLCLTxiUitQd1wnGxgBIX6bn4NgVV5udoJANzg6R2A6RjghIB05KSeHsa2alFArbmdySFl2wv+rRDRLPmBbKC1Kqq2jok4gNipNpKFZluufPD5US10qJUA1d7GTkmJBLCcWakBEYGFBN2VcX1NSVjsRY56DaWBYNV93NytOQUVOaFJda11ZTkVRZXVZN2duUE5qNHxRLC1MSV1yPmeznl5YQT4qQV1wSDdMTWAuKUJOPGivjc//0V40Li45Sjg6RjhXPEttR0I3J1Co5cSCdmpTRzk6ZDkxOlBqZGmLqT0oJIjSupikvIxoXC8hMic1U21cmHU9eZMuJGrA7O370nZGIiI3MiAHa1k1fV4oLp9Ed7+b3e7VaDQcABQqIg8ALEg0d4JVIURyvmhdxZtLMhoZSEEAAAABF3qMWV9qOmvKjSEpORUlK0U9NxcAEBAiUKqfKj1EdOCreKBSMkdMYV41JQAAKURyhH5sWEA82eXIoV4yNj5pbjwpJyQWA2Jua6FAZ1tRka+1VCw4NCAnPCkqMS0WB1Y1W2otfWI1eZJuJDk1MjgnLCw0LScWCxUyViY024hb5rdFJiZBh1A2QCohLS0iGAlXUCkn/92PsY9SHHpolCoAIyQnKSokJjFNQT0o2Y5ZfINpa7aNbV1eWGhwXWFsWHBkd2U7XmpYVGRiQUY8SCEvTkg4Njk5PFJTYlZqNHWAXVxUMyMvPAMkKyomJycnOXbIpmKA",
+        "color": "ZmLKbInSjnilrJOaeWyEiVdQv25X+513yJCeoWnexHvPxY7FKELENoPZooHMhhRnTiw3OD5FTCw53XVX/5VWsE+JLhzNOTPQV2noo1Hg2XDTXzSeCHmTAm6HAklkcFlg/4hZy19DdiZ3exOrcw/ZfQylfhOwYl6pFHuBSJKdKIaTHF9zlUAxqDs+pjuRoiabmiGwekeHZiKfZk2Bo7Skw8a6Y52iPVRYeSZSgiOXdCCKdk6QiG5+tHxZe08/YGJc6dvJzdrMsKGWeEU6SD5AQzpEcEI6dl5giId7XUU/p2FLlomHt6ygzrCccj82OzI0Ozg3HR8bQScPp0yLXF9aaHB1xLGio4GHVz9aT0ZIVVdhR0hKJyEeMi5Lo0ObyGnzhxOKjYOG29K2jFShaxCATFRjU11kQT9AMC0mOT1tflX/aEvE2F7hvXmss3ShSwKdgi2/WUBMPzUyQjo8NjYzLCEwZCfIZA+f6Lfb1GysvE2vi1ejqnrPXExUY1JLYFVWVFdPXUxjgDfLex+loTqomEmYiUahZzSuVyylQTxFUVNSS0xMSkVFYWahrnbZyDPS"
+      }
+    },
+    {
+      "id": "a1-270",
+      "englishName": "Giovanni",
+      "canonical": "サカキ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a1/270.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "qaq9wre3rLGhli0ZFBMKPa+YkpGfs9rSIyk5HwcAACgCAFSkYlCKW0NeVW2Tn8RIEiYiPFAAEykADobEu73Ht4SjdFcuTDhYIkl5yPZmKQIOVYGzqaq0sVwwDwAoNAs0nKB2r/J/BgAgh6SunJaxtoETACNFLycoeUNmhIpjGjMjRau7sb2+x20JH0cgKVe0aUGHe3l2PXRGBIa0hYatYwAsSyslUWN+fXh8cm9yUytHVXKghY2eIjRPDBdVgYRYdXt8e4FNJjZHKHuRm56kWzIiJSxb7O+LYnV9gHxKPBwADoqbk5ubs2MsPiJMxMWGXXyDaVUvIwsGDYywnKWgqblFKCdLb3B8YJR0U0UlKBkGAYO5m5GPmr2ZKhlDd2N2Vc6WaTwUJyUYAG7RoKZ1UYeoRQ8naWJeiY6LbSILJigoFmP2padKL5aEPB8gW6WofHl8aAwKICglIjbn7tEyL3KBHCUjUfLXb4N5UAMMHCQmJxqk/8ApMzgjGiIjIo2gVW6NMwMKHhojKRxN+m0nQTcmDA0SM21uGWNjCgwJGRgTJCYicDQlP0AjPxYEElR5ToM3CRcWExsMGygrLCYmGBMMPzMiKHmKfzIrDgUHEwwEEx8iMh0YCgQNIyp1e8CPEWZ9S0JTPU0pRVBaUFRNPzZGU32Vdm1yglVCaGdVSE83h6hQWlBFTUdHamZ5in14Pj43QUtHYl5JX31GXyhXW1NVY26MjYWDC1RxYFtNKyAPDhYRFg4WEgcBPMreiHaA",
+        "color": "gVdqh193YFFma2B3U09bZU1AVUM6ZU9IaYqPT5CSSrS1Zrm5VgAorDaCaV5rDQANKBkW0ZF38aeE5qeUNmV0AzM/IyZYIyM7yC2Q90OD4m11NwoKZUA13ZyC3Jh7562eWTo5PwAObAATkS0BzBUs7QQJ5gAAlBkYWzQkr35q0pF5imdjQB0cWxALkTUr0VEr5w4S/wMDvxQUPB4ZLiYZeYaZp5mcroJ0Tj02OQwIyXx3/nt2yC4y5xoqYCIkEiMhCQkLipiopZ2k4JmBtoNzISosoB0Z7AgI7T5j2yw9MBYlJCgjGRYVnaCkqLDAYFldqYiCLTg6dRgT8T8k/gURxBZJDBQZJiQjHh0bhYWD3uHjMzM2Sk5THSIjPjor55CttRAjgCJNAg4LIBwcHh0cQkJAe3x7NTMyOC81JQ8aCyAfuhhCmzAdQBUUCBEQFRAQDw8OISEfJiUlFxoZFw0QXRMfgS805D84bEo1Y05OUVFRTElIVlZUcG5tVlRUTk1LTEtJcFhWxFta2TBCQDxKWVpmX1pXRkFAPj4+RkVELS4tNTQzKywsoGxv7nRw8go4"
+      }
+    },
+    {
+      "id": "a1-271",
+      "englishName": "Brock",
+      "canonical": "タケシ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a1/271.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "xMvY3N7kzdHAmp+RQkwiFaDAp6uwvsbRrZqusKWnn6deJB08SjcSHSFwqbSlnqmFsJa52KqKvoc8O0VUN2FJNBGC47WFgnmYtrrz/86UkVg9bXFOnpCPhUhkpbK3W1Zj4ufj9Lmbc5ZqrZpetLCwnXZfjZN2Vkw/x6KqtLJyTq+Efmicxaq2tZOXkYZ5W4TOh5SohKJtSDtEaldvwLKyrpy2spFog+/FlKKMfndrTi1it5BdQXiitNG1pJua8/+ywaeEfH9fPTs5Nk5JNBtN7sGytoqj7PaYtJd8dZROPxUAADx1TyxWrp/ivpCPoqprm4J6YXKGVgASADeyloNrVJS+lqCRk4Btg4yGP3OUMw4PAA5+XlxqelR5uaW9lHOEi4eNg6dxOR0EAABCTlNSUDpQsLpyTEyUu5SHlLJrMRUAABIzPE1hX05MhFA7N5jb2MGejYkAH1sdCg8PFiRAWFs5VnG+pPP4edTQq7U0YYlwJQQPDwgMHB8bgJr49unAR5zSxZqWi4KFN0InDBERCgQEgMXMtrSCZouuxrmvurCdN19mIA8VEQ8OfqqDmJxwgLWAp8DAusekLjlfVDQZGAJdqnmGjXiMpJSu8+PCxbRSTFZhcXpcJhJAcImec5CLkKvm/PPFqnlQooxjbXJ8aTIpY3N2i6CU1cG328KrqIJ3c29OR1dQdnhjcIqUn5zCpMfb1sG+r3ZpVGVfZEoiIR0dQp6Pk6fXirTLyqivkV1pa2pldWU3JhkABGqQnavF",
+        "color": "57hU8cNj7sda6cNsr4ROh3NkbF1JSDoxpYpf5bxQ5a9e67p69LcQ+eJ17LYmzYYUlVYdf2ZTo4NblG9Wf2ck8roe5YAgxF8A9swi9tl91qZJr343yI5mwpJy6MOK3beQu5NB3JEOw2kNsXk23Z0a0pkwt4YvjFQRuHpBqX5AopN+2rly5cM32Z4Q3a5h8eKs1LZRwIonp38saUohSkFHmGo3cVAvp5hO89Za3aI26b6C5qyAzJJrsHo8wIo1UVFIGx8jgm5QsY1ZoGw3v5JL6bdo5JNd0W4T1aN+0JBavIk1RUVFHh4eP0JCZ2xrd3ZteGpd0o5ZrlkdxaNR3LyO6sGRenRbi1c9b0w3LjEtPDo0U1RPWFBCxX4k0dOb4OaUtIc64siR1K6G4q2AontZeE4lPzkvKiopOTcrzKIn974o35MDsqFC48CQ69iq4MSKgX1whG9ZiXpmTk5NW0wv1okG0IYcwo1P4Lt18ufB6t14sqFmi4mBh4RygHlohH1ua2ZfrYBYxpt41LJc4rdY3NWk1sBqoJtzgHthhH9dfHdcV1I0Pz8vhWos3aAc7MMN"
+      }
+    },
+    {
+      "id": "a1-272",
+      "englishName": "Sabrina",
+      "canonical": "ナツメ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a1/272.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "xLevwszOysjDehUVDQ5/4sq7rKOrw83BWyM7Xm5wX3VAABMXFAkAfp9/dmBfhKFNDWevd5GFcH0hGE5YW1kjO6mSjn5OZlWSVsX24fT3vn8kVpOVpaVnK453fnhqWhFZztCM2cjUnG5Bam5+kXhpN3GAgYKKOgAAuztarHp8X1k9XFaBfVVlOG6VjKepXC1oPVSNhXhHVUIsg5vY3qeCMGmfr9T9q7uOZo6Bfo15hlsbW+/19/BVVre5erfSrP/gm3J/nJrezk4BBUjS0UERy/+2m6KMufjFaU5xrevlZgMAAxNGQhCb/+7d+9iyrJuAXBhwuKsfAAsnN0JARUpemvv///31waGVPFKfiRsACSVHQ0hKSEk8MLb9/f3+6sCAX4xlkZUJATRGS15lY1ZNP3j9/f/ymnlxn20oQE0UGUBYepWNi5JgXI3v/da3m4q7gYUyHh8hM0s7aGpMUHdzj1WSx9/74MX/apx8LkVPYDmfZgANDRFy9W1KWoPFwdHVm7TCg4CRgi93dBAZGQCP/7Z6fXCW0sWaiL7pt4NGGxMDLjkcGAFm///Mn6TR7sKJg6vCoXRKJg0ZODo6JRoYuf/94LurzpJ3kVzM/8KKgoBUPjU2Jic4VI/u78fHl3p2Yovg3+e0o4Z6bVpVVmBgc4Gr5terjYxSlZqNteXZ3o+PkoONdmRkZIG+y7eAg75cVXqTsLu73FiAk4WKioBia3HHyqSCcmZrAFulrImru1F0koR9iIRbSU7f97CVZyZC",
+        "color": "pmmXyVyS+Eu07WW2flx8Gik1ESEtiXyV/oj2vWXdw3/xyorYs0p9+YzN/YzR2EeoMDpOTIKAWY2JPFRd6Tni7Q7hqwy+jRip3Xqr5H7Z/37ntjCfSW9ueo2KfZaOSWZrzCes/1bTzT2hbRAxwzCW8Si47Bm+mTCFP11k5dbL3tfKX2Fz6WO5/4Lh/LP39Kar0Six8EGi/rzxYW6FABo3mWN5iFlxkamv/+X/+ZPz+4ny9pf4fhuZ4nHQUGZ5CxY0hQk7owAtoQArtjxm8t/q/////Nr9+kPYzkGyb1mMDkxvRgw51BdJ9EJo8j1kuAU526K5////+6Ls+j/Rxmy8MFRpWSxapCJSp1p1eDU9gjdA0n6SzEhv3X6l4sfZ3dzivKq/w7emykhdWC9bN1xqNjMsGBwauMO//7fG31Zpy8+0xqW/31il6NLnZZ2tH1h5ax89Zjc9RCUpjEph3e70/9n69Z7j7BvLzV6o4bvT2OTjta2401t0rlxsqE1krDldop6q3cvb0IDKtz7mhkh72Ie+26vQqZucyGx48mt+5152uh1KyI6d88LpxTu9gzK2"
+      }
+    },
+    {
+      "id": "a1-273",
+      "englishName": "Lt. Surge",
+      "canonical": "マチス",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a1/273.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "nJSswK+Rx8XU5NzUxKaitaikmpq4orSyFQAWBCOBytng39zZuEU6LDVpWFW7Y0wIBgAAFIvT3s+wqb7V0WNDrKaRZlWXXyNnEihWhoubsLO9zeDq5Yd+k2tmKXyqLQAyX25BTYGoobLq7t7erKiXaWlCPerqTQA7bHhxXhx8mq3Jz8rLr7mPblU2afP+bivTS2n140VSlrnIqsXp4qiidpGRnLuGOyemAC/c/5tEmsL37tTZwpOUbZ+7n4RtFSyfIRhOlrtEaZ+06MfexH4sOzp8gng9PIFiDwQWpIJddChQc3+Xo3FVOzYrbH84dkQzGgBroVGKgEFIbXZlgF5VdlYcR0WLn31VLyltuIthTlprZ2OfyH08ZXqHMVXc6nEyFimMtkMpNi1JhzhVf1U6YHSfZar037kkUh12eUM9PFVCX1xDPVhNQz5FfcepvupzRBlVTlUvM1VOVUArI1BLTDgiTqrW4OqiKDM7SGlEOVUhPUJASU5wzpNCguPp5uucFD1uTlpaYz4nS0QuTmF5qWx3u7Xu7eKEGVOBOT1rOS2PRClOUzkaJheizbnLyJc2R2NtfzpaWbXzdhc6KyQjGgBtxYJ+gGxSfjOMqJ/N4urojUxcglAIAAAWooeLbsJ/tIDCxJunucuqnbbN38RILUBihp+hcnhQ4LlyrJ+fk5qqwNHLw8eLYYR/X0WEkGxQxK2dn6eorcDNu8rIrn1ja2tldmV+gm27m7+tjKqsrbLc5ta+ZycuMkQiSFNjaYCy",
+        "color": "ZG6FXHeFeZ6J5dxk7eNX8+VikbOdYo6Ul5+ZoJyKxqhvqoNmCy1WAE2KmbBy6dNa3suF/+OzpK+fcoh3dYx/aINnVYhvITk7TIqqRYW4dolvz7dt79jM89nH3cCrWqukAXGBnb+ylLG+XF5UX2Ry197NWoZ1wbCW8eHI7t3G1ce0Op6Oea6LsMOgUHZ5f35NGidja5KAZ6WdYISKzaCQ4Lmwrp6POW5FJntGOpRyQ25UbX1FGUFhf5uMYJ2XK3xWVnNeu4h/n5N+Q4dVT4FjKXhetcm5Zn5oE1mRYZ+YLW9CGmk+NIpnLn9WO4RZJ3JCRYVTkaac9OPZnJ6sDlh4GXdgGn1LI29HGnFEHWlBHm9FX6F6UHRbrKaU/+7M2MbQHFmNKIB+E3xBKHVNRHRZFWc9I3ROdXNqmYqE3sW0+dzBjZyWS3awaqSTdZyBv8zGtr2yPW5PZXJiJCUoTklDrrKjUaKoSpWnq8KKkbuquL22y8TBx7mu3sy85sy9hXd4bXxyeZmAb6WsOJClr8ySbbi0ibi2yben79fB5dG9eYx6THpiRH1fUH1aQ5GNWrGp"
+      }
+    },
+    {
+      "id": "a1a-080",
+      "englishName": "Budding Expeditioner",
+      "canonical": "かけだし調査員",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a1a/080.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "0Njq7M2hzL2Xo8fQuq+uzfXn0sTHzM3b8/fnt8To8ePVtpjSnovNvYFgwv/5+//V/9ucxt7f4dra1JehoZyvTZu3wMbS+9y556il2snK2taymJSOmOy2VpuxX2KXkZvWn5GtusrnnkI6W4CRl7m6eEK0XLb23s/Mmomq1M1WChERDwoxYkd4RxnWnMP/7NremrTKjycDR250cDksOkdOABaedqj3xrnnwoUlLD5tiZp2Zkl0bUslKBeFgFF2obvx7jsmW2Wt0JpGallfMRkFVBh4dBqEh4n83nIygIfs8NiMqntLDCtKPxmIo66tXE+7374sfuXUw8DwlR4ZbHlOlbbDo6ijsZqa8/u2aMdiKGm6cjlgq4jA2Nqxn6Otn6O66O3a26dZYI9qky9WhJe2qKujqqt9iKqH5dXj9+MsMmpPahwxdpqblZFtLi4DgYSqxq7C6t9BJ1JLJClmVIdtVUU+DBNBo+3/oWJLtrRBIGpoHXZ9bWN9gn10KXF48f/UXAAAJScXaaFsIVFYanGqvZ8nGU9o8eExFAMAPHtow7GTXUqUaYSPaREAACJ02rEALjdfyfnMqJTSqLeMBxoaDhQ5NzVFnGguAACH87KBq9XN/8crJiclLjE3OSxKj33VAAA1hZfK9urPeyYlKywpLjcxOnhwn4GtQW2lwMK+o7dYK05bVVVmVVhVWXmEk4uTz7vG2OTq9q0aM1J+lJNcOkNCOl+99cCUxMbG6P/3998/KI5+iJQ/fbs5Ll3Q+8e9",
+        "color": "7vTM6enL5tnH7uHR28241dfBzsWi29Ca28ia6ea17PTa7O3g5Oeg5MmZ+erV8urZ5M6u1reH4M6p0rBy0Ktvx72G0diz2OG91bV379Ss07+wn3JbnWRBrXtTz6h7vY9htpd00Mip6PLt3+HM3LiNtZF+qmlLxIVet4JfsW5HuXJJflo5oH9TzKaI3cGn/OagzbdmimZQ28ea7OXDqrCPwIRklVxEhWZPuX9g35Rt2Ype3rt47OibyKZu3r6j5amf4byblHFby5p60bid9cme/8B3+bmA47OF7PqG5/+qpquopXJRpZlhlnJb5KJz87qG5qVyzHlSw4Ri3ruWzrNax8W1qaGMXIEXaoUwhIcyv5ltz59qtIZnjlBI0qqc3Pn2U2B0aV9lkZZArMAplJw2lJtRvZl31qt8inFWcmA9xtp7kaaCQlFwrrRe1+Es0tk+4u9tkK6DQmpCSWlEQHFDNnw9dKszp6Z9a2xHu7tH2NdT3uGLk6x9UYZTU4tNTItXSodUZ5tmo7tdu8R11eVC5eXK//6/1+KuRHxKoqJOrLlSeaNSaZtWWZE64+am0dSV"
+      }
+    },
+    {
+      "id": "a1a-081",
+      "englishName": "Blue",
+      "canonical": "グリーン",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a1a/081.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "s7fL0svOx8SqmJymmJq8poF+qqSsrb22WmN3aF5scoJIYlJGV3WUhYF1bIKBdoVaNEdVZHZvkZZfjJ2Bsq+floB4hp2Gh3hkO0lwwdJ7r6eRnKGkpJqhiIF+g31yb212jIdq1v/Eeqy50Mqbl5KChZGGdmWFjXp6ajte3f/gcLLNt5GMiIFwf3p2dFutwq/RoztxpNTAqOXSs4Z+eE9DeHFtcmNjxdG77sJ3orazvLy50qONzKiduXtlW2SNlK1thq+yrcHIvMzm6rmCzbz10W9iYl+jqq+HfW6q17uGJ17m/9BYnICa4KpynMSCps25p5B3tsh9XhxBfm0ida2RrHhxoseyqsXjxdJ+gqPCoqNKHSAPTzoCIGhhpJ+ixdXq0deNlJSozcJxJTwfK04AXJ+by73I2+HlyLKXiJKku9vVoj4cK3EcytrF7vH+9OrzeHaJlIlaR0ybiyAtO0wIR/n7+dvN9vr8en+U9Pp9Gjk6BBo0SigbO/n85MDd/P7qrLfe19j3xcuPACQlIyUiLu/uzuXl6vG+qNHbu+XU1M2yFiAlJSUkE3jS6eSmttSyvuPp5eHG59e9OAAVHyIVADfg1cWWrrGqxuT//tvFy8fQRgAAAgIAApTan5eiu7HIi7Tc0bmqvbm3bTJGMzo6PpCalJeWkbLGvJGfoZuSoa2Fd1xPNz1AQX6ixs6AZJuChX2QkY+IjJiNkomUgniARXWzsa2zlpeUVH2GcX17e4mPi5Gci4c4AC3s5rnerKTl",
+        "color": "Y6TRa7DeYLDeZLneW5nab4/Jj5262KdzwYdLeqrJYrP5bazuElzLTpXlNavdC6/ADK3WkaeZ7aBL65k914IyuotViIuTLIPdRHXchLfyuPL5Lb3NWejEuq5q3oc0xoI924Yx2XEWmKePdb3xmqnBJbHLVefLXefWTefPmKaEwJp/tZh9xHtAuGUnn7CXeMX1r6KvucSsZM6rV6GDmvbOR8HO2bSl8t/HmpWTnpmDXr7eQ8XyybKu2Z+Z2LKpk4GHc3BuU19fi2tranaNNpHjRcbuOdH5jPPd68u3xZKS2JuW9c27r5aQT0pLWlFWYWt4hM/fkebosu771/nUO5q5hcjQrqyiaG5qeHyDUVFWYVpXYmVn/P7IvPPM2Pjs8v3rWNnDmPDUuvLHcubGP3NuRz5BUE5LTUZItdSypfjfj+bjiN7ioujY1P75huvamvneZqOeMicrPjw+Ny0zga2mS93pT8DYxsazb8TZq9DYesPQgsrHiaaraWVqXlxfbmltsaSilrm9oaGxtay4WpTRdprAa5u/fKHAmZ+zn6ezlZyoWFlhm52ZxefOe8S8Z8PW"
+      }
+    },
+    {
+      "id": "a1a-082",
+      "englishName": "Leaf",
+      "canonical": "リーフ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a1a/082.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "ysvb7e/l1NLY5fH39e7q1tPLwry8xtjXvbLJ4fPTp7a75Nubs+n417vOysLE29SdxcHC3vzXwsWj4X+UjoDRsOHo1MeqwKe55d7y/v/t3a5ohnWYmJGvvcW+u6Oyq5Wt+//x9/vvy6Wlws3Gx7yUVECFwcaznKea79zk7Orsu1QzWl+rz3hbJxt+5ezAvL7XqcHq0t3utjcAepvU+NHJVyad8tHT4MTCstK9wsvc6lUZZefXn9q+MEZWxeXk1MGrxLauu9zxsyszSIC2u61HKjwkWtHd1M68s6qw2uCbShMlLThalEAaNCsUFEyq7+HetrPRpU4vGEytinJaPxQsJxIAABx//v/svceCJwAnle/v3rSNbxaJURolAABQ5O/Yu2R9g1DW87xfUUx9lXV5uZQjAAAFYWWCvlFpaezhbRwAGkBTVXyCfeeSDRcHKq2Ds6pMAJ//lw0XJVdTT229XIPjkRxmN8Lvs64oU22E+58nHUlpjXSjYjDO6TyI2Nv6srxty1ynvLMwNF92nYpvYGDywoaY+OnNweDTttf2mz4AWnqVn6WcOwCJ6sK+5Na03ejH4/LT7ap4sjVAQE5pUBB5/8TS5La24cTk/+/asprAg0tUSTYjNcG7z8ncx6+wweP6/+Pxx3RrXFVkYl9pI4jAx+nPxtSz7L24trnHn1pkeGl0eG9ybWmnwLihu8bCspq4u8GXUG11bWFcaV9XbU5ptNHC6MrSrra9z8Jqa2tybV9bX14/X22LtMnE0srs",
+        "color": "8cG09t/K+urP7Ma73uLm79XW8N7d7unq9tHZ78je7czn78zj/9W1/enQ//TP8cWR1K+/44uU35Oa377C6c7e/7jP/6fN/pq7/fLa/PfL//q+wayGmYWK1ry04cS6hHVzmX1t/9S5+7Ks/bGn/b+f+s6P//Cerp10bVhR5su5/+HMpYt/iW9Z/emw/t3J/b6z/bOQ/8OG7daUhWtaZ1ZOu5GCyY+HeFZJXEhBmX1k+uDF/9jH+7mmuqJ+aFVOsJiL4b2rmJeFaWdNdmRjUzo1OiMhvbWx/PDhyaKeiXdz2sCtyKKYgGBiQ4mnWpmHm66ss5mSRDI7ZFBVw6mG66OeeWBk0LqwspqUSzpVLHmiS6DEn4ym37WpqZKVloiB7Oix9sKkz7mVz8SQwK2QYV9mSKC3R8beTIaUl4mE4dO139Wy/9y2/d+f/u7P//S+4ryJxY2HmGBvfWJxYWFup5mI++Ct/9Oy/bOa89S469/X6d3NzpWP119r3VNj41Riy0pe2JuG5NSg7My39cTB7LOt2syuzqudx11v2WRx31Bi21Bi1kZb3Gp45Mdx8dCf+dvB"
+      }
+    },
+    {
+      "id": "a2-190",
+      "englishName": "Cyrus",
+      "canonical": "アカギ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a2/190.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "lKnAt7upgIOprbWjp5eUtMCqkY+WmK6tPUZial9bb3Wbp5pXNh8hSl1MMy8+QkosMi5fbVRagp+UmJ1bJh87amlXhVZATTJ/RmFySGSPtOrAfYNiJy9Sa09/dS1YY0pTtbB6Y5SgjKT2mIlvHH+JTEdtlJxdTodQg2OCjY+Hfp3kyH1oM1pdRm9NTYaQV2F+NF6af22Dopi+ynEmO2NWaJNJLUyYj1NyRamwbYmMk4fHwolctLQxJW+JazdqkFZ3XqmkTV95eo+PeHbUylMEAD95jEZOeXBdOTEjO0AzfHE3eXKflz4SPBlifGZVXWRXSCU/PDNTZVsAapuQf0QWchEiZl9hVFJkVVOgemZYZW0AcrCUdVoAXVUZT2hTWFRcNH31/8JQbYACkaOMfXocGltvY2hWVlVWVVjM7N3FyFYYtp6QhGlKSEcRaHhcVFhUM0Z4we/osjsmr6SXY2lcVCQAIIJphaNbKDlb0urVnzo7nX1rZXZSPTsXACFlq9ZQFyJ8r5uphWmfl3htfXVIUH+iAAAvT1QkIVRMPmWQgnKok39wjW9ccqTMgwwmIyMbUlYfPXh6fGicjIx9kJCEioPVpD0pFBgXTRk9tndeeV2Mg4yHmqqypH23uszIQhIgL12AoElmhV2GiY+Ro6C0qJOoutHqkFA+l3BWZjpFimN9ip6qoHNjbW+jtW2HaVQ2ZHmGf1wufXZ2hmt9djddZjk0ZFtCVkVAU4qQchUAW15XbxyQnDTL1zUAAEkyGhky",
+        "color": "eYiPmqe7i5u5cZS5iL3UoKq2dHiPm4CbtZCxdYCaeoKte466b12Gb3CZfnyat7W+kbvVXoumP0Rfhky6hHOrfnF5flRtaWN7wo6pko+gvJSbz7Ku7cu/pmtxa1+Gl3HEhGmaoYmLo4CBl3Vxn3ePoqqpp42WzZ+k7r60nICBdo6YcGNrmX6AbWt2rIeOo3Z6hHCPdGqGhGSQsoKRnHqAq7K9kZqbOjQ8fGhzloGFjWx6nHd9Xl1wgXmQd2WTdWh5XF5krLLDdHF/YE5ZZlViiGyCkmV4lWx5hHWA8unkysydfoR5b3iCvLadj4WMXVlmblxmhHyakG6Gk2V1Vkpiv62I+Pq2f4mSfYGJsqF+jH+GdWx/PDxAPUNUq5uwso6dXEpclXtioKWolZGyp6Gzloydj4eZfHGCrKmwRENFVkFRZVFgd09ZM3V7ao+fkYWeopqumpuoq6y5sam4v7vBvbzDbmtzNjQ8d3iGZpSdbX2MjYeSnpWdqLCzoqmqmpWaqKWoxsfKs6+wcF9slYtwpIxuUEtLeXiBiYCHi4qMgn+AmpeZVFFUVlVYT1ZiX1Fe"
+      }
+    },
+    {
+      "id": "a2-191",
+      "englishName": "Team Galactic Grunt",
+      "canonical": "ギンガ団のしたっぱ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a2/191.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "tb/R1c7Sv7OwsLOUkpSZuc3Cs7Wpo624bWiIgHdiXZ6tqq95Ih8pLE9ppMjFvLund2FcfHhJh9DDwMfToyo8fUlUrdXYxc7Vcoi53HpOidPW2M7MzYxaUmFieb7R083FxMz/8JJdc73H2MTNl4KSRExrU2ilvL+9iXbTwIN2V425xLOdXFlxQE9xVk1ZXF5aQJ3ok3lSWmFkZnVUXYeDbHdsfYpqX1Zwjc7uqIJkcbhgZIpyjo+sWmidpOa9nVaNrsXR1p6f0uHf23pssuHCcV9Tntbq7I1zo7bV5ceIvqzFwHxgpaKIw/WwToPDp3ppiMD2vNZqbYpyX0FWgoF50ezyyCtfZG16UYGVo9aNl5mUipS8rZNyquvf/NptPktFHkSMyKLN+vn18vvlsI2Alez00oN8Px0rKRJ8vb7q7Ojq9KNrhH2yrsfKaI6TYSQ+GQpwvcjm7ujNm2F30JhTeoBpktKvdX6bJUyEdg8pRDxAd3hxrd5MADZxsMOVkr2ubF5xVwACAAIgam5xic3DMwBZ08yHjIFFpGTEYQAWFCNodWGYtna/v1pu2sBlbVFFipT2SAgODkJ5dWCo1kdlw9GoxKNTjJ2vcOyYKTEbBkaphGl6mS4sk8m8rWpl0LZhvNI5Ozg4JymyvL9ygjkOVZLWtjx61rli3n1TTV5hfEuItMKRbl5SYI6jxHl5tJt4oFVeUmBhsoOHlZSITEBMSIGZnceIgmnWVEZdVl1UV1JyhYRSN4OPTEeFkq3KpYCM",
+        "color": "lZvwmqz4mqjrYbnDOtLFZrbFYGXKanTmX6TnbNLQRNPKWsrPkHr9qqD9NIKuKsHAVfDpSO3fQpDZREz1F3C4MszEX/btQuvjzpr82OLwKp6kIKKuVOLdP9HOKaioVm7uPHS/FYaLHaOwLa+0g539mdDlUYqfiY6ReJaWOpOeRJ+0lIXIeX6fubKpkpqbS4SRjNH7tev+sK/Q3r+y4bywgIWQu7POwq/JpKeisKSg687BfpPlgon4x8zzrbStnZ+joJ+imqCslKC0oK7B+Pr7srm2Z2qxdUr4Tym1sKKn6+Oz9ff86+7ux8rPm6Kuoq3E19zktLu+enelbRu5TTaciJGgkpSboKGllJqkgImat7q9a3J9anSJtry9saey5nnZko+wgYuZISQvMDI7Y2eFiJSot73HmZudbW92y9TNpoa2u0HlybTSk5eVMjM3SVBghZnKk5+yaIyijo6T1dbYnaSjo5O8voPyvb/BZ2dnamlobHJ0lLjQoLfMXW57W1xfub3BnqCgmKq8np35f4KHbm5ufX19iIaCjpXEaZHEdXV3e36EgYqZub26rKjFmZzu"
+      }
+    },
+    {
+      "id": "a2-192",
+      "englishName": "Cynthia",
+      "canonical": "シロナ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a2/192.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "tMXV1MrMx8rEwM/Y2tvc2MK6sq60ssLMcZ+Rgm+BkImIgb3b2NG70al3d3OBeZaTXHeZopmidhQyOmXYy7zhztuRcGCIfneQX3ifrMXQrkwkNanPvnCv0d+VX4zOgHC9j5mSlqv87YonhcSy0unlvNGCdYJ3epifqJugmJDWzJe7yamG3Ojqv7BHomJznJeYkt3nq6e2spbCxa0zn/HnuHZKg2iVm6C8fdDqwpfHpqjXz91xNWdmVoC2c4yiirytYnrLcxJiksCtpamOSxIAEIqlf5mVtNi2ThZZOxoWeM5hNSc4FgEAAEqSmIeZ3frJSBIABQ0AlK5MIShTSzgpHXOHlZGfn9jXJAAAAAA9unk6Fx83NzRflJRvlKKin8DWaUQmKixunFIoHBceISw9aIWOiaKdo5vAk6jJbCZEXzo4MmBGCRcaHTtxlZuflYrYrLCtrVIhOCo0WX58KhgZFUSWvpiiuqPtuuS8xYkLGihPfJCXYBQfGS+ftKva/uavn9/dpnxEHESQtKCbRhkvHQBRuN3v6+igkam4hnp6cYSZurZzJzI1IBw7yenY29jKl7y2hpyYp6O0z485ODgtKSs3kt7W18/Okdi2xfLaxcfhlDo7Pi4mMjc8Qp/a1NLRosq20uPWytGjYnBrZ1ZcX19wZ3nHxL/QxdK4r8zXyoJnfHZzX1tlb2hpXUNmwMrX2ty7p8WpcWZjc3BvaV1cYXJgd19ed26f3cmyq6Z1d3ZvS0YkLi4jLjQxWFUlFwE1",
+        "color": "0ZhK5qRd5I9N1ppTxZ9k58tp/d1r5dee1KdzzINE1IxH459PtloR5YYK+6YQkmMZMDAm2LFF1Lh22sip36hQw1kL0XMo33QAx5Rhzo9K9Mhg37A+qoQ22ahD7NfD+d23rJVYs2wl13EP7IYc3K+K5s7B2pwc758X/dthtJU+kYZ+tZ15sngbx2kN7X0B9J4HgmA+fXBvPTce0po7q4tHfW9GKy0eAw0MrHok8ncA8p81+dE8KiUdAAEJLC4kwZRDRTAeJC09Q0REXFVPu3Iq8noA9JIY+c0hrG8Nb1caVVFJg2c/NDU2Rz4zJygtSEpRoG9D834E5n4C7asM8b9G+b49VU4/Gyc5eV8+xIQvQjovDhUhbWtk8aUc8cA/5ctS4a5C1rRbkmEjcFMx3aJEzJY7Q0A7JiowRUA179EV//Ub9cUS354r2rds57hj9LxC4LlRZFxINzxAODg0Ojs/rJw//9sL/M0A3L5r1Mec496xxr5/hYR6dnZ6bm1qbm1qdHNzaWtwwrJi9tIh6NqNzbN5rqJ7eHuBbG1xX15cUE9OUFBPWltZaGFZQUdNdV4o"
+      }
+    },
+    {
+      "id": "a2-193",
+      "englishName": "Volkner",
+      "canonical": "デンジ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a2/193.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "39+yubWaxdG93NvRvrrF7tKtqKCcttLk/KdXVGZlfnqc5Pv7zoWn9quKlpGXyPj+cVeCh6ukq3p4n+78/t3B8uzu9Pb+////Pm2eqquuqaqTpMrc6fvv3c2ikdL6////V6Ktqauqra+rosHcsOT/9u7N0Pz/////g7Coqa6rqa+rp6W3ztXvxarz//7/////eaipsrWosKSEX5vb7p61pbn8/P///v7/VJeKop+bq6dMZL7n7s7H7P////7///v8UJOTsrXRsrdKYt/F0rfw6f/+/v/69MrsXJfm7dGDna14Jb3cyuaMJOL//ubcnL7/nF+L3s3Ayp6fUEHH/6MAAGv/wrTUm8H/3Vhcyvr07KeCXSwynRIAAASexcji9f/G5opjeYfGrYNlaE0vKAAAAAAsTGhJh8zW+3hchSkRclx1fjs8PCcARloZj9FkAD3X/4popVgMU111UD85NjEbLyc81/+yPyR+8sF8ojIUXl1TOUA9Ni4vBggba7ZtOU6jpKfWpDwWNztiYzZASEkzGxwnRVw7RUaK2dLqxJ8mABI5Xlg8VqJdFjRGTUxJSTNv6u2v6P9cQBERJkFKTnVbFSRFQkE5MSGUyNbm/96GvZEOCgobQUc/lFwpHRgaHRt1sMbZ38Syy8aRU09AW2Vif35OSDpMSkEZ9t/R0aee19CXiXNyeFhXZm+RVFNkZF819urfqrfCk1d3b16NxH9lX1+UQFBTmp5bxr66rrLNcwAdRDY2aj1HRkQmGiRw7fvA",
+        "color": "0tfWn5qepaKNr7GOzdG+/PHkbs3LkN/pkNXpaLnfg8jj5fHzhn1TspszxbU8t6U5kK90uvjVz/LMofTxdOH3kN7V8//3////tZks18VFzrxB2L87rrpiIdXYbe/Zte3nsd2l4/bW///+/v7+s5Yww7I+yrxN0rQ8eIZPRt70NOz6VOfA8vTV/////v7/+vv0mohX3cyyzMC2xbJeeHtKF+bvfvXVtrSk8/H5/P/ys+LO1eTTp556xKyW9u3s3cipjnpfQYibl5+rDABNeIueXNzSZ9nsx+nwscKxUH2Vlo6Nr46JhIV9LlmnDjSDFxtjJ0mbeKbabH6+QLzatNHRj5SnVEFOZnBwRneuFle+FU+0FTuVIUGcs8fwQXTLPXrBwtq9g9fTZmlZHzl1H2bQHWPKVXuBMUt7CD+rIWvKGVrDI4fLm+bBrPvl0ce0eml8IzmOF0apRG2OZ25PLliHDkuyDzufK26slefm6t7WwsG559TFkpSeXXOkVn7FbYicho91TGaUTGilLFSk0OfVw8XAtsi7dYB0W2diV3y0YonCMGnDV3COPVCBh6repMDW"
+      }
+    },
+    {
+      "id": "a2-194",
+      "englishName": "Dawn",
+      "canonical": "ヒカリ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a2/194.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "sb7H49DL7e7o4tG6xMXF2OrDtru8u77CZ3ZxmcLO7/z//PnQvaucst+Mfp+9kaObcHVqfNnXxs7l3+ixtLjB06ubs5SYx9nGfZmKr9y20+jn69G0o6veyqfKzaqv3rvCh5uozs7q+NmfecC7apvbs8LWudrTwrCskZefn+jqyM6XRMuTOGjUyr6+09m9Z5HOpYm9xc5uoO3frMNYQ1aHutXZ46yf1b7Fpc76+5h/edfT3dhpQ0dTqOXjtK7F6srIsPXx5qp+0tSKy8paRTCi6uCbUYbD0+jd0tfKuNF/WMq5qX1IQZ3q23EoFkXK2eTeysXe2cuBJG1xZWdYseXYaxk/Q3HN3dLWzcrV0fFrPZxbcWF539hxPE2b0crc6NjSwsbD2ODWx4iJpk970YgqRbjm6cXU59HYusbG6PnonY7jXEJ2lXiXv+38+uLAg4vG2drK5tujn+u0HkJ2a7Tz3O77+OeBP0e4wsjb3Zv7gdpGDxZnboTI7unz5N2QY27f39vreGXoPWUJAgAwdmZxka/k3+yBa8PqzfDrTytiOREJAgUCWHJtc3F+iYNkmOna2NzpnzIuJwUAAAcAf8BtY2BWS0KM+OPO6dDX67R1WBYAAAIAgvnZo46Klbbr8+DY0dng3+PRuyMACQ8AH7nw+P//+/316+fr2cC6xsW6r1pfPExVKjKQ5dLT2MTOzcvyurWwyK7Lm0ZhRk1aRkFTyODt/ero+vb5vsqdhavOcElbN0hNOz9Scqjf2+L8/v/+",
+        "color": "TZjVZ7Listjn6uzw5/T0zNzhj77bh8/qhMnsS67oYb3pf7zZBn7fJpjp3MrX5tbf2uzwwNDjiLXZaNP3LcD/PLP4n8HP8b2lH5zqU7zm2N7m29rWnZufoaCNWIaYV9X7StHuztjTv6+0hrO6J7vtqOb1k6Ch0rSi89C7k52aIENadaKs/+HMnsLFOM3yMN37dOL2jvH/TqS6tZuR/5+ZmWh3UWFp8suzmH5yKFhqNeT2TPT7UNn3Suv/XbbKPWFz0yNPwyxQ8cavi3x0IVZgQp+qaPD3RfL/VdH4Zuj9neXpuZerpYGEuDlWwpCMXIaEvuXplPz/grbOkbfSP+L9geT00MTFxLzBQmtlfQ8s60Fqt+vpzf/0v/3+sTVbsnaKY/r/i52vjklpQFNbCBERIR4h0hVG7BhJz26CsIGewVR5sNzpc/T/YdnjlEFoRxorARAOAg8OkKSv2HSWySlTxEdn1tTLp/TgSuLwc+fo1d7NbIOFKjEwKzAuTmNmwujm6frl3/PX0+vI1OvYscK/uKOcjsLNYH6AUVJPT1ZVOD49gnNy3NTU1evL7fPd+Pr8"
+      }
+    },
+    {
+      "id": "a2-195",
+      "englishName": "Mars",
+      "canonical": "マーズ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a2/195.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "p6q7tqi+vbqxjX6Afn97qq2Zjpaipq+lQTUwBRE8Y4SBf39+f399g2IpJTNWSWosMw0SHzYNDlZraXeAf399g5tjilMnQykrAyReeWUADT5NXn9+fX2Jg36FPAcUQAAVJIJjKiMAQk9WdX9+hpCTXXKHSBZOji8DKmpLBw1CTkhjgYSIiYOAc2uGWCnE/6VPAGrEDS5WO1JVand5cmuclmmDRgCI23s1J3FCAEIvL1tjTE5QVV2BfnFgHgAnRiAjO0QAGFQYKlVZcFNZsLOce1RPVSMHJCM2GQAAi5QjSWNWZ6fL7uJ5S1JeTQcUEUJWNxBT9uhrUF+Jgpzc58tsUmxJLCkWHTxVYjc4iqSCg2u1jlNqgVlNX2JKqJ43LBdVK1kzSXpnhpV6VlBJREROX1pge2kYACtjPGJuX42Ggl9FSktNS1ZpY4xqYi9HU0RTLmBVeYVjS0dMS0xHR16fd/afTzGUll5gKUFMY0pFSU9cXEd6wpdyg/3BRly36bFPG0hNREhOW22JXEem+/+tacmCVonl/8A+M0xBR2iRlp+edVN6xNqsWWNTXWONtFgyQ1ZCPDxlkpaXgllIbXlUS2JbXVY4QjE+T0eSbVxERJeTbHBycFJmrmxdVVRTVTsDRn60pZ+Si66jn56fnnGf3X9+cHh6dnBTXJ+ous63n6Omx8HFx3q216yWh3lxcX1+QpuqpNLRy56fudXfy8DW27uBbnOis5SBGY6qob/Fuqevscvu8vb4/ORgXFKx7tim",
+        "color": "pF6Sa22JkmCN1IV/53BQ9UIw/jUv9V5IioeCYnWPmH2dkICXRApTZySMLh5XYxIn5Bck+zMv/EIz/0IhzVIyMkZkNSBiLhJLeDyXe0mVRRpVoQg74Rwi/0wv/1Ql2lQ/9jUvbzBIp5/EhFp0Y054UEVhZwhIqRAvwiQw1QwZyTE2vnt15iUlVSE3fYCWeElmLChKWUBhjjxynAY0tzQ/zXVu6MK0yElVwgwrVB04IxEydRRKTB5Mo3ah53vA2CZ371llzIaSuqyjgVRllT5dmVFvPS47iB5XkidwvRN58h7IwlqSd2dsWEVcT0hUaXBskW94r0JnWyJFhSpadSZkvSmVi06QX1BcaUdfbWh2m5CJpp130MTHpxxc8pnCsmWrbCdcV0taZ2hvtHGfxEF+i22C7+TloIqXjnqGpkyA6bThkWGikzJrcmd8Z113no+eoZGhdGaFeHSJkW6JuCJvblhjjSpnaQtNt0yBu7jLt6m1uZiIu6mqw7jKm5ObvLu42XGgq2GBoG6GtTd4h1yFurG918rKxK+nwbKt5t3V6+Hc7vXr1ouqvSpv07Ws1Z6i"
+      }
+    },
+    {
+      "id": "a2a-087",
+      "englishName": "Irida",
+      "canonical": "カイ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a2a/087.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "t83m39jf3NC/u8GyqrKAWK3Qtb6+xsjUrNXp1bTSy8O8y8OGfjIDFoGITMjg8fPtrNrd2Mja0MbBy5RzYEh1dTszL3Dt8fXrqM7my9Tp37zIu2poubfI7dRjLCe3+untzdSttM3x8b6lXWKao7m1rOfNNh6I5+3w0r+Yu8u/u5pwZWeyta2imLLJbRh70vb6ua2jud2wnWd9ZX6Opaysu6DUkHCAyfbuucOfmqqtpYiUZWcyiKjU4JDDm3Zt4PDfzc6bn52gm5Btc8Znid1wPHK8jku3//DX1LWOqqKw3NeDn+DB5O6EIlrOcGX1//HXrb6blIt2sNCixsjI5ua1lMStVcjz9uDcltCoa5iUiYGtsHhjn7BgmLVat+nt693Vorzri11RYIh9UYF+VXZqTlqb39jY0tTmuaPav6WjfXgbAE5jcl97n6jc49zExuv9lo2llp3IoCosJUnJmmNy4Onp38TY7f/9jaW0xMPplgAhMi2a67yi2PDdy77x///4jsHXvotIAAAALycGZ+TVw93S0un17fPrlr65pVc1PwAAAAZjoNjEvtLV8PDU1d/nn6WjgEApfkkAAHC3y9e0sL7m7efa5u71zYuiSCRiL7dgQ3hyUdKorMTY3+Pm5vbztbuvkDlHZVinRTadQrSUub+/3O7V0PPxrZSWiW1LZ3BOQEVdcpRlVJ+Yn6Ojo7Twn4mLoIhDPDUmHkJCLaC7PVXIzcGyvtX2lp+Jdn5zn7envJKEPGvmn2607cOtlKrQ",
+        "color": "nuLx5e72sOz3xefyp+XtcN72aqTH10h8u5+6rMnVyPPy5O3vf+b+qPP9oPP9wu39cOb/LL3bsJ+M4aqe4G6V2Tl/2PH17fv/lOf8K+T6nfT9qOL0ia6exrR76dqg2N6q4OO0zVJoysDC7v//huD8Gd79ZOX/ZcTUsqpyr6GGz7+t5Mq/3dCfwbN5zca06/v/r+L8PtDtq8zawtPWvLywr87T7NzaqaexzLmPu7KF7enl2Pj/eNz6ocfjmrXJ0sjG1dbQwc7O7tPRururvruPyc7R5v//vfP7IeX/tdbqtLG9y5ej01J3u5GHv5mVo6uht83K1fH+r+v82vb7HdP+P+DyweXasXmK6ABM+2GS5r26xtHV2fv/v+b75PX7/f/9Qdn6IPP/ioCxZFNZghlAxTV10dfV2ubpuuv75+/86/H81Pn+VNv/Hr3cjmJ/wHida3x9iK/ByszSfeTqdPb/0fv+2vD+5/r+rs/ymMDUg5KYl4mboIeabJCXxKSsjLXBdtPkyd7p5tfo5/P0mcbutLzKpqW0xZKpwI+liZ6jr6Om2Ki63KTA6932ssbyt+b5"
+      }
+    },
+    {
+      "id": "a2a-088",
+      "englishName": "Celestic Town Elder",
+      "canonical": "カンナギタウンの長老",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a2a/088.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "p6e7zs3Ktr6olJyknJeUqJiXk5GhwNDOSkJOUFxUO35BITyBmotFBCdfUViGtuCaNhtRkXhTZGcbQU6mvr6BYaeLfpFajH9pFlPY/7uJpx4ySU17i4h5aGxfZH1zglFNqvGfzYu3qkVxcbC+ra+mk4VRU4XUezUj32t4rWR7WmiYzsCvpKSLg6d5Z5SjXTyhXG7u4oyBeHevvrSbdV9ldXV5e1Rpe1RpbMv3/5qYeX5+mKqfbIuys3lfa1x+dWlJkW5kc4GVbGRcbKOqj5HAyqFcX2VojIFkbzcagn1Yq3hhX6+0ubDLqnd7ZGKVr4ZkOS6FjF6rrYJvgsiMe7vQpracYV2ovJqmVIOUTLzOcqSbk8i5v7SflIubTH/k9N+Rd6hCefu8vvykSrTWl6O+tIVVfs7q//mPy548hff3x24rAF3Ck1Fsl2+azoyU0N2+aUhBvv+nO0I1EQ0peYtve4+BZWRJmuj7Hh9v/7Q3SEpGMxYJIS4JUbRzSlqv+/vUFlPXrTVBSEZBSDwhGA8GK4hpTc3qzf94NbaVEiNDQUYpMkw6OjkyMWRnF3dpf61OiLZKESE+PzMrPDw5Qjc7MzdRFyV9uVo8p1RvHhklMUEbFgQZFAkZHSElF1erhTY2cce+NwQWEjNNMmU+Nk4iHhYGHZF5WlE+j5WfblBFLihIZYF5gntIU0lNho9sgoNuO2fAe2IvKSkrKAAAAAAED367c2Rob3+vJ2tOTVA8OmdiLwAAAAAAAHKOTWhuYVSb",
+        "color": "x5Jk06N/46Nq2qduxJBXu6WJwcS5r5OQyJSi0pWn17vN3Nu9pmgk3Lpu5KU6vYARoFU5mpq7pMngmJnA4Hqa54Jm7JRo0IQf6LxQ8cc95rJAx5Y4q7SustLyosHdkrnekqOzzaAl5aMfw3EC36kR9eOb3q8RpaBvnsf3t8fWsqKlzq6jm6jKg5yi05ILw48LyogNv5Q45qQApqRqg5XH1bqt4LWf/82syaCUe5O0wq4XvaEXw3gD0pUL7LAW8bcQ3LGB8Mav38u+48Wxyquwk6CK4+145cZI468x2Ysw/vBS58catW5w5aut6K+X366fv6d41rcU996L+N9etF8k6rpO38eAvmKNrkKMnTuDtmR4wnKD3qlw2oYC8L4a+/hQxH0A16U5s1SIwl+QvV6Nt1WNoz+GqVCBxoqCuoVD/M9H3bB857UMqFljqzKIr12JpkeHsUaDsUSDrkaBo0iBoVdo46E7w2cLu7mGuKmdnUx4hFtoknKHnn+elniYmGF6olOAuJF/0KBB0IMmunpmx5pqm3pZm3V4mnVxeEpHekdFeUxEuKZyy5kcw40O5KYu"
+      }
+    },
+    {
+      "id": "a2a-089",
+      "englishName": "Barry",
+      "canonical": "ジュン",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a2a/089.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "wdDSy+bq3qNzm5KquLusw87FtpibnbKu8e/18fPcg8OkcarFyNziu5+nhW94c2w78e/u9dx1kOzou3VmXHifw8vSg4FVSkyS7vH9/di/pNCFU05vYUcnVYqku9anTlpR9//B2P+UOj1POCQ6SjVlfFpssMjBOwoP/7abwYxfiW1hTEo9sJJzlT07dU8TJkxquLDunbbU4NZ+TKSHy9jBu1ZfbQAARG1l0NCQpJpzbWaUWpLiRjjenVwwAn6yMj6Qw11odWVhfsf7zozQLgCbPRwKEarSqtTvX3VfbI659ffFwYNOb1EcHkIzY7je9/nxdWWQy/X7kne2bWFPMBgprNpWdcfS+/3/jKfi1qhmJD6qn1hcB1qKzWg6rriVy+/Fo6TQzYU+QjtHNhEXkPfimxdG3rmFiraujpCbit7Q7Pm2hXwesK6MpHcCTpt6msO7lHVGofH5/c3B1G8XQEY7FUyhT5V6neLzc1qQp4Xz5NT/hRUZOHF1HiHBmHOy8fnsm83Fv4On//v/TiOBLKTxnwAHgLvz7/vz1OC2lb+k1s7Dhae7USynrEwAev/1+/Hq1trzpHWDn7vHmmxqOB4AJoMyALS0mKGK6PX/972fn5SBU2pzVh4RByc1BxtJZrtz9+/x9fv97u+wTjosIwATEwUcJhsnQGNY6K65qr+ku79hHBEcFyEwMC4yQDY1QJXg6Ki9trLH1m0zJyAwHiEmLjYzIDUqNcX/7sO9u8WSPRwZAAAABSMeKn6YNjhEOnq5",
+        "color": "3fHu5fTy1vP10dywxM+hzten6+Oc6Oiz0+LSks3HasjVb8vd4v799P//rObfwtiG3Mx3tKtntqlpyrpt3dOF2tW1fLq4Pqmw3fbyyOzjmODVhb2bsZhpsJJ2zrCPyKuJvaqA6LiNkJyIS5+us+rhb+HUcda+jNzBpb+m7cSg5r6j8dGseaKbgZSHjpODYMDNZsutUcOfgde0vunSvu3Mf82yooxqs5VsYoyRlbiy8/Dd0vf3dM2uvezLteHRdbuPl8qQXqibjZpZ0rae1a2K6smh++TW6fv6p9t/ruLDltqin8mAb8e1kpSG38e23sm1wIpj7r6euMavqObEXsiBeMq38+7a3v//xOLhvXlN5I8x7Xcgs6CFfcels+Gg7/u6TvT109jA5cSv5fz818u4yZx9xqeCys3KcIlzo9u39v/s5Pv1uP//4/Lu2cy518237L+N66Zdvno8nHxVpIhbnY5vgNDKetHC4PPy2u/v1fHx0fTyqaWXkIV6i4R7onhVqnlJsnpDfpFvg9TIz+zqzNvZxdrXoKype36AdHd5fYCAnYh5uaWYrY5tsIxry9zR"
+      }
+    },
+    {
+      "id": "a2a-090",
+      "englishName": "Adaman",
+      "canonical": "セキ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a2a/090.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "srfN1MnNv5iLhIKgtK+yyMrHva+8vsLCcVNxbWdtNBhBlpRgVDxnbJSxmHKvnppyhWmGiEFJOCMpOYyHdWxfrMXEzZu0r7zChZrp5GRGhpZwNiAaaqM8ltDb/8aUjnqg1dey0XI+TX2IcEAtQFwug7fE8dCOioegu5TAmG2rzdanqn05JiNXk5KNzeLWopjkY3nCZMLOo8KvkoyFdmFxU5ur99HkxaOyZXdnYdeNfZO0oHJSilYUWLq/vKKgtuCqlpOXQYu9tdbNlHRYboJonca0lJGPgWx8fIGKYzar29bKi3JYanKPoKCKj25eLhldcnWof1mztMiIncWvn6e7eYuMWxULIxRWdZGCbpqbbYGOqqm7r7aAaIxjJAUWHQCXeuCok+JrWJtxZHeamo1OdJQ0IAAPLnnOrd6ht6MbPlJCWWdlpnQ7XXcjIgARXsDFd2tbhTkjODU6OztrTnIxQEEjIwAng6Gbcmc5HSo6OC48RV2EKVs3KycgNCxhgZKUXx0AFCMuOyw8QY1wTFgxJhQrhXRBiryBQgAABS1KNTY0Lzxuf0UoFTRkRyVb5r9MNkWEMSBJLzkcE0CBRikcOVMoIjGvx2AAVWPZvTMANSUAFkY9ADU6LhEQAz7Um2JFUHatwp1ASDY9TmBTQn1WQTlNXWfGm7bObn+gkp1gQXhVa2NKQEFUYkJWdo7cp4STbGqKoZtxfWIlX1Vyfm5iVkVOU6ruvmtAVXSBjo+WhV1MVWqLqHAhFhoWC5T9sidA",
+        "color": "k5qbn6OroqWyb3SPeXuWnJ6tho6clKS0ssLem67NpLvhlbrYjJOir6uzWF9/R1Z8TlZ1YV6BaXGLc3+qytP/vsnomZ3LlafFxMTMwcbQkYePrqu+nKOET1dYQ054cnekrbrR4+fqpa/Dpqm8c4mKhomX3LCdyLCcy7GOk4deYnBrWGSGqrnFwc3mws3hv8LRg5qca3yUqoZ8+s6u1auUgHdmfYJul5mMq7jKgpaoZG13YnJ+fY6WgZWgnJqezaeRrKOcsbW2s6+fmJ2ZfoudNUNWGhwfUFpkrbm9scHPfIiqRF6cT3O1hoh9pJRhZW1vVmuUDhYqOj9AqbfKdIKQVmF2Lj+EHzyeQEtpbW5qYWVsPUhkJjx2LTZIX26FqrXJPUdWEhQiOUJgMEaTQEdmdXx6YmdrJzdkM0mCRF2jfJbIiZercGJgp4qAREVPKzlmGSVaW1ZOSktMKzt2ITCEJziIqL7RVmmJboKM2reohn2BT1NwWmKLbF9YXlpqYWWUUFGEgoait77Bnqe5Z3uPoJKTrZiVfHqSVlqMeYOpiYeRTUtxLTV7fH+j0NPZRVqE"
+      }
+    },
+    {
+      "id": "a2b-088",
+      "englishName": "Iono",
+      "canonical": "ナンジャモ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a2b/088.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "o7bBz8S22LmRldTOvou42ManhnyGlbyuT3F/aS8ShHgvtN3O2s+pn6fAYUxLPlUwQFlGcaFqrWhUuM3S1uS2fX3HbY2dYjEPOmK8+O/AfomhbbnPu8aXTmuqdlyEVRdH1LSy/9KnTE/EuYmyvLapWpXn6cZ0I42qxT2A1pGCy3G4xbm7q8KzhL3h7enASNK7o46Yel5EfJ+Aiq7Hxs7EmLT8xOTYmHmVXkCa1sCwiZuvtoqN0sS5o4DdzeTAoV6PWyTk/vv+/unHtLbX95htzpqIn3aK9tfGODry8e/u7fPulL3o2OHBxsCnn4p659ODDTvz9/b49/rWTl6lvLu8ysG5fpqJj4JqGRvN6dvPx7ZgdWt87uqXmq3CxHKvmHGdYECFjYqJkVxDT3T28vvJlK7K18mbb6Wafcq7j5yahJR1V97z7PPlx7zO0dTdxqeSAFl/kZSAfXqJo/f6/vjdxrPP0tLY1tbTGFWYraqjbZVDLVZlmuXk06PN09PR0dHSX6PqwsWcodEhAAATGziLx3rC1NPS0tLSYrK2eHnv9eC7IAAAAAAAhmmq1NLS0tLSqtiLDyeASjVUMAAoNh0/knqIydLR0tLSwbYiABAAAF9bklFfuc2DRoN+o9jT0dHRpZUcIhMQJZ/YzbA0dpQgD3qKgs3lztfTwJVpYmlPN3yKpalGRFw+S4ORj46fn6e0qq1vWnZoQENMu3FtWT1AR4iYj42Gg5Spq5WUbVVqZkgqMDowPT1DScKAZX6RiomF",
+        "color": "lpLtpKH1nIPdqaO2jaHa7t7h4MTWb9PhoMrXfonmg4HrdofmdVfvvqX3qrKadIaQiKWi9cjf9Nfhj43lp5HYeZ/pg2b1US/LxqXlz8P/p7/OdJScRsXhrMHT2MjSqKO4wMzW2+zsg4e5pqmqi4izoK+Tpp6fhq+PVMDeu8LN48/NqL7DqdLZ3O3mvsHOqaazemF38vQP//8Y/P8lvNOD2c/U3dPZ07nQwbvQn5LWzbX7rMvYWFBT6+gi+PEm9OQdrZI1rZZk6+Nj2L2n6b7Uy5TlhKL6d57TnXy9yqZj0KMXtJcrmH9J6t0g//8T1tEl5MSm/NPwvL3YtaazYWGiz7CWw6tUsJk8mYYjwb477Okv8Ogl6r7H/tTv/9fl+c7shpzpz7j+xsGH6dcYWlYhHRknOzo7oJBC4qHJ+9Lr9s7k99Pk07/7Zk54Uk8kfn5Ti4t8ZV4zmIMDj3o20nrB9sLn+9vp+NPmgLrWbWV4UVBfdXR70tHVn56VmotAa2VcvYLA3qHS4cDW68Hdh8LMiJmxiIeicnJ6d3VzeXh8YF1qZnJ5eLDNt4+61IbR2I7U"
+      }
+    },
+    {
+      "id": "a2b-089",
+      "englishName": "Pokémon Center Lady",
+      "canonical": "ポケモンセンターのお姉さん",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a2b/089.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "tsLV29fX0ci+nazm4tevlafNtKyvuL7IztHXyMTIyNuqYJ2yxt/Kra3R087X3+ro083K0dHI09VPUU1GRUZRmrSv6OrV2d/ZxNXm8vLO2ZRBNhIeIygvMyu81dfX1c7Z5uzb7vnk5n4zJh4eJiQWHg6V3dnX29Hi383k4tnq6rRGcHMAwuJqEDTf6t/Z2dnuvMjf0dnq5r5suGA48KUQefD17uTkzsjVxs3G0+jRc0xdfM285JRZI2j16tvw4sjGzsrR1+pdAKX/T3zfztuaiQCB/9Pw/dnNxM3V1c4ANv//RQKVhzq2/zQ2/d/s6tfbtMjixsQAFNWnAEpWAAA6eQBf3er26NXZtMjmxN9yAAAmfnBPYpomJFXKzdP16tPKyNXm9vv5pVlRh3BTrK+RXZ//3dno5NfR7uru9f35/+Rsbk9zutPAdmz/6tnq5ubu5OLb6v399bpuf2Zw4sabg43q8s3d8vn929nG8v/125VFOByLzr6Uc4eL6M3o//3u3fDy2dXf29N+FHeBkcKRiYeDlfDw19vI3/bOo6zR5LbVvt+qndODoWqXgeTX09vKsrabo9/o17b/05/Z36+BtHxsZMbq9erCn4mq6v/7xovN0XaRwn/G9q+Bi+L13d3IxqGfjbSvfm5qfjhwcsr/9dO4xOjw3d/CvolyXWhqXWJWT4fVo5+0vp9zgZSqg5u63cCjbnloW6qVcLrEtKeyqryHrMrV0bK226GnnUpgYHZkn7rC17i0vsqUm93X3caq",
+        "color": "z+jx0+32yO73wPT4xdHZ49ba7ezmyd/k0efpvOzwvuzv1fHy0O/94/H8yvb/pefx53qY+luA8mKE6YGdv8bSyvn/yvb+xvj+7+v88/H57/v/4d3o73+KyW146ZWX7Vhv2aW3zv7/rfb7y/b88d/17+f29O/46rrL4riry9fO3+7ds5qc6Nnd2///1PX6xe/8+Nzw/vD/5ZSt5K226sXN4aOc28a+5ba/4XSR8PT89fj7zfP9/dXo/fP95pa04VqG05e2mJ3BqpaiyoKp4ZK28u/78/X80e/7/enq/PX2///z5LnKlrTprL3O9drCxLvB2t3p//P56/Pv3/bw/e/a/PDx///y7+7ybqvvjLPi8uLX48K2682++O7s9/by/vzx/vLV/N/h/uDt9+bfu8XP0MnM69jQ1MHR5K+d89XU//H7/eLt/sbT/czo/PL28N3Z8+Xn5c7M7tXG597o5L7D9czT//n5/uPv9c3U2bzW0sfXzLTIqbPPtL7T4NHL7vLo3dHV7NPb7ePa9NXc9ODg08HJoqzMobvYsMbY5eXa4+Hd3t7W2dLR8dPG+OfA+tHT"
+      }
+    },
+    {
+      "id": "a2b-090",
+      "englishName": "Red",
+      "canonical": "レッド",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a2b/090.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "ra3G17nFmEVNXFZXiLPCwrSjq9neyr3NZmN5qVxMZYpsY2lfUXiUd4B/tv/ykIFxZV9WiGBVn8LKa11kXG2En7Kf8v/CimqKan+q05h4e5rep3hZTT2F356X/+KgpWNs0uDE352UwMunVmy9MAAptpjO/+uWf3qU2NDs7p6JgY97r1rUh3FipKfkyLaMh46R6s3gs5ZpX1a/89/e67Kqn5elo5SLkZOL5P6tgHQdW4Hk6+ryzn6bu8KWmImAg4yYpOnxl4eFi9GTSdDtiVuv8uugcZuLg4+Iu5fb05exzsaTZsXS4822u1qBIyJyjoWA06+52rvu2crxy4m+u6pNHD+OZQ05o5SQpOTRxfvqstrTmJp4mnAAP5iCiKnY17Sgk6e/2fve2f3bd2lpeksAX5eUjK/27K+fxZCn3/32+fKdYzZIaEMAHIhDJOD69O7VpYWt7vr4/pFpaTJlbQcAAAAArM3i/f3+gpO+//nxr05oXVx4bBQAAC9jetrb+//7lHnk6v6xNGSrcWSBcCgZB53uh3PE6f/kGhef5fN0SY6xaWSbbSQzQMLf5KdZ3v/OAACJ9qMVZJ2fY1+UeyowYpeRv+l2zv/Mr4GUrLslYKN2XVpqmzYzYk5dQWKd0/m5zKuWiamXfapreHRqp3ljfpTTvWViwran3ridmouJm6BseHpderORiIiRysKtu7OpqZu7kZSQrJNtcXNdXH6elJSRoL6+zKq7r7S2oKmOi3RkY2hXIkNmR2R+gsz/57as",
+        "color": "61SH9Hyu5Gmc01RV7QoS7AAO2G1m9Z2X7nil7M/T68Pu53nQ8xNd+GSdvV5xzKOq4pGY2CAjsyMc5X2i/43D/fDp7o+h6Sd5+tCS/eLFwq+g2JeCzZaAuqaRg29RoYJ5+bmf9da55oFe6XZW/eq29LOlmWtarWpM9ce2/Ore1Lak5Kd48bN89Ixi739g5olm/MB1/LiL64JF6L56xZd96szF0bil27xMxZtek1tF12xD4YBd+bJ0/M6E/N6o/9l30cmpu6OqsauHXFUvyndcpG5bwaaB9Jde2qSH88mG/vmv//d6pqKUfl12VGR7UDYkwmdEx6iO///a/ceG65V97dSj//+dtbZLmVNQpVNAYlhDCxkWQEYiuLM//vnG/f/vfFQ+7OCexcaBiWZC52RY3WcAmkgNZCsX288xz7woz8eM//DbfVsz5aqXl4p0s3RQ8zpE60AJtFoOfVEGn5wmraA1x759/9u08sOa15J7x5J+vpKN20hXyFFQxpdEpJRDsrNUu6pSvq1877KN6LGc1bChy6KLw4qN7SQv2hwto04nmYs3h48izsFL8d7N866M"
+      }
+    },
+    {
+      "id": "a2b-091",
+      "englishName": "Team Rocket Grunt",
+      "canonical": "ロケット団のしたっぱ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a2b/091.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "sMXezcfJrcKfg42bk4uNqqmKdnmHmsK2UGSjklB5WodSERwsLRgpKh9ETBk0PVYWcWF4uoBpjZN5XWJbNTQwMS5VeUMLRCMAaF1TXYF4nJfY4suBGhsiGx8iLj9GVkYAn41kclRbd4S+/9qKRHmEgSQZFw0uHwAAyWaLo3lbVC4nkXF7r8jItnhbXSckQiZpY3mcaTU7aEYLADFsrrjYvNqUbVA4VWVBh7SQPxQmSXmJTAAZWHC6ztqxcVRfbYxpmItmSjkxM0FzwIIQAB4klruHY0RjT3iBXlpTVEQvLiwoP25mNQMZUlgoEz55bH5+Vlh/VD8sLS4zNjBtkTYNOF1LRomfwrzAZHyARj8qMzk9RDVw5LgiNB0URovb///AcoJJSDEsMz9GS0GM9JM8RkQYVJfi7r6AlEo5JxUOGjQ4KXZzgYG0WlEpRI2CiKTbdXUnABEpQEtShKw3PH2bqZ+FaIlpu/z8hcR+nFKnjpHK7pw6LzdcTyo0WouJ7f/maXPKsaqjueDopC8bLDc6O0E9PjEohNSec6encJ+DcbCfGgMHEyw4NTk2KiUWUoKkp59op8B7YkpYHAsNCwsXKTgzPGI9acnegEGa/85XSEhINyEJABUiNl47IzVlUY6EJHa4vJFpY4FgXWJPP1hiPWx4cFJkdXaDU1VUZWtkWmJQXnd/fJJVL0anqlpXe3xuWjloZl5aY15eWm1xeZx7cpSihY24vnxdAEp7b2V3fm5pLyYsOYp5le2nZMPitnBm",
+        "color": "qo+E5K6t9mlx53p0olBLh1BDa3Bpa3JzfoB8bGuLVWS+XXy3Y3F6iHl9xEtI8GhF7Y5/mm5hNSsvLy0uNzYyQERRYitpJRQvyn9ewGE4hHFrcWpqoaSk3oN8bJheSLt/U1dXOjw9ZCscZiUB9mw6rWtPSD8+ikU+Xz4wXy4uhpVyj+SPyMu7d2BqelBNjWhXln5veVdbQkA+TkE7dHlkb1RZNA4jaVtIkIBqYUVIjGlqvXlspFJDml9BSElIRUJANUQ/i195x35/MTQxRy8wnVZM/c/D/LKe0UosTz07KiosODc1QEtGgnmK645xlGs0N05WuFlJ/6KT96uG0WFke15MVGBWf3yDvq6igHlwW01AlIhraHFzjl9i6Igw//Zz6GlG/Yo82IdH4a+msZ6SKCorNTU3P0JHRkRCQkJEYmpY+KGY2FgS3ZyH2oFyuBoXYjQ1IxkaHR0dPT8/RFFRWTo9dVVixJmZW1NZoZSrmWx7hVtXcm1tgHNyfXR1XFxedX5/e4GHhmtukH99TFBdhWptdnVzfYN/Z2VjXVhVgIGBjpGXyZysupKVwMO3iX13"
+      }
+    },
+    {
+      "id": "a3-190",
+      "englishName": "Acerola",
+      "canonical": "アセロラ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a3/190.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "xb3Y7OjqzHN5r4ybvq60zcTNs6uyz9vUqKra0MXHonhvd4R2h5Cjl6rc4tDm/vOtp9bHzcSTmqdVZmNpc3aH6uJjf8T2/+KMwdjj9eqztH1mdmN3mHtAZoA5InPfrr6T6ty06v/YhHJ+a3mAxMBXKTNHK0yVZ6CgyaDC0cmbbIuYdLHX19B/ND1CL0d5gaDlmMLPn694UnZ0fdjM5m1MNTshJXao07evwtqTpptQOUdJWUeP7sCkTjc5Qo2+x6ie38WUdFo8Qzw9PlaY26/PTi5VY6+kyJ+a0a5vdz08Qjg1PJDjwYyIRmdeo6CgzYnMyZxNSkRJUkwrRjllnnYjTJujwbHHvZfNu66bOTdcZW9vZVU9WlqFJzirl3/NtrSrzbqqgTlvjM3TXFZZnqCog1d+cXi7vsC546jR/PS7oNyvkzUATp+cf2N5YICv+vXls6DI+//23LTElB4NSX0zHw+exK/L9vbzq6Ct+vrs7ePWrTJCqEcNFg8+y9jx/Pzmq5jE2trt2+C94pRzbxMXGBcWnv/x1unLq8GrtMvC1M+7yN9tRBcXFhkJY/C7trmeydyLyNOcscLQqo+mUA0YFxgVIpevvoSJzK/A4vDivaSnVIS+AAAEAg0TAEnPn4GSnKO+ydjlyat/Zst+LzkwOUlVQ02gkI2qxKaVp7vTx6Nfm5dCVj1GL0dOTTddraPBxaK5mJqroHdsoF5JRClEPEJITT09gLHUtrSgpIWUfnGDlVZgVlQhAAAAAgAALMTH",
+        "color": "1cXi4+Dv597vv67RqZqxsqfEtrPfzMnu29ru29Tp6unw4eLu2NHs8OXr39DwvaPQm4SJloqlqpO3saDRpZPHpJTD8ezwv7zp6M/j7dzw29jvtJnGuJq71rip6c+mhmygclC0dV+dwZ2A0r3F0MjvyMPwqJTTkW29pYSwzbqe6dmtlYOZbU2djX2x6cex0MHIvNf1opTOh2rAd1e0clOttqSl+sSbs4qXjXXAxKfr28THvbzkw8btiXa+eVmqp36Ak3GgpIGi1ZBth3COr52R1bue1sa60bzr3tDv08Xou6257MaPzbOhW1qan5yhjqrPlItavpVY4M/T3OL5yrXm7uHw5///0+rp0sCrZGGAco2/PliYaHCp19D06vT88Pv5zbvpysvuzN3139796dvL1q6FYGidMkOROkaNzMPb+OTz1MjnyMzw3M/46tj13cPvubPQuLOxS1WFOUV/MkSIbHOvx8Pwn6Tl17bjz8DS4uHmz8PUmp22oKOvZ2Zwa2p0dXmSbHaeqqrDyLve4MTfybLCxrDEoKa7oqa4kYqUf3+FX15pWVlnVFVlamx+5Mvj"
+      }
+    },
+    {
+      "id": "a3-191",
+      "englishName": "Ilima",
+      "canonical": "イリマ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a3/191.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "xcvX3NHX1Mi+tKi5qqanp6qVn7y8xM3O1MXYyLOys7m5YZ7Kq6imo5ucf8rg1+TIvqvF393R09SBNbLdt6anpqaheLS/yNjYr7zi/+fF4pojK5/X08i7pI9/fom/ub7H5/Tc8cqknFwjRpOrzuCqiIuPkYvXzbS59uT09Najl4Zka3Gbt5tzi5uUmIu+18rizeX//PbYmLKec2l/cUV3kZ5+l7Kz08vHyt/N6OX8r4ahpJFiXV+MnFhQgYHQyrmr1M22x+vnt5iVhUZUpp6chl5MMYXg6OLcvLzL0OrA1/Pn3INIj5SUjn5XgdDA6PPqXnvqpH/F5+/5/7lJWIOFiVpTp9C83O7UYXXCvHKmzufvnnNoTUKJnkyf987l19TCjlRso56Mx44+AF2eZE5Gc37X6/b+37PFqDp1d4GMpq0UAAmLc2kAF3nX6/7/5LzXzlw7a5GIju5XHwA8iXIGACu2y+vt4O/7zcBoa15FmP+DQz8RspwCEV+ywNzx/v/2wNbv1EUx0OB4WG4bjrwdVJ/WxPbq3/HXq+fuhTVBsrJhV3NFRV47ZZrt08WvwNawx+DWSjo6RoFGP1ReFxJUVJvUqrPC0cq3x7O3M0MvYmg5QjlDIiszcpVrj76hzbTHx9jXPjtimoFCTA8iTUUd14595ZRux6jE67KnlYytr3VGV0NBYV1rv6+mpGiGnpy30aSmtsTAr2cLAAAAHR0/Xm9zQyWty+Tiu6ujocrosDUJAAAADQkjjlhcXXuwyufY",
+        "color": "8NfP9tva9tPW9dfV3ry85sG79bqq8rWl6q6g28HD7Nzs7t7o/cW+/ePf/93Y7cfBvGZz9MG9/NbN87uv56WQ36ei/M3c/tDU++zk/vfx89TO1Z+dz2Rs9aSd88e83aqI3q144bKb787M+9TD/OLV/O/t+O/r3raw75qX64N+u456z6h3y5ho3aOV8tPQ+tDG+Mu/9dPO/OTe8tbG8M64x4l72ql14LB5pIRlzZiY/Obj++nkx5uF5s2+2bSi/evW6+/Vu6OWuYZe06iLwJ2L69vU+eLf+d3bvpZ6xJds4rOA0sGvfVlUmIaEnpWTi2dl2Liw//35++3s+dHA4Ly3wo5l0I1T39TRooSAhl9aubG0cEpFuZ+Y/+bg/Pjf/vnV/9zU5dTFsXFM0crHuJyUr31wrZKVpnxy1M7U8+DY/d3Q+dvh/9zM0p+JqFsipZKDonpxpXdrh1dQp4Z8x7y42sLD9MbR+crJ9dze0Kiewp2HyKqomXZvjGllmnhws6SjzcPAsbKyzrOv9snL7MjM3ry/7uXmvaOicUVDbUJCd1VRl4yJt6CcqYqC68TB++Lh"
+      }
+    },
+    {
+      "id": "a3-192",
+      "englishName": "Kiawe",
+      "canonical": "カキ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a3/192.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "orvF0dbUiKu7rYwZcpt9kIt1anh+j7uzhpqVcCYdHp+Sd0oVHBwDAAwrKkthX5eTua2QZBkUr8tINiIJbWYpaXVxcIl3eneDnLva/MN23acYDRQUNCoRRFhQkOjfek023fvj8N1lPToyGBcXDwwfMztIm//dXTwS+8fG6Ys2IUA7GhkUKTNLTgcuV6pwOjxyv9L3yE1ATUtIJBIAOUdJPAUfNEA7Mz9Tiaj/zml9eHdlGR8vOjsqKSFNNjQrGjM/bU+ni6S0l34vES8uKT0rJ1tkPzIcZlpQMiY6i7TS0j8rIUCXWCVBPVNKSyV29se6F0mmzbfHSTknHzRcVzBdS191RnO71LbNZMOzkstsMCoAFDIuQzorTn6ftoO0gFpdnpxJgH0yOQAAGBYuSSF/6LaGdox3Oz1k1ZtPYkMkDw0NGR4fHJP/9uirV4yDUGK5TWlJcjsAADQ1NiMRU9Kkj8OgTTg/i8DnM2jNSwAVITgzMjMUo4RJWpovP0+m+v6+NbTcSTkfLyoiOjU2NR0ebTlBT5/Nt6BTgutyLjwjHxwXGik5JwAJABxEWFU4T1pJxcU5NScVJAkVLDMwKwAAFCYZGBccJRcW2YRKSi8sJSVISE81RjQmKzk/OTk/KzQAjFdoRGqTJklYW2FQTTxPQURXS1NYNEkDmk5mQ3+bSVViV0RVSDtHTURATzpNTkcAm1JfRnJkTVppXUlGP0RfTz02OT02RzMkn0RbRn9zSiYkHSMkMCtBPTo4JTo4OU9s",
+        "color": "76lj76SArn6GxpyA/qNkjmdVmml3lmGbim64slertXzRxK/d/7Uj7rWFsXdc7Zxmn0E2XUxEc1dckC2D7Bm1/n6//4O75y9h/Opd//lG8HlMyws8izU/WEVDa1A9hmNHmzhG3bac53mBxiAX/MY8+tuj5kAy7j4XoklAaD08nFdCo0Yzc1Q+eWVZfjxI0CAwzjA97mxu/8Mb0qE2alNNg3Jtf2ppd1tb0Eo8uCQ7yIFx8ZVz10Qa/6UL4r8vemZbVURDhmtigWhnkGhb52hM5HpX9KyL9Yli+5pP804Zk3BXVEJEUkVAY0pLjnBI6t835M1Jvp5t4kBL60g45jQt1HRPV0lEX09Mf2RbZlJPr6NYzbQvw5oss1E95688/9lX8I8brKBoaFBSZVFKalBIemFXcExHZ0Eyn0VAwVlH64Jl6E5z4Mksgm1oclpOY09Gdl1XgGlhbVJSdThDnj9FnT5DoS4/jSw3r5pph3h7opRrinZqlYZ/jnp0gW9vmmhpo1xdo2VnpWFhdkdMqplriHRutYprg29tfWJhfFtdhVldkmNliVhhglNWfWVlmmJb"
+      }
+    },
+    {
+      "id": "a3-193",
+      "englishName": "Guzma",
+      "canonical": "グズマ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a3/193.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "rK27ztji4MjCl7vQyIqOva6pt7CRm8LEWFhrm6q5uM7Sre791oF2ZzubtYJpdIxaSE6i89euyOj+/v3/8960m7bD0Km94sp0Uav7/+7E79Lo9f/++syj0tzFyM7o3dnM5/vh7sze44ZnvcTIsI6vqo+00Pj90sKX9sjK3Mu3m4YDLFx+VDeFiI7O8P7/7+vpvsPix46fR2V1YkqjhXQzHytl2vDy8Nml1O7Ku8CnYFaijYnCxJg1AAARNMHu5cdr/eyRwuzSvch+qc2trYh3MickEF302NDmtr534e/e8/+rW5u7u3BWOzQ4PjOGyJvvyOfY8uv03qMuFzeKlFEqLxwzdFl+tobD9PPu0subiW1nZT89a0MaFyQqZ6R+d7e45+OedWVyknVmW0togEcWHTM3Ln6eSHDO6LJSVYx9Zml0UC5DsnMDKigwMy+lXEGKzcrBWXJ3aXZxamBQlVYZLxgtLSZau3Fgj42Pc008EBUQEw1YelYkLhAdIigjhHp9cHyKRgATGiQcIj90c4IwLRgOHw4XJKx0isOqkYKiwbdDET6nhpNoLRUAEyQQAEByke/y+P//3U8JABfDxHqBdjQVAxokHztY9eX47vq7KgAAAC6nlZOecH5wY181J1lcodfE6aosJUxOVcK+rKNLcY2NgadiJ39lnKuVm26VtsLQy9Ktknxcl5+VlZu1p59ja7alYqXXzL7D1sinc2J1l5GK0pis0oRKY3lgtunMxMS71ejI4+i2j5rq85ucgzMu",
+        "color": "kYd3xaiQ8Mdy4tSQwcbT3d/ftru9hY+nn6K1sLOjfpDNgqfJhXZO7N+x59SJ3dzF9ffy////3+ftuq/L4LOl6b5U8c580atJ+eNi+Olo0NbIpaR7bW1PpKWWhYmWtZSH5bEd//d2//mT7tEA/dkc9MkJtqxmdXFdjXddrI99uI+EOTU6OzwnvrpH//8qzL0d3dZa1r8h//AI4d4pp5Zg2LO1y6WcYlNVKjFCSk1Nyss3w9SQ7uUZ9OMX39Y5vbFPYFNRdmJqiWpuMzQ6PUBBf4CHhpCHsr5d9eZKlYpemIGHpHqLjWt0bmFegHZ2LC82PDw8Z2djf4CKmY000KinlHqPY1ZqUkNSVEdOX1xVc3t+NTY5MjU6MjQ1dHV2iIyPrpN2o5RGa2wle38yKjAxYmlzkZSVUVJWHB4kICMqKy8zf4CH7t8I7P906O5jbW4rCg0nfICRuLmIgoRiUlt2RU1eLzJAcFFaj8R6rcW9g4l+f3k/np1it7msnJUzg35Fl5+9lZ+1m5lsnXl5jYWDppJp1tBE7dhC7d9309TDtbCbnKKrsbnNu8TTs6t7f2By"
+      }
+    },
+    {
+      "id": "a3-194",
+      "englishName": "Lana",
+      "canonical": "スイレン",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a3/194.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "nqjA1NPQzdjHvn8/MjMmPozIxcfFydjbOF+YiI+2us+zYzJJWlJGKRdS5vr08e62UYN/j8HqzMx/QFFjXlVZPi4ii//b3rOUq7vH2+Po46c5KS45QFFXTDUnLr7pvp+kntCxwsW2jUk0dh8nKSs8Q043GYPoosGol2xnqK+5WgBaYEQnLzI4PzU7Fl3RrtbQJ2mbj6axkB1XeMmydnnBUR0yFlTf2+LfPpTq3q6etnSE3uDlcl6uHR4ZHprXud/fVLP/6q+gsdfbo7Tfk4MuCxkiStaxktHHLkSvwnSYvtftwbLYlSMCExkHI0ymkqLjCQRih3HaxLLiz4CYflcuDx9lRimFp36AED09FX6ci5d9Z4Cri5u7qHO24MSogXZXKzw8ja9ymIhtoteVbElqqMG3u+qtXYhnTgl4l8LHql1dQ5WAbGNfUm2enJVIWlVNHix9id7wgaK7Z6fIRmbfiU2Tl1w0rtiyDzBqzNPCXuDxpvb/R37p2nhMSDt2o+KiAg+VmkpSWf/47vj/cjOQ2tFXTLftzWUfBEBcOC8Zmv/7//z/x01JbeLJcrf/7IcZMDsENFEL2v/+//7/+5M9AmLgvUaXfUQrpEYyi39+8OLm5d/j9Z4cYFdnx5BRVX0qpMy+tqaTj8Dm2trRyIhZd0JqwcWLSG9RaoWUmn5HHRdfoKvB0IQ8AEbb5ok3GlA3J1psWkBgNQAAAACS27tXZcu+bDlCi3JQHIRaRCdWZVJVP1SIqqi9pI9RH19RTTsz",
+        "color": "RZrlUMjzatnzoOrxiMjZWIWROnmKIWySYpu10+vs2O7toubuHbTyHNb5dO/8aubzIoGpL3CGSoWPOn2QAF2cmL3Qp/r8Ec70F730Fcz3OOf6IYWvYnOGHG2dEGibMnueAGyoMXiibOf4Pd73HY7tZ9f5F9f7MprAqaWn58++saGZc42gAFKQRIqojO79ruv6O4bsoer5Fcn4TfD/6t3V+sy6fJinBkqFAUiAQIqpIMr2f939BkHMBHjgHbT1Etb3bcfW4amPkJ+lQouvWZ24WrHNLLvwL6L5DFrWTI/cGNj/LKzOWZGihLK4L5vAPqrKTMzlfd7xN5rrKo/zFkjIFMPuRur+pbjlq87VmtbqmZGZ3sWuJpnHAIbSKqzYKtb6AD/SGo7vLlnpwMbs////////iZ2vnKS1zbi8Sarlovb/KXzdT3rDb1rblnTH3+nr///+//76sM/iHV/Hq5+2x7e7hprZJW7RzqadwrzAkp+uiIGbuLO819PUyL/ESGbAlJi81sa9RHTGL3bWQm7DX4HBMnK9OmuUOlF4g4mW38e6r5ylpKq/THjHP3nMNXPW"
+      }
+    },
+    {
+      "id": "a3-195",
+      "englishName": "Sophocles",
+      "canonical": "マーマネ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a3/195.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "opS53dS8orWQfH6rl1Igm4uZjXyUsr61w42Jl7Jsd6lhXTWNXwddUBiytafW7vh3sJBumdF5vKddbDMzVC07UinRxZ7N5L6Zh8Xn//OyolJdQVJdUlJQUi09QXXWq2h+2//i3cCHnj0nQSk3P1BIVmNOYbLAm3J87JLNwF9SiVCUt25yn913ZY1lcumeX4LWlKfpxWyEgmrs3+fk5N3bYU5bJ0Okkpe5ud34xYCeSpvPvMPYxd3KVlIzB4m+1s2e576+noubM8WXd5Ketdvidw4AOt+8/PDPtZSrtZmul8gvSvg/CuTkd0FYfrW+zeTkN2HYq5vspMDFn9+ndcDI2Hdll7memeniQbXfl9v6wJ6ZqcOw7unNhJ9hlLepvtHAsMrKz/jdvGh8fHy1tXkcEFZosM98iZS18KK3yr7Rfjpst3mEJQAOHhAKaneNssjivp6pi+7bkmpMt/OrIkOCqZIvSKvY5/DwyreZrtRy+D8Qxe6NJez17Pj/tbLp8Pzsz4Sitz/W20p5cdTUUovw+v//9c347vB3t6tlbIT/alCSO5/sz3Kiyv/6/9Gr5IBIzchSYeLpaJ8nAFvp2M/Rp9H//+ep505W3fB5df+kUp87cQrP5N3p1rz8/PzdylJMw66Ldc15MzUnKQpjn8ObjZCwudaLgFCH8JuEarm+3cjDhISASGpSjam5l7mbgkaL5IcAACUOJyKSvs2JiYSiuaTNqad8fEa1z4IAAAAAABxKh6mNoquNh56i4tayyt3p",
+        "color": "79J79NeF89iF99CG7r5u2sVs2a9j1qV66sih79az6+Xf7+Da/tZ6/uGa/OGc9cZY7qAz8pYr9ZQu75Q35aZt8syd/+az+8tx++mb+PCz/sJ+5rVd3bKY7LGA8L6Y+bJf86pF68ph98w++cYY/OZy/Oiv/LdN5cCF+Ozv9ufk//f98Myo7Ywr3KtU+OBx/Nxp+eBy9Nxq/c1G7Muk1MbH2svD4tHM9dvTyYtv6MJt9/TH9fi49bRU9+Rx/+5/6uSP5NHW797Y8uHc7tzQ48iL8Np7496V9O5o8eZk8+aP9fbJ08Sk18TH4dPOzbKntpF8wqBo4Mxy8dNs9uU68ONl5tiv6ef217vH5L/A7tzWx6ai7+Pt4NDc5NCG//qQ/vu46uFu7bbF5tzf8Mij166v8uPi7NG+8e/q////9fPb+vO4/cak9+p26b/D9ubd8LR92otV48C2//Xy9eLe8/Lx/Pz99+K4/qZX5+imzsu93tbU3MGq27SRzLCg1snK1cvJ2tjX4eTl08mp6bB92d2LjIGHlIuWoqOe0NbY3N3fz8zN1tbW4eHf5ODk3NPA8d+S"
+      }
+    },
+    {
+      "id": "a3-196",
+      "englishName": "Mallow",
+      "canonical": "マオ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a3/196.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "wbXT7OzcvtOzimJBPmGbzcPIs7WwtcDA2rzY1sCWc5RXGx4oTDsXWaq13/bj092Tz62Y1tORiDIAID5ePiAAAH9fo/i21q7ds8/m/+qFO0FEEwARDQAAACNHhcXRyHOf6PvL9L5VACphFjNKKhMdIyQwwOr27752h4On/adHFjpBTZFpfWEjBS+1zfH6/+3cUkqUsspqUUkAUklClKpiXJP24c3j8cjLaIiTcXvNfzgASVc+sJ2Yf63miLaik3ifXpiRh3WFsLtVLYydlnlkiKZmao51m4WiW3aHjlJ2lqK1iE1sjF5cKw08w4wtZmm2ioBxakRfn4+UcQB9T0JZAACy5N2TPCN4c4XLgKeKYZimeTaiRwsXJBoRhcP6kyNJZNOzdrz/xVlMYTZRcGZVWz5GfzJ7bi1V2P/tyv/KTB2FNio/cYC8oHtXV3AiP4fHwe36/6ciF7P/exUwTI97bICPPo+ARFR9wcr0mBkju/Hf5p1BFpGWe2g8TTZXOjIys8OaHRuz79bc1fbWEyNPNicnwLNKMztSsKIvD4D21era09X/phEiJSgy3P/mw6Y2ynUTO+PTvtba032miD5pLSBEytrm39hsvlkolP/KncP/ii0jMGGjgi9UzdHtvvSpVFFfs8+fe6awVS9UVHiUmlVZsr65sqNwMkRukYyDh184eZFwYY+PdTVqzbvIw5GTNUJuiJ2Yj3mWkX1EYo92W0dVqbvVtZjsPGppjpbA+NywlopegJRfIyUqufrjtc3V",
+        "color": "vued4uyu0+igwtKWirR1b5xNd6BYi7iR0OG13OfDuOnpl+jbkfOU2vS6zticsX9rcnVJVYpAR35JKWVEd51i0+Ca0+6wjNt0p9idw/uy1rCcmmBkuoN6l5Z0mJFgXHZGg6BG5fRU+//Fu+pKq6Fu1sGL08eLsIh+dn9VsKOB5r+ayLGOzN16wuwh4eGNlOkyyKuE4qyNyKZ+yc6nsqeNtqmE3ayOwZd4f7Jcostm05ZsfMphn7t6u7h5uK6A5L+W2K2NdKOHtYxvfGZQfINfrPCIpr2Kh4tP0eCw0O6z4uq4jq9uqpZstoBnuaiVwK6hrZmRnaZxi6tqsap00fes5/K/cp1dqstZvfGUnY1jrJmTrcXHmqqmuZd4w35gupRwp+VxY5Y+n70q2/910fyB4farq4mFfYB4fYl82Ny8y8CQgp9lqsRUdp915/RwyfIWy+eMn6ahvpqXmqOjfpV7t/emsv/Ik9+ZeJxXr7+jwdCAr7dprK6YlZWTsKmktcLDmKaWyNnCut3IgtSeaqBqrr2EzNGCyNiCrst/q7Ouq7qvkpyahY6F29/d0OS5tumW"
+      }
+    },
+    {
+      "id": "a3-197",
+      "englishName": "Lillie",
+      "canonical": "リーリエ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a3/197.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "l6O9wbC5sLCdj5ebkZeNmr5/X4OBmsPFfXuLd4t5b4Vzc4OPo7TBvr2ni6qsdcnhfYWwlayPc31zfY+jsLa2trm9vbm9tpHSdcP/9JpVYXd9e3mJoa62wb25trm0u6eyu8ncvmltfXt7eX1xXWFnfaG0tLS0tKayu4uTbXl9d3d3fWlSUldZTmNvhYGBf2majZ99d311d3V3a0xfY3VUYVdOX21pb1yXtKxrd3d1dXFxX3HFf3GjvYNQRXFtcVzB8Nhlc3Vzc3VjtMH7OkH4x3u2gWd3UoHn0uWdZ3VxbWdz8NTLk/j/aTSuy19Va+r7x9z0oWdtb1+7n7uLk9TQ3nGuu2ON6vbuxef/+MeVd5e9OJ/hb5e0oziFqtj/+PDcw+Xs6v//0JpXdXu0ixghNHtdd//9//Tj4cnJ4f/Lf1lZtptcvX8aJ67HfeH4+Pb4way58rRfVV1vy5VXUqFfXEVtnbDH3v37trCRd1BhY1WD0m+JFRu5lTFSRZHB0v/0fWVSZ2lVY0imoVx5Y7mNQgYTNlfY/f/ea19lcUxtcXXyzouFe32hbQAAABpBfdrWu659VHWnfYWhy+zjy8O2QgAAG0czDzGftOPOlaaucYlrps7e8OqhdSkPSFk/LR0Djay50KOFdZXe//jn//j7wToxRUe0kQkApnmFvZGab3+LxbuLweW7qk5Vp3FxOBWLw4GbwbK2rNrh8P3e+P/4/3c/gxsABnPBzqqPppuXpvv///vJ/ezF8OU7AAA6hW8X",
+        "color": "vsjyzM32z876zMv2xMPvzsnm1dLm2tXv1tLpxsXazszZ6OPgwMz/6OX+wr/zvbHryrbq0cL12dP+4N3+4uD+49753dv55dzfz9v91tfwy7PczrXizrfoyqnH1KWc2amV2r3G1cvy1MXv18vfvNX6wbTi0rXjzLXmyK3V47eW06+O3r6d1qmJxqnMw6rl0b/J3e/7yb3gy6zdxqnf3NHP6ei409S55uXV0cmn08DNvanS7+fZ3PH+7PH0z8XmzcDW48ec4dWi5dW85tW407iT4NbM7ezq/Pnp0+/95vr/8/v138Wb6K6N486u0LeVsI2b4bmL6eHD///8+vjow9300Nfe4reX35py8MmoxbnNu6ukzrim2KF96MSP9fPL/f7x0bWm06OD3KOC6K+K69m7x77ayL/S2LebmW5upY2M2szD7Pby4Nvyz8zO4sSi6L2U6dfI8PLr8PDq2cK5lXuEyIZ163tlwoaK1srz3Nzu3tDUz7606uXj6+zv9PX05eTptaKn37Cgu6qtqpKi6c/u3svZ5M7i6OLt+Pz58fHy8/P29fX6w8DPk4ido5KivbO+"
+      }
+    },
+    {
+      "id": "a3a-081",
+      "englishName": "Gladion",
+      "canonical": "グラジオ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a3a/081.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "srW+0ci93tnVxK3Bwr635trO3NXO1NnQVkdeVUtdwu/l4sKjwrOVvdbn/c7Nsa9kYCx3k2REh7KerdLo7/PXuv//y6OWlNqAqan3/7pDkLPj6+vs79jh1OKVSm+ndolN6//c5l8ua93v6O7v6NfU2aRKKKfFVTU35qfHtmc2fdXm4O7sysLY535IgP//sWitwO7Hr2dsp7Xm3OriysTKknZao9r0tWlwmKpxeoFnb6Th2+Hb39OEm3hfVHaPX2hwr46Nlm53Zq3H29zfyMTWqk9XYGNET5nEko2PboyOK059y93qp9XkdDJacEB9bFqAd46MVrpMICU5sdKnrNKMLyVUVWGDkWtbTo2YbY1EdjwjebF/qoYuJDqM0qGTjaN6cKefn29vfTIkJYCnm28pJjaYxJGXt3I+2YCnm6FzABc+LjZ5qX80HRZalIuQkoOClFWen50oAgAnNCwyWzVCVyEJZ6Ctc7P4PmGOp44YBhBNUDUzRxhO40UAJZBphPrOXGWDakUGDjBCh35YQB2bs34BADODo9KXT7dpAAEQFjsnP29XSmWfc7NsFz+Tk2dhkq1hEgUhHi4xLiQyUHd4XY2saGeEoWVSvXm8jRcANCUiJB4dJWR9f4OfZmStjHZVbr+ktyoBTywlGyIoJVJyeGuHVXy1b06QnX5odnpvhFJaY1JlbWN8jIuHg4OdpYCZXFaSf4B6gGJVZUcsRFAyG1dhXmmA4bLXOYDH4Z9Si29ocV1HQygEAA9MTk9snanT",
+        "color": "jnOQn3+shonQ1tO63NOzv76trMPFn8To1+/y1+bzssryn7nljHeSzarLXmSag5qa59Gk9eCt9+Wz1NXC18zqiobOm4jRj2qb5+vb5OPWY1dzrp2J//TB9+u56tWs8NrHa1qpqIy0yb2/dk9itL2OlZ+jVGehtZ+J9eOz7t+v4s2rtKeiZmWGtZO1mqXWaHmbpZJ1hoODYX+iVl5q1b2X796t6M21uKagUVFaXVFkQ1l8RYi1iHd2o4lzhnFnQTc7cWRc1bSWvJ+aWEtMT1RgXZumfpechWp4oJeWxpaGl3ZvPzg6Ligui3BupYR7Ix4kWVhlna7LrpKWqXJRaGt5yJ2Oe1xTBwYISkJESEFDRz1Cd3BgLSYibFZjs42B485icnVtdVZMIxgZKCUkZVZWf1VRUkdNl6OiVWlzMiMfuIihlY6op6WKTXeCGQ4LMCksNCYpMiMnWFlmaXqlj4XJVXqGkI60Vlx1XpWrapCzUlNbUlRYQT9DQj9DX1JZm2tyqW17eHibgqGjjImRglODwJ+/foylhWpuj1dSeUE+ai4qLh8dZjw6mD9QjZOrysbO"
+      }
+    },
+    {
+      "id": "a3a-082",
+      "englishName": "Looker",
+      "canonical": "ハンサム",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a3a/082.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "s77L3Nnd0t3RysrLy5NhRTNDkKWboMS8cHaPlpOgm8rIsrXWpyISHyIgGkuMkWUnZ215eXt5eImHfYGqXDyPNiYgIR1ViHI6W2l4cWNWZnmDf3Z4SJHXr3kvFgAgUpiBdXNiV0tLUl1tdW2Fe8CMtd2paRsTNSYZZVFqi2daRTpMcmNtueB+WMacgkxDfFV5OFGTZ047Rk5QbWdOveTG1pxxj0uW/7xjQlpVHRM2a3luXkUNid3b1tbHSUV/1qpVeVFVcHNycU4rFwUanMfF2tZnWLWMe4SGd155eV1CKAMACwA7kZ/aoF1Ov9Koba/RTUQ4LiAcGQUHCQVBcXxSGkVTbZzOpZjxLS4vLSomFgMHAw4/UDoCGnmslLWqn22IOFc0Li0VBQUFAxsrGwcYKFC4yIh+q5hdcpCjTxUDBQUCGBUABxkhIFjZ7Z+InKhSRM7kQQAFBQILGAMHESUaHor/9rGDiYdBAkpbAgUSHBMPFQAFDiIkJ3j98a3OiSY1XEErBR0hIR8dIAcHBykzLFDl8fj1yoFIe583GSIfICAjKR0XDSYzLzOz+9SQe3FIfa5DICMkIB8fJiIhISoyMC5eun2Xhz8nuHicRgclKCckHx0gHzgtLjUyYXd/WzIcj62PNAADFxUXEgcJIm0zMzg0P39mRDsy76pPR11SXWFPV11aapByaXdxa4FkboFr+ZtWW2RfYS4aHxwTNplFL0NJPExwunVf+6tDRkJHTSMPEwcAObm+Vy4zL0Of/7hV",
+        "color": "1YFR7557861568B/5MBv8sVXoI9tODc3MTUuiGVqs5PTaoPFoFkip2gdj2MbpnUluYAqsXwhgGlIo4dtWkU7GBkUiDRpgEaAgGcwkG40dVE5Wkw5j2YhnXA0wq2UuqiP0quFbk1HYD5KlFE7fU0jjVQ2fzMbg1opgGEsXkow0bmZ9dOpxLGTd1xQyKqoyXtZk2Mif142c1kyX0MhLhwXJyIqsqOU6ceejXxhqJZwvZBc4ZMxS0AyPDo2MDIzGxMdFQcNQTI5cF5nPjExdGNWxaOJx6OBvKdYiGdqdGNrJhoeHw8TIhQZLh0jJxgeHxwgsqNo2rh+u4d1nX1kgGB0fGdyGggNKhcbJhccHgwSKCAhKSk0v8M28epJtZ14Y1tVgllLQh8aOh8jQyMlPCQnLhUaMSMmMDA6kZNH//SM8Z13lUdJ240tbFJHLRofPCEkOSEjNh0gOiwrNDc1SEdD0mhf0UdWcBUIzrGCXGRmQTM2TT0/Qjo7OTQ2cFtSZldTUlVMh1hgoE5Me0NL0dOGVEpQcFxdXUVGMSQnLhgdXoB9SYeESkQ/UkdDva2rs32E"
+      }
+    },
+    {
+      "id": "a3a-083",
+      "englishName": "Lusamine",
+      "canonical": "ルザミーネ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a3a/083.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "tMLZ5ePg4MmkyeXStsmBn9zOubKtsrvL3Oru8/P46sTS0Ofz+v3j3K/u+uz2+vrg1efs7v3ux86D3Orz///l9sSb+vjx/eDJzt74/f/J10ZBSXhvh8DV+vO9pOrq8dfL7vHn+M7eeBOtpMdBAE39+PjgqcDl5+fJ4NfZ49C5ITLs6uzuqeP/7PO26qS5+PrlwM7nx8lcGySt+Nm9+v/g7tmy+s6D7OfJx9W9u5chIRsPYm00tO7O/7K9//N9n8fEu8CppE8WPSYpOgAWHan/823l+v+eXNzAlKKXpBNaXFp9OAYeFkv/fV7/8/q9NrvcfZ7AhQAANODOwK8wIyRlHaL/5/HOO1y0nq2rOwAAYv/e5/pSGycZMuD91+zERkttua1iOwk7rf/H8c4jIycbYP3xyf20RlRpwl47IUd2ham7/1gXJyQeXOfjyf+fRlxegz27fT9eZVbxmRYnJCQhQZ7E4P1/S15iRj+2/8taP63XISMjIyEhGz+n/+dcUlhlVgAXYtzuYp9PABYjHh0bGRd2/8JHVE9nfwIZGT2b8XokOA8AFxcWFxYwpINBXEdpdicmVksnXvOZT1YmAhsbGRkXQ1ZLWj9rkEk/bZl9Um2vc09YS0YrMCseMD1aUkFtg09Dl8u2bXG7Uklldm+DyYtYfytiST9tpG+iydfX0JBLKUt4gYOy/6+7+FIpNE9vh7vV9v/9/+6Oa0aDkIWi5bbZq55aD2VWZYN9g5+vmZOvfV5lWGCOm4WJcYd2OFZN",
+        "color": "2u7s7vfz9vn06vDs5enb+fvh9fXe4+TZ6Ozm6/Hi6e7i6vDm3vjz9P769f322NnOzsS93tjJ5uTJ/f3i6enV6vTi9f/z2fXl2/fz5/v54uzevqet7OTW39nHwryn/v7f9PHU1+XU3/bw5/n0z/DtzvPoyr+/tIii1cPG4c/N9fPa+fvg6+vR7/DU1t3W0fPxuuPkxt7Osp6vr6G8xZ2yp3+Tx6+46+fP49nO///Y0si1w+XmruHZzMi+Z2tvttXP//bw1sDCsYmpwJ+z8OrM/f/H28OrscDDrOPcvaGrso+q7NTq+PnqzLa9r4SpxqOs+Pe+9/m+2cOvwK2ssLG95NTO18Ta1LrU18zFroyptJGutZSl4NCy/fzFy7etz6+pjKOytJyy4NHR4dPMs5m9n4eroo2snIeqtKKs6d22wqqoyrGqkLvLs6G7wrLK0MjH0sbTtaPAp5ycpZqsoZOps6Gnvq6pwrGqwMia19XV7/Dp1tLWwbm+w7Sv38lj1N/AveDrt8XOq6ShvbKrxtKv6eHH8e/N7evSzce6yLyV2chw1d/OxunqsdziprW4tbGw"
+      }
+    },
+    {
+      "id": "a3b-085",
+      "englishName": "Hau",
+      "canonical": "ハウ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a3b/085.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "0uHr7ujf2dnBtrCASGZWUbXKwq671uHY2Obt4cy7pcinaFZcVlRLWV+Jr7Djxce+sLvi5su+sJRiPDAuMD9oTS8sgsLNp6uKrtH0/ebBq1tKVVJudzQkJk9xmtjWpJaa9uK+4fPXejN8lpaUinQyIS13vfv+0se92JLIwb7DbUlmYIqFWWJjKFyOwNrKm77sf8Xvn5Ssd0ZjXouJa2ZmJXbFuYGGhLnmzfTlq4afXiaFa5GMfo9fFF3VmoKRiovF3+baqZ/AViKEjpGPfZNVIzmnp4SIfHXSr5vY59TloiR4Z0JWUH6yXDfM13dtVZS+tsL6/tfu8FyptmtugN/9u9H/6ZJQYKWau9LIwdrc1+3h1IFJea98rdLMxMFxX36SmMK+su7uw4h/Wl5xalgwKBgfKnqlfHqXvZ/C1vj3Z2RUbn9OZGUUFBE0UnaVi4ibm32s5/+kUGVPn24AZFUAFCNVgY1/gIOFf2J5/eMiWD8kZScAW0EADRYXOJuhlZyyfVRo62kAOxQLAA0DNTADLB8JVPL05vDSclRdq5MdGhMUExEHGTYWWaPN+OvS5urI4Lh0XaJ1FR8QEA4OBzM5WuD/6Nje8t/W6uXjhVZBCwEAAAAAAA5Chf/s6vb66ODl3M3jyJRyQEo4SE9IPz9fyNjY1drRx8jt/8q9ztdnQlE8Rjk9PH1tsN3Uy9rUzMPt2bLD4ohLQ0IrSkJZTndiUc7Ou9jN5sDv0cPIvl5IUG1ycYSUm49waa7UyLu50uzw",
+        "color": "8d5O9u9s+NBU/MZhyqJnd3lgSGpTXm5Pr5Nl66t+7MWz7MK3/sIV/O+B/9E3vY8dVmNETF9GUGBEJVI4XkY09KNr/8Ge/Xcc+7td+8lJ/8tcc3A6iW5T0IhXlnZUI0o8o14Z/9Jm8cZz/L4E/MII+7gB/3MHamA0fXZoxIxamIFuQUtFtokJ5J4ovoFc478d+8sZ+s5K/7oNV2wvkHRevVxcyYJOaXU0mpEm5qhDp2RO2aAc/bES+tuU/+stydIYybAjtFg7xI1J3LsV29VD2bg7oGYz4oAc+aMm/r019e+LwJknrW88kXJOp08oRTEoRjwpmHA6yIdRyYRCt3c/6ct3u7mIcD4kbWhfU0g/hToRIiMgOCMlpnVNyZdiyZtgn10/vJI/eWYiMx8jJyUeJyEaYxgeaRoVfnA/zcpM//JO+t1S79ggx5hWk2s5LCgiKSEbIyMcOhMVujI1//eD/vhP/u08/eUV7OR13tiSoI9yUk9PTkxIS0pIUVBSqJeK4N2d2trI29WP6t9q589d1M56fnxia2FbgWVbnXJXsIRnh31vxsi62dKh4dJ78utc"
+      }
+    },
+    {
+      "id": "a3b-086",
+      "englishName": "Penny",
+      "canonical": "ボタン",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a3b/086.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "x8rc0drc0tDCt8bDo7+7bFdXgsXDy9XUxrfFwMC3sr+6vraets6TcnBlUnPn39e+wrbOzda9vsfD1ot3urRlalxVSC+P1d7Nu9D7++y/x7+5v25ihohNW2pql5ycwsi26Ovk9OTIxdTKxWZcbWBIYaLjp362rbOi6cba7d7WxuTayGBSWluPksLXwrCitr7axtHh5cak2sbKy11EWk6L6NLR69+zzcDQ1d/U37lkpM7S6MOEcm5+3e3w7d/AyrS249LN3rpkYr/8/OncnHZKj73HzrrK5Mu+zbvD571mZIb//uhyMjk2V4JEXNHk/+XKv8De3cdyblXR/6ciOjg2NVsnBcfp7tzUx9/eveSbTTCk/4c4RDo0NTAyAHrj3s7L2uXHxfTHZiqYwkpLST82Ly8zAC6Sss3A7sXAvY9OaCdlVj1KRz01NT8dADJ/bsfpj2pmZjhAfobGyFw1PCpNVUZILHiUfrT/ZmxwYTm5//z+/9pkAEBlLBYig9DVh73zYWBgOkbc8fP38f+9AB4cNDQiwujkrb7InMeGMojk6/b2+v+3BQAAOAlTS02SqsfK3/pzOKfl6dfnuaeaDAAAAAAUAACczsXG4797cYKnt19PPUZ7Lh4lGSMmJjvSyrfH1c2cmIl6f3VAXVZoUkFGL004Q3vQua/O4bqTlZSGjn9VUmJaVVM8SEA4S4+5sMPNy6iPm5ial4t2YFZXWGpGUEs2QKPNxrLezbuAhI+Tj4mCViZIPDIuNjgsR4O7ubvf",
+        "color": "8cXy78zz783258z148jwxcThktzux5iR9Tw703aSw+Xxv+fv8sf9+OT86dH86b79/L/7UqTpUbbr50pc8E5jz1Z6nczio+H/4+T74/X2tu3649f978bzNYfUEYTSrH2b3c3Jz8a9iMvehNv+sef6ofb8qMSw3sXf9dv/nKLUj4GkzcHD//Te9ePVldnsk93+rOH4rPH/up+HyJSF////19HigX6GqXyG3aCfpcfP0PX9tuP6u9z50un/zMbNqW5T5+Hnk5amX1thb2dvZE9jaH+Y3/f/4dz73+D31c7pxbK+kmJfqJiee3d+dnBybGtuYV1ZUEpht6LH8dD4xYx1tXhfqXhm3sq45d/KmpaTYF1nlWdMhFE+sqSdy7Ku5drk0J6cpm9h0LSe///r///t4drGRERZYUFaZ1JutKWX28K99cP16OD7o46Y0riw2Mm1qqSeqp2aVVJfP0VYT09ZUFFaysLh9Mb8vtvntrC2uKOxpJWienV+hYGGgn6FdG92bWhtjJGaxtbe183rytDrtqSxvqyyu6qxlYyWdHF8d3N8b2x1ZmNtjJCYwNXm19ft"
+      }
+    },
+    {
+      "id": "a4-196",
+      "englishName": "Will",
+      "canonical": "イツキ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a4/196.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "s6vByMrNx+POuohVRVuk9OCbg5O+2L3MiUl1X12Cf6OAUkxXZ2Awquh+MGnS7KvDX1lkqZ1vXFJfcXt2g4dgQfGaSaDnscPVAF+98H9HZnh6d3iEbXNuPLk8LcH+k87HXYWLbEh6d3NzaX2bbmRsP4sNSdvkiNerameapnhpgXN1jXZjd2JXQFUAfvZ2W8ybPLLlm5s3ZIhpl3VNe49ENy0hxdNCj5R3Yn1HTq1JHFVkV2W9aZNXMzZR5ZRSjI+YfZMVO8hzHDaBTTZ3qbJuQDJl8GOFr8qxbNZRUOCkTDVCVpOqmrVgMR00iFOfbV+vMJStRcXieXF5LqeTjIJMHQEBKXhvUT9KB1vOT6/rfXHUY4utg1E1BwAAIkVTQSYqLlKjo8T4udPN5f+tVTAgEwAAGCk2KCtscV1u1d3t1b7HrXM3HUB+JwMAGSknJGzFdz1Cy+arbWaJTxgmKGqFJhQAOlcYM97/hF9NxPXv5IuAPAAeO1U4JxoATICHxP/Dh4CNjdfV4MpaQCRASFlAJhcAYqPV+90pgJSJZbbgr9V1Uy1vjog8KAFVoZfLxT9DwZeyl+D+s5RXEFzSqmYoFkCxfZvbbCZS8nPFxLXXdz1xK6SjY0I8Npdzbq2UPEF5vr2bzpKvrai9vqlsd2NVX316joZxX524vaCYrZiPuMLBtZtuY3NZLFFmjnJqgn8Uw7KMiI2MpsfFnZiAbENNOjw8UztEZ1VcSnq5vrOyx6eCgVZcQCs7Ljg2K3LXoIVm",
+        "color": "vXzfh5Pe6l796IbluJnCnV2ljFWUp6+/m8jgtV2d7sPtxr3wlxuLnJHUuETGqECspV+wtmrDwWbHgWefZYa/xFOW/s/lkLbZrWdQ1pLEj26num7Fu3HGuW7Gr2G1c1yfGC+F0oS50ZLeganNdGrco4XCS2/BiEuNpnCajnWMr4OpZ0ePcTN+5YzypFXHsaGmjmLmWVSrZqjXUUKBeFdmmIl356ebikZ2dUJjv1/tz1uq2JWTfC/MoXjprrjngYX9oXao1ZDDwGiEZxRBGhkYhyJuxBttgxBkfC6/1W7p5df3u8jW3cbZr4SlV1dHUUsxFhUaWho5cQJIr0zCoRLzvGLb+Onqo5rDi0qvNhwvmh9JiEJJGB4dfjCKuGqr4ujf7yr83kL33NDx1c3+YFxiiiZM4Sp6bhZEQzVF5lfy/tL/nlaYsa723Yjy58zuuHzLbFlSwJONx2KFYThNrlm6/1j9r23RjBXUy8LCwKa8upPMxqe42MKpx3yVl1R2YmJlqky0r13BgGamjH+WtYSbxqKlw56i27uqwZ6bomiEaFNcSkdIS0ZGaWRqrYaxpkF7"
+      }
+    },
+    {
+      "id": "a4-197",
+      "englishName": "Lyra",
+      "canonical": "コトネ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a4/197.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "j6O2wb7E3s2Vf4yalIybr6aakrK5obnbYlNcWVmJzdVqZZ/AtoxJOUtIbdKPdtX/lV9sgnpthZ55w9Tt7fPUf2VmwMdZp//zdYbY76Ryz8OHc5Ld7ub0oUxXwW2S9v/Jttr863KP9sqOZWlZh+bKXGJZgn7b/92S/KOetra9o6+MmKamcmpuWVZBd8X3+b22glnA67KKuHNpaGNtoWwxWUcyW5j/24qSQEmMnmJ/hiJQhqaVdYZCTyEXXCnJual+Lggr4sCJAQhJtfrMbowmGgBFPUHK1P+4JgoYr//PJECAyfaSHpsfAAYSH8S+ueLDZRobOcz/soPjz+2jn5gYAA8o2OaamKzbUDwVF1fjbSvFdp/dgCInTXPB/7K4no+qQTYkGxssAABjr7bAR0jFubn/7ayJaI6Gih4kFx4VOZ1gbJFjT1Dd2HNdallIcLaynm0KABkKRZh6m4eDr3OYfAooRy9Tx/Hvp8fXoUUXK3ZMvcXJco9zVQABJ2DM9/nm1+D5wbVsKQAiZkgzNrh3p1JPqvf63tq+w/r/2sMpLwAnQDZHPdJPqd2dn9TRx8rr4vnx+u8YGykyKE0sW+18KdrpTD1XV2iV3c/j9/8oFygYAyFl3c/XciJMSS8iMiYcwc3Y7uYfABoXASbH4snX2o4VNT5dmG1j5ayYqaplKDpBL0GasrOwm6aJVVZXWWNo7cO5rLV3JjMxNzWA2LWYqp9jY4NqNyM1wMTRtr5oGD4jJDUrWczJqaqykbijYGgv",
+        "color": "1Z1L3Z1H3LiF39rJwquG1cmw0cCeyJ9kzZxb2sGU2ruF6OXc35sk6blH2aE328K0yKum48zV7Pn/2L2x3HRJ47JW7L5x+/Tb8t1v9OGa58SH6dnVv6Gu1IiQ56qt84yG61ZG17Qu//fS7tFW7GNW5LWU1bd5oZOYt5SSzrivwZaR7Dw+2TQs3nNP7uCx6LYsxRIWzYhi7OB5jmcy1bqo7tbBtqWRnToxuwAM2V9c492L8d6PuVkqxywd6c2HuKVl6MOz79DBupdtjVk3uoOX7u+k2ckU5MMqs3sQpSYhwxgbnGdgxKGM3LOlppCG38e03c6j3K1Py5Em570X3r4qq5gjp0AmqXiKw6yey7S3zKmaw6J/g0wasm4V6c04//pC9O22/vuPtqc5iDhHlnV2tVtw4Xpd16SLyK6R2tou/vMk9+ZZ9eqC///irqihuBQfmzhKyElD7cqF36GD6IWI3FBGs3BCvIJh4uBI6OB/qbGBTlt9XVJ0w4958eyb4dOev4FY0T1Ew3ZlwX416N+I49SVubVYQXacP3ibbn+MyMK518++zMCKzrGKxouKulhQ"
+      }
+    },
+    {
+      "id": "a4-198",
+      "englishName": "Silver",
+      "canonical": "シルバー",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a4/198.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "m5mjsaysm6SXj4R2c4SgtaOPiYGNpMq+EwsVFQYAAC4WGDFfSzMyNztMkXVheKosAQABMSsogzYYTVE/QUlDQD5eiWkxmYgAACt3wGlawCY+SjxDR0hHQkk/GQ9s8PVhYXaZ/6wnIRpPWVtKRj5KXnBdNR5HrtRLZBd5/KMjGTRRl6COXVZvaXZgSzMAI1FaBxFJXDZORkFXhpiWyY3NrnVfUSwGD0VaUUxaGChtX0thfoPf+uL45IBhUzQqD3SwYokqAChLX3KKquH55vH15YxcZDMlNDY+RT8TMSQobaGx0PXd3O755XZQWkBAcoRHJUFQRShYWJW0m9f6/Pjpo10+N09OWGhYH2+wTm1yQI/ChonEvbK7k4ZoUl9eWVVdPW9SaJeDhZN7Wnl0JzsqRYaYjX51aWJUeW9Ygo5pUiMfZXiNnZJtJGGjiHF0ZnWKRTBNRi85QGOz28bFrZacb3eHcWh/pNrxKCgYEjZsacj/6PHsMAArJTEtVWmx+PGnOzs9OEV4b4ePu9Xhx5Q/Eh4gHDyns+xjSj84OztXZjQOFioobGIqDxcYFgRCVYkvf2xJaXZzQgsfGyAEAAAPFhIMEQFBW0UvdVJvnc+TLh4qRzMoEQYGCQAaLhcvIDZxSXWRs7WAaG1ldW10VVdMP01TXWVPWiQadIq9qn+CcHVwcHZ0cGlGT2haaW1SeT9CUpLQnYd2XWl3aXRzcmRNYGGHgGhWalxGD4K9hoB9bIB9b39RLh9jf7uYMi0mCSgy",
+        "color": "ZlVReU1MflJOilJNeldWglphmUZXnVxun25trYBvtINfq4VvMgUAkzgNgTsqcTc7ZgoOkAgQlgcbjAAgkholai4Wu49nk35piioB37qnnnBsTwwVtD4tyVAsjCorxCYw1hsoVw8VaVVWb3mcVDkzU0VOjBsYrQgGp1JG6KyB1czL6sC83zo2gRwjMQQUZ1R2fEpGPxQdYhERxkFa1ZfO8O7k//vz/u7kwj4/gho3iRs4pSlUgxYRqTcwnyUQxGN184Ti5qqr2sjA2p+LxCgvnB8vtic8vwsqqjcmyD8j1FYnekdijEhswWJLqGJUekhV3WNY7FpFzSYkxys6TDFjPjNihx4xv1FA7tm9+N7IlHaEakhnfz9fwCgr3ZqeztzKVzhrPS1pnyZCwEMyeWBwmX6PcGqLJxxYHQtTLB1SvXllvlxArS4+zSmH4Fh8TxIqPwY6NgtDHA5NHgxFIA1FIhJSViApdxYYzjFR65CczHlyeWOIjmmIiHOXbF+GUEdkZFBmdWeRZWF0bywln1JN2p2DtFFUhXWSknKKfnGVWUd3mVWDyHlwckhbRz5yaTU2"
+      }
+    },
+    {
+      "id": "a4-199",
+      "englishName": "Fisher",
+      "canonical": "釣り人",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a4/199.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "m5LG1NTNvsO7qq20tbnG3cvJsqC7t8vUP1iNi4mIdpqtrKjL0KyUa1dRYmq/9uetLWh5n6d4iaWlyebjyYZlQ0VgUSdJv9KdOWe36cOAg87IzvbxxIZgaHWItE8TaKrgYISDyJuNe7Sw492/lmWDg36DhHkvhGvBYkOBlLvLvqiIp4uASDKqa4Nwg5qEiJ+DOEKqieD/5JZ2hIkcIlHfY3ifQ2qYgcSaSSysr6Xny6egt6U8Nafky8R5WjxgvLnJTx9Or2uAmtrz8dCES9qq0N289RMP5PXwcAAUbWIqaNLk7bdzO7TJrMnttQBP2tXSfmgAQyV9nY3G561IQp3S57+JV3bO3L/NcHgeP2rQzpi8zaM5Y79dgVoAJ9Lt/9WiAQaShIHJxLeWeEszlMZcG1yQaI7k57+JMo6oT3On1MlaInngmlpioPj//6x9n8GyJL5qOKqJr+ZdXf/IR2XE+v/6+MZ7n83ODRRY0L+Ibb7ar8FFR7vp9f/OtJ2a5NW1aidiyMifQmPm15Qztcmv9devmKjSt8SYS9zYp7BVNXC+3+C+ueuYrbWLM6CjlouUKmWn0DsAdv2a0tratbxfe4QcLIGBmIOdfhclMAMAR//OkOPfrEMlXCQGNp+n2LeUAEtTJ0lAP8StV5+bVSwtHgEpUZiNrKiIn1FHOVeYw+aNTFQqL0NMLxstg5pliJCLhnAlORcAFyJcTlFXUU5RQj9DbqB2i42fMm4kSV1YPzAnIR4pOzgvEwE9YomWu6pz",
+        "color": "YbLSUtbxadn0fNTtjtjqsdrqtd7sy8G806aWsq2vyObqxOfuD53RLt78DMvzLsv0qer4zv//08i233dTw4+LwXZym5OanOj/Hq3RQ9T1buL4VdXzY974dtTjvJdyvKudq7a0qLTJk5uxncncL5LJUsvvvvT+bOj2KtX7Q6SzrpZ54tW+17KJsZN4mMPZo97uJ4zIR5vITaDIYtTu0v//UMnfr6eZ/+bA/fTUoZN9f6650///WJ64YHiRx5qFyMnAkPL/TJys3pBy4sSZ4nJWgpidxf7/mOL2hY+YnLS3xMKm/Ny0p5WWuaOf4a6L1Ilm766votDdfuP6d934TYjLmK+5xMS23cSj4Lyl4bmx05R78u/w/v//uuPvTNbyWvD8VJrY3dbB1riXx4Rt++zG4bWY7M2t4+nY0MHWZqq8Gur/Edf0TZbntZ2diEU2trbB89u+/e3E5rGAuXxy0zY8VoCbMuX/KtDyYZXOsV1gpnl6vMzU2K+fzJB4wGhcyT0+wTo1mKu2gcjZQ87oeZu9rHpjkId5kYd+v2JL2UQy4FRC2zktvURGRr3dYczkPsrs"
+      }
+    },
+    {
+      "id": "a4-200",
+      "englishName": "Jasmine",
+      "canonical": "ミカン",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a4/200.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "zcrW7uCyyNCzn6PDvcCv09bV1biCrsve3r3e9PVgTJ2Hda7jwMOWs9Du42J12/fL9dXO7v/LJWireuPQ2uiCwP++Rl+y//C4w9Pw9Oz/lRlSU53Yxqd5d4dZNVPD59HizvzR7PiuUzgtYnltT1NSVko/ekrQyr2y/9bF9PXYc0koSos0RoKqtq6BJFu5uLvg3cPjyqHK3a1WKhI7uOju7O30nX/L3vjj8OPGuaPD3tbwjTZu5dbT5d7VzZDt0OPR/PDtvtj48P3yY0p/05DD6uKPqnadoZW24MvDttXu9/+vTEeFoBm58sg7jWdzpKTQwIizudH//eONSWOa0WDe9NCQrVWbveL0zcvVnerqo416VSltxt7WxcL0iK3d8Pz6uejIzY9lTU1WKgAAHa7dfKiun86h8NPD2m5cYE1+fGgaAAAABTiNqmcAa9EgluPgaTVFUoeWepoAAEefxo9TPVtDIOdPGNX/NTtTT2OIjdoeOf3/+rKKlsOuKJ3AA0zeTFNFUxV/5bMlxv/tqHGQyI9TXGDobkeCYkBHKgAFgmik/9CSnXdrOV04YHPY226Cfik4DwAvfm7350CYzWU7LywlbWK0/7R/mCMoAAChoGiqTACW/3UpSjQYMmeP9dVbY1VSLDjAuXlVJiWQ5YtwaWk9MUd3sq1AqG51RS+boWWCtMO0ypZxf3BFMSYvZ1CnfoGvkDhSSl+KkI1pkKeKYzQyOTZigXrVq5adn3ZTRnGQlnGNmKOBQUVMNkmhlpTa",
+        "color": "1OPv6vL94dTPz7uypMnwtdrv0t3yz9P89PL/1snDqsrDx+/1yur97PX+8+frsYlxp5+VquTw2dXeyK3Bzbq4soht79/f4+X/3er85O/57uzyoIuHnnRXyYpzupF30bCSxJqAz3x06M7z89b79uz7xd/5sdj71uX+tKmps3Nd8d3L/+/f/OrWzby+1OD74uv25u751tL57+f9////0LytvqCGy7er8+DQ3cm5xaacYcTXZOH90tX92dP/8er35dvJu5V3upSB3MKv+OHR7dbG5K+ey9vT0Pr/zM/ly7OxwqeWtJF7lWlOdEows49857WsvZaI07ejxcjH1fL/oIRzqYBi3qKP4Lemh2hU0szF3sS+2J+RsZiMw5+Op418zcfBqIl+oXhbnHBZ3q2Y187H8PP46quL7Jl35nxqvpqhz8/MuaCTrZWNgFU4k3Fd3bGowLWzp5yZ8rioz09Iw0VMp4iQ6enwzL2zVLHNm35zsKScwr3Do5GPwLax08nEvJ2Ss4B6j3JkraCct7S2gMTqw73GmpKSjpmcmsnIlr68l8jDlaqoloN2nYF1hqnAk9Tw"
+      }
+    },
+    {
+      "id": "a4-201",
+      "englishName": "Hiker",
+      "canonical": "やまおとこ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a4/201.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "yLS00sXSxLHHwbnByb6iysm1usTRztTPzYiQurW7l4TBrquvrJNGi5hjYG2a1e5f0svFvbm1qJTP4t+6i51YVzAUH1d3spsFmm6QgYBwmJfr//vbs7o2BQADosfFvqg5ukxtbltJRHrU/+Cskm8AAB9hnri1uM2otisvOywbOmB3o4GLg32BeMG0lH6btbvJfU00ICVFXWB4h4mLfnaI1vfdYElpcoqGcVFiW2hXKSlCaXh6d3dsifi9NCE9bGMAiklXcVxNIUNVPXhhRF1xcoJdVy8YISMbektciVxYTI/CncCBVl1qcEZbZ11GKicxQz5XUFhGPZJ9dYidu8k6NFxUV1lbWVguYElHWVY7BxM7R0IrLoZGPkdXVVVUVF0wm5MmU19JAx2EtrSBGwBAZVNWVlVWXTcz3rg3UWE2Cw4xTk9EGAcsTFRVVllXMDvHzvhxVGFCBQkOERMJCwVCVldZVUAlOKP/m85fY3JOHQADAAMJACBdW0kzHSJfc73u0LNZeXddRigWFB8iJkxiZSsOMHxtlPXP0KZjeXl1X1dVU05TY3VzYyglTkab3tff0o1sd3l6cnF5fXh4enh8UURWFhOb7MjC3HF2bnJ2bnZ2d3d2dXV5b0E7EUhukuDeq4CHgYGAh4eEfYaKiIaKinFcVGx8fdX1qnqIhIqIiop+dYKHiouKjYJuYVVlqtHskISOhISPiYuGiYmJg4iIkH9nY1F2xNH4jYSLi4OOj4SCfoiKfnaO4MBDKR93//3p",
+        "color": "t8xc4Lyc8Mys0LSSZ9RPm85Eorxatqdvo7RyZZ5mWuGyc8O8jr5O75t73Zl70ZxwxfKPxe1Uq6kqX0EtNigkm3le0L2bh3pYaJJYZVJSRFJOYW85+LyKw8OGt4hIYV4unopJ6KOH/K+G9LeJH5BBAGZKBWtJQVY+lWU4r4FFo3tBya8z3eVgUFtMmGJVnW1YOoQ8CJFhBoJPa2lVxYdtxodom3RPqHJCWnhHAHZMDFFBEkU+eUwcAIFNEGxCZVRIo4BwmX1tr4JteGBUE3FJAIJLB4VOAmVEw7Q2QVk+kC8gQSEopGRgp2ZdTCQoUlVEAoJNAn9HAGtGPIRTx9lQtmY3WmQ8GjEvQxodPSAiPCQoaEozAHRFBF9EPmRZ29hy1LoiqH01iYdFIGpGH1ZCJFdDUW9FtUUqE0Q9PVxezLhN5Ogzzbcyo3o8soM7p4M9nIpEpIhCtYs6snA+c0lGeyMn74on5uYuvKVWq4xiqpJlr5Npq4xhrpBlr5VtrJVpmHlqoF1gwG9R6+d4vZdcrpdzsJlzsZpxqJJtrpdwqotYybJ/q45zeDw+u7yW+/qc"
+      }
+    },
+    {
+      "id": "a4a-083",
+      "englishName": "Whitney",
+      "canonical": "アカネ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a4a/083.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "uammsrCPoLubp659bnaIu8Wjh5SancfFmIxBM1RccHN5s1JKXlJER2ZuUXt5jKlcVYWIaMfq89awYkE7HQ8PCA1HdsuFV1V4Zo/v6PHk7/GUMxsAAwADAyciSq76h3V2mNPx3MXm2uhxFQgiJysvT0Jej3PV5pRKhZjd75iuz99GVK14NbzfvC2a5si76NGgdub/37Pj79g4GoC8F8f/7YCz462g++F2pv/xsMv/2NGgDUfdps2aNqPDQlR2vs1Mn/PqsMDBg4h4QZO+3eNUAKpuAEGUyMpxmq7f6NOKVSoAAzNmw+PVp2oADzqTz82Dm7bf8eTsYhsIABVErnhzcw8VIrOwtrOtvNHq3/jVn5g2K3j93aN1STNHf5rI4cWaqeOztf37/7WCik2T/+z25tiOYdGmu7uUx8Wjw//z1dXdvHg+6qqIp6muRmxsTbbFysjPxYqj7PPfoJ82c5ibn5utXCdZR//4voJJTCUlvM3Kp45EprCdo6CtaCpkcebzsJp1PAA20+b45rnc7/+5kZ+ubC+ClrW2o9X/eVHk382+1vHx89yfj6CwczWCk7KggsjdvOjarrPcs8Xkyr7Y8dGnhRWuyJ2qquzL3fPWvrz6yHud0/v///j9yDOyzYqgoqKawaetipPVjIKbT2jD48C8oD6KtpuTtZqUvryKlJOjmp1hIyoaedXKW0J4spqdm7KurpN9oKeIgHYlMD42E2mjPkxsvHOPgI+iiFtpXHvLwCgAAAslKz9RGRowvGpq",
+        "color": "8bLJ93rQ9onT8aLY6rrU456p73qU7I2j6aPH7ZXZ66fj7bDl/o7D/LDf/tbx/+n57Y2s3y1f1xxazRNQ1zlz95LY/qHy/G/F/LLn+/P3/dbm+efx4mp3xmVxxHeR5qStwpKf9sPY/OTs+qvE/c3l/OXs/trn+enz1nCD3K6l6s7R68jK4cDB56a19czV/LLT/Mja/ubv89DY6oOb0UVz3ISZ997W5Jui1mSH1DVq9MfR+6zP/Mbb/evz++vv24yfwjJa4Iqi5tTc5JydxFRm2Jap+uLm/MHV/dPr/tbm/v7+7PLu38O/9pqP3eHmxNvwxsbTyqWm26vA/cTU9sbi6pau34GJ9ePb6OXrzI+mzLXLs8zrwM3wxmeNzXiK++/t7cnQ346V2mmC9+Pr+d/v9+f0+e711Mfc28Tmy3mL2qit+cnO8c/L9fDk+urr/87i+tvw49Lm5ujs/vf79e3734mX77XD977C3srA2c/O4MnR3LzO1MnSprDFgJq1tMHL5Ofku5+f37a148HG2rvG0cXK15my26Sw6r/WZomuMnWlPH+ucqnIdXyW1Zyf4qPJ"
+      }
+    },
+    {
+      "id": "a4a-084",
+      "englishName": "Traveling Merchant",
+      "canonical": "旅の行商人",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a4a/084.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "y9Ti6OjrwtjQztTS0NDX5N/Xz87P0NfdqtTb19WvwtzL1fH54Nzd3eTe4O7u4OTLf9DU3qJmrubq6/rLqL7j5cre3+zk39y+aK/u1nxtx9Tz7HGL6dbl1Eao1rLf8vfKdV6Pz22K173lrRC1hk9LUUhHYk3O+PnEh1sxfGxfxMnP0VslEztEKm5oI1TPoNrqMzoWG0w8m7KtuoMbWZ+fjTtpNk9pOrn3CQkAAAAYTk9sWDZgm4dAaXUwKjguKqKbFQAAAwUAKzg8O0ZZdX47Y4BBJSQ7LEk5CS8aAQEFABVPb3E9QqCUnpZ8NBopKyVYgsmdQSsOBxdQZWF3Z5Jtg49DJCgvJ0THwtu6TE8OCQBHh0Buc09Ig0MbOzs6IjRu5f3VWUs4ICt2qJKLZmNiYUw5NisrICtD2+7lrmZYTFhhdoqOlnZPgF5PORATKE2Ts8TUfD0jN1dHSVx3fG1FcV4xUSkZY9z6yrWCgF8hWTU+RklmclgxZV8nORlIcMLAy5uQ3ZQoXCo6TU06cF5JqnY0PQBOu/jJ5Jt/qDdutn09VVNFT0xYi0M8TBsZK5rr2KUwVDSyrVNMUUtgVjg6WFwnR1UAB1ng2NRNL196YVleQVF2clBQcZpLYW4qKIDK5bStlEdfdnx1XGl4aGZwtK+JgXFtfKLC3bSnl2x3WXNveHJvYmOUyKtzbXZweaPW3MXEeX1dPnB6aHFqWH3Cs4hsV2hpd5ul1si1nWllbm9tY3B1XHCBd21pSFBdb313",
+        "color": "ZtzeSvr7YeTgVODfbO7oxPPiWOnnafbwcvrrl/HVrO6+f+zFXaygAP7/fpB9Nd/ZnffSycOgNuneVebaTcS2MO7Hef7qUPDVm3FZVZOHnIRlBfDbVd7Egl1OgGNVllc8iVchVGtPa9u9ovToQTkxPyUdUEMzQ5duPaiMeVlIx2pPrHVfplImfzkfb1U6fruZKTYwKDErJSEhTDUshVk3j2JFsn1iqYl0unFbcSUleyomYltCPNjEYpeHPjoqLicjoGlVmHg6nm1UxXdkn1VDdjUudS4qW3FTf//vV8ynTWNAVVQ8tXxd1oxhqXxSmWZOgVhRcjIycB0amWZZGuC1QcGeOWRnPF5WW2I8mHFPr3BPgW9egWdcTzY2elxWiOnpNtSjhqKgX4WBWX2BWmE6YWZEeGBUhIB3ZGdmSTkyQ21jUuDRed2/PGdlZYaJjpeBTmdUeXZtdWpiS3R5dndsbWljTTUyTbaYc+quaq6Ne3digX9gSoeXcYSKan+FqLStwKSPfoV7o4NzTNCXOfC7XcCchnxdeXhcXIqJP4WaY3yBxp+GnnxnbmljhIB4fqKO"
+      }
+    },
+    {
+      "id": "a4a-085",
+      "englishName": "Morty",
+      "canonical": "マツバ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a4a/085.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "tcbM4ejh3raalpSjpaGw6+bY1tOwqMjFWq/f3pC035ZjdU9beDxKdISHu+7CaI5Slvnzx4eq49jo697Wm1FRZHJiV5jTzZQyl/vz+6x21+fd3uLh03ZWaWNSkoB3o2gyqv+wo4J+m97t7uTn6aZmZFFNm59fQTs3vejnek91fJiqm4+jysJ4TEs/eNjQu4yUP5KgSjELbH8AG2hbVWlSUXRpx//3//KaU3laQjcBE08pGmlgYlpxvvfksvb/7fPGaGRrOkoqFQkbRYGbqLKY1//dl63O59fYU1U7aZ9ob3mqrrvIn63b1p9ybHaKcYZyQV9pemtrk9/7+P3oYKPUn6Ffd6p3Okg6SXyFaYB+fdXq+ermSyyorLtVfoBVPz9EYphi0Nubmkqby6/cYpeSaWZXZEtCOzw5iYBolOaYLgAOIYE8sqFxlJ1xKgcJETM+ZXd0vp0NAxAAAACN88zpzrdSXXVBSSQ2bqOM4jgTEBEJEDnK9t+CX2AjgH++/+m1enzFch0cBSA6Rz7f7daqfysddNXqvNiJqK9/KSohO0FVRKf23HlXejccW7JSfKBdwlMvLCgjSjssI7vLh7x1DSkmMVVTht2IVRUZDgEADgAAABZHemYkCxYgHFNkgdR+AEYzKzglPkIyN0ZcUjIwPFVHVWmftqxgRDc+PF+loVYyJz9NTUVBP2RPVVB6l2xFcnSPp7/Go008KU82TzA6MWtJXFxrcmiBSXeQnaqtlF9WRUtfWUpSOoF2LiQqQV+l",
+        "color": "j7Tbv+H4yNTF2cuPg5W3gpG2Z4u/YaLgecLymNvvisbub6Hlpcrt2O3/qKWU9tpm9uWL+uR5f5aVCWH3E2z3UYzre67wL1fH0dP1vL3shnqC0bZG5cp45cZz2shoPmvfGFLQiLDfZqTkSXa5eH7PWnjGLCxsXU0wTDFVmVaiimuFYIzTmLbltt/y////wd/2UmW9LGnKQmWdcFFikHySx6qqnrKde+PztMvuR6jldr3Zoa21HWvDVI7UdorN0byv///w7+3ckYB1XsXPPIbJTIbYaFqkjzFdMonTa6TgxLjgTFZ7im14speUopGqqpWuo3+4WkePTSN6ayePJYjTerrpb2BiGhJLHAtNhWWS9vLlxqzKjGaYOn2hk6LAloi4T7Pvd4qaPjg3XTeDdUGU08DA7dTMm3eqTTxMeJezmMb9e7DobXZ/NjEzNCo6UiR5RCdonYR5pI16TEdROzcsS1BzPYnuYq/kO0lVVVJdamx4a2yAQkBXWFJvYFhwUk9dZmJic29yd6/GU4rQV3nLk6XAp87gfJamXFlibGSEal2AY1xsanyFZFpVTmF/c3va"
+      }
+    },
+    {
+      "id": "a4b-373",
+      "englishName": "Professor's Research",
+      "canonical": "博士の研究",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a4b/373.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "pJ/L6eTmy8uic2N5hICG1NvFtbWzma/H1obd9vHJusmEgrW8n4iGl6jk9u+tn/HW/+/S6+Siy7WOwLy8wsfFt7Ov/9SA5N/W7+/x/+mq0qRNkY6OjoyTqI5dzuKkwMLH+Obd/d/ArZMsIqTrhiq37V0jteTdVYzCx1+U//i6m6Q6MD1Wt6aXTUEy6evQunbWTcDWmcKbr3cVO0EAa9slIj9W7cLfwFV8vu/FhFHQjjIoU5GOpNSIr19jwtb7sUFB/9KqptDps2GfkZ+6vrW3wneb24KE7Zlh3a2b1v/v1KTF5sKqpKKmqozSfDbW2+LxqJ/Hydb/r0Xk/7yGpJeUEX6EAFG+/f3/pLfJmd/UKqr/3444QV0cADAuNDJbnen7wsJ3tf+CWcLA5mtNAAwAIzoiWT9BAEfQlJ9zvv/JvunU9FE7KAAANgZ5/+TWrZHpdkVVtf2x6+vf31FjZyAAWxfS/fT/s9j/m1Uox+TA6+u3l01xa1lPMFPAjrrOrf3rsTg2jsXf2O3Cy09vbWtjAJOCVoSdzuTQfoRzZZPr7dvW1EVva2csHvGMd7Gxvr6baZfFipvO8eLO0EVxb08Afv+1Z8K+jNufjlmfirW36fHHxUVxbWdNgqKzqsLLlISvQXxffOnL9P3FtUVza2txX1N3hKbYoqLYn6abydat2/HfkUdxZ1ZxaZG6gmmigpf/1oyZurGMm8X/fjpzZ1ZvaZHmn2lxUa//2O/H6/a6//T/pDR2Z1ZvrcL00nNzjOn4",
+        "color": "1t3Z7O/v8PP04eboy87K0M7Ez9HI09bR6O3s5+zvxd7s2+zv+vv7+Pn75Ozt0dzazsvA6d/P3NTE4tnJ1dLH6Ozz2N7s5O7w2eDa7PDu6fHvwtPTnp+az72v18e718W5rqih6O3q1t7d0dfM1d/Wz9vXy9rbs8XKpJ6Vuqqh5tLDwbSsw7Ck6/Dr4OXlqrWu6O/n0d3f7vf53dS56tSn8uLW9NzJ7dfF1tjTuc7Q0u3uyuXmzt7f2ubi6O/pycqu9vjpy8fR2LOjr56gpKmnepuTtNTV/Pn70NLP1dra5enR0NrD6Pb1tanNkX2Xj3yWz5Gf3tXSv66w2dTLyLCkz8G68PXs6Pb11uXkwrHatajdtYuj47G58fXw7e7k9Pbi1rquy7Sp3enr5/b22OXlxLLgxrDg2oie3srI1MCw6N7V3ufsx8O34sq+2+Dd6/v72eTkw7PgxKbZ0KO74uTj6dTG8d3OydbZp8fJ1cnF3Obk6PX10N3ewK7bybLnwq7kvsHSy9LO58e44eLf4Orv3+jq2uXl6PX01uPjvKrXxK3jy7fk5uv2xNTWvbq56/Lw"
+      }
+    },
+    {
+      "id": "a4b-374",
+      "englishName": "Lillie",
+      "canonical": "リーリエ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a4b/374.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "ucfZ497c18t2k7bAyXan3NXCsq+vsrLH8/bz8d7c17urm7l/npSL6ufs5/Pz7Orx8/Pz+Ozcuavg19XcrX1vyf/x7Pbx7uPn4+r4/f3urdzx8ePg+LtgtPPl5fP97tXl8/bn7PHEmfG76tltiddzwO7g3vb/6uPu7N7j7OqtwK2DhYeJotCLtNfV7Ozq+MfA1cLn5/aitLTSwOepOLnEa8er2d7LwHir7tfS3vGtnn8Auf99AD3leHODfWJ/c3jE8eXQ5erLnlwAg/PAcYG2eBdNTyk2UiaLx8Te5+rlrdBxotDO3G1iZ0teWFRDQyttxOX47ur/zraFsuXgvTY2R1hWVlhca0mpzvj/7vHl6otni55/Tzg4VklLXGJtXo74y+P26uOegSlGMjg0HkkpOm9UOE1BO8Dc3sDZ8cuUxG9lp4ufhZdHUlZ9SSQhqeDg5cDC3smtsrlnqatvb55za2BHbV5vouX619XSy2t/ba1ist5x3K1xMMJ4wpnCfZv/ydf62U9SepdL0v+Jr9V6TzqeqZ+iosnz4OfcnolrgVom0Kt2Vo54PU+JcUOr1dfO9ueigY59SwwAq6SBS4FzBmVPWpTSu5mp19V4cTsyJgAAn6mHRmJpODRPdtXOq7TJl8fJzgYAAAB6q62TRz+Oek1glOrVwr27uX+nrSMABkdgkId6aV5pfVpivZlzpJ670nqOi0ErDGtphaSHiauH0tfg3sLH5+Dq57SBVGVtq7uehYGHdkHZ8/Pn1c7z//rg",
+        "color": "7/Dx9vb39vXI7OrJ3tWs6+Cq2dOm4ePO8vXZ5+3Q5u7S5vDf/v3W/v71+ffK7+Wu/fa/+PK65Nii2NWx+v/E+/zU/P7c+vnC+/e0+/y78u+27OS18OW85dK36tu249mt9fXC/vzB/f3T8O+7/PKg/Paq8++21Mmc1sjH49bRurOd5tqt3syf4tmQ2dGZ3Nan/PCj+PWt+Pi22NGYw8Cp+O/n18a3072V26R42aN3xKFqzrR3+u/G/f3j/PvR4eKt08u289fZxbKxx51z5Kly37JqzrRe3NGV+e649frG8ejPyMDFr7XE1rCzsrHAwKmm07J2u6BZxrRq9PWp8u+j9O2x1c7U5crP6M/T0+Dj09rbyrjFyMGn3M6Y4cm89vPB8Pm76+yx0rrA0LS/4MPK1N7nytLeqrnPtMKt6Mmx69m39uvB9PSy3cyy6aWyzm99waO1ytPon7rQvqqyq6Sv3cui+eiJ+tuU8deM4Nuuv3N/r3GEysfY0s/hqLzNxsCo2bSr4OGp6OGl9eCh7eSvycetsK+9xMLWzsrizsrkxsDO4eq06PnM7u2c9PHl8fnO"
+      }
+    },
+    {
+      "id": "a4b-375",
+      "englishName": "Lusamine",
+      "canonical": "ルザミーネ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/a4b/375.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "1bO11evi7PDMppihpZiUoZiw7OLdsrvQqKGw0eTw+/z/0DsXGR8rHhsUidnIwbqHy9Lt////////kiMfHiUjTl5EEhYfcdTjauP//v/98umGOi4qQDwjNmWMNw002v/SebnOztjos149QjJGZj1EFUxKMjoYJMuUlHNVkJvz9FtYTlp2VEYrDU/Hn6ioh5CJk+C8MHL/kjNmX2CNzZMcHxeTsDg6nqJuYMxNJpSoFyVTRZ71/6McJxwabqNsJQM2QU0OlboVGTIuL7D70DsdMxskAJiXNDAjaksrW79dYCYXFh6Igj4niEtxwtdHgPJSjMeChMqckIk7T3V9kIY7iu62lExKY7Fghd3ym4DIT5iYkJ+cn6KLyKIxI0u/u6ibXH+lwITHiGlWdsnEwMqwora3lrT/+IgeJF1/ffFSHCUdPPz//P/UN3/EbrKffiMxMS7CRrTErKhoW+378fjgOjF6wJlQbUVOK2DyXFaR1717s97r9+7SlaGU+P+qPUJnKB2QXyMnIyYfZbfL7sSfgGO1//+8ONa9HCUoIGrLZ4Scp8D738RmJBhr6P+3Tm4iQi5eVJa/ztestPDz+9K2uZNYof+vXCc8NURceq9+jZOzs8HNv76lrsuZjZ+Ign0kAENgsZFacl95eK/H1ceSYrnAJSosJx0NWDqk7YtEaS8kZYyVfYuHxPiCKCAiFg0LbgAJTLEAAAAABRg0Z4muzWYAKzoDAAALnGdfXKRMSlRfVnBKisTHY1hgh7GGcmYm",
+        "color": "2LOu3sPB++vj//zn1Nm9dm5nb2Rvg2d4gmqCwb/MwMzVxLDCy7TA////+vv8y/v/dKGgJipEKjBFSTROekd2NxosdWh649rpn5mnn6+6yufuoqSpOkhlV1l4Z2F3MC9Pj3KAjHR6dneCp6+8o5+qaWRrm5ijZ2B7UlZ0xbfFxbnAIyNTQ0Rch4iVb2l9W1J8W1ZWaGN9g4WTMjRVKStTraGkj4aPOz1hVFNvjIqZdm9+YV10u6qjraq9sKy+kY+ge22PnX6nm3+oopi0s7C6c2uAq6SzpqWtmFQ6s6eqrKvAXl6BcmeE49rq8On6p6K4jYqonJapvsfEWFJyWU9ol5Gbk42XnZWke3eS5+fl///5oJ+xhIKd39vXZnRkY1lJRDpTYFdpcGd3eGx9iYKc2tnf3dzog3qWgHiD////n5SGjXgTMT5gcGRzq6m3vbvLwLvN5uHg3dncpqC0k4+ZtbG0lZKkRD9bQjtSoJmjhoOST0thZV94pJy6q6DEtqnIt7W7OC1GMihCKSA7cGh5bmd4eHWHLy82Q0JOV1BsmJKstLG3ZV9pb2Z7XlhtNjFK"
+      }
+    },
+    {
+      "id": "b1-266",
+      "englishName": "Marlon",
+      "canonical": "シズイ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b1/266.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "paq0yMXf5tbFu8rFUhcdBAAegdDQztTiTlhWYH/czb+lqd7MEBEnLHPS8OLi5fbwbYdWecjmxbqzrjw6GQAqvf/r3uTm9/zqYH6q3evZ1a+lOxwlCxsXI4vi9uvy+OvomseuurSdo687IXJyGTQhJxM3f8L/8OXrm4qhrZSPn7IpRmd3UwsNFhYAAGb26u77XKepjqedstGJPlljRjYWERQAAGLu7vD1kZqRpda6vd2OaVlfQk8wACkGO/D26+3rlIac5f/a1dFVeGiFm24sAARBUmO56+3kgoaV3/jU6d06XHBukmQAACSu8NbZ6ujUfoeptsPW8/efVTpHWSAARcf75vb/89nQf6m6mtbo7/f4h1xZOg0xutba6fX65sK9ssSUtt/q6t+5jUMREEFpp9/h2Nzot6zax42dqoGSkVSRXhAqRVNuctHCoXdso83ljouUYGNPKlOdYl57bEZVZ3NVS1JBof/zeZRjaEgpSnZdXI2lqY9iZHJ2W4Byh//iXYZHMCUhNW1UTl+AfWRwbXt1Z4VbTeWuabpdGCE2WG5tZk9PTWloanBxbnBCbKOPKjxANITazW5kbW5qbXlVMT1DaHBtfXOdQhs2ufXt1mhqbG5wclgtIxoiUHZwYK3SrarC6t3p6HVtcW1uTTRKGSErIktsaoSVv6ep0MK5s45xf393aH6BYElNT099fXNojpGv0uLu6qpFUnNycnNyQCM6DS13bmdNeJq/xdr39bFTSFxwbW1QITY1C1hsZ0Vi",
+        "color": "WqTIU6jRXeDvde/ofd7EnNfWNk6nIEalToq4hODipvLw1vLyLJHkT7bYUfH0S+nMNq6uRGGZFTScQG2vi+v0hv//xP7+uv//UbznZNjNO8ywO82xWmd3qXVCSlKFFDatFzyWbI2s2P/8tv39GbbDOMu6PNe/WefHg5SKnXpKf29fMEOLCSKFUmaNuf/9yP78HbOlf9nJxfzsmeLYnYJkr4hOjZOKOy1HVW2GjMrqv+/1if70JrykRduri/jX3///ya2Tm2o6eE0vcWxrtfLtyv//zPv1TezRWdS2a8Wls86+uMbAiay0eUkmi0wXlqGS1dXVy6yybsWqf+/BiqmSto1gkFwsk2Y8TIubcJmUVp2vjIJjv4JIr1ZOwXp31P3UpZKIjF44gEIVpnpGln1UjIh3hJGCsoVItYlIpo1WqXx3acnCcWJIfX9ileXcqLqctH86sINCs3o3jFIjh04frns3solSeL6tKsW+jNzWsPj8pb+usIRSs49bpnxLl2hAdEw9hGJPtopXp5xyO7vJrtXM4PLzpdzSn246sIRLt49Sm25EYldgYVpdrYdSk3hM"
+      }
+    },
+    {
+      "id": "b1-267",
+      "englishName": "Hala",
+      "canonical": "ハラ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b1/267.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "n6SrvbS0nK+akICbkJOfrtqMgYmDl8u9Lyk4KzQNFj40OCNAJS+FpLdKHys/SIAcKRoqVGskMCwuL1V9aWVlr66nRh4YajgAJWnA84kmJSsnYIdrV4Or7rN0h0wcZx8Epvv6xz0nMDAzPT1Sfma6pllybHdWFRUNtLqyYCUuLikmJpKbkCKQd0g+VGBCXUxyiJUiJS4zKiUkPYhsZWJ+bWYqOD1Wj1pWax4iLyc5MyYpJSQjNUlZVVJsNRd7k4hmai4uLCyBzIhtdKugYypXLiZSVECTs82MXTgpNHh9wfbf0/7efSw9KisaLHHR07eEMCo/Zn1gk8CQlebmkAIpEh45ZZzb473MaV5yeHmanoBxccDjkgAPDRdNi7H+/NqrZXiAfoyglHtsgLLPeB4JDwREj5/j6IQ8aXdsZoVxcnufz9C0TEgeCwtgiGxvY22Mnph0cdODj8LP2+BmPEY9HAQEUpVepOj7hJeUgJ602tTJ13E+UU1DPzIAPcXF/vrxlZeUjK3Nz+PJSiRARkdMTVEXIa250/rLeZ6rxcW9xLmYiIFNZczRbEguGsGmheCboJ53QCEVHClag6+3wNjUyW0hDa3BflZMtGcAAAANJwAAE4zT49SitN9ME5DClXhscnGepKSzvZ+SjKCosaStkKO0caKMcoStfaCzraa0vbqznqCvlXuYqIySrpuLfna0urHBrq2qqqqrpLe0qpxeiJpStq65ooS2vbK3r66vrqC7ra60pq6qqsGXpLaee1RA",
+        "color": "vW9F0XBVynFot35qsIRus3tmrYBnw7m9vba7o2aFtoLAtZC5r0Id3JNmqlwwgkAdllwyrXdKvXE2ycC+wrermFVmszZclCEq7dJ7286VllsqkUojmlcsvJZmspJxw6yYsX1GtYdKslkiuUEAwoUUjkcXk1MmlFQnkk8mp3hKk3ZopoFhmHBeilc71oYk8nMHm18si0wWv4Et48Za2bk82cN6pnQ/o08mmE5IlXRk8MNm7rNHq2wVxnkK35Yf57A5658M/+tgeHSbViZri00pzKlp/fvc8cRgzYsa3YsP254y24oK7KIM8dMjMXbBFiTcWlKn1qJI66pv5Ycl3aM53pIo6ao2+MlB/OFjYZy8AG/kBWDXHjnIpodX8b8a/vZwzKtX3bw65MYn5tlzqbWlHnjSS5rbSKjkAE/cjYZw99hf8seclLCyVWaaSk2RS1CYWWqsucbG4eLezODXYoTOmHpm57FWznItoqaVpLHBrbzCsMDPmqa0ssO/q7zApLW2srW9v66RyKBb4qxyttDLwNLMt8vGt8zFus7It8zJqrq7pLa6orLDwMi6xq50tpJx"
+      }
+    },
+    {
+      "id": "b1-268",
+      "englishName": "May",
+      "canonical": "ハルカ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b1/268.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "tLbQ7eDW5N7Hu7e9xcnLjSQzxcnFu8fOk4q+6+vSwtDb6+7/8K3/ihTC//j/4Megx4N+3c02cem5r+m2VXL/frL/+P//6ZuN9tLZ8uiGovpyIUEcDis1JXnm4uj98Kua9vLd7ebr175qIzU2QCgnPgdl6On2/96W8quK6+TA3f+kPExVT11ZTl5BgNDt+MS+qcSFhVtb3ddoXmVIak9LMjJRS06N5puYotCnamJ2hUkhn8KdoFkzVR42T1FPhZOF1qbF4NB3V0N2lGXe+lEnmip3dFt2empor5SBfm16dHfbuyea/7aN3oyIvm93bFuymIqvmlteVZrpxba9mn7wsAEqu4VdTFawx6a5pGNGQKf7vrm3MHbNMwfA4oxDO1uFydKKn5gwXuv/n0V0hZh5ufDCgFaFfpGAx8eW4P+bYvTwsHQST4ipYldRU3nNfXR9rbnH9v3/zbLJ7WxM6dtmAFlvhWXQtpbJkafO5tbH1M3CjAAAMkswy/3Lq1maO+jru53e0tfbrY/UXSQzAACK0tvSpHZmfuLF7dTJxL2ndq3FOCEtMzoUUdbettSMkbfZ17SfmtLtnbtxNSQlJC0AfeDS1vCRmunw15O34PLUmoZPPjs1Ni5P69uy17uFwvC++sKtvbYrJIhgO0xGQzNt16abmpq9t4iB+sSmlIM+GFNOMjVDSDhttK2ksLbCsKDU4rCpoorFWxIAACQ2NjJLfpipvc25lqTWuVM8d4N0dwAtAASBn2ygpsevpqSpp6TH",
+        "color": "8MBG9eV/9umL8+aP7vOf7/Wf6+3S78Ky5Hpe7PP27urW79SK/tgy/+o08MQl5sKW8al49YlT6WxUzJWN4s9u//+t/vjk/MAr/e9q++I6/elG+faD2YBeyV0zyHdHwnFFwY047t0Y/f6z/NhX/NQd/rEX/JUW5blcyaOB1r2fvqaKr4Vdwn5RzIlT4L1O+rwf+8oR7MtX4LZt1JZY0L5zzs3H3dvQu7G2z59R3a032Jpv3643/ccc7r0byohZ369S+e1t37+o67Cp3MKmwqUq780iwYlm26wx/NxQ/9JZ2rmc3840/emP045p5auV3LFV7KQH+psc2LuX1qx08cZb/u2D9vvY6uOd69KsqHlgvqOJ2JqH6bZ61a1bysG46ddt8Nq28eCK79mp8s9+659N5yIAxTEN3JNz+/nU1c+yzbN3++pj8N2y69KE8uOU58hC14Mq9zUW+CwK14lW6+nK79nJ8sdp+uOX7O685dl7ubKZoIxjv3pRzWlVz1lH0MCW4tVw2c+u29qX7cpZ7sWA06BYtr2zkYaFf1dQsH9Z049Ex7mU5NZn5dVz3dB37dxJ"
+      }
+    },
+    {
+      "id": "b1-269",
+      "englishName": "Fantina",
+      "canonical": "メリッサ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b1/269.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "qrOhoa+jlaWUi4eVl5K96+nDlJKYpcrMND5DUHJcAD0UAAAjOUjC2qNtVUdFZJdjPkY3PkJnZlMCAi0wFprahICgmoRiX3B3PU9oVkksVTkdZnFbRaqXhI6BXE5DSUtFNSk7QT5BLTOPsXmBgZ1jVjstNyoaO19dNSoxMSYjJBw7w87M1GkdGyAbHRsQRoXcHS8vNSs+PiRnub7H0YQZGRgXGxRQmlV+NWA9PD6JWzFWMLnFYnIvSkY1NFDY/I9mU4GPUmpcQzaYmMC7bG5O78qpgFyX5ZHUS7/pnX1Sj12R2cPK3X2c4WmRm0BGjXiPKVa0kXGFQRx/w3mVvko7TWyFhW5oX3J+KyyFfWNHIw1gy73AlxoLHFtkboSFo4FZNHN3OyIwLRhsh4RwvV4sHiFCaWpec18wZG0wJ09jIQY2VYSpxIBwdWJNX2pjOWCLaDcjVVseSmx42ffVkmJ1hYmRjY6Vn8r/QSNHSSVe5NnN1pyCoJiSioRtVlRqd7rOOxFGIBa/0LSSfZucm7S5x5SYKS+aaJ1CRmQhGBq5tn99jYl5eHV7h3eEu49zY2x4kZJ5939i1omBWzNSVU1GQEhDfcxxO09olDmd/7KEo4pHAgAcKwQGEQ0ZNaqUcHlsUIra+sicp6EvAAAAAAAJDQQASIqKsXZql3ua2bKKnJ+FRko9Nkk+UEhUhnZ+iY94X0uOoZeUlJGOnV0tQlJjSzNVbWptmq2aVnV5joqGp75+kZ8tLUNANiw6S2OFoaOB",
+        "color": "vWy82WDMzH/YlGvKd1a+fE+9g3/hw9713LPrw3DUvX7rx6f0uRuixiOwyyOzlzWyYy+xgibGeXLm45zx8GHb4Ee+wC3DqDf3oR2PtB+YpxiOlxmHzpSy+bi43pS4riSdnBWJlgl9iSCSt3v5fTfBhzisjUq8ikGetXOH+86zyIyUhzWDii6NhzORzafTyYHyt3HzwKT5t2L/nWW90qSd972uu5SSxK3P1LD6mXb1pZj8qLP5ejHs4ZHly0vIjymI0puf9LyatH6VjCKO0FHKwWvtfID4lHH6uD7cwymusyGkgweBsF+117G3wJK1pDuNtEKc4Vi+q2rcp2b6qjOhqxqXtziszZWo1rTK7rze5Jir6pWp34StxGmn0Ia538rlokKnhSaDqmme/8ms6pWX5oOp5oi94pXD1YmjqHmjuXXDqXSw0GrKrsPruaLh64+9o0RzkxeKpRKkkBOSmA+X15GbporJo2i4rnXVz9rn4q/o647plEuXZiVtbi5ufTB2djV5qnWh05vAxoTculfTvZXO4orb2Z7W3JfXmmmYiU2GlFWNf1SNiG/Qw5W43JvX"
+      }
+    },
+    {
+      "id": "b1-270",
+      "englishName": "Copycat",
+      "canonical": "モノマネむすめ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b1/270.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "0reyx9vt8OXGrZuqmEWY//D50KHP3tbk3qOujLK31NZxXRo7FACJ59jb7M2YvuG6aFtxYIeU1J6qahkdAADC4dXa3OG5fYx0YH5cTnuLp1+MmlEhAB7u3t65l7rslKFuXb1WXY7MeCcAOYBKL1XK1ep4JjaogLRwbaGCjHKRw5dJNmNHbEO3nJWji4SXp5S+QV+YqneCiVtCPChOj5N7HIffn1lqJjbjmlYhgfZdTU06OispXLeXTtzxcC8mGHebtzMFWL5lWEY7PicXmpG+29jfqGAlUphNtHQsOzU8WTo8aV0/sXCCvs3Krz4sOjM/o7dpTVFCQjsyQUokjLqLlZR+NywnJTs/m72aX1lGPzo2My4uPMzaW1WMITUzLiw2nJpZMzZLR0WVkTcyJ1K5d0VgIi42MiclzVElOTMpMXLl4UUuLk1JZW1qLCl5VlRop2ZVjGY/cIJxZTcgM1VYVEtCKZ7kwtjzYHtscIlqUZGjbEI8Mk5VVFQ3IJXDqpHlXS5Prd+fKG3Jz0lLQjpHVk5JXJvMwrLH27aascl9XK3/e0JUVIjl0qu5zbrcurmM8e6+m4lPo7nMYEdFAGqRw8O6Y1mux8m67N7ox22o2KjYnk5FAAcArsnCAyienrqaqu37t2KoaafMmgArZWNxzMKlW4CTgmZw1qWjoXtVUZyAQiYDXHiMm4dlWZ+PiG2nmIiPhah+iY48Oiwpubqyo5O2Y4yqjHLEaFhip5eRjDM/L27Ht8SctsO2TneaoZGb",
+        "color": "6cjd9a/g6tbd8O3QyLOlqJCXfG961c1X//1Z7OJf3dDH8dXxk6J0iItznbWIvr92xJx+RWlCN0Eu9+UI8uMA19QT2sp7z5izk7Bvk6x6n8OBxJd9jls+NKM9XJNH39BKycIgc6MY2bBW37ORoX+QxJKPwreN/lVexSAXIn4mxq2Bj5+D39G1taR0jltGvaiS1JC0vjaW5XWi/x0fokMzJZRPqaul5cGk/eLOabNqgkEk7TdP6rqmlI1mpVmD7xMn4SAyxDhBt6O1ycC3pZuejkIqniQX7wAMubWkCZsbMn1Jzlya7qW23hQx6jAw1omAtmht5Ror5zI53S85t4CeY6dAb6Blkpmm16XSvj138RMV/zom8hYbxlxAx+Sj4t/Noax9x7mhxruXhKie6bvA8TEw8ERA6pqVpoqeuaq+4tjR08qv6P+Qz9a1s6Kj2NjQ5rGs3jczjE1bj7bGf/H/iYmR2sGr4b6j8dPU083QkqG1pbPIvKqyc09UpnJgo7Opp7Cvr5JuzKp8up+e3X3Nuai+s7m2fZyndHNzlZh73dRg385HzrxBv6Je4ax12Lt2"
+      }
+    },
+    {
+      "id": "b1-271",
+      "englishName": "Lisia",
+      "canonical": "ルチア",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b1/271.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "yNTg5eXk3tTCtrK5vbS+tJRfdMC4x9Hb5eLi3t3e2ufX1NLUzdHdoJpZWcrl4uKt5eXg5+vg5evs4uns3dG5oH5WULvawqB24uv7//HS59LS2u69oHlLXnd0S2hkxcet+vbe9dfS/+zW58edjo5HPT1FW01hrN7I6cjP3czb3p+yyqyYjHqQUyIjTnpwo+z1z9Hb0cDCsoSsnXpjdKrXkmgeh8BcwNLH3tTe77ao67m4hn5yluDWzZRVncR6u8jF0u/7+uybia/bdmmH1uXgwHd0rdu90dbb1uvx+//4k5rvm3AbZvXii5ifncDe9t7kx7ve5+/KhqDbhnGSad692+uJX33n897kzNfn5OK0ab62n3BZ4KU1msB6fuX2+MKlzen/7uTFd6f46aI/p8ifp593crvI4riY+LLa6aqQi2ad1NGBwpNWSKduY5S95+vu19SQmpKblI6Jd52jfn0iROf/rZ3v+P//pcS92+DbsX+Ui3ZoOLm+0sqgg5Pn//v7ia/43drxx4Sbf2YCAKfPWVd6u6W9/frxdr720ufxu2ZwYTkAACJHADjPu33I7OngyNvAtotuOzyMh0QqJicSBUF+eoGj8+Xkza9pAAAAFiGDn2M/eYxHCofSzN2g7O/xf1FodDZQxX++kn2g2uxLNcT96aey7u7nACJIRWSBo5qWk4aUjJpQX52nspaqraPkOV8qNiYvW6CqlMydmoN0m7aUcSUQHKXuHiFmtMh2HEdkan92X5BcKk08QSkAAKrn",
+        "color": "vfLyv/j4t/r5svj2me7vk+nvquv4vebjVLmsr8HY+en109zwsf//0f//xff/1/T/7u7/4u72tdXajLm4XbK1ZK/Lnd7rVtr/9uv+/+T79+X+8t3m4dzolNjDVsWdY56hSouqRKW8W8bQl/3/2uf25er51dbj6Mq9usnBiLasv9O/3t/MV6aoZM7cZtnpfPP+0/H0/f3/7OTqz83oqNfOgaGZ6drR9eTXsb+vw83j4+b/9uj9zeT19PX/3ef7xMTfz9nKhKmi2765/8Cxs8fCnsLT/vf9vOH86uz16u76xs72t7HN9NrPo8vEwsTSwpirn7/Qbcrho/f/f+78qdz5xNPu09XmscHnu7fflrq1nK3Iw7fJ3drrr8XZ2fn6////btH9uP79qf/8gdDbnbTQLm27V2/BkZbJsJir2sS8zevryf//hO75cbjYQYrRQ4m6eLvSJZPwR5jkIWnPqq/ax9Dvwubxwf//c4rGSYvRT4jNxsDRusfRrMXRztLXgqHM297o09TartbZwfPyWWy4gKHFmqrIeJvHp7jOu7zGpbHGlKHDmaXSWY/ORGKzx9bj"
+      }
+    },
+    {
+      "id": "b1a-081",
+      "englishName": "Clemont",
+      "canonical": "シトロン",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b1a/081.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "nqCgucPCxtLU0ci5s7q75OPerX+En8rADwAAACNDk8fX5cqfdX+g0dnekzU0PWAAAAAAM0oshNXR68uUgnFWv9TNupJ3iWw1FiyV86osm7bS3dyeaixPkI+elXaM3nZIwvf345vO8PfVnNmUHk54aHCAX217X35ao13W3uz89Pfo2vvtcGFiYXq2fn+UhnN7Hlaf0ffx9PP39vD/4YmbqrOee4CTmH5zoqKP7PP09Pbo2uf+7Y6VtuPIsqajoEk71oKD6fj09vjc1o/n58q+zeTp/8KApzQiuW6JyNLk+9qw0bPV0cjFwoma0YMAViYyorTH2uHx5Maym+H03ol/i45mdYcXACcApNrU18fN3O3cnMXd0oeqv8twCUNAAHawkqTQ5HOY5+fQztTSknqq1I/IPwkrFnL7mnDSy7SIt8jc19DNbh5+zSIngG6mcKv6m2rOv5iQh2qrv7CwhzqYq4Y0Tp+cdmmecXu3w5U/NjaEk4DDwoiklaOUl6O6omZ/H1BlUz1KNTStqI/e9piQk4ycr5PKvbeXMik6LkNsXXAiIVg8c6NkjK3ChJOCkoOQUkg5j8fQ48sAACkRPX14kNKUeoiIk62y0ouj7NbO6689HDtgeECGopSIhIaEg+iqu6S9vrOfq5pBUoyPTkGOnIiEfoZ9i6SPtJNshJCjr7Rpe5ySjlWPlYxgg5WemoOLkGqokn2wt8KJcJ+Tl2hldppadaefm5PDyIamuoSMraeGXZLI0IM8H4OCKXugp4Kg",
+        "color": "ZH1NaX1cYaR4m9mf1e6kceCHWcOKVOi8bP/xbbGbVZbCY6DBKVEUfY5QLItAesZi7+9yZNtvB41QFau8FeD6iaRfX6udPoFhqsFv5/C+4uxq9Ptf9OhW0d5sLZJpGpufVap1v5Aez5gSxYoONKkysNNj//9m/f9j8/Zc//5oqdh6FdZKlOco6a8/5rAAqIQ2RNBptMdX//xx9vdo29Rl3d2S5+Fxm9lNdOll48qbmoMdXllJMtqszOKP8uNN5Oyr0cSe3ubx08igUsaEOsSVr18dWjckfHk0cbu+69jS07Oc3tvk6N/x6dPNmotWk77AcqCGSn9ikm1R4M1YgJzb5MO5p5Stbnqk3LWN+sZNqqtwhLL/eZO0tK2l8Kxx5YdaPVXiaWvBR3beIHnYj3lFrZc7rMGOdKr7usDa7KKO3rGZkrBuSaNwJ7fOLfT2DOTYQ1FpRF2reIRzl6jZ/aaG6oRg35d3ldGRMNllRM2lPtaBW9BigpKAk6vVgIqQwKagspWWtJ+eyKepkLmdi7a4sK6ngbdrddgxg6SCp73ok7HjeX2Ug5i7jZavsbjZccGO"
+      }
+    },
+    {
+      "id": "b1a-082",
+      "englishName": "Serena",
+      "canonical": "セレナ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b1a/082.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "2cjO6fPv2NGYT3GSiqe+5vDSy83S0t3RyKrH7d7Nqq91fqedkpSzrMzo6u/y8PW+rtby6tLe0MNKN18hXqejl32/9/Dr99C/oPby++Xdi3FZVnViW1I0VKypo8fz/+LC3d/e9+vwe1VST219j59pPYaUp6fi8tHHwrv6/+rRi1lnVUmFhH+Cgpug5MXLxMjmhLHv4sKshZqnXWne2ZxgQ4TMhFJ3l5KVrt/o3dqfqcWzldL60V1kT0YvACYUi6Cu8u7l4b9+n5SF5rrYu42ci4U2HZyFvu730sLRs42LlEY9xY1y6bSjtpGvf6/O0OnZp6+tj5edWSs1XMOzoEGJvqXY7c7ayNjFzsyKo6CffUonQXtiIF2El4mv3NbpyN/E4s17i6nAvUgcjZhTUJqdi4CjrNHuzu7r6K9jgYuKjh4AXmmCrI+gkdH37tbq3Ov/5e2EfntjQw0AEyFohLmVlYeRp7fC0fj/0OHcZF5UPiYkK1J4l5d/lEUiZ9nm+/vY1NHVhsyjFAQGABFHc4FgXEgww//88NCs0fj1y9SENwAAAAANOTsiNDtyutW/s7+239bMxIYshkEAAiI1SXBgNzZNkqGLzbrF4aCtr1sWaGkCOV1maaOyPCswRk6x1cTMo7LSlFhkU1kpSWxiXWmvmk1BQKfk7+GhvqO6kol5aF5cXHNzeX2BlKCcsaC2yLK+rqq7jot+bl9bWWlzcG5ncYrH8+Xy+uHpxOWpdYR5XVtITVxpcGJnbmxwpcLo//Lo",
+        "color": "8MTt8Nz26+n09sfstImvuoqc2qGs683SzefsyO/1zfLw5tfs+8Pr8/X/+N304ZrNqWGDoHGCmomWn4uTsLS7webt6f7/8dH++sLt//P79OH9t4GPrV5K1m5x8IeNtW9/16WZ0sbI1t75+M3v/6/d+e3/28Ha4bZwvKuA1tHK37qrvGRZu3R5dnBsuXme/5zC1eT+zNvwx7CGvItJzKSS+8O8zb660aluoY6Qq4N/4bzN6eb/r8z7ya6M2LFsl3JXn1xT15CMpH1m0aZh1b+W8uDd7OTcvt37zNzYv5JU4LRul4BreFVWtYVtuZdZ0qhn5r+i99jE89/Q3vb2y+n7vKSGsYJKZVBEPkFKmHtU4LBkzKdssYFi1bqu/O/m/e/65+X88NTgz6OtXUdWLzM/U0xKk3hXk2I8kmI9zNnK3uX/9rfx7dDo8cDHqG94d2p/WzI2pkM4qnt/eYKjj0wvsIZN2b7a0s7/8q7U0rC6xHWCvmBxvUpG7F5H1Xdunqi8oY2Ssqab4OLlu9P068nk0qWw3n2OxGJ7r1dbzmNX4mBP+VE18Ip75NXp8vH58uv5"
+      }
+    },
+    {
+      "id": "b2-190",
+      "englishName": "Diantha",
+      "canonical": "カルネ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b2/190.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "ztXl5+zq1sq7u5BXWTQZLNbTu6qkssXK9+ju1s7j2M13dlAsICAiBU+259CyssiI+PDW6svK6thNFB0aGRwkIxwgp/jFw7aU4/r1/+O2481uYIp6dhQQHiMAWezq0cPA7f/9/Ni9w8bFaXf1sqtFEAAAScjQxdGo6uz/7sXKs72zaF3dQ0+aAAAAab2HttPaudP/98K0tJaz2NDup1tnAAAAV5CPy9vV5cbL4svN26iQ2Nbb2O6kWwAVcYrR/+zV3bOr4vX///+9n+Da8L6NDwDTmJK+9Ma+8uf1//38/fr/vqGzhR4eEoTQwIKbspiu8P/9+v/38P/IrpWHY3/j+P38+uOqlIh+xfj//+3Or6eUf97LhYja/PT39/r/r3Brw970r9jLgqtuuNaEr72u/Pj49/zbva6HwrnFubKgkHFui5qt8vK+wP30/9GEy5B/wMPevU2h3ahglb7y7ei5nfj/6LuhX0WVr/LihIK0uej32uD/1quvssjswuCyd2CS5+y7kppoea/RwOrClJC+vrOh7MV/eZq26MOPbq9jT4V1i5+flX6huMDevqeVn77Dp6tnnf9/VpJ6i6eqiJWgqLu2rpurxcjNxbuIr9h+d6OEkqGVj5aNkpCokqjCsqS26oqFlI96hZ27lKCLhYqWh4SanaianZ++r5KUfHd8ncuuraSKf52oqKiqrrifrqetnaGaZVZ3vsq+s8C5gZjCu5SflrTKtJjKp5qHV2eP0c7GzqHasoGh2ruVlqTKwLTO",
+        "color": "7+3q9Orj8uzt6+Lewrq2kpCaenOCdGx6zcXC6N7b08zez8/Z+vj5+/Tu8OLW6eTYm5SbmYuXjX+Lcmd4bmNz18jI/+jl4ce29/Tv/v367NvE6tO8wLe10MPJwbO3eXJ+PjlIuqWK7te27tyr79/C8urY6t/P3s6828rC9uXo2tHWmYSLR0BJvqSG7tzN+O3S8Onc7urg+//9/v/+3t7b59PV2cC/jH+Cr66v18q119K/1NXK7/X6/v/+9fPw6eHhzdHWw8bTnqi63uXp/f//9fn70dTIvamX0d/n4OHY5c3Qw62vuq2r2dDS1uDq2+Tu/v7+8fT24tLZ2K203+Xl1NSwrra809zj0dDJ7e3v4ur0wNDg6O307OnPuayemqbF3ur1tsTOr7OpmLTTvtXsxtfpqL3ZvdDkzt3rzdrgs76tv9Pmx9DNvMPC0cq5kqXAnbbUrcPdvbW+tr7JvszZtsXWvNLpydrm2cXKwbC3pq+8w8nQz9HVsb3MvravyMG/usC9xM3Nx8rF18e+57rGzZanq6O33OHj3dvc09TUtsHJztXSyszHy8rA3NnO5tG3"
+      }
+    },
+    {
+      "id": "b2-191",
+      "englishName": "Sightseer",
+      "canonical": "かんこうきゃく",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b2/191.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "pJvY9Onb4ta7rqJQHTB0wMe2sq7Cqqfgy6R5k25hbYZkYUEuZDk4SG6Yjb34xaPboJhQS01QTU1bfHVtcFB5bcC43bjRzZS1cExVVVVVVFRUMyc8W3mm2LiMtHGEoKCSf01WVVhWVUsXAABHOJSIqtCGeJR9la2bnEpZW1xcXCQyACKkhUKNk86NetuToq+gjFBcX19kSxd5Bk2pNxE0dKSYbaKtm56kp3hcYGJqQRdCLHHbVnJBRWCPr2xmeYWm0ZiYdGVmTwBFcMjs3cpFXDgdZp6Stc6crr75zppxaSNC2MiXvMhFLCdcesf23Y9gtdL/0p6md2Awk76E0ZQvESSM8uq0cVldirzs1sumf49bJkKYpDcKIYDd1ZpdYXd3nJeaue+rm5RTHw03PzSM3/HIio+r2bmUy8Oqrb3D1H1Yk4SAtN/x3aNZmJ6u+/jcnNGiwM3Rq7ium8jd2dy4hiMAWcjk9fXmorKt3buvirRcoLLKq5x9IQEICEpsjODKlb6QnJCTjUibuKexrYIuEQ0IBgAdhMOcu9ynDUKrSJD24NLHoiUODRMBGH2Tra+Y1sTCiHGPU+3i4+nEKAAOACcnF9TNp5Wa0Zqptls/r/js6v9xABgXAGA1SrbS28uqo6axx3JGzs3N0d19JkhCQo9blKmPw87HvZ+csliIx8PC0s65QpW1sqquqrGir6a0vbGnckakwMLLxMjIlLGpvrG7taetoqTQ6bSgdFmtx6a9xK24rZi0psK0tJiUw8jK",
+        "color": "57x0wsKmvLqe17Vm26FusIJqnUhB0mtV7rRs5sml1dngv9bF6IggzF0SzVcM01sIs2Y0mmdOzXJR3qAe5b0i5rR1yMHGzMCW0XoU2FsZ4GcVuGU0VUdHhWRVq4Nk3rc88b0EpalnobvC7a6Ozpc802IT42sVjGFJel5WwKmWpH90jnVh151HuKFcrqaP76+I1NGK7bmG34g1j1gsrJGH/9fB78+4enFui1k88KNe98ej3qB488JD8vSg67000IlRjntzwpaIuJeHXFZSwqaQ99jF051o2nIX2rxd48Au7tpt37OUn3tlmIR0uKOR69C547+m4qY39Nht+tiE97U8+sok6c93sL23qbOxr93k69vFwpuFWERDjXw1z8+Q+e6Qz9Boq6ZHy5NgkaClm9vjouL0lZufWklFTUBCaVZQv5U/9a0Ood+yyrNwrYJtr8/Fxf//rNXUUUhJU0E7blpNtp1X9uJG3bs23LtO4Lpln5iBtNnZwO3mssLDkH1irKBsw6tf3rRQ3MBj5NBI6NVVuZqFppyUstXSttbRr9HRvr+c0syB0M+Y1r9e2LhQ09dc"
+      }
+    },
+    {
+      "id": "b2-192",
+      "englishName": "Juggler",
+      "canonical": "ジャグラー",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b2/192.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "yqrL8Ofg5NqhwMjE1r634emAcJqk2tvly9Xp9NbG7PDXzd3evYmL2Ol+mMi99fz0kczL7vCyzvz69dTl7qK32//knJC5993akd755ezcwev39/nQ89jBzPr1487c3cTK4evL4NbL5cvn5/vw8OHNxNrXzdvl0MvF4K6Crcat5+DKt9TKrJamrtfH4OCblKbXrn54an2SqOPYi3BxaGJVZ6bF+u/G+dqfgnJyX2++m5x9cnZ2cWpfQKfl4+Gou3h7T29fbbPFu2p1d3RuY29uKaH53uGMLku+Ilhlj6rk54BocFpJp9R7WLPv+eza1s7Col9thcDp1Jd4roZb69J3jL3s2vTQqKe5g5+fgbm7i4CXtNfI1tG2eofV5eTcu7y9iae2yNuxd1JccZHYys2mb3Gh5d7h4cHatqTA2uZyTEY+Oj2XuZZOiaJ7xOX/zcD/x6rK9P/CXldRSEM+T2lGdJSny9v5rtj/vsGo0v//9HVSaTtIUUZIXH6q+sGosvz8ypyakMfljWPS61gTcklGPFKWnZKQ1f/slrSzoaKtmM369sQVN1SFIgCPwrfB2vXjkIamrsG5ytK7tKFSTDeHUSNqoqSxwM7lrJiHfYWSytS0jIBsbEo0PSNkg4W9vdKyiZSNf4Oiop+QZ5R3UlZQN0xciXiMjYx0loh3eoCGY0xHI1UyAAAAAAAnooh1dnd9b1BXb3JqPTk9QiUTBAAAAAaG/8aAgYGCd3JMZXBnSE5HRUGUfwAABgRw5qhXdYOC",
+        "color": "P9rnuO3YnvHd4OyR0taB3+GMj8XYf9z4p8nIuo6u39jT9fXSSdX9nP/6peq04uxD//9f9Plu0OVhwNyH7fTrqM3qoez0oOjveePwTdL7VuGv+Ooq5Oww7uRC8MwV0cVIu+D9nu/6N+L+W93/5m9g2Uo8fJ+9xMg25JEd9lgp/y4MzDItjc7myvD+xb/Vn6ndrUdMtHOFq9jhvKmb/kQkz1A/631ht1taltfTu//tkaaprqSkRaDnQqfkLuf/hrTQ25pry7yi9tm1z5+IiMvUlP/z4Ni62sSkW7fsY+b/U8vMt0ArxzYx5ot55cOq4HlKmJqodvb/5+Pq1dvX18Swv9bV/fPv2WtoxygtvB4hr01QtUpKoanz2db2zcnu6/L447KL86OB3M3F1a6l6+HslGpztTEwikZoiXGZmcP/W9Xu7fnelKmkwqaVxq6k19zjy8vomZe4enKAcG+Lh2NVpqKRiNbq4NC/U6Pwloiev4eJtn+QlGZ5dGyZWkhaTjtObVRa7IZL6ntA6XIsQoHe1kU88FMxuDwesy4Qi1VXUT9bMRQzbmJ56cvB6WMc9XMh"
+      }
+    },
+    {
+      "id": "b2-193",
+      "englishName": "Piers",
+      "canonical": "ネズ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b2/193.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "xNXY2OvQr9K9u4BFwaefudHgwJa0vNrhiKS4a6NpLjg+IzBDKlWZhneAnKCto86VkY2bdK9xNhsYlO3eQ4hQFAECIIjC2MpvXpPZ9uJbHBlG7uGZr+SYDwsPEBhKg4OO0ev//38WIpvo7a3H39rIVwkNDh4iOV+E5K/EkV8zLtr9yLuAoexSElgJDR4iEjZ9RJtlADMiPdfzhdy6eNSZOJAvABAleH9WYJNyODxqYWjTW8j11OvLx3N2Y4bL9b5ap3yhaV1XQxA+pc6B0frr/Y92kMLw6rOEVUJkSk9IHAQckapHyu77/v/Tm7js4a2fABgzPlVSVSkATK/Stb7boIaPn7bs4a2dADdBMoOWdlhWg5Z6dMGRauCyaLr9vZHXlp02c4WXNgBLfHRhjqBVl/j/qq+cKT9yqoEndo5kPQANKTYvZmiDnuDdtrM7KZ+lnEg1h5KjjlAqVmlikLqRreCtrbVnef/+aypOs8G9nIZFZFWp7+7Hgtzby/+jhPLvOiJ4m6rk5G06Z3jY7/rafrvElv7ZeJfNQCmJYnbTxERCLpDn///CiJKMgKT39Oa5Jjttx7NjVUZJBUKbuNqjdFqRx62HyKqjLl12wcCGYnxpTWZBZ2Ryf4aZxcenvX19MWfI1t3EhGlqTCwnMiVKemNSo9fKqVCBM2qIvrZ3PGJcaTEsGit5h2dAbX12MkV6JSp0SlISEjIqVj5CMxdVlpBrUGJXAgBiJXh9Z2hXb3ZugHZzd1qBu56JZ3Z3YE9U",
+        "color": "2I3etZnmn57Hg4OEfXeAXWNkbnh/lJOqnKWtr6W8yLfowqzszFTNza7wbImjDxUSdHh+x8fVl5ajXFtoBgUIO0FEnY++x1HivcbT2tjUTExJbnJ37/H9sK600tTTaWtuHBwiCw0IJBUrc2JXi3qhTVdaNDE6h4iPtbrFuL7CvcbGoJ6eYWVzRkZQj56ljXR6eGhmZ2h0WFlgISImX2FkuZ+i5dnV+vz6sqi2qqzF8vr/YrLMHyAfREZIfGd4UERQVFZeo52msLC2wpy0xqO3rqy/x9TmR6+1fIuHV1pfjoaZMi00QkFKXVJiqEF8oXaV5ezqsLC5XF9ijINuUV1md25zvLqtiXZ8WjNPkmOA0K7Cr7K3y8nMyMjMi4l+6eO4HkFDWXpfzcCRv3qbXyBIvq28////sK+zn5mkwsLJ3NHVjMTLNUFCYLSjsparpjBxUTtIYG5nnJmbjXuGiH+Ktr7Azr/GipSrMlNXgL3HpaWmdFFlgEZlRBsvHyAldGWBiE90p4mfj3KCYFB1PURScG6JSlFPWUBPlzhrljVnW0BSeZSbkX+Ze1FtTkVOVkdK"
+      }
+    },
+    {
+      "id": "b2a-105",
+      "englishName": "Team Star Grunt",
+      "canonical": "スター団のしたっぱ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b2a/105.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "xMjW49bW09y7prKvs9DF6N7CwL7CxdHQoJWonpq3lcFqaaOvpL3MwtfT1NvXucVglImr0Np9japSrezLudq6yNfw6Nq3yXYyjJLu01+6//N5QsvE3rmnzcfHwKven0lK2K6zXMDm7fE0Usjcrrnt/8u7u9DTVERN6HhXckREciYrm7eYbLP8+sKu3NeFUHHCk11dPBxs2m+Ix5yQoKbR1LKcsY+HlY+qh2xiHIjU3M9vnojc297Pws27UUJndI15fX9jKUiPvXFHWVrC2tjNyMfMhFZiVX1yeHSBUTlNyXdpSn2oraKi1Pj/6pxqWlZ/YmbHaxW53+zBSomfm7ft4sWYWrqeXWBrVJPChITqo9eAgJia35dNPjc1ADhgSmVGk3s+49G+t89Ng4my6DmemzchI000EAQZswckz8e9255jgIWqqJ+ySD0qVioNUYc8MwCAx7rI359skIWeZ4A5kKCYqlciWvPXAF7XwMnauXKAhUw9FgAAxb3munZ+2tjXAGfCrc/7Z1Rvj6BDADhZl3+i14CU19rYAGKkx/S+Pi5i0ODXosKvd5yPl3RnqODXUoBGtNfucxyi1trM0cvFfqPIs3dDjNfbgA1imJ/QlWXF3OLMwpq7p5uxjaSELqrTHW/Ir5CVspyXpMCtsneXi4OFgaibe6rRfUpDSnOXla60n5+VzLNil5eTpr69d06yBx5IQk2bkK2keauxpodxnJCSsbuyZTiYAEk+FUJ9kp6bmNzAd155h3+i0Oi7AACX",
+        "color": "4MB478yV68mg5sOB0rNt2sBm1dCc7t643uXJrOXuleTyhMzc36pX4s+fzcai39XAt5Q269hr8NSp7cq87N7KpOn3l9fvQIKP3MqRoJuAp6OlubW0g46S48Gw07iu+PK+3tGpwOT3WLa7bptuvZw/eWc0tZCE17San6e1rMDUttfqyeTErcvRuIaNm4ptn7uIx5c3k3dCqIll28FvkXtzp67Itt73xeD22vf/3p6M/EsRoYlix5U7urKOsKdG/N8n2YwzzqSxv8DGtLOtnJJ2i4xrxnhGwFEgnIRBnqKd5enF2cNtyYNT6rajzsHFmZSYdF9OeVk2b1s0kGVTXVldvL/J3ePh2rt9qZSLoomOa1ZPmIh+7cqix5p8t5N/++C8YGJi0s3b3uPshXtspaugn7zJh4J6zZl06bSVvrSjzbOf/+S8lHU6j6qx1d3tlJCPsc7avvn/0N3b67OLubq+pLDHqoeZ8NGyZ4GGeqC0vaOd2rifyrqsq8LNr7nAvKCVnqy9urzFrq22xrChT090d153oYR12q6QwLewtcrX0Y93s5OKwaqW5NzZhpCeiW1o"
+      }
+    },
+    {
+      "id": "b2a-106",
+      "englishName": "Iono",
+      "canonical": "ナンジャモ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b2a/106.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "yICYwtrg48C1urrQxb7NwdPgxdPQ0dfigwAyJpTCtKlphpXAvdHfrqn85/j08vzyXwBlNmTi08SooKWRyNLSy6H79v/e2vbtegBbm23R9u3q3+Cqu9XQqJjGp+fbsd7n0AIpr22o//Pz8ubGnJupsZPGj7jKtbvT8kwAp1Zh+/Py8vfmtratsaqHg5+kwObtoKAANmVF8/j89uLq0drQsrGOk83cztz2pMp6ABFJ6eC+qdrnqW2N3NW44+/l3Ljl0LKxTSttspyu5tCsx5Gg8/Cg4vSu2r3e3HeXuLavqcXgsYuq2Of/19KcturywsX0fDq+qqSv0NGLYI9mmOXr0pq5waiYfJvXLVzWqLba8/qskpszh6PAxL6p+LFojsShPVXYuZy9ysukssV4QV2ttLio16NLn9rjhy3Aqo14aYqoyOp6M0VomoKhzrJgX9DfxDtom5R4i+rp5ubzp4qAtJ+NysHGaZjl5YZrpIl5uPrv8tLl/+7Lzq+pqtHWrkGU59CRk5VmZP7u8+rHxrnWkU7W49LI38uA4Ou5i55RAKT/7fLn1drLQFGe++7i4PLv4/Duwp4vACSs//Lr8+Nuk59Wy/bv4+Xy5fPn5rsOABwljvP/+mZU1dFRaOvu8s7a3+Dl29sEABUmFFGvaB5Fi3wsgay5wa2a3r67tapxHU1lS0dLRmhcYGp6m46XmpOP5sTEtIajf0ZIRz5OXF9vgIqGjZKPmJGNxLSckoONjo9/VEZAclYnO2SXhpSTYo59",
+        "color": "lYyTh4Z91Neq0cnR4ZbO4rvJ4dbb5s7d4N/j6vHv3e3r6PHwZ1NcemUexL1R9+w56sJ/07fM9sXh97/a577c/+n7z+X21uz2m4mjhmoQuK5x+Pp4//877exl1r/Xx73SzKLB2KLHw8nhy+fs3q3aXFBRampF8e1J9Ogk9fMgssO53sHIxMjKw9jf2OTn0+vo473cr6B9rpMf5sEX3c0Rs8ySzM3L7+TBytbLzejvztvdy9/dkHqf5cBh/9EA+vAK0rEko4lt0ruX7N/Q3L3BxNDVkKewttLOjHyRp8XDnrqBybs29s0GyrVbdGmHzZ2W7Lab4L3QlI6W0eDmorS6gKCnbKnP1NA4//kG8u4ozc940sFN2bBV/sLo1KzLwqe2zezznMLKYJOhoqAe//8L+OwK//EMurc6qKVR//NT+eZ719Ys2vP30fj+XoSMJCMntLQz//8Jz84Uo6WYnKCu09Ai//0A/fACz+jt0OnuhpyfQkJCYV9nkI5Pe3xgj5GWn46czZaT6L9l2qdbuNjeo7zAjLC1haKnfoKIZWp/gX+FenRut5Wn1526zY2p54PB"
+      }
+    },
+    {
+      "id": "b2a-107",
+      "englishName": "Nemona",
+      "canonical": "ネモ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b2a/107.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "1dfX3t7c0tq+WYnM0Kdd2NnLwsDBytjcsKGurqqno7I+JTA9RS11rpGssrCwt8u1oZKyzM63xGInLRwVFRcncaObwr6vvrTImsj0//fnfSMqIT1WZWpnYLfRwsLR1dDhwuG+1LiWHyosHo/Auba5m4Kv3eLo3OXi6afAzXYjJBwlXJybm6uuksKN1fvj4eLtu772tD8eGxAUgZFIbq15VLiryPPf0Ket0uHQTRsRAC1ikZOGuKuMm8O1rsitkouUxa10JgUBAH+Ilre0sK6nsrl+jI9tcnqOp5dOBQEAFcC+q7CbjJajkmSFnpuYiYSbjIs6AAsALZ/I0n6Kl4+VgnpnbYKLfXl+f6JaAAMAJK7Q2pxcZ4KNlomAbm2OgG1ukqF2MAcAAFtqfuO3jl52xamul36Sn6Jlp35ulsi9iIaPY3PQxTRW2Mi+q6KafZyWhHNrtv/2xKN9aVRKZEdCk9fOnKuWesPgw9LX/9qYVUxHVGN2f3dKKJLFsqyl6//219348MNtWDlyn62rrqPAiz18gbWj4P3gtdjUm7tfMyR8paKXn6PE7GBBhKei2OXO3NrBlIV5ASU3W3OReniwvXw7spqrx7u72a7I4H6ObUdMPYncjXWRlXgYnsTHubKvp6/Q0cGPqqtwOo7IwriimJtYtsLCt7fHvqGbn5q3vn9MR5HHzsqblKylzbuyvcDil5Oempilp5xpVqS+vtelm664wr6vubLjhZOUlZKLcpGGgqrQ2dzSwZ+0m6Wpq6vA",
+        "color": "e87afNH0fdH7htL0aXaAZHiHYH6OYZ+2e9HvZMjvWs7vZ9vyWLy3n+D6muf/SYGcKC87REJHX0xKWHNjZsDDZdP/YNX+c9z7zMzp3dvuiZKrKTA6REZK0pJy86R54ZNviK+iu/D2vff/zezl1trYqrC0JC05HCIrlWhcw4hl0ZBtxo9zmcCvr9K917qc5ZRZ4qtnTFFVCxIXdV9A7Klp6Jx38Zp4151sopRvvJFre49HpY5h34VBQzoxAAAUlmAk9NV0v4t/vnhhupJsr3dMxGtTo49umn5h4IA6pmI5c3g6c3takYqNtKuye3iGmpqt2MqZ1Y9avoxYvYg3rqV82cqg8uSXw21/tzNivUVerVpla2F/uL3K4quM26p49ueK4dy64ObHs3WTdQg1w3Vf7ZJq65duu6+ubmiO1Ypy5MmkzPPdld3wZ9Xoho+SU09Vb09YspuVwIt6w7CqXWeIc6a2ctHvT8r/OMPqZsbdrbK/ra+oZltgr6+zycjJpZ6ctJCGs8auocjCp9O8N6Tqa57LYKXPV57IcH+Vwrm32tvbvr+7gLjOeb3horC/1MO8"
+      }
+    },
+    {
+      "id": "b2a-108",
+      "englishName": "Arven",
+      "canonical": "ペパー",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b2a/108.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "zOPz89quoda5eZiblJqroZWMu8PQu7vaWXDP944OAGI+OYGtsrqlQwUUceicSUUlckk6m6McO1g/boePjpStvXY+lcYAWWYAmK/f/LQuajmEcE6hbF1omqEzq5Ex224K5f/oz7eohD9wfit7PJNodok8Sk0xYjqT+8S35OrfyrdWIDbGx82JgpQ5R2ManM3kwp7J7d7hzeWMJKHEutB4O4FdfS86cWhDk5Wn0I6b4fGaNXHKyah5Pn2fR1sMBTZCVjEFDCAATo5gcX5ucnZtKFmCkaVVP3hlAwBpw+S9UqplgqOrupyhGiyVrpXMrn2YGJP/8eOFvvafK5TQh26XRSyMp7fPqqPMlIK3u4iAu83YfYKLqCYHGjqr5erjmJ595IKrhXC+vcC3lMaMrlUmhKfh++6fjLaOubuxutrb2NrW1avAsnlNwLLb444+drG+obfE2sS+0MTYu4+5u2wmuXDPkTc+jKiJo9XbzaejqJi6nJOxsWwMtJOjjFy083dte5fCm5WTq7K+icTHumAAka2yzeX/zWKAnGJjbFyAq8+tjLutvkoAe6/M0sKfbmqaaEljamNpdFFpcpycuUoAeLKan5MueG6vRyJyeHaAdjd3r9LEx54ulaVuoVYRfkfMPgB0d21BKTMoNjokNlU2YHJwjp9CXJ/UQgBWdD8dKRchSl1GSlw5Qx1WgaePgp/MHgpUeDUUK0WJo6Gro82no2NJo4GOh7bsHAAgJhwAMWh7sbm2wK5jnm50caG3sbTu",
+        "color": "obfc3ejynavlipjYkaLBv7ep2cepsrbDZ4Pgsc7tk7vxaZrlZKvkt8/1bZjKO263j46Sv6WHvKSOx7KSeYfSiKTvf4XjUWHI7vmM9vV+8epUvbtal4dvspV70bSTyKeFlpifVX+0f46swMPMxscs1sQ81Ms89+w2sI5F2bCM/9CfsI10kKmrVYu1xDRMsm+EdGcjqppEoZ44saaFs56LwrCi3rGbpoVvi5GLe8jhdKS6TqrRo5tz8eY81Mh23dTzvrGpxbeVtKS5g2x3n5eLrvT9k+jro7/B1tHAyL2F08u25uHG3Ne36MlEuqB6lIaY7N+EyOHvmqKp57aP0s6y6OfI4dSv39Kz3M6a9cgrwKlun4+n5NFxi6G+qrW047GEwKx8yKaTzZx938Sp2bdh/80drph3fmqX7dN33d3d4sef0ZpTnHxazIBw2o1zuo52z50+8sg6tKGQiHmd5cdzr6XEp2190LRGa29OrZKRlIV/amBWinlOlYpiko2MkYyGnIlpsrC8n5ei2tJVU19ocnV7WFpdfGxpx7KL0cStysXRsaizm5OVp7aXwsdQ4uNK"
+      }
+    },
+    {
+      "id": "b2a-109",
+      "englishName": "Penny",
+      "canonical": "ボタン",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b2a/109.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "197w3tzDoK29vsDCtqOVqI6Cenp/rdrD8fH2yH9bSkF6h2GATwAJBQwiKTs2Yc4w7OnFc0ZKSUdDbpKygE48TWZ6ZlwsWH8A49y0e3pyWFtETVignGRWWldJLh06RlIP+taLd2xkT00/PTpVX4JpX2ZJCUM8AFUH9qdgSkk7OUSQXTQuV3tLRFBOQWUAAHeO1ZRbQzY1SHiqnh0XT2kzNjZHXDsSK35Q559dRkN938dihlpXYFs2Njk4DSIvAGQv/8dWXXWbw9Xn6X8/YUc9NDozHjIAHH5l4daSWtHt3eH2pwAASmFaMDhBX1I1NWVkzdH2v4DL//7hUAAyOsOyJCY5OUhyPDtVjsCqkmQASIKQiEBBJ09XJCsyM0ZcQTY8drRKZSMAADh4Qzw5My8pJyMmMjIuNTgw9q2bvSoeLy4wNjQ4PzwySpKJlbBdLjaHmGqioyw2Ly81Lzo6PDZK3P//7PjwTjCtQSew3i4kUlJSaUAwMyeE/vP08O3/qytEsJvt84crXTwkZHUuHlXF5PDs6O3s648Fzr3HxZdhJDtIOT0rOpyivt7o19TR0N8p1td/h5WOMFq/cCofV5WAh4+kmIuXw+TX0oy+j01lPzVPPUYzUk8/OjsvcpOLqN/emqSmv1ssRmFXVUlkWltiUFVikougoJykyJyMonhJSVdQTVxNU1tIVVxzkJKPlKa9oHOJl4tGUlhXYWFfR04rV4SPmpOPj56qfq2IaHhDOTw9T0BNNjglNDZolJuYh1dt",
+        "color": "9e/m3+ftvqCxuX+QpbXIu7zFjJCvfHeri3y0iXnCj5jbnL7b+PLm0Ky56ExU6DM4ukJQtJi8rXXZi1qFmWede0Tak1S7YmSVzt7r2G137TpB0j5HzldSuCxIx3PZs3luom5bklOLZktxhn54qtLprkVcv0BDw5yWu6ydnFh7kmLgjFtOkl9LbllqXkpYk4aM7Offm5GhysnA+vzr1dTBamR5mWnZmmpmg11KbGCMWVh/loWAz83OxcrJk5OMzb2nw6qQV01MlIZynXZNdkc5kmVPi3Fpm19BtMHCm5qKUklDXE9OgnVwcmxsZmVhcmNao4BmrItwj2NPlm5XkZWpzsSlcXBpbWtLdm8/cm5iY11fwb6o///b///Z0MClmHRLssDL8NuvoJRyfl9CsmtAaWdPh3dq79ah/fHB8eW5+vC+loZxvtvRp7WnppB0fHd6jouRZ2VmmIt4mo16mZF+uqSC1L+V5t65c8fWisLVfIF9eHRyfHx7g4GAgH5/dnd5j4iAvKePwq+V18KcjbHUsJ63lIeOc29sgHx5fnt6cGppaWRmnot7xLCUvKiOsZuO"
+      }
+    },
+    {
+      "id": "b2b-081",
+      "englishName": "Iris",
+      "canonical": "アイリス",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b2b/081.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "qJqk5Oy+i7K5vrrFkI7D30oJJ620n7CvREuSnkgWNrm0pqJkUJfRUwUXdpJcYEdPWoJuZVxy1OSodl1aq95dABYZMhgUXDiffX2P5Pvh/9FQQXGAlX1cZDAADBgWFV3Gg7Kb3/GylG0rJUQ8X6RscBEACR4dME9VbH5+p4NIOz82Q0gZHTx+SwBWWBIYFhKGgIZ+NCMnJkFtg0lVQQ89NRIzLBwWGRIj2eXxQQBdbkpigGF2OBokOBwPOWYfFDU8//6aT2iOvlpYi2I6NQweNCQqs/91FTB//68ArdHVtmhui2I7MBUHTy8vktJWFQ0X/3IAPIh9V2FNVnVuJTNDVy8sWEkADz8YzbZJGiw4T3F1cHFmNCFOVisiSkoASzUAs9HZs6jo+Kc8WI6Vjhk8cx4hQDtDMgA1j5B2iKBicFxQt87VylsSHRcpRzxLPUEpwIs5iWo5YW2gxrLa0pxiLzVYUEo8QzsejktKbFJbX12iq6qfq5+qi2l2MzQ8Ojk7QCJdbmSCooSkk3VQc6OfkF97TjU1NVg/cGJuf3WTtn1zYkdsm4mmlJPGaD81O04zTWKOhoR2f1hgZnPz7GmTo4+EYlYyLCkuRGKSi4aPh3h/qMPfmI57m5ppbGxXSj0wOGiTj4aLgnaGn8O2q86oiJuaemlugGUrX12Ahn+Dbml3hJzHt7STaYKPhntwdW5IUmlzen1yZWhmhJqir49mS0dxo5twcnVulZdld3tlYGRkf3qar4uOl5phO4iokHBo",
+        "color": "j5XTsrfqepfcoafg2sz1crLpoqf5yLLdWkuOb5G/op/TsozQsIiLs6y9wrby5dT6TpHuWYyby7O9c3iTSUBmUUeOYEuWuYbU0Yt04rDm0bHseYDBal+KfWF8in9pfo1XWE9xVEiHVzeWcm3N/7zEoofDO0ylbG+kxIdYqXpnZ06IY1Z7WE2Ve26oV0mLWVmb5+rthYqZw7bjyJSgxoFXtnZiW0mAW1KKaluTw77XcWefZVSk0cPJbV5+pY+6q4ySwXVRw3heaVWNiGuffFmUhWaeYU1wWklo3LnhsbDdu6qvv5ugsoeI7MPPpY22XlGXYVGLlGBxnFtUdlFXfJTrcXyy2Vpp2F5286+/78LS1727p4GYs152qVtasFBOlFNTl2GRvnKF4YORyKKws4m/jYPDvaqu3qqq8oSexE98oj1yrFFx31l4+ImR8YuTuI+rrInS1crpwbfcxaem3pqj5FZ4s093pTturWl/15Ce2Y2d0XmO1pao4MXY4MDhppvLtpuo14qU2HSLv1t6yIqfxIGXx3ybz2CBy3WOxKzXv7HgqofkqXfMsZSf1JWh5GeG"
+      }
+    },
+    {
+      "id": "b2b-082",
+      "englishName": "Calem",
+      "canonical": "カルム",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b2b/082.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "pqWmuLK2nUA4OCsrOVKDvpSQjIiSuN/XHQcLBQAgCywscUUTGzcvGTZmbXihu+NSCQAANS8dCxsPRj8cNzssnOTCjnFCd00ABSKDlz8iNQUgEgEoIhUYdHA4HAFCpkcQia9beRoANgEFH0ovAB8SSTkdEDel/7AwwJCQeSQFBxxXZ1A2IX9EcTUNPnm0xYJ5VdXgMQkVBxCDtaY3SiQhPUxRcY7I12hTbphGBxUjAC9ezPHQahMgG1J5W9DN5IM0nG0ZBysgFz+i2t/xrRggGllBeNXe44NFZGImPjUXbjYfx9bHcTxBUUxbc53OxDFAZleJXiR6jDYAB1dLNUyUc3SSWEzMl1JWbIS/QoKfTHerbmSQTj5qd6G0fUWQL2lqd6O7x9urp/G9ITWWR0JSXlhbq38AABaFu3qJ1Png6+IvEHDKW0JSRks5iaImMjlZeH2K3/fc/3gZV3jjx018SzkxQXw/NUdOSX20/PnynRcdZEq22EI/SjETGTJRQURTRXTt5q1BDQAYTC9ieTlLQCQbEB8nOEZKRpq+ei8yDUSFNDAdND8tFxihnyo1bktEjqdRPThLc9u7OSokDR8LGTbi72kcTE49pVE3Pkmi6fTgWCRAAx0TFTXOy7h5LzgxUC8lU53a5+3/YyU/FRIiCw0x1fnXiVNHm39sq6KcucLebmZgVkpTVWpKXKmdmH5R9JuBiYqRodWSdJJNRVc+QY14GUWEf06vu3F0ibavo6dYNnxVOD1BL1KJL2lVWYOv",
+        "color": "WX2SdHiHkX2FmFFajFZbdExPmz5LmIGDmaSapaaWxr+WwL6kIDdQbl9YaEBBWCwwTUtOcUJGeCU0hmJIpJ5vXmBlm46AWWRvr7SviqSoP0xTUzk7j0tOdkpRTUtOeG9uQ09yO16FzMvRfZfGe7TNWX6hIjVaUT5D1bGnzsG0bGRkWkxMQXicnaew/NnDgH7FRY+9LEx5K1KDPF1/ppuQ+uTSgHuARFlkV3WouqOw/t7GfnCXc5G0aJy4Qo67SJTEb2t4dHmYUW2rbZS5m6HUiYianoh7dHx/jKzKwcPVl+zyiu77dnmUiZKoY3zFVGzBYnzHnKHEMD9lVmuZfoqy0dPmwv//bpy7N0eGurq1labWS2q7KUagQ12tS2m8TGe2ZJKzo9jqWXSnJj+PRmeoWWF2VW2vLUyoUGanRF2gO1msU225VKDIP1yhWHS7yt/1kKnVJUB3L0BtCymNjZu9zNnoU2yrPF20hIeqcn2mrcDX5/H0usHSU2adUVt3SlqLXGaAtbu+pbrXa3qg2ralop2nqbTIrrvOgo2tdoGoWGSYYml9gYWMbGxvfomboaW2"
+      }
+    },
+    {
+      "id": "b3-190",
+      "englishName": "Korrina",
+      "canonical": "コルニ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b3/190.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "vdzm9su2xLOSqKTL28/T5uXY0c2nrbnfy+z6t2AuZ2JgunS94pWNqKrLyM14c6ur6cezhIE5eI9v0MuSi8WovqrbyLGSmK+m6Lq55qs7bTdGyZMAAJPftq6vnJ+fk8fizcfJ1Nu5oAAAy2IAAHPcV3aunqeezc+ItLrq8+7TojAH7mAAAKqPAFeen6qenJqtxers262ScWws9IUAJfArAJB4pqiukNOz7e3eubnXjMzt9bEPstACZq6YqLKVk8Wn28Hb9dDekFq29u7Q+/Diu1ejvsivzM2zQE3Q9NTQr3Zrb6C5tp5xREym6sLR08zAjGKj39Pt06+znpKFX2s8XWm0tmXUyOrAg7bB397stoDcydGxrbqQopD/OV3P6OzNf2afu+X0pDixdkqAwrf8xHH/XWPz//TpWYuXr+3/oDBEo6CYnO3grjV3bz+r//XsTpun1MH/zJI9a4Q4b//Yi1ozQkBH2vTtp3jR4k6H0exRdnE3ecHqqJ52PjOA0NjpromzYDAln/ptzFael2efwODogYvQ4MvMYLL1q0lMnP94Y3v/j1Ccyc/cwtvp48SrZovL6eOvZtd7XfX/mnLtsXdjan63vo2JVytx26qfi2U8vf7MTa3Up7SIVqLArqaQI1mYq36Di4g9XW9VP8DY1t7gfYPN1rvga31neDksia6JSS5Zo8ird6C3p6uQRHj1vod+iGs+RolxiK+inMi9l2lNeKOid5P+x7GNm59/UoFNQqTIp8Xj6eDEoIyHkrT6",
+        "color": "1uPk3uTo0Y2HyZuLqq7H48mh19u+1cyQ8t1/6dl36p5+1sG+sujV2ceFon+Bg2hporHHtnqFqXSHzdPU4sdP38RV3aZg0MG00tV68uxu7Od7hGlRlY+cYTM5cElPl5WjsJBb072Q1LuR+LpP//JQ4+2EUdu2iKOr5NLgoW1/uJmqim94vpyT1767zrBvqst8mauyruf4Nfv/kLa5u8LG1dLQzNThpZmkvZ2W786/z9uBsdOHGqL5SuXubP7rzcG4y7izy62AmamnsJFr076wobCp7+R69eNxiZSVt8XA1P/lwYVyxYWMz5qj6NyV7dpWwoSAw1tb89K//f+1sp6s37i77KWP17+sznx8wF5j2rJW695f2VVa4gEQ3aOQ+/2bacb20bK3tzEw3M/P5oaF65CTzImDvcaS4NzI5rWj+drZ8cxgPnj2Z9//ednOupaZ2Wdr6dvgxpKdxdXcnKbDm5u08c6g0qpkTnXEWKbDi5CUt5ictnh9sGpuwKewzcvYxrrJgbjjobDOus/g07yKvKGeqYKAmY2PpIiMurC6ys/dy9Ph0aCoxql9hKGK1dXL"
+      }
+    },
+    {
+      "id": "b3-191",
+      "englishName": "Cabbie",
+      "canonical": "タクシードライバー",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b3/191.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "ztnZyOfz7+ni1dDNfXzl5N/Qw7K0vtfarayIo9zdn6m2uMCpp7/28Onr2JGw0ercr5fE5+hte7asnbyCxZtbl9rm07Hs/euuftP8/9ohe8CqsJAsfU4AD3F1cLL86tS9xP/s/6kAPXxJbWnAs0pOf5sPJbnuxaed+d3pvjoWHA0TM5bftp+mtZ89Yc6uo8Tn2um6HAALODphnLGEuLvBsbCTjry+7PPY67ktHg4AJrLBlpNhc9rKvrizxODs2KOl4j0YKSYOXIc5TGdMXoOqyrCjv6yuytHUs0YhIx8XKQAAG1yGg1BkZWWVi6vj7d3oXTMhIyQVFgAOFidkiXWDYUFl1/Pn/fPeJxwkJRoNGxggDREwWk0zYWtoc5/A7LmPKCYiFwAbFyMlHh02HyweMD0vIVGbmYSIGhMcXyAPFSYjIRwtHzwvL3EgIxddj6bFUQI4sygAAhggHyFGXEcjQogyIhs/xubvhpWZsWM6HhkVIiI1VUUvGTxBHyESsfncfK3Z5uTZkC8DHB0dKx4VEiw4Fh86XdevgsjOrsinqyMAGBMVERIWExwvEhU8Jl+gssqw0r6blCgAGBUXExUWFhU1GRMnJh2KzZnE9s6SkzgCEQ4LDxEXGBE3LgsjNRVsp5/T/sqXxH4WEQIcJBETDQkeRQ0VNihX6aqp0aej0tBxbGZkcVZhW1VdeGlYc5PB+byovqii0Jk1Lk47JSElLSwkSUUjLIbw5N/Npq6zjB4TMycRDxMiDRICQDICBZ/l",
+        "color": "a83Wc8fIru7qltjIuNLE2sCuvqd9+OaI/++Mq8elnsvTw+bqM7bEwPvzdaGXpYRr16mUoYR0hX5qX1lJuqZuo6+Etv39W9rOv+/f1PPvWEhFVCsjb0pEu6Z0s5Jun3ludFNRUYV/S+nZQdXNhO7pO1hiDgYMLlxgjJV4sIhUz6SI9syx46d/bsarVefmX9zlWJGYJx8xJScyKUlQPUVGaGxgZ31ht4p0rpVudsq9iujrde35OkRSJig6ISQwGhUbEhEgQkJAbGxiPFhJRmVYabfEwu31e9PUIh0sMzA9HhgbJCUyKCw/LyofQDUVOENJQ0xTKjRHGZ2cB7q0I2hqhZWNNlFWGB4qIiM4PTs4XU8cOjlBTlJkJRkqJ4GEfv/hNb2wSum9EOLjGGx0GhEdJCc1JiYwGxwqLjA9ISMyTkhQWbGDFMnBV+XdOc7XBm9pFQsXFRgkFxckGBgnJyg2IyYyJR4wIFdcZ8fOfdrRa8q/mLa0TUhRQUNMQ0RMOjlEQkJOT1FaSENQcod/x+jYZcSnVcWrd42NQj5IPkFMLCw3MzM+LSw4RkhSLzA9lMya"
+      }
+    },
+    {
+      "id": "b3-192",
+      "englishName": "Cheren",
+      "canonical": "チェレン",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b3/192.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "0OLr6un3jg1fs83KxMrN1tDLzLq7vs7a6vzt3drknFDYxfLtyMzIv7K3xZydru7F+Ojt693duk1GQ1ug1MvO9d/Mv66SwNhi6Nzw8u2SLCwsKysaYs3Y3dDFssCbrn5G9fDz/8g3L2SdMC8vFmziud29p6quyn2E5OTv/oInZLT1tocsIhuu2cepp6CnvYHEyuT7zEEvrP/19/dyIQApurLMy6egnIe5y9TprSU5r9HwwFJbKg0AS9DcvbGut6G50r7Rkhc6gUrw6X+cLQACGNne2dXLtIeRy8vZkgIrss3q7v/DHABisrvh+/Dmupys0d3rkVgXWf/26v+KBABi3Nnd1OLfvbS92OLHu+knAGbe86wZAAB52uLe2eTiuZyz3+q23v9zFyZVkX15aUOC+u3w4dXOv6OU7cSj5PzuWcSVVKWulJy+yMf779rEvb+uy6PL6f/46M2UOn+0zfr/3J3c3dHO2eHSoLH39vz43t67QJvu//7/3sCcx8zh36+SoanQzt/Y6v/mWKf/+PLt2v/d2NacqktylKOxv9XO///SZIHZ3/DF3f/vlFQOPHJom6C96e+t9//KiUnH///OvvrkgAYCM4+Jsbbi/9qP5P+2Y2qv///MgtajUwYmO4F3kq/R1bKYw++dcX+Jt7mglJtUNmmKXlMtn6+qoJenqs6Ue4Z/mqGxoG47apWFiUNfxKmjlJiso8Cle4t/kae+knuFp5WYjn2qnImLhJGbj7qfdXh5fqCthY+tsqNxgKmR",
+        "color": "7+zs5+7u5PbxhpSdoa++4urty97lzNvlzNnlwsrWwMjS1Nzg7/L07vf5x9zgcoCSW2N6b3mJsMbS1+nzxt3tpcXjncjohKPJ6e72/v79g4udh4iPu7qyXmRxWF5sv9znqtjwmsHrn8Hfl67O4OL3z9nmXGV4y8m7/Pbcnp6bOj5PWGt8vt/2q87qmL7bpcLa1936rbvKTlJjvLmw9e3VxsG2RkpWZ2l6zuTw4e/zutfnk7bUzuf5zN3ma3eCh4KA//rgta6kLjJArbnG1fL72O3xwN7ppMbb0eDtvOLx0dvedXqHqY+Yr5ewj5Gjx8vR6vHz0ezyuNXkqcfjqszh3Ory/vv96u/zvn+A1bO9////8e7xyMvYxuj43eb40cTHj7ngw9bx4eLn+///4KKU4Lyz9f7/6ujo8/T0qbTHiYKWpoqPm7zq2ez0ztba8/v/15uJ2I15+f//08zV2djeZWF5VEZhtIuRr8PVyNHTr7jF0NTd05aB2YZtxr/OubrNfoeVioSYq5qhdnKIn7rTjKa/oK++vb7FzpqHzn1guqWxtbXIoKWqubO9q52qo6zP"
+      }
+    },
+    {
+      "id": "b3-193",
+      "englishName": "Parasol Lady",
+      "canonical": "パラソルおねえさん",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b3/193.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "0MTWwKyop6OUj5SWnZufqKWax9vX2Nrkp5R0Sy8rMDQkCwADLCoyNk9r6ffy9fXwj4dVNzI7RioAABsjIhszRofx+Pj2+/v1bV07M2ljMQAAKScmKRoiS5Dk9v35+/jyazcnMV5UFQAmZ080ImEnMqrg9fv5+/LsRjY2MjE1ABQpO0E6hfG2OmPp7Oz17+75Nj09QzIlABMmIVnK8drBVmry8fDq4+j0PT1GPEMXACSDMKXx53mdWVj/9uza1e/7PU13TT4AGXzEmtHy3lKbA0Dt5uXR2vLvSKD4pU4qHH7V7NvR1ueNAGLv4d3h7d7WR571pkxUHRxDo9GCweUyF7n05ebx++7UP057WFaHSQcrhMXQyG5gtO/l5+X1//XLQkdYWGJwaFuGt5OYlI25//Hp5+zt8N/FWWxlamhfbWeI1PLdx45doP/39O3l7vDom6dncHFrY4bY0uHgwbC4anTk38nX9Pv+cXducnJyctHp6t7X39rm54Fcpfn3/7+nbnFzc3Ztjuzj5erp4dXe7LKtfYm/2/inbnN0dG5upe3s19rw9O7VqJKnr2OWz97tc3d0bZfCz9rkvanV2ruOj42Eo52QiIrCiIhxyP3jzs3hqpOYmpuUj5uYiJKIfIl/Y3nU//Xdz9njubSNo66omKGjqbfA2/jgfKnU1MDAtrmdrrSfpsLCpbCXu8C+0b/n0r+7ysC5prunps20xcXKt56UtNbU5u/0rMG/qsjLtK2XuL+s1MrNxKeYlLnG2/Hw",
+        "color": "46+a7WpptFBmu1VqjFBgdVhol15xwUlhynGC0Obm1PDw1fLt8zExpA0lqhw5cQojKCA6MTJRJihEXyNFwa6/5///7f385f7rsREqeiY9nC5GNBwyQUlsWlR5n4uMf210ornV//v6+fXv8vH2nA0rpQ8saw0nMi4+X05gwrGx9N3Ql32AtKi2//n75tv39/H/vUti3omYcw0rbFVc4sC499zQ48jEUUdWgKGvzv3/pOv5wPL9w0Fa4oiWyjJIXS0/lX90/qyqzKyfWIeVdu3veP//1f/9rOr8xyA42xss5TI93iIz1ZQr781pt58rnLmlvv//qvv8xPf8r/b+8Fdd+Dk99yYz72hA+uog+O0g8NMZ3bgOnKmKrdr73/j87NjZ9i8z/C4u8Ss87b1D/fQW/uoc+/Yw9dkWwqcYqZNu7r254NHZ/Dw9/mNd3MTf2+Jo79AK2rER5roMx5QBxZgC05gTxohXwJyVsnZ5yOXnv+n/1M5wxMtIj6143K8b0bYwva8/gMeelt26vefWk9LQrcu4rcuUyrZKobhzjNCt59RN2tFG1KUSesSqdO7/3vjv"
+      }
+    },
+    {
+      "id": "b3a-086",
+      "englishName": "Juliana",
+      "canonical": "アオイ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b3a/086.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "3+ft7/Lw7sOpvb67u76uxOre3N3X3ODo9vf08Or3uHzHvsHIwsPCtL7w+/77/f719vT69+ndc1uNuKqTt8G9wbLC/e73//by+Pj6+//BWGdgPxcLHhtLssir3O7y9/v2/f3w9v+1WFYbEEhIAAAAPKuFtf/u4PLv8+Pu/f2bYm5pm9x3FhYAAEhWi/7y6eP14OD73si5roSUhNSyJ0EQACZddfD28t7n8/fFyL6ljGijnL3mdismABhaY+Xt2e7w+MXRuJqYOkmKLrfnwTQwERRlVsPp7ff1xNDF2dLIJkvCZ8fnpRyGSjJpVqz//fX25dbS8O7EL2rS39fiyKPIgmBjVqv/+/r3677SuNKSLmqy0XCG2dqMcV1mZM366vXv0sfd5ZJCLmcnopKIxU0BWX1qXdz/6dHau8q+omZgT2kYeZ+cgmpWhH4cOlF43uzw4Mh+ORc2YmQzgHmAi35RGVZNLyUJSv379f+iZ11bgXE4dC9PgWkrL6LSVgMUAEbm6+/v1+ji5cVCjDMwdncsSLKtd1pGT0F47/j03vDv5f2iWSxflZYuW8OMMGDCXhcq9ffW4vvvzeDzNCqOrI4oZYWYcH67UUU66NDq/fv4/udyZYSOvp4ycWZupbKpt8VO0NX6/+5fZHKC9/7FpYIkhHBjfKS73FkA89HH4MFxZp/Fxd64k59tkp+Oj7nMl1gN89LWyszXyNLp3YmAxJtYu8HC3N+AEBaA7tjazKrDztHORQCL9Yh1qtfqzZVJEIb7",
+        "color": "8fKt8/ek7fqhvcWhwcLLztDS0NHVxsjL3OK87/PW7e7q7/LW/v6Y//+61emXbXGHdniUbGtxc3J1oKGoy8vL5fSo+P+5/P2j6fmb/P+u2t3Ea2iEdVxTimZQHRMRMSwweXuY0dON6f+I0Piv3fd64t+a266Js4dyvJyE5squb1lQIBUROzlbtbya1v+jufe86N6u2c+gs7ZedV5RmoV56Na3o419Wkc8UEpmh5uc5/zB9P3Q6NW71++asc2GaF5n3r2r7aSO4bufpJCKZmmWmKW47v/y1PnM4sqr0ruuiF5wWktdfmpu1ZOFk4mIXmN7cFtvlGdWv9yrv/6v3Oykk4R2cU5XgmyBaFtoaH2Yan6hZkJJm350aikYTxoa086q+v6a0u2evvHOzOmli3dwQUWHhYWae0hErrO3dnd5dVZYakYyxfahy/zK6PjQvPSOf4uTh4GqqqCdeU5TeoamkZahxq2giVxRq+i84vPZtLancIp6xda83uPKnpCNjnNvhYyptayu3Lefazo36u6wu9mgl9CVw+GlorGDdXuXvrK0tY146tXC0MrBXkVEn4RQ"
+      }
+    },
+    {
+      "id": "b3a-087",
+      "englishName": "Professor Sada",
+      "canonical": "オーリム博士",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b3a/087.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "vcvb0Ni0S2WHiXqOlKp6WIeHbFQ/WHd4h4RoVoo2ADZHXEoYHSA8ipRxako8SkhiTU0iY2xVY25NOzxfkXJSc8I+JDIiRCgYc6/Hcm5yMhkmSicmY0tYVEpWREtLWD9g6P/GeF8YEFqnx5oEKkQjOzBfu97lfmiB7HdKZRAah7aWMm51GUYAAG6p78Knd2K4eJOObSaCtK9tMG24OTAoJjObwktzdWOzbZpVSFVqHUu4tKmvT0Q2NV9QSqL/uH6Hol08M0gyZVigoqOjH1VLK1VGOJHVs4SFXzM1NTlBga6gc6xiS2VEMgAmQVBxdZC/BlU2Qja9rFR6nW0od2Bth0sMAHKBipGxP9tnIzigRiAtTxIkVFCQr5s7ACvQjm5xX+qOJjNCMkdQARg+PzOaZVpVABh4UFBtfGCQeHdxhGgjAEifJm7AeL+TRiImKIrALQABkamYilqCgX+HT8T/7P/4qWo+c9XvEAwAS5pzI1R8TR9+3Pqdk/P/58TS3vbeNpZVcX9NHQYcSlrN//3GT3+70vrvrIVNncCiVJqvXVhtgV/E///lboR/rr2n3rs57OXidZ9/bH5zbSNu1P/oourE5efqy3ovv+rSbnxINlxxajg/YOPnmMJ3pdfs/6cZiZCFdWhnSkJud3dcf5q0f4x1ndC/k7oiwMTEcVxoTVh/dW1VmNiqeodjgUZYn08kiq56X2BVREZUVGqQhZBugVpLflBPY1iEJ1w+UEcrKyRSgprszmdWrKBQZzJCOEep",
+        "color": "6bZb97Fm07aeoZGIt6mVrKKOsKKRyKOD27N2tY1gtINXx5Jr751I2ptptJl1mn1or4puoIVtp5N+up2Bs5+HsYM8uYk4soE0+t+j0bGFm39vz59/2a+ItJF3mH1nim5e1JhI++FI8qoe9aMZ9Kwv6IATxIFV0KyIzqyI57qRrIlsjndowaFZ179t8b2M96Yn44QhymUyyIJSzKeA/MKP67SHq5J1oot5j3Zpu5R78MJ777tDzpNsuoFwxZdMyZ1mu4+Hqnxqr5aC26usont7j3Ff57Zq86RC07eC0aKKvpR3wpGXjHCDo4KCqZGO2MHFxbC2lHBk4Gss+aEwjF1InIdu17i0vpSOsZqFwaKX4tbW497g9vbz48rO5axt++lJ0K6Yv6qMvKynt4Bf0HxH37CU////07/J1rqt8enm5+/vz56V8Ono08nVwaWy8YZG/4Y50IBd4d/b7eDl7r6u6t/a8/XzvpSF1tDXxb2+spaPuYh245ZmxJF4xb6+zcTIw6ONx7OpysfOvY+Ly5yXxpaHyHdYpX6BxZd64sWq07+7va2zwq6nwYtwmoaOzKF2"
+      }
+    },
+    {
+      "id": "b3a-088",
+      "englishName": "Professor Turo",
+      "canonical": "フトゥー博士",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b3a/088.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "wbSyxsS7p8KbWEBFTH6bemM+LyMaJUo1ZmlOPjIzV3FXT1NIJTF+PlN6g11lZWpxP2VMXWJSeIWtsLK5nF6QtG1fLj1ESk1SPILp/6tccJfFnpSXpaK9tU5FRFaobSMiy+7U32ZTh5u1VGqbUF/G3Wo+U4fjtT0m6mN5xVRXf3LMja3ih5PS8qkug7Wu1HV/3LKDZUE3el2e0IZ5baCt7tSE1P7B6qg+nf99R0A8bXpfiUZiVGRousdwbceGztQxebnIUmFEP21PNmtjXnlpnoAdOl01qO6UP0TLqm9af62RaVBBRK7AiRw+TS43gObkVkCd54yt57QYPiIUftDFznVVLFBVVszqVXyUk9+a6N8AAAAAQJ7S//h4ToqLTG2CQKTbqt+y6f/EKC0kDxtt2ch1MlZGLiopd0zGwMfiy9v+yjVGJAAjcrZVPxghJIfZRknZzYq0576q6ac+TS0xQFrjtz0Adeb/Om/Q7PCMwfjW8vtPKUxHJAKJ/7SN///uNzmuru3kjM748u69ABcoLSAV39GbstJxGle7ubbqrtvU6NzYdQAjMxEEl8xJJG1QVonjyp+cn9Xjp8TNvkhHMSk2XaeHPoSCWlj127Skm5/g6p2py6KXiVAoGpajUq3EAon66tCllJaY9fOdm9T15GEAAH6wXSHKY5zGopafl4+NrrWym5TBqmk0Kn+WjU5aMqq+in+bjJaNi5TY/rCaPSovAFWGeXOYGJaleECgeXmHg4vd/O6qMT0gHD9/hoCy",
+        "color": "epjsgoLshn/rnZ7DmYhyfmRNbnFrW4jiYHa1PmOKMlWMNXWOPGn7paryZW7LnIx616uH3p9yrJN2YbP0b1/ZRF6gL42uJk2os8Toqsr/WX7dp5uNzKiNzZ1+u5d+YvLvOHH/poD8KeH/UlXOuNmOMXzwIkTxh26LvZp3tIppoHt2Ucz3XbfpzqjqXN7/N5nJZ5KsKbnrGGv+fYTFlXddgl9GgY2QmJznTU7KNiryHnP8DfT8RG3ISsL2Ws/5yNTfUElOMCYmgJij2u71fpfNKF3jHnL/CK3seHPuxMLwzNLm5vD0pam5VkFrODhQl5SqrLXJM1CqHRnyaWDfWkrqxtXmx8bmw87e6vf5qpu4Z0B3YDxviIycoKzJmn/E/vv/Y0e8scvRwtbpwM/k5vD2y93kTEtgQjBbR0Ngu8rPm567a430fm6p0uXtyLWqvbq8y9/ru9DcoK7CgHuwT0GEdIKaa4O/NqDMVoG/097nz7Kpypd6vsPIw8bKtMDH1NPdU1N4Wml2jZ+yP5CTbXq+q6jKmoiJzpJuwIls0MC64/D0f4afTTl2W05wfpqrkKSq"
+      }
+    },
+    {
+      "id": "b3b-083",
+      "englishName": "Elesa",
+      "canonical": "カミツレ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b3b/083.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "r7HM1NLHs7mdiZednJrY3WcfJkiCosvLUWN2VkxDJV5pHRo1QXjcNSea1rF6RWEmUlpRaIF/S0pDgTchl/9RO+///+PBp21AQIWs1/r+qi4RNDdMl8wbx/nl9PGk45gxtOrk9eX1WwApJntfd5QX9vXv6/mq3awXpMr/5b7e0nYdEjgXUa5k+fn37++uubmbY9rWzs2i0urKSgAaTPnqzODn49F3ksWCiLa5gY97ftTW4JZbcuPluZyIztKfr6+oiL1xJj6NM3vHx+fpxZTVvOnk/vPOolVDr49MQjNCPaLeucbc/8SCQ4b/3cabSDlDvWpLYjVdVL3M6qbG1OWbGwRlu4xOZ0hVUXiCVJeCF2zbxWTBtvfHShdstJLB/5glQXpcnfdOXtDbW67L1v+osqO8y4Oq94ccjTLCyv62mPV+aty84Zxk3tDEuUU9bnZaM2yUrvXvmKrL3uOjcCVCol+MlBwxo/T0jaGf8efz9a53d4WAdAQAAgB9Qhyd///zoaG+2/T09v/70beskSwAAE5eMbnxtr6JZJ9Sr//24ZebwjQAOUpJh5dMrdRhVW4wbmEClP/0dgAAV3pBY2N+0p+NUEWFX0xqbgpYhWmkjV0sAitnaFSmx3FoMBxHqLtSI2K7ohE4NE+AXCwsKF3Bo1FFR1dBmKJAdXBSkEMzLkBhekkaNE68fUpkf3pIX1xLslWMlE9ASFFdaniiVk62ZVpyepRhVFGAW2ejVkZDQl5uZG/aIFvWl9GbV6gfOUJl",
+        "color": "sYzP1H76vW72qXfthITSgGaqnaPKuLh5gIA9n6BFkZmgfo3plFjLw3v8yqr3czreUDe3Slqtoaugjoo68vJW9/hZ1ctbeFKsz8Td+/rq//bem4HURCmSLFC+gn+Pvb1K//9Q7exs2tZsr5mIw6vK47rQzJa068K6y7PCW0TJs6Pn6/S7ytd25t5/vrugqbXP0amyfE3GYka3oIKl/9XN+eLb6MniuZGTxcfY+eLpmJLBTlrcnn/PeGbVf13As2+t4cndxqnV//CvoXhtgV5m1rWoo7Dacl7OfVbVqqnw1LvkyKGqvqLg0L6r3dZp07m28MKUtpSNs4j/onnHQYffrs7x/feW2Nx4vr13y81RdWdXYz1jkYVoaEm0uob7+/T5Y6HkyrCi//9S4d5H0cRbn4plfV1waU5ilGGtuoP53KT8pXjcf0S6ZG6r1NNrenNXWEFfdV9egHRu4rK/t3zuajnblGvSjWngY2vUgZbIYlRlcGdxiHStXlJheGx2v6KwbF62YWy+iXbWomPunXzdpIK/cGd+cmOFjm3cnJLKjXd+sqi9iJflfJHrXEfPlEzu"
+      }
+    },
+    {
+      "id": "b3b-084",
+      "englishName": "Puppy-Loving Girl",
+      "canonical": "こいぬ大好きガール",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b3b/084.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "1cDK2Nru6ujhyK/SzdDY6ufX0tPQ0NPe7t3mpn7869bQ7fv7//z1+ebb7/X07vTx7u/5nz6Bknxqhue/msDq6//4+f/+8vb07vT/tD5mgn07JklPVztCV5P24cXX+e7x7fj0g2N9fVcQOF9bb2ZTaUdzbnFvlfT/8vGMQTk9YzcWQHqqtaqfb6deF1CBZ4LV9ddaExAQHxsoVvTJz/vo04VXEyh2fSsb41YbBRAREw4uprK61vis38BBMl13aycr0DMBCAAAETEgYFaf+PTNo8U3MmdPOABj68ldLm9vtW4gkgCD/vSMPYIaARQODgCc5N/XxqBrjEpFyZfd/P8qSqAxDAUIAwGv3cbE420fCkKKv+tzhay7yqpYAAoRAQAT7cXSwpNbbbn1qsWNY3PoqaPNZyheGwyf7eiT3dB9haCTlae+wrSV3v//yLb/flvjyMTE2//FRGu6gKajgnySp7uYnOT74cyvyMbo1+ruZkB8mpKCgZStm2VYdtj0xLrWxKq/69v8lUd2uTe1wpuHcjhQz/7mnu35z7na5/HyjFaHsjeCuqJyWDiv++bW4dbjrdaiscbSj1aFyVgkWrqnT07k7tbo39LP0r2ewKO7r21eUzZCZnprb2Ox49/V3cLMtaavusK9r3JJK0JOSUFnY3KGoru9u7bE08Ssr6/FqWZLT0o3SU5vfm2Tp56xnKzM2sDEscqiQk9JRk4+Ymqa0EWJo422lYqvzcTCum9FS2JTTkxWjXxltJCUn3Wbo5Ws",
+        "color": "wfGFut9059ly8fOW6Olv6/KJ7/aI/f+81vq95fK56vDC7/CQ9f9E3NmHs4dRy6NprINFx6tZxKFNzK5y5eSQ9veV8fa2+f+E/v9Cy6+msnFLsHVVjk44vI9yxp+GuI5zsY1vontXu6Bm2NeZz9I0dUg4dzMidzktqnNw6tvC9+rR+erKrpaWjGFPv45hiV5CrctKfV8vjHM1kHtJkmxlrJ2W/fngxrmumH9xiVc+i08ulnhQ7u9w2OM9rZUoo3c5zrF25ryq6L+3xaWUsYh1ZDkjWywbgmZB2uxZ49uZvp+hv5SU1dGy37a13ZWO4Ne68eO4vrCUpJKDp5Ngzd9q9OG28ercmX/J143Zwq/EwKzO16vaxJjB2s/e+PLg2N+Ort5R9d2//PbTs4DEyo7Go5S03rrc0G7FiHq+9urV8t637O55uNmHwsqJ2tet4Ye9vIXGi26TxYm/vHrCxqTA/e/M8uPI1+J609dbxMuW0d5/raepZmO4anGPi2+auIibtZaizMimzsqdx9J/lfFSyNeai6aia3vPZHvThW+uxX6Srq+cqafOtbC0uLaNqcaG"
+      }
+    },
+    {
+      "id": "b3b-085",
+      "englishName": "Wallace",
+      "canonical": "ミクリ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b3b/085.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "0dfn0M7C0enr+/787trO0d/n2tLHtsDf2eG3bmqr7f7//v7+///87dLU6ceYpMV/4a1tm4TN//z///////7+///0sJi+/7ttyJrV/OGGxv/fsH13icr//v/3lZW7nmyH6/fL5f+ycJ+XjpB/j4DZ+saDaYuPd73e6KO76ci2rYCorbuzraqMiWJtbnGDqOnolcbu3NXpyLvjkqaznKiTZVphdVWE4eXnxe7j4+Xo1r3l14mfsJStc9Hrq4jQ6enI7t/n5efp6cuJ45xcg5eLpu3NnNHs6Ny55OXp6+nR8MqU2dWmg49igMOfsuzp5arDzuzt8dmYi1OI6+zr7Jhfc4R93O7Vl7Cw5PH28LuryINTk97auX56cF2Ax697ssPO8fTu7crW7rBIAGBfSVJIgmmGiXav0vD3+Onp7PTco61SAAAAD0meu3uQcIa2uf/z8+TQppfXkmROAAAAAKbGaX2AS4+i5fr65L6tpMreclw/AAAAO69+iHNtW0uH1+v3zZuCgnani4liAxwmcYetdXNspIZww/S+0HeXsLu9iZ+/GhRcsqKnW1duV1NEUo+Ynrr7+9K7m8rVJxLH3Zyiak9iPE9ivsiogKbax7OqvcfKjlbUeKCPg3BgRla+8PHpj9Gzm5ytsrOqu35glZ6Prbd/W1+DxdXottGmnqO0r7+3gnOHuZ7CnqKkcmBmt6PsyJV9f6+9wMfIe3Gfp5rCjIC9w6SYmrThkJCLt8DIuqbLvoyrzpi7xYyixr/HwrrU",
+        "color": "W/XxVs3zisXt8vX2/vz8////+/n66Orq6urb6tncms7scNPvIOf5a8r2nsvY6fLw1/DtpNDNyuPi////8Pj2xrLTusbeVqnUg+b1n/Xz0dvYcre2Is+hCcyXI8ibo9DLh6i4gZWg1p6V89nJXObvh/rqi/nusOLYz9G6Q8maANucObWbnbbCZqe2483D/+rSnvzsr/3wk//yot7S48++zLqsW7GQQ8CbXOfqpd7d/+vWqtPIuPbt0v73fuHOcbSxoqyw/+7Yqr2nRZWeeaGo/8aysMC6T+Du0//7tvj14uXiy83PRlWPX0CFSW2Qdq+8y5KKp5OQYNrm+vritu/pvcfF8MG5n56NO0yDLQB9b3uoi8abuomBVZepqtPK+P7nyMG7k7e3rsKydsircWSkdjyzf8qdW7J1g4qVaJKihp6vX9Xuv7WvsvLtjNi7R+bho6LNpoi+ltaiRbeJYI+eU3mVqcHLtt/kq83PrMG5ZsnEVuDjkMfFdKWQi8OSrr6yWcDSYZOgpbm+6enl3K22l7KxeN7beeHfkcnCfLukuc2o0L62XcfOPtvcX8zNgeLk"
+      }
+    },
+    {
+      "id": "b4-190",
+      "englishName": "Psychic",
+      "canonical": "サイキッカー",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b4/190.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "n7TCxcjDr6yfmJuwWoKvsrKnnJ+yo62qW3V3fGRQQ2RfYoGcThleaVVPXnl2VlYtTDdcvZ9Vdo2On9LhZxZtiamKhXJYi2CGPkCJ/+Z4VkEYKnq7hiRUeZXraDus9aOFc3bM6a4tAAAAFBMcSzRUd1qctF/A66d5c4uRkUEAJCssJgAAPlp+tZeX7KGDp46Cd354awAeOh4zYlFBhc3cyNzq/v7Sp2dWVoKyPAA3NC98q6yngTCFrNzz7MeEkZhdbXOPJQAhPluwta6syDx+wqvY2HC4lIyIeIGBIgA0PmOwqsjUym2Tu7j/p3Xq7Liqi2h+PQB3RlDu5v3mnEpFhZSqjZ+4///7d7aif1smN02s1fL7tUVdIjQ2yvTAtda1bcSbstyIUDi1//fpiZhcIkMeYumna0VDjY+CZUlLSCtdmK2IiLJLAyg0X2pdSnGTiY2ur14jH1pLCxyFm69xDiZNdXJtc7vZipik3NqLSW1VQpeYk8jjQxliesSn6PjCipaep6eVi2tujZ+f1/v/32hdrsib3L10fWhPQGqMjnmIt8je//7+//Sl6Hd6ioqBRVZbVl13m5iq4sfg1NTM0r6f0paAioyVNXB5YmhlsLC06d/avq+G0Z5yt+KGSYaeJVleXWhrjp6yu6vH2sSiy9mnzNiCDVl+Wl0kMytSiMHXyK/1/8elp8Wn5a6kVDlxUIBSVlZ2kszlypt+zMS9r6m0yJGhp2Y7jXpmXoCGuMTc46tYUoBza4KqvtXHmHRL",
+        "color": "xkzU+krnzFztw1nj4E/i4HDjhE+fu23YtVnk0ET0yErwj1/bnAZM0pbM2GrroQSbmSyY4ZPgckKVoSC21nLUuBPo0l343TPoxlqL26Xqf0yFFyI2GC5GISZFYWJ+rmbK0InP05DW8pzn7l7Kv0n3sznDHxxEQEFqkmyBpHaEm4CKz7S07+LZ+uTmspPNeGuf7gr/hySaFSY1a1+J56mr+cnHmYiSt4mh9trj62jmw63tob3l5Df+xDfXYk5oZF9+19fa//z0ooSmaV1/gnSS7pLu/tD519Hx6VX54XbhnWGlUztur6i008jHmJLMOUdhQCNcu3jCuSrwoCDx/UD/9Zv3pXGwkDKaZzt/TnOjmMLufXSPcxiExGu01IHI/Kn/5yziyEfM+kn5yFXgipbassf18fX99PX1wZjFxqe85pbn/Dj/oi1go0RfrkuKxpDPw8zb4+Lfz83OxsfOtrvPw766l2Wl10fpaU1lkzRbqTFQ7ILA47juzMze293cxLm4y7u/4MrFj2aLh0O0e4mnhU5rx0Jn6qnV6t3tro+yrJm5rY+wwqauycXEyqLFmU6h"
+      }
+    },
+    {
+      "id": "b4-191",
+      "englishName": "Drayden",
+      "canonical": "シャガ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b4/191.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "trV9ibKhlKqblpSlr56XytPSnZ6qwNjWVT5sKhUhEEkvK0myWzt8jYDOqmWOn7l+JS4+RFVHSYBiK2ObSH2MdWx24ZhphKp8HC5ETC8sZNPteLybh3x0h5ubsNqNdnJIHSQdTzQxPJbQytFSP3jH5unr1PG0YgkoJxU4gjpRVUJBVz8iKJTE1d7dtbpoOjiwIRkbKBo9V0EAR1kmQqOjurqynV99sptmHBscHx8kNzI5pYFxVajDx6y0nojN/99TbScdIiAaQIC/hHfaYL//tn+OhlVLzo5HV1IZICZ0suPu84UoVdT+2ICAXwAZa09yAxETESu5+9Tt8O06CaDjp2VydT3HbL6jFgAAFoG3y+3H7/KCAXHt46qdjUSUneF9X1Jiruvfuvnk7/uyKJvi1H9KjZMAUIUAab7y7uPdwujf//e/LLLotjZB3tUvrLBgYJ3d3vLVlo2Y0u7NMqr49YeU+b9V3ajYJXibnrWjj3d5ca/ISLD93rK246Nm5ruKEFWabF93YDd1hoZ3NrL4tKy/2IqI8/fEBZpWAIlyHxeM2I1jAG+bUmaAf0Z57/Hwh+MWUrA8JBVj+M5fCW5/SXSAOhyK3u39dDRS8qcAMThX9f93AHx8SIF3GUWQ1P6sMmnHzblrbZOS39yKUYmJfpKKTIKeoaOCfmKB0uO0TFWa06+hvoiUiZCKa6Ogh7bkPDtTk51jNHWsoXF4abe0o6V1d19Tn9PmHV1rcnJkaZSnl0ZxeMLHpoAcOSlTgdPj",
+        "color": "moqzgnigfHGhfXihd3CNopOghJWrmaK5vcbPnqXNmazsrcjtQTdlVkmLSjpvjYWVo5WjZZmqb4SllY2grJ6mwMLUpofdfG6xPi5eZFZkXVNph3CSiaW0M3eVdHCA6NHD9dnH1tLQfnyUdlVLRDFeQzdWUj1uUUF0SlprZW2GiYem08i7yb+2pJaezLq+tp2dcVVsOylbTEJroqSs0dHTjIiVpKK04OTqlJGqdGFie4mSZpS1LyVILiFMpZem7e7w9v7/n5mvbmKA2eHjmZujcGl7eo+RkKO3mnl/0r679N7N2NPU9/7/0snUlnucytvUUoV0p6W2gHSWnoFsknh68tDI3MbBm5yvoau/wLrMtJO04uzol8GvzsjQt6bDysmnYGRjlWRPiXRxQ1Jdk5yrgoGhhnCTo7S7ja+vi4yfwrjK6PT8nXhZbJOKZoZ/KTI4wMjHsa3AVkpza4KTa32RQ0djt73P6uXmUGx2m87WprW5b3J1vcHIxsC7ko2Tlp2slZijiYuXr6qx0LKvSlaNmIOXjZCPfH+Eq6m4hH2Dsa+wvcDLf3yOXmBljImK8NzQ"
+      }
+    },
+    {
+      "id": "b4-192",
+      "englishName": "Skyla",
+      "canonical": "フウロ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b4/192.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "xMbk7+iXbqLQr6y7wKeqwMTGtsbQ1dbhis/mpYdOUEZ+sqJnWk5POWnI0+f4+f7nm7uBhZVYVlhb3Zd+fkdrr8S5zMym7f/mwsbA8s2aWEc5ZrXnv1BWj5VlVU51r+v43eOqntj72HwqNrrjmEpVU1JQQUZ2Usrt0INnQn3Y37FrtoZgX4VeQEEzQGaQcaa+vlhEUiRjdlu579CHVY2qWyNLTzROb2d9qps5JyI+d1txioKjnF89Y26ttbJzM1VgfS8vFxEuaTc4M0UlssWCknycrOvNUCRn32AfFhMWAzu2YGV8udXGtKPWwKbSgCBlm0AjFBEQE2eeZ3W/v3V4o8/vyNX2ozZmoJBSExETF1Zg1sBSj4J9l+jd4ej/v0luv/+yGhEQKGZXl9AlN4BXv+ff49/vcluf0NKDFBQUgZVMVV0ZF5Wm09eY07GKRJTrnHpTEQw7m3pMSy4BCK/QjGuSinWNfuH8o5BjGBhmbafSQh4AAHjnzUQ9a3zP7/bqmtOsX3GfoPjeW0sAAB+TxoIMbrLq6+r0gteeaq+00v/kanc8AABgbiMKvsilttfkipV3qs+Vv+HTa0IkRIZCAABMm1dputrdoHag/9iBnMicDgAKJMR9EReSgoWHktvelLXn/O7G0pg7aqO/vXEAWmt9nK16XoO26sCnwMW9lV2XwLaircJpXoaGtIl9goXA9La+vq+XQIWnmJygtMnGTnxjW2qeoKDVubKlvoZCOSOAwrm0wLvScpAzADmCgZTh",
+        "color": "i9Ptke/+v5Gx6l1+pdDcjr/db6XjbaX5pM74ze3y8fDw4vDxY9r8MeP/d63K9zRis26Tj9rusnCguG6qeML/Zavtgs7z3fz/ZOP4LbDipuTvtsTYiI2wsMTU5HWN805mtzxsYlWXIJ31sdX+X7fhP2WrPXS6PKTikrrVz6Ce34F8pIV/p3CHq5SzZYHCM430aKTPNE6YNk2iN3vAtWKKqnJ83Mej0a+Rfs/Te/L/mKbCXFukbLvdO2SnLT+dYVqlxqzAr7m11aCFxqyerfT2r/v/59Lam2OXg+7+Xoa+JUWmhXqx7WWDbn6tWX+pr8jMteD5mu7/1Iykw5u8Msn7O260UF+tfsDhpIScRyBdSneutujuXZXMHab5tL7S3/LzU8/7M7Dmd6zkvO/8o9fmSlB6MjZmhqjMN2amEb3ya/P/tfv9Gbb8eNj+dtn9b+T/faC9VFaFg4+zX1+HRmGPK7b/OK/8sev7jNnzy+jqsubugLvLqJuX0LGY3LOZZn2mfqfNjcfhIqXrXsv0luLtk9LciqW3aXScrcHExMzD7dKvxremZYy6WHa2KbXtQ9/7"
+      }
+    },
+    {
+      "id": "b4-193",
+      "englishName": "Wally",
+      "canonical": "ミツル",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b4/193.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "p6e9vs3O2daddHmRm5iPeamnj5qiucfQYklsppuwcXYAAABFhZFZG6vCmoPQ1+6MQGaTx7YwITgAI1N6q5OMPK3CwH2G0K+PjNb6/8lqxCoASJOWm4yUequRQzCyvW9v+PSK0pi58kEYZVlVdq29sLKBPIzQfltJ1kxXxW82SQ4MWTttsLS5uba9wpR0cn3QUVeigFcAFAAAAChesrB9iq+twKBqn36norBWYjYMFgA+hSEocWggRY2frYp0ln2A3Yg4YEMgGj7g3kk1ryMgZmWYp4pWhZqMpGU6ak4AXdb76IZt8HG04k9ysGKBraCgel6RljpqbF7o/15A0O321ysgPGyfu7SFgaafgeiMF3b97kEEn/a5uYNxZqTX0oYcgbSWlLl0YLe5jHGibZ2FoL7Nvd7NfTpFvYqgt8eriIbArYamYDimzrew6f/XSV2viHGAgau9po2kt2Z+ubCNmprNvtuReub7d32Ag4CFgY+WcZ369Nuaq9Kng5Sv/f/wdoPQU0h9ioWDYr7w7sWwxbKPiOn7pq2IqdDCG3JiU2x+dEtxoH6genGt+q1BJUkrx/rd0LtDGiiBgXm5coBxMjCmVhY2XkZirbT/+qsgK0jAvr7ClrBsVZ2BT5Owg3p6fp/m4mYWGkC0ua2btsd5m4hviMWdVkxIx4Nmj1s2S1t5m5N5kaB5emBtn5OMYFVod0VxgZiGS1dmjJOAfYpvXWOalHpxT0+2eYWFflldWV1ldK/Ad3KWraaBcnJRYm20",
+        "color": "w6jD4r3i9Mfx4LTcn4W0sZS5t8zHmaeul+JxsdGw0N3x0+Hs26ra/Nv4277eo4bAY2mDgLiLktSNibt8ht5gb71o2c75sbjW3dPp0Mzar8nRkpzEYoOaQ8BBZ+VZmfRuiOBfk8WCrr/WpbeyqrnDsabJbIOyPmOjY4ekNqYjUMtZdqlldexmfONskb20pMrDmc7AhprHYIOzi6Sh7uu8t62WvbS0vaewYMBcSc5UaMvAZ9jkbsPAo8nSirXDkLKW3ffAg6KR99rH/+blf6WQVL+Aa/LrR73VotHWs87stdbmpL/BvNvckrm/rq+q0cawsOTTzPv6d9PTaaetZ8DLprrnssb1s8jzsb/i3s/J39/Wyc2+w93DleTPv+TF9fnjjNrXgcC/haG/k7LgoKnP0sXF59jQscm+dtLFrNrFwrutfbSu9d7b0v76LLi8Joyiscrtrs7vwsDGbayxfLi9k66xf6araqK5VM/NvdTjP6S8ZZKxu8/us8zlxM7Ul7jRgbLJgdXYcsDTSabNdbrSqLDIpazOkp7Loa7NvMfSqre7a8PLXsnMV8fCKazEY8ra"
+      }
+    },
+    {
+      "id": "b4a-085",
+      "englishName": "Team Rocket's Researcher",
+      "canonical": "ロケット団の研究員",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b4a/085.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "pqettsS5rLqLq8S2q42Qr729qKiqxd3gHQ4jVTdTboRxipCKfzYAQlesqniX8P/FHWMxaniTmJOXlI95eE1LeBfIwIKHy9R9SffAgZaSkJKPk3JodUKATRW0vptdVWlpnteqlJKSkpKSk3hjZzt4ADyDvpdoU056nWOQj5CTj5KCm3xgZWJVAFVgoLJ2YktxTGqmlJqgrJt2hHdfYlkiAV1OgcS6d05eUXmdlJObnpR9iHVcVUIQRl1VXaLJjV1gaGKJm6yvq4iQi3aGLygoACRbACrcs5dnJw5wrq96hq29h4avMVCHNgBVAAG9r5tlKAB6uLWqhNjV2MdsMZKDAB9JMBdzs8BsST6QoMvb19TE3stQXV5TO0AQSESdmJSYTceJbbHR3NTA0KJigWJtk4hYakWCx4+NW1+YfNyirrS+s52OdniYcV5EvkWPz5OKToaHtt2Am73KzYaNqKPIdXZTHTm0npiSnaKK0qWOid/b3at5m9jasnULAGeIeXqOhG6f0c7kn83e5qM7m//Nr5IDTJB9jYqJGmzA99vWrNrLdTYhT+rum+i4n5SWtatgQ5Tl6/urhr2LHCQxOIT9pcH3qHnFvaorcl3/9te925iJcCtAOivHurrekIbsupdGHGff5bK647OBlmdPWUF/s6PEf4/UsYYQS0/E2MK2zsLEvnFMWFFho3+Jzqu7vlkTSEzAysDKyMXNfFhZX1NJk7p2X53coFBYUJSs0KPH3Me7Y1ZbXlxRjsKNFx1qREVP",
+        "color": "imVYqHJ3z3iEy5aeyJac6qSst3qAoFtw3pmh34+h6r3Y8+Xgkm5puXh83ml17HyI736K4Gh4qlVvhTRupHl9/5GW2F9s3XJu2aGK8pWh8oSQ7oSP7X6L0V9xulaEcTNnsjgw9qKiuz06zCAgwlhE7IWR7JKb7Y6ZzXaBvmV1nkJpVik2vhQS1YWF+ZCQzikooCYO1IWMyKypyJqcvKKioZOVg0dSb0ctayMiSjw747W21W9sgy0muJSG0MO/1se7797Jupabrllkolc/bzIoaUM/qKGfwp6Yu15S0I2O3sKd4cu73Mezs5Kjqm6Mym6Aqm9qjXBmvKmnt6Gey3eF5aSNuLSjxbCu89vDt6Ciu8DTzr++iUMiaTtAzo2orpiXs2dZ28yy1Nnl1sW72ca5Zlh8urrO4uDmk5STtG2O1pG7ko6aulIr9vb72Nvey7y1g3aROjZ6a2eayMnP3dvi6Iu62sffiXuHflRe1dfXzM3Py8zNs7C6e3iWYFuClZWjs6+0v628ydXbfk9cll5wxMTDx8jJ0tTTp6eyb22JbWmNioqfoZ2fhGJkrHp9rTg9"
+      }
+    },
+    {
+      "id": "b4a-086",
+      "englishName": "Team Rocket's Master Plan",
+      "canonical": "ロケット団の大作戦",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b4a/086.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "o6O8xdDCr7Kuv9jex7S/wMXAubKoqb/HGB04d3yLZUA+kvb/qHCWbnNva4CXd3dBBwAlgoijroBisvf/vrutf29mX2CBhG9SIBuM5K2Hc5CBn/v/vNDIsJFsZ2VWb1MqgWdiuMKYYXKJkOT7W2vEyrSUmYRocj8AUh8fX1pJPl1+raO4Wg6GjK/J0rqfpm55Eh5HLDEuGyRjkritiQVLa22Mn9TUyeCXYVM/PksvFQs8drDIgDIXbVVzGRmvtphod2psg5+FQjePcm1WN1EAVG1nQQAkACRGZmuMn8DVr6z3iAcDIEYyLSgYi1pWZ3h1OZ+TvZvl1cm5Qg0hMzJCKhV+68m0en1wXXKHm8LMsqdBADVMOTo4PUSB3NGfWHjhFIGwL6uQd0MFRmYvOj0+LyEmTGiok4fYQU1iJiceGQkcbDs7R0IvGBcYNn+rpqCWKyU1MUMlDQ4pOjtDTD0dBw0jLhtWqrSOIUZgbIA6FBlVXCgtNiUAGyYaFQNggqXRQ2JGaVYoHDvY31tNT2NJIzEvHUiSm4J4Kjs0ODEmGxl2fx2YvNflq4NyLWinsoJgPUo3OzcXGAAADhxcotj97sd4Nau0spZmaj0zMy8/XDwAWHlIK0iJvq41lsW2tJ9LYWxPaJ+0i3FaZUlfZTc6bYBqeajFq48hXGKArn1abpFZQE1nYFtZaVxjVEdyiI8oLFyAYlxbX5tSO0xwOUNUc0dWa0tOhaCAoHV6WmFiYXBeaFFNVmNWVjkxSk+Vwn9U",
+        "color": "e1lkmoSOvau0t2x81nJx8e3d7ZKC3nx423Fx03p4wpybqpGNPQYhnHSJsqi2j3KH2WdW//PP67Cj9I2Nzjc4xgkJyDQ4azQ9iS1sjGZ8g4WNY2Vwp5ie5sGjhV1W54KE4Kio8pSU7lpdl0o2kQ8aVDI2OT4+IRwfcXCEzLjPcUFEhBUU6zQ0gHZ20bCyyIV0tkZBgY94v6OkfYxyb6JhREdRVjc/VSgtfSwoZz88WEJFij5DWXNWk7Gb68vLpd6lR2tEKyctRj9DQTs/Y1xY4dDOsH+Ovn+IhTFGdVlmZ1xoND41NDA5VlZZTExOOTk6MC4vd2lmpKCvra67ax8kjz81ZjMrHSEjYF1dRUZHNzY5FBQVHCEhOh0cnnB/r6/AWjs4f09ITzgzMTIxm42MY11cop+SlpCMZFdbcCxYupCujIiWakpIMD5DREdJRSwuJSctQVxzlouN5dLMpoKKmYWgyczlgHB+mUE2gn6Ejo2UjoOFV11iYGZpTk1PYWJkc3BwfHuAoqGwcmVwkGtuent/ZGRkenx8YmJiXVxdYmFjaGZnWVNVWF5gq4R0yVNk"
+      }
+    },
+    {
+      "id": "b4a-087",
+      "englishName": "Team Rocket's Boss",
+      "canonical": "ロケット団のボス",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b4a/087.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "sLO+zcm/tLuzpKSnYixZo5BEhZ6YqsS+XGmskHJjX3ZbhFpol6/Ry8rCPixQVI1lkp67m4Fudnl1lnG81Levp47UcSg3ZYZj7q+bp4xrW1yJfZ6fnrunn7bomyJtokAx7oOFrpVtcFlnxcGVmczJxMTczYOwpjUkwWBxl6qhel1nehmMwry2prvQ57FFOzt2clhlh6qnjHBgJAB5yJuhusXFnEseOCxSeWVyJGvAo4VUkCUr0MrIyLa6TQAjDhIfEB9LSk28t8Sq8X4JaZeLgpPEdQkZXko2RhokpcRxc7O84G4ANaS6zt3xvg6R/7tuhnuCuv+fAEW112NWtNvc1rqlf2m6/8FrMlxgRrWUVXWXdo7s49u+kGpWYHOMp3pIIlYBKrZPLkI+ZdDNxYE9bopWaGpMTkA9ZRwDYpwlIyIZouKfQB1PlIKbfSskG1VAKDMzjFUdKSIuzZgeJEeRu6OtwItUIkUpVMeEXUEjJxhKmBsoU0x2h196rK+zZyUWH3GBKjwoJR02KxUiLzRoZ1RfmKzCwnc0AE5zNB8mJSQjFCRqfmpeWltjf4SGplZEQVw8MhsSKCYlJY6znmNaWVhUen59mzElLB8AHiQDGCAiIEBbMQAOGAMYHx9trE8AFCU+UD01Qjo8SEOMVBsyTCxEQDNmm4wcIztYS0JGWzxCa16CUig8Q0leZ2BogJRtY2pYWz1ESV0+PV5bRjxCO11VXEhek3mRkI5IQE5PUFpCSlVTABASJncpAAAYZz1L",
+        "color": "03Nl5qar3XyH1Hl/32JjvHpzj4Z+u5+RqpqLemh0mnG+q5PI8ZKB94SG1Dw9wiAh60U7zYx92MGwz7Gj4cizcmFerzt2ryRB246H91la1pOT2RUWtU5OlI2I17Wk1bSj7dC61rijtlhQnCUGtC4spC0u1pCP8nFxg0E5VkZF1bWn06ua2bmlf1pOSgAAbyELbCMilktFrpaXz5OG7M93NU5gkHGA0rmw39DKbVRRk3NzuWJguCQY2VxEz6KLf0Qru5tgk5md19DTwsDCm5aXi3p018K9zXVuYyUUdyYcm2xQPjIxdm5x19HSenp5e3FumYmBd2hhRz05VUZFm0VHrFRPTE1JJiIhfHl6WldYXxcYsYR6uJaKxKOWeG5qPzs7gkU2emJUNTMyPTYyOTQzTEBAl1NRl2BWkGFZxpeKyq6jYlpXSTYrOTU0LSgoMSonMi0ql3p0eF1XTDYzUz04ZEpGqYF2VEZCOzc4WldYT01MU1BPV1NRdnFxTklKQUJCVVZUW1tcnYmDjHZ0fXp7Y2FhWFZVZ2RkW1VXaGVkPzc3TUJBamF2RyswclVTq1lX"
+      }
+    },
+    {
+      "id": "b4b-421",
+      "englishName": "Iris",
+      "canonical": "アイリス",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b4b/421.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "trfA1NbVxde7qamytK+yxLKqpJ6lxNfKaFplXW1pZZ9fXHGFeHFoZFVNTD9z1cxMXmmEk9StZlpfWGmEhJOJxc11UlRIaZ9JarT82MK7YlJTSTORtXen5NxXT0w0JEpizfPom0VcTkdOPS5twp+tvZ+dZUgvIi085J5yWz5CREJfQDcvr96YlNTtljllJgY0hYk1NTc0NTo0LjEllueCPVqcrS1HGAQSeIp+RSAUGSgsKhw1mm9CQTQ6aRwAAAA+aUByaghIPxRHShkxOkJbSDkuMhYEPjuUTUxaX2S2tjE1MxsGKHdvIi4tVzRAWpr0YV2FwsbAWgAPBgYALYZ/Oz1KaluHWMj0c2W9zczqxDwACggMNX5lfYRhUpfLnLavb23N0NXj3cg5AAI8TFZKmoZAcL7cwq98umK929XX0uLnawYXP293iodplunRorW3xJaizdDW3uz//9twIEl8dnBymncmlvb4haDS/OJfTluK1f/dakFEWnpQDxUnkf/ogrfs1O5lGxwGD6rfnndlXDIAGkKEu+iDgNK+oLJ2XGmNkcLLtpqLfA4gKlLc/8d+vt22uVyMd4XK1dfCq7BzMQACAA6E47ul2aPYhmmipZSyx8TBpH9HABISFA81gIBrk67Gj5quqIZ5hnZ+d2p8XUBOX41NV3VTu6Ojlpelr4lwa3WTcXV8cXBtcHBQQXODfnOXjZajn6WGfIKcgJuap7CLLh9GPZG1aouKioqAhX9+cHKXpa2y1Xg7PRcgaH2M",
+        "color": "rJphx5120a2DvLaaxpOE245Z241t7X97sJiYjIqJssDKsb/LopVQ2MKZwbZjgXZ4eVaAmH5l3oBM/5elqqCyZFR/cGOIjnRd5dh7q6mceGt/d2Z/almKYmCG57985rGb3clnmn9wTkR4U0ZZupNGaGFhQjV3VER0XU9xWkdsxqFbe213lHtqhG5jMi1oPjRWlmdTq2JdhnNtZmJvUkiBQDdteV5teGB1TkVyWEhrU0NUqrBoul1b5qib9+S0hHmGIBVTMCVYimhko39pgWZhn3xw0qOT5sJ0yYpp5cag+eWu/emqiYGESTZQh2BYwY15uYBn0bKQ7NCc9aEz0ac16N2O0MqiqZ+J3t26y8G1iF1brG1ep3ZrcGJ4i35h//Zi8p02/9xCw5lYgzhqjGto6NO036GerHFkRjJVRz9t0s7P2sN63NY8yrVc1nSD6JCY6cie5cih3KWfelpsMSpSQztep6SYsKdQn8R9v6uY2qKz16OtwXeFwIeOwnOAn3CBdnaLjHhsaWd1o35QxoBPup5euJ6N0o+dwHWCuY2aw6Gxyb62k5GiTEVkX19zwp1m"
+      }
+    },
+    {
+      "id": "b4b-422",
+      "englishName": "Elesa",
+      "canonical": "カミツレ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b4b/422.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "xNHK2fb03MKrpJyrtKqq2czGvsjSu7rMorSgo6qyx7V4fn2YnoVheniderf846hynZp9tXxUg6WFooQ+LEFom8KijK/u/O+klKji/8hvT1CgcggSBgASasW3gKr17aV22//b9LCDaMaoADYYAh0RGpiHXqPX89yj+dK+x4ue2+98ADlQFEImEUxpopzG//71m9nSrZrE6faGBgAAGXIEBlybxomk6tHIstGtx9CyqMF2bUIufVYAFbKosrKaqMTF7sDH9enIq61VtN/8ynNaSNyru8rW0Lm33cfY7e/Vvpw2vfzq5uJTYqS5y+Pv78a3vtnVztzOwqdQXt3q37ZClr3E5O7u78LArcbM0tbBxZ5yc5adoKJaqKnY7u3t7rSum83sy7bOvptlhY1/mpZmwJfn8O7t352t6OrjzLLIp3WrzLC+1p+C0M7q7e3j0tnS7+3v79Gktbrk2Nnw7p6el+n58+Su2f7X7+/u8+a7ruzyttbo5rueh5iUjbai7sS37+/q6ujChczUvs3FyLSWy1gAAFanx8XK7+rm6eN/KsDGq77MrmmU0rtTAAAUeadY7ufq31oAOZ7Urb7KcWmKtLrGgCI6eFUX7/L0sgYAaXGyvsCLdYmQyuPMy7rX5MK76sLMliU7d32DtJh2kIOMttDFsLW+sKe+5r27jCVwxbubmKO2yrKFrcjCy8zLxMXY27myiV6upJjEtbK0vsyvrbK9wMC6xcfwwKWpgmulhoOysOLQ0NHGq6De8+/v7vDu",
+        "color": "vL/RusTI0NXHzNDVn6nGpLDKmq7Wma7it7nSucTD4+XVvrXqnKvpwtLxgJbUjm2ehKK+VVhuOTxXYHWks7bvoKe+//uzuqra4ujTx+ngfq7mysLUaWx7ODBLRTxRRT5MXYqtdqvL5Ora4eDUodLhp9C1s8il0OfqcneIRkZXaGZyPjhNdqa2isPQo8PN0d7IxOO46OWm9euZpa2Jlpqf//jxycbKb3aCwMaX4tt44+etmM7cn8/R6N6o5dvOx7iBjIRi1sG7vL+ckJNn1s5p9vOi//abls7H096r6eON08uMq7KOsqmS1q+WYbWkm6it9uig//6n4OWnmdTi/Pik+fWm3NR5zsyS5+K09OyqzN6ktampx8GQ0suH0OLF6uyu9fKi//moxcF5r61j4dh33tRrnbaIur2QeXJPKidBl5Jqrahe/Pim5+GSRz9NW3t2z858u76ESoyps7xm6eJ0mJVYo6Btl5Vt7Oimsa6HZGBkoKujqa+kq62quqqdwbRx2NGf1tOQ2NSR29aF086Bo6F9m5qAt7SSvry6zdDT09XVnsC7ucmf6eSo4d6k8O2r"
+      }
+    },
+    {
+      "id": "b4b-423",
+      "englishName": "Arven",
+      "canonical": "ペパー",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b4b/423.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "z8nb4+Dr49K+kjlHTZvN29jKvra1wMnY0srPzN3grJGVfomhnpSmucrU1Nrb4OPA2MPR6+67lIWsp6qq1LJmmrChlqO1zd3NuN79+c2jgqS2kqantaZgfqyaioCKp5uy4//8z5GnSIKfdox5dnddOqfKwMPMzdrJ+dvb4rCdS0WPnnUxRyxERX6nyuvl3sr948zY0rCVgy9ZlF1HmFVNUm2ayuDj+dXv5tXMzbV8akUpedS5u2BJYHenzNfp/d2968PHxL25VjIKbtGewDpNbJrN4+7x/dGf4KzEzb6vkT5EdWlskheMcnXXtW1gbW223abUzLjUw0Rpj4msPhiCd5TdKwAAAAiU4sfbrdG2bXJLaXNBJC5MdXY1MayytbakyuaytdtPkmYxUksnGyNBU0duduba6eji2NfJ5b43egAPVVAvKRdZnuD2uJrMz97dvbnt+bZbRACfXCkYCES13uPd3qTK2NrXmKba1dV2FwqsV7kkAKza4N7g3qOhub62pJbNwOhNAABTeXcANYzJ2Nfoypq71OjXvrO528w1ACNigEcNgnK9qqPapIrR4+bJ1czKzN2UAD1gilVCUICed3zXnozR5em725rR1NLFS0BQlVORwaqdgnbApIW1zNW4yZGzwJRWaJWRpo6YpoZ/dX+pnp+wpqmhz5Kfpm1Cfp2VjJuKhV9lgKqqgH6YhYmh13Bic1csVWZfXUFgm59WfpSCKx9NY6bo4sqpjFkGK2VLcpitqaNHf7LJhkQvPkez",
+        "color": "7t2b1u2W2vis1Nq0xbmvq5uOtrWpuOKsuOqur+apru7Bt/DN0+t74/2wyN+QwLWkzr6t2cq41cq9tKaV4byn0rGR18uowtyO4Pu33veoxb2ZppeSyrSgrZiLoYyFlYZ1yMhV5+Bs6NyQ9OHLxvlv3OdR4MF6kIKCo5CB0Lidu52Qi4RUsro97/NP//+t9OrUzetk69pa/89NnItlnoN79MSltpiJm5V21thU0NNQtLpt1rt/yOp379lK+Ndatax9qpSUuZWGgG5rppmGpqtXh4lYipF3u6h4x/J/5eZ/yriFi3+GgXqIjHV8a2JgmpmJqLvSxdCA+PtR8/Rs38hl4viwtrmvWmRtspSQhXR+d3xa2OvN4fz/yNm/0tVU3+Rn7L543+bDlLLGJk6E0JGBYXeSiphjztvZyuD8us255OdV6Ote1N+1z+T1udDib2+H1Yt4fp2/wLakxamXuLvOt8iY5udK2N9Ux8rLssTbwZSK1JuBzLGhw7Gmz62bvpuPtLzJrLOBwL94w9CFtt6in7WohXN4loCCqZmbv6qd1rGYwJKJwMrUjpCPen+Exb2f"
+      }
+    },
+    {
+      "id": "b4b-424",
+      "englishName": "Copycat",
+      "canonical": "モノマネむすめ",
+      "image": "https://raw.githubusercontent.com/PocketDecks/pokemon-tcg-pocket-cards/refs/heads/main/images/png/cards/b4b/424.png",
+      "fingerprint": {
+        "version": 1,
+        "gray": "vrKozu3t6Ne8t8TKJgCG7dfIyMDEytrfp4t1nufq+c3Q1+3/xAAAtIGt5OXAhWeXp9Ca5fvLx9OJa93n1hEAAAtzg+hxUFA+tvOyi+X/ysh1lZ5+mF4AAEZeTZOOubdBvLRYg4PrxcWt0eBhQr+MeFBxUTeY069e/3c3bx5deXVvmvHWk9TRfVVpSkqmmozN3SYdKFg8I0FvZNOhvOpvIlpebnm2xJyj0HgdHrZzLBs/2I4suctVCwIbZHvQ6oGy1/G2OS87MjIXWq+yvonCuy5+nIvt2Iy83N/Kq0wAIjU2HSyJj7Cvyr7+0K/lwKTWwnWmqmhRUA8xIl+ylNSvN3f06+L8kYWnx0VXcn+JpnkoGFAoYoUrJTdog9ihM0obg0VOKX2Fr/+7IUUvNSYuLjMzKV8zJzIbUVeOfVCDsNiVJVw2LDMxISE1KyMvPyIffdjkwi95d5ExHiMvMTIsH1AhLDYnRXWw1qReg2xVqol9gk0oLj5OK/R/Jysmfvf32NZsbnM2QmL07ud/JTcjV//3hhhBb4XX6+KTVJNiEn376rnLfywZZcBzPjZYMhFv1Mpna0UnM0l512EATTMaaEEhUWubeC+GzaO2nqEAJXg8NVE7ADkXjLZoZ6TNsiyMwLK+zZw73PffsFAxNTMYmM6rMqvnvEZMv5Sqe0mRza+oxLaBPDs/gbCIc5NyjGco3MSIK6jAu7S3u7+/JwZcr6StlFVCo12Y+VQ2v8q/t63Auc2hIwJd16inVyYsibfU",
+        "color": "07/Ex8rF6vP44Ork2tmD/vJxeXRNiJSi0dTp9t/uzsbBqci56M3E1M7A9fjo5eGcp8F24dmTn551Jjo6UItspru5q7qtaZds4MGsyWtm2ZF4tMGIz8Omzsi8vrunr7WYNqhcQphlycO7ysO81qaewi0j6FtWlU1Al66X57ah+c27aJR8H39MgKmX2NPXz8K53ezz37R5vk862BsRvkg6wqKZ5ci9ssLCo76+x9Xd4uTh3c/BbMmwhq56o51tqoBmzTMspHh3v7Gv2mdg7I2J5+Tk2Kabw3NmZKZ2ZqB0gqiXuOzhuXZxuUM8zDIoziIWzRwPyEY61jUquyskn9LUzrygkpaQo7K6w3No2Twy3SoexlFIyo6N1Ckj1lBJ3tPWu/D1kqKphIqjmnyC8vn91cXE0zwxwFlVk+XeZIJke3pXr6ieydnlrcHGk3FtsWpJ1peBmHR5wTUruWNeVaWQhqWCr7yVXpV10tHJyMWxpKJ24tuB4clyxY1iuT0zqoKBrszTva2j0Me/TpmCzc2JnZt529WL2tOL3dyS1taMZGdjirG0yM3FwXBftXxshtHU"
+      }
+    }
+  ]
+}
