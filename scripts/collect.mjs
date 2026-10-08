@@ -18,11 +18,14 @@ const imageOcr = await createTradeImageOcr({
   maxImagesPerPost: historyConfig.imageOcrMaxImagesPerPost ?? 4,
   maxNewImagesPerRun: historyConfig.imageOcrMaxNewImagesPerRun ?? 200,
   maxCandidatePasses: historyConfig.imageOcrMaxCandidatePasses ?? 8,
+  gameWithPassesPerCard: historyConfig.imageOcrGameWithPassesPerCard ?? 5,
+  gameWithBadgePasses: historyConfig.imageOcrGameWithBadgePasses ?? 3,
+  requireVerifiedStar2: historyConfig.imageOcrRequireVerifiedStar2 ?? true,
   upscaleMinWidth: historyConfig.imageOcrUpscaleMinWidth ?? 1800,
   upscaleMaxWidth: historyConfig.imageOcrUpscaleMaxWidth ?? 3200,
   timeoutMs: historyConfig.imageOcrTimeoutMs ?? 30_000,
   cacheHours: historyConfig.imageOcrCacheHours ?? 720,
-  cacheVersion: historyConfig.imageOcrCacheVersion ?? 4
+  cacheVersion: historyConfig.imageOcrCacheVersion ?? 7
 });
 
 const recentSince = new Date(now.getTime() - 24 * 3600_000);
@@ -50,11 +53,9 @@ for (let i = 0; i < queryConfig.queries.length; i++) {
     const message = String(err?.message ?? err);
     errors.push({ mode: 'recent', query, message });
     console.error(`[recent error] ${query}: ${message}`);
-    // Respect Yahoo's rate-limit/access-block signals immediately.
     if (message.includes('ACCESS_BLOCKED')) break;
   }
 
-  // Keep separate searches well apart too. The final query needs no wait.
   if (i < queryConfig.queries.length - 1 && queryThrottleMs > 0) {
     console.log(`[gentle] waiting ${Math.round(queryThrottleMs / 1000)}s before next Yahoo search`);
     await sleep(queryThrottleMs);
@@ -98,4 +99,4 @@ await writeJson(paths.state, {
   lastRunDiscovered: discovered.length,
   lastRunErrors: errors
 });
-console.log(`stored=${posts.length} ocrNew=${ocrStats.newImages} ocrPosts=${ocrStats.postsFromImages}`);
+console.log(`stored=${posts.length} ocrNew=${ocrStats.newImages} ocrPosts=${ocrStats.postsFromImages} gameWithCells=${ocrStats.gameWithCells ?? 0} gameWithMatched=${ocrStats.gameWithMatchedCells ?? 0}`);

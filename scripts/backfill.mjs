@@ -15,11 +15,14 @@ const imageOcr = await createTradeImageOcr({
   maxImagesPerPost: historyConfig.imageOcrMaxImagesPerPost ?? 4,
   maxNewImagesPerRun: historyConfig.imageOcrMaxNewImagesPerRun ?? 200,
   maxCandidatePasses: historyConfig.imageOcrMaxCandidatePasses ?? 10,
-  upscaleMinWidth: historyConfig.imageOcrUpscaleMinWidth ?? 1500,
-  upscaleMaxWidth: historyConfig.imageOcrUpscaleMaxWidth ?? 2600,
+  gameWithPassesPerCard: historyConfig.imageOcrGameWithPassesPerCard ?? 5,
+  gameWithBadgePasses: historyConfig.imageOcrGameWithBadgePasses ?? 3,
+  requireVerifiedStar2: historyConfig.imageOcrRequireVerifiedStar2 ?? true,
+  upscaleMinWidth: historyConfig.imageOcrUpscaleMinWidth ?? 1800,
+  upscaleMaxWidth: historyConfig.imageOcrUpscaleMaxWidth ?? 3200,
   timeoutMs: historyConfig.imageOcrTimeoutMs ?? 30_000,
   cacheHours: historyConfig.imageOcrCacheHours ?? 720,
-  cacheVersion: historyConfig.imageOcrCacheVersion ?? 3
+  cacheVersion: historyConfig.imageOcrCacheVersion ?? 7
 });
 
 const history = await runHistoricalBackfill({ now, cardsConfig, queryConfig, historyConfig, imageOcr });
@@ -29,4 +32,4 @@ await imageOcr.finalize();
 const nextState = { ...state, lastBackfill: history.backfill, imageOcr: { ...ocrStats, lastRunAt: now.toISOString() } };
 await saveSnapshot({ now, posts, cardsConfig, queryConfig, state: nextState, discoveredThisRun: new Set(history.discovered.map(p => p.id)).size, errors: history.errors, backfill: history.backfill });
 await writeJson(paths.state, { ...nextState, firstSuccessfulCollectionAt: nextState.firstSuccessfulCollectionAt || (posts.length ? now.toISOString() : null), lastRunAt: now.toISOString(), lastRunDiscovered: new Set(history.discovered.map(p => p.id)).size, lastRunErrors: history.errors });
-console.log(`backfill stored=${posts.length}, found=${history.backfill.discoveredPosts}, complete=${history.backfill.completeWithinSearchResults}, ocrNew=${ocrStats.newImages}, ocrPosts=${ocrStats.postsFromImages}`);
+console.log(`backfill stored=${posts.length}, found=${history.backfill.discoveredPosts}, complete=${history.backfill.completeWithinSearchResults}, ocrNew=${ocrStats.newImages}, ocrPosts=${ocrStats.postsFromImages}, gameWithCells=${ocrStats.gameWithCells ?? 0}, gameWithMatched=${ocrStats.gameWithMatchedCells ?? 0}`);
