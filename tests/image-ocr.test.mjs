@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {
   chooseGameWithCardConsensus,
+  estimateGameWithRowCount,
+  hasCardSaleMarker,
   hasExplicitStar2Marker,
   verifyGameWithStar2Badge,
   extractImageUrlsFromEntry,
@@ -72,7 +74,7 @@ test('merges multiple OCR crop passes by max count', () => {
   assert.deepEqual(out, ['アカギ', 'ナツメ', 'ナツメ'].sort());
 });
 
-test('GameWith short card names require two exact OCR votes', () => {
+test('GameWith short card names require three exact OCR votes', () => {
   assert.equal(
     chooseGameWithCardConsensus([{ text: 'カイ', confidence: 95 }], config.cards, config.aliases),
     null
@@ -82,28 +84,50 @@ test('GameWith short card names require two exact OCR votes', () => {
       { text: 'カイ', confidence: 90 },
       { text: 'カイ', confidence: 75 }
     ], config.cards, config.aliases),
+    null
+  );
+  assert.equal(
+    chooseGameWithCardConsensus([
+      { text: 'カイ', confidence: 90 },
+      { text: 'カイ', confidence: 82 },
+      { text: 'カイ', confidence: 75 }
+    ], config.cards, config.aliases),
     'カイ'
   );
   assert.equal(
     chooseGameWithCardConsensus([
       { text: 'カイリュー', confidence: 95 },
-      { text: 'カイリュー', confidence: 90 }
+      { text: 'カイリュー', confidence: 90 },
+      { text: 'カイリュー', confidence: 85 }
     ], config.cards, config.aliases),
     null
   );
 });
 
-test('GameWith fuzzy OCR needs consensus instead of a single guess', () => {
+test('GameWith short fuzzy OCR is rejected even when repeated', () => {
   assert.equal(
-    chooseGameWithCardConsensus([{ text: 'カミツル', confidence: 80 }], config.cards, config.aliases),
+    chooseGameWithCardConsensus([
+      { text: 'カミツル', confidence: 80 },
+      { text: 'カミツル', confidence: 72 },
+      { text: 'カミツル', confidence: 65 }
+    ], config.cards, config.aliases),
+    null
+  );
+});
+
+test('GameWith long fuzzy OCR needs at least three agreeing passes', () => {
+  const noisy = 'ロケット団のしたつぱ';
+  assert.equal(
+    chooseGameWithCardConsensus([{ text: noisy, confidence: 82 }], config.cards, config.aliases),
     null
   );
   assert.equal(
     chooseGameWithCardConsensus([
-      { text: 'カミツル', confidence: 80 },
-      { text: 'カミツル', confidence: 65 }
+      { text: noisy, confidence: 82 },
+      { text: noisy, confidence: 76 },
+      { text: noisy, confidence: 70 }
     ], config.cards, config.aliases),
-    'カミツレ'
+    'ロケット団のしたっぱ'
   );
 });
 
@@ -158,4 +182,54 @@ test('GameWith ★2 badge requires visual badge evidence and two OCR votes', () 
     ),
     false
   );
+});
+
+
+test('v8 ordinary names require two exact votes', () => {
+  assert.equal(
+    chooseGameWithCardConsensus([{ text: 'カミツレ', confidence: 96 }], config.cards, config.aliases),
+    null
+  );
+  assert.equal(
+    chooseGameWithCardConsensus([
+      { text: 'カミツレ', confidence: 96 },
+      { text: 'カミツレ', confidence: 94 }
+    ], config.cards, config.aliases),
+    'カミツレ'
+  );
+});
+
+test('v8 five-pass rarity badge needs a clear ★2 majority', () => {
+  const metrics = { darkRatio: 0.5, yellowRatio: 0.02 };
+  assert.equal(verifyGameWithStar2Badge(
+    [{ text:'2' }, { text:'2' }, { text:'2' }, { text:'1' }, { text:'' }],
+    metrics
+  ), true);
+  assert.equal(verifyGameWithStar2Badge(
+    [{ text:'2' }, { text:'2' }, { text:'1' }, { text:'3' }, { text:'' }],
+    metrics
+  ), false);
+});
+
+
+test('dense GameWith sections can scan more than six rows', () => {
+  const colPitch = 100;
+  const rowPitch = 136;
+  // Enough space for 8 real rows; old logic was capped at 6.
+  const sectionHeight = 100 * 1.02 + 7 * rowPitch + 30;
+  assert.equal(estimateGameWithRowCount(sectionHeight, colPitch, rowPitch), 8);
+});
+
+test('GameWith row estimator matches dense maker geometry', () => {
+  const colPitch = 88.625;
+  const rowPitch = colPitch * 1.36;
+  assert.equal(estimateGameWithRowCount(254, colPitch, rowPitch), 2);
+  assert.equal(estimateGameWithRowCount(513, colPitch, rowPitch), 4);
+});
+
+test('generic OCR sale markers are rejected', () => {
+  assert.equal(hasCardSaleMarker('ポケポケ ★2 販売 1500円'), true);
+  assert.equal(hasCardSaleMarker('買取表 PayPay対応'), true);
+  assert.equal(hasCardSaleMarker('販売不可・金銭取引なし、交換のみ'), false);
+  assert.equal(hasCardSaleMarker('求 ナツメ 譲 カスミ'), false);
 });
