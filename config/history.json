@@ -11,11 +11,14 @@
   "retryCount": 0,
   "imageOcrEnabled": true,
   "imageOcrMaxImagesPerPost": 4,
-  "imageOcrMaxNewImagesPerRun": 100,
-  "imageOcrTimeoutMs": 30000,
+  "imageOcrMaxNewImagesPerRun": 30,
+  "imageOcrTimeoutMs": 45000,
   "imageOcrCacheHours": 216,
-  "imageOcrMaxCandidatePasses": 8,
-  "imageOcrUpscaleMinWidth": 1800,
-  "imageOcrUpscaleMaxWidth": 3200,
-  "imageOcrCacheVersion": 5
+  "imageOcrMaxCandidatePasses": 12,
+  "imageOcrGameWithPassesPerCard": 5,
+  "imageOcrUpscaleMinWidth": 2400,
+  "imageOcrUpscaleMaxWidth": 4200,
+  "imageOcrCacheVersion": 7,
+  "imageOcrGameWithBadgePasses": 3,
+  "imageOcrRequireVerifiedStar2": true
 }
