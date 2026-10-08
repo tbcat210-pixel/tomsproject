@@ -1,7 +1,16 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { extractImageUrlsFromEntry, mergeMentionCounts, mergeMentionGroups, parseTradeImageText, parseSingleSideTradeText } from '../scripts/image-ocr.mjs';
+import {
+  chooseGameWithCardConsensus,
+  hasExplicitStar2Marker,
+  verifyGameWithStar2Badge,
+  extractImageUrlsFromEntry,
+  mergeMentionCounts,
+  mergeMentionGroups,
+  parseTradeImageText,
+  parseSingleSideTradeText
+} from '../scripts/image-ocr.mjs';
 
 const config = JSON.parse(fs.readFileSync(new URL('../config/cards.json', import.meta.url), 'utf8'));
 
@@ -61,4 +70,92 @@ test('merges multiple OCR crop passes by max count', () => {
     ['アカギ']
   ]).sort();
   assert.deepEqual(out, ['アカギ', 'ナツメ', 'ナツメ'].sort());
+});
+
+test('GameWith short card names require two exact OCR votes', () => {
+  assert.equal(
+    chooseGameWithCardConsensus([{ text: 'カイ', confidence: 95 }], config.cards, config.aliases),
+    null
+  );
+  assert.equal(
+    chooseGameWithCardConsensus([
+      { text: 'カイ', confidence: 90 },
+      { text: 'カイ', confidence: 75 }
+    ], config.cards, config.aliases),
+    'カイ'
+  );
+  assert.equal(
+    chooseGameWithCardConsensus([
+      { text: 'カイリュー', confidence: 95 },
+      { text: 'カイリュー', confidence: 90 }
+    ], config.cards, config.aliases),
+    null
+  );
+});
+
+test('GameWith fuzzy OCR needs consensus instead of a single guess', () => {
+  assert.equal(
+    chooseGameWithCardConsensus([{ text: 'カミツル', confidence: 80 }], config.cards, config.aliases),
+    null
+  );
+  assert.equal(
+    chooseGameWithCardConsensus([
+      { text: 'カミツル', confidence: 80 },
+      { text: 'カミツル', confidence: 65 }
+    ], config.cards, config.aliases),
+    'カミツレ'
+  );
+});
+
+test('GameWith conflicting exact OCR results are rejected', () => {
+  assert.equal(
+    chooseGameWithCardConsensus([
+      { text: 'カイ', confidence: 90 },
+      { text: 'カイ', confidence: 80 },
+      { text: 'マオ', confidence: 90 },
+      { text: 'マオ', confidence: 80 }
+    ], config.cards, config.aliases),
+    null
+  );
+});
+
+
+test('detects explicit ★2 markers in generic OCR text', () => {
+  assert.equal(hasExplicitStar2Marker('交換画像 ★2 サポート'), true);
+  assert.equal(hasExplicitStar2Marker('交換画像 ☆2 サポート'), true);
+  assert.equal(hasExplicitStar2Marker('交換画像 ☆☆ サポート'), true);
+  assert.equal(hasExplicitStar2Marker('2 stars Supporter'), true);
+  assert.equal(hasExplicitStar2Marker('★1 サポート'), false);
+});
+
+test('GameWith ★2 badge requires visual badge evidence and two OCR votes', () => {
+  const metrics = { darkRatio: 0.31, yellowRatio: 0.02 };
+  assert.equal(
+    verifyGameWithStar2Badge(
+      [{ text: '12' }, { text: '2' }, { text: '2' }],
+      metrics
+    ),
+    true
+  );
+  assert.equal(
+    verifyGameWithStar2Badge(
+      [{ text: '2' }, { text: '' }, { text: '' }],
+      metrics
+    ),
+    false
+  );
+  assert.equal(
+    verifyGameWithStar2Badge(
+      [{ text: '11' }, { text: '1' }, { text: '1' }],
+      metrics
+    ),
+    false
+  );
+  assert.equal(
+    verifyGameWithStar2Badge(
+      [{ text: '12' }, { text: '2' }, { text: '2' }],
+      { darkRatio: 0.05, yellowRatio: 0.001 }
+    ),
+    false
+  );
 });
