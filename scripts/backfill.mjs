@@ -4,6 +4,8 @@ import { runHistoricalBackfill } from './backfill-lib.mjs';
 import { createTradeImageOcr } from './image-ocr.mjs';
 
 const { cardsConfig, queryConfig, historyConfig } = await loadConfig();
+const supporterNameMap = await readJson(new URL('../config/supporter-name-map.json', import.meta.url), {});
+const cardImageReferenceCache = paths.ocrCache.replace(/ocr-cache\.json$/, 'card-image-reference.json');
 const now = new Date();
 const state = await readJson(paths.state, {});
 const oldPosts = await readJson(paths.posts, []);
@@ -19,11 +21,19 @@ const imageOcr = await createTradeImageOcr({
   gameWithBadgePasses: historyConfig.imageOcrGameWithBadgePasses ?? 5,
   requireVerifiedStar2: historyConfig.imageOcrRequireVerifiedStar2 ?? true,
   processingBudgetMs: historyConfig.imageOcrProcessingBudgetMs ?? 10_800_000,
+  imageMatchEnabled: historyConfig.imageMatchEnabled ?? true,
+  imageMatchReferenceCachePath: cardImageReferenceCache,
+  imageMatchNameMap: supporterNameMap,
+  imageMatchRefreshHours: historyConfig.imageMatchRefreshHours ?? 24,
+  imageMatchStrongScore: historyConfig.imageMatchStrongScore ?? 0.92,
+  imageMatchAgreeScore: historyConfig.imageMatchAgreeScore ?? 0.80,
+  imageMatchMinMargin: historyConfig.imageMatchMinMargin ?? 0.035,
+  imageMatchStrongMargin: historyConfig.imageMatchStrongMargin ?? 0.055,
   upscaleMinWidth: historyConfig.imageOcrUpscaleMinWidth ?? 2400,
   upscaleMaxWidth: historyConfig.imageOcrUpscaleMaxWidth ?? 4200,
   timeoutMs: historyConfig.imageOcrTimeoutMs ?? 30_000,
   cacheHours: historyConfig.imageOcrCacheHours ?? 720,
-  cacheVersion: historyConfig.imageOcrCacheVersion ?? 9
+  cacheVersion: historyConfig.imageOcrCacheVersion ?? 10
 });
 
 const history = await runHistoricalBackfill({ now, cardsConfig, queryConfig, historyConfig, imageOcr });

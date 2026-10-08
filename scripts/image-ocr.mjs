@@ -1,9 +1,10 @@
 import { readJson, writeJson, extractCardMentions, cleanText } from './lib.mjs';
+import { createCardImageMatcher } from './card-image-matcher.mjs';
 
 const IMAGE_KEY_RE = /(image|img|photo|media|thumbnail|picture|large|orig)/i;
 const IMAGE_URL_RE = /\.(?:jpe?g|png|webp)(?:[?#].*)?$/i;
 const IMAGE_HOST_RE = /(?:pbs\.twimg\.com|twimg\.com|img\.gamewith\.jp|yimg\.jp)/i;
-const DEFAULT_CACHE_VERSION = 9;
+const DEFAULT_CACHE_VERSION = 10;
 
 export function extractImageUrlsFromEntry(entry = {}) {
   const out = new Set();
@@ -805,7 +806,15 @@ export async function buildGameWithCardCells(bytes, layout, {
           }
         ].slice(0, clamp(passesPerCard, 1, 7));
 
-        cells.push({ kind, row, col, variants, badgeVariants, badgeMetrics });
+        const visualLeft = Math.max(0, Math.round(col * colPitch + colPitch * 0.055));
+        const visualTop = Math.max(sectionTop, Math.round(sectionTop + colPitch * 0.035 + row * rowPitch));
+        const visualWidth = Math.max(48, Math.min(w - visualLeft, Math.round(colPitch * 0.89)));
+        const visualHeight = Math.max(56, Math.min(sectionBottom - visualTop, Math.round(colPitch * 1.06)));
+        const visualBytes = visualTop < sectionBottom && visualHeight >= 40
+          ? await sharp(prepared).extract({ left: visualLeft, top: visualTop, width: visualWidth, height: visualHeight }).png().toBuffer()
+          : null;
+
+        cells.push({ kind, row, col, variants, badgeVariants, badgeMetrics, visualBytes });
       }
     }
   };
@@ -916,6 +925,14 @@ export async function createTradeImageOcr({
   gameWithBadgePasses = 5,
   requireVerifiedStar2 = true,
   processingBudgetMs = 10_800_000,
+  imageMatchEnabled = true,
+  imageMatchReferenceCachePath = null,
+  imageMatchNameMap = {},
+  imageMatchRefreshHours = 24,
+  imageMatchStrongScore = 0.92,
+  imageMatchAgreeScore = 0.80,
+  imageMatchMinMargin = 0.035,
+  imageMatchStrongMargin = 0.055,
   upscaleMinWidth = 1800,
   upscaleMaxWidth = 3200,
   timeoutMs = 30_000,
@@ -951,6 +968,13 @@ export async function createTradeImageOcr({
   let gameWithRejectedRarityCells = 0;
   let genericRejectedNoStar2 = 0;
   let genericRejectedSale = 0;
+  let imageMatcher = null;
+  let imageMatcherInitAttempted = false;
+  let imageMatchedCells = 0;
+  let imageStrongOnlyCells = 0;
+  let imageOcrAgreedCells = 0;
+  let imageConflictCells = 0;
+  let imageUncertainCells = 0;
   let ocrProcessingMs = 0;
   let processingBudgetSkips = 0;
 
@@ -986,6 +1010,31 @@ export async function createTradeImageOcr({
       user_defined_dpi: '300'
     });
     return worker;
+  };
+
+  const ensureImageMatcher = async () => {
+    if (!imageMatchEnabled || !imageMatchReferenceCachePath) return null;
+    if (imageMatcherInitAttempted) return imageMatcher;
+    imageMatcherInitAttempted = true;
+    try {
+      imageMatcher = await createCardImageMatcher({
+        cachePath: imageMatchReferenceCachePath,
+        cards,
+        nameMap: imageMatchNameMap,
+        enabled: imageMatchEnabled,
+        refreshHours: imageMatchRefreshHours,
+        strongScore: imageMatchStrongScore,
+        agreeScore: imageMatchAgreeScore,
+        minMargin: imageMatchMinMargin,
+        strongMargin: imageMatchStrongMargin,
+        fetchImpl,
+        log
+      });
+    } catch (err) {
+      log(`[image-match] init failed: ${String(err?.message ?? err)}`);
+      imageMatcher = null;
+    }
+    return imageMatcher;
   };
 
   const recognizeUrl = async url => {
@@ -1106,7 +1155,21 @@ export async function createTradeImageOcr({
             });
           }
 
-          const card = chooseGameWithCardConsensus(results, cards, aliases);
+          const ocrCard = chooseGameWithCardConsensus(results, cards, aliases);
+          let card = null;
+          const matcher = await ensureImageMatcher();
+          if (matcher?.ready && cell.visualBytes) {
+            const visual = await matcher.match(cell.visualBytes, ocrCard);
+            card = visual.card ?? null;
+            if (visual.reason === 'image+ocr') imageOcrAgreedCells++;
+            else if (visual.reason === 'image-strong') imageStrongOnlyCells++;
+            else if (visual.reason === 'image-ocr-conflict') imageConflictCells++;
+            else imageUncertainCells++;
+            if (card) imageMatchedCells++;
+          } else {
+            // Only when the reference DB is unavailable, retain the strict v9 OCR fallback.
+            card = ocrCard;
+          }
           if (!card) continue;
           gameWithMatchedCells++;
           (cell.kind === 'demand' ? demand : supply).push(card);
@@ -1128,7 +1191,9 @@ export async function createTradeImageOcr({
           rejectedRarityCells: imageRejectedRarityCells,
           passesPerCard: gameWithPassesPerCard,
           badgePasses: gameWithBadgePasses,
-          requireVerifiedStar2
+          requireVerifiedStar2,
+          imageMatchEnabled,
+          imageMatcherReady: Boolean(imageMatcher?.ready)
         };
         cache[url] = item;
         dirty = true;
@@ -1309,6 +1374,12 @@ export async function createTradeImageOcr({
     requireVerifiedStar2,
     genericRejectedNoStar2,
     genericRejectedSale,
+    imageMatchedCells,
+    imageStrongOnlyCells,
+    imageOcrAgreedCells,
+    imageConflictCells,
+    imageUncertainCells,
+    imageMatcher: imageMatcher?.stats?.() ?? { enabled: imageMatchEnabled, ready: false, references: 0 },
     ocrProcessingMs,
     processingBudgetMs,
     processingBudgetSkips,

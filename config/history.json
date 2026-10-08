@@ -18,8 +18,14 @@
   "imageOcrGameWithPassesPerCard": 7,
   "imageOcrUpscaleMinWidth": 2400,
   "imageOcrUpscaleMaxWidth": 4200,
-  "imageOcrCacheVersion": 9,
+  "imageOcrCacheVersion": 10,
   "imageOcrGameWithBadgePasses": 5,
   "imageOcrRequireVerifiedStar2": true,
-  "imageOcrProcessingBudgetMs": 10800000
+  "imageOcrProcessingBudgetMs": 10800000,
+  "imageMatchEnabled": true,
+  "imageMatchRefreshHours": 24,
+  "imageMatchStrongScore": 0.92,
+  "imageMatchAgreeScore": 0.8,
+  "imageMatchMinMargin": 0.035,
+  "imageMatchStrongMargin": 0.055
 }
