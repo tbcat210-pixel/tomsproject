@@ -3,7 +3,7 @@ import { readJson, writeJson, extractCardMentions, cleanText } from './lib.mjs';
 const IMAGE_KEY_RE = /(image|img|photo|media|thumbnail|picture|large|orig)/i;
 const IMAGE_URL_RE = /\.(?:jpe?g|png|webp)(?:[?#].*)?$/i;
 const IMAGE_HOST_RE = /(?:pbs\.twimg\.com|twimg\.com|img\.gamewith\.jp|yimg\.jp)/i;
-const DEFAULT_CACHE_VERSION = 7;
+const DEFAULT_CACHE_VERSION = 9;
 
 export function extractImageUrlsFromEntry(entry = {}) {
   const out = new Set();
@@ -263,7 +263,7 @@ function scoreGameWithCardTitle(rawText, cards, aliases = {}, confidence = 0) {
       if (distance > allowed) continue;
 
       const score = 1 - distance / Math.max(tokenLen, targetLen);
-      const minScore = targetLen >= 10 ? 0.82 : targetLen >= 6 ? 0.84 : 0.74;
+      const minScore = targetLen >= 10 ? 0.86 : targetLen >= 6 ? 0.88 : 0.80;
       if (score < minScore) continue;
 
       matches.push({
@@ -347,15 +347,15 @@ export function chooseGameWithCardConsensus(results = [], cards = [], aliases = 
   // exact short-name OCR needs two independent preprocessing passes.
   if (best.exactVotes > 0) {
     const canonicalLength = [...normalizeCardTitleText(best.canonical)].length;
-    const exactMinVotes = canonicalLength <= 3 ? 2 : 1;
+    const exactMinVotes = canonicalLength <= 3 ? 3 : 2;
     if (best.exactVotes < exactMinVotes) return null;
-    if (second && second.exactVotes > 0 && second.exactVotes === best.exactVotes) return null;
+    if (second && second.exactVotes > 0 && second.exactVotes >= best.exactVotes - 1) return null;
     return best.canonical;
   }
 
   // Fuzzy-only results require agreement across independent preprocessing
   // passes. Two-character OCR slips on long titles need even stronger support.
-  const minVotes = best.bestDistance >= 2 ? 3 : 2;
+  const minVotes = best.bestDistance >= 2 ? 4 : 3;
   if (best.votes < minVotes) return null;
 
   if (second) {
@@ -370,6 +370,22 @@ export function chooseGameWithCardConsensus(results = [], cards = [], aliases = 
 export function hasExplicitStar2Marker(rawText = '') {
   const text = String(rawText).normalize('NFKC');
   return /(?:★|☆)\s*2|☆☆|星\s*2|2\s*(?:star|stars)/i.test(text);
+}
+
+export function hasCardSaleMarker(rawText = '') {
+  let text = String(rawText).normalize('NFKC');
+
+  // Do not reject explicit "not for sale / no buying" disclaimers.
+  text = text
+    .replace(/(?:販売|売買|買取|買い取り|購入)\s*(?:不可|NG|なし|無し|しません|してません|ではありません|ではない|お断り)/gi, ' ')
+    .replace(/(?:現金|金銭)\s*(?:不可|NG|なし|無し|しません|ではありません|ではない)/gi, ' ');
+
+  const saleWords =
+    /(?:販売|売却|売ります|売る予定|買取|買い取り|買います|購入希望|購入します|出品|即決|価格|値段|値下げ|相場|現金|銀行振込|振込|PayPay|ペイペイ|メルカリ|ヤフオク|ラクマ|通販|送料|買取表)/i;
+  const money =
+    /(?:[¥￥]\s*[1-9][0-9,]*|[1-9][0-9,]*\s*円|[1-9][0-9]*(?:\.[0-9]+)?\s*万円)/i;
+
+  return saleWords.test(text) || money.test(text);
 }
 
 function badgeDigits(rawText = '') {
@@ -393,24 +409,33 @@ export function verifyGameWithStar2Badge(results = [], metrics = {}) {
     else if (/[13]/.test(digits)) otherVotes++;
   }
 
-  // Require agreement from two independent badge preprocessings. This rejects
-  // a single accidental "2" from noise, ★1, ★3, or card artwork.
-  return twoVotes >= 2 && twoVotes > otherVotes;
+  // Five-pass mode requires a 3-vote majority and a clear margin over ★1/★3.
+  // Three-pass compatibility mode retains a 2-vote requirement.
+  const requiredTwoVotes = results.length >= 5 ? 3 : 2;
+  const requiredMargin = results.length >= 5 ? 2 : 1;
+  return twoVotes >= requiredTwoVotes && twoVotes - otherVotes >= requiredMargin;
 }
 
-async function prepareBadgeVariant(raw, { threshold = null } = {}) {
+async function prepareBadgeVariant(raw, {
+  threshold = null,
+  clahe = false,
+  negate = false
+} = {}) {
   const { default: sharp } = await import('sharp');
-  let pipeline = sharp(raw)
-    .grayscale()
-    .resize({ width: 520, withoutEnlargement: false, kernel: 'lanczos3' })
-    .normalize()
-    .sharpen({ sigma: 0.6 });
+  let pipeline = sharp(raw).grayscale();
 
+  if (clahe) pipeline = pipeline.clahe({ width: 3, height: 3, maxSlope: 4 });
+  pipeline = pipeline
+    .resize({ width: 620, withoutEnlargement: false, kernel: 'lanczos3' })
+    .normalize()
+    .sharpen({ sigma: 0.7 });
+
+  if (negate) pipeline = pipeline.negate();
   if (threshold != null) pipeline = pipeline.threshold(threshold);
 
   const body = await pipeline.png().toBuffer();
   return sharp(body)
-    .extend({ top: 28, bottom: 28, left: 38, right: 38, background: '#ffffff' })
+    .extend({ top: 34, bottom: 34, left: 44, right: 44, background: '#ffffff' })
     .png()
     .toBuffer();
 }
@@ -546,11 +571,30 @@ async function prepareTitleVariant(raw, {
     .toBuffer();
 }
 
+export function estimateGameWithRowCount(sectionHeight, colPitch, rowPitch, maxRows = 12) {
+  const height = Number(sectionHeight);
+  const col = Number(colPitch);
+  const pitch = Number(rowPitch);
+  if (!Number.isFinite(height) || !Number.isFinite(col) || !Number.isFinite(pitch) ||
+      height <= 0 || col <= 0 || pitch <= 0) return 0;
+
+  // A real slot needs enough room for the lower-left rarity badge. Using the
+  // badge position instead of round(sectionHeight / rowPitch) prevents the
+  // last row from disappearing on dense 7+ row maker images.
+  const badgeOffset = col * 1.02;
+  if (height < badgeOffset + 14) return 0;
+  return clamp(
+    Math.floor((height - badgeOffset - 1) / pitch) + 1,
+    1,
+    Math.max(1, maxRows)
+  );
+}
+
 export async function buildGameWithCardCells(bytes, layout, {
   upscaleMinWidth = 2600,
   upscaleMaxWidth = 4200,
-  passesPerCard = 5,
-  badgePasses = 3
+  passesPerCard = 7,
+  badgePasses = 5
 } = {}) {
   const { default: sharp } = await import('sharp');
   const meta = await sharp(bytes, { failOn: 'none', limitInputPixels: 80_000_000 }).metadata();
@@ -579,13 +623,12 @@ export async function buildGameWithCardCells(bytes, layout, {
 
   const colPitch = w / 8;
   const rowPitch = colPitch * 1.36;
-  const inferRows = (top, bottom) => {
-    const sectionHeight = Math.max(0, bottom - top);
-    return clamp(Math.round(sectionHeight / rowPitch), 1, 6);
-  };
 
   const cells = [];
-  const addSection = async (kind, sectionTop, sectionBottom, rows) => {
+  const addSection = async (kind, sectionTop, sectionBottom) => {
+    const sectionHeight = Math.max(0, sectionBottom - sectionTop);
+    const rows = estimateGameWithRowCount(sectionHeight, colPitch, rowPitch, 12);
+
     for (let row = 0; row < rows; row++) {
       for (let col = 0; col < 8; col++) {
         // Reuse the proven v5 occupancy window before running expensive OCR.
@@ -603,7 +646,42 @@ export async function buildGameWithCardCells(bytes, layout, {
           .toBuffer();
         const occupancyStats = await sharp(occupancyRaw).stats();
         const occupancyChannel = occupancyStats.channels?.[0];
-        if ((occupancyStats.entropy ?? 0) < 2.2 || (occupancyChannel?.stdev ?? 0) < 10) continue;
+
+        // Dense maker images sometimes have very short/bright titles. Checking
+        // only the title strip can mistake a real slot for the pale background.
+        // Also sample the illustration/body area; an actual card has strong
+        // texture there while an empty slot remains nearly flat.
+        const bodyTop = Math.max(
+          sectionTop,
+          Math.round(sectionTop + colPitch * 0.26 + row * rowPitch)
+        );
+        const bodyHeight = Math.max(28, Math.min(
+          sectionBottom - bodyTop,
+          Math.round(colPitch * 0.60)
+        ));
+        let bodyEntropy = 0;
+        let bodyStdev = 0;
+        if (bodyTop < sectionBottom && bodyHeight >= 18) {
+          const bodyRaw = await sharp(prepared)
+            .extract({
+              left: occupancyLeft,
+              top: bodyTop,
+              width: occupancyWidth,
+              height: bodyHeight
+            })
+            .grayscale()
+            .png()
+            .toBuffer();
+          const bodyStats = await sharp(bodyRaw).stats();
+          bodyEntropy = bodyStats.entropy ?? 0;
+          bodyStdev = bodyStats.channels?.[0]?.stdev ?? 0;
+        }
+
+        const titleOccupied =
+          (occupancyStats.entropy ?? 0) >= 2.2 &&
+          (occupancyChannel?.stdev ?? 0) >= 10;
+        const bodyOccupied = bodyEntropy >= 3.2 && bodyStdev >= 18;
+        if (!titleOccupied && !bodyOccupied) continue;
 
         // Verify the GameWith rarity badge before spending OCR time on the
         // card name. The badge sits at the lower-left of every maker slot.
@@ -650,9 +728,11 @@ export async function buildGameWithCardCells(bytes, layout, {
 
         const badgeVariants = [
           { label: 'badge-normal', psm: '10', bytes: await prepareBadgeVariant(badgeRaw) },
-          { label: 'badge-threshold-130', psm: '10', bytes: await prepareBadgeVariant(badgeRaw, { threshold: 130 }) },
-          { label: 'badge-threshold-180', psm: '10', bytes: await prepareBadgeVariant(badgeRaw, { threshold: 180 }) }
-        ].slice(0, clamp(badgePasses, 2, 3));
+          { label: 'badge-clahe', psm: '10', bytes: await prepareBadgeVariant(badgeRaw, { clahe: true }) },
+          { label: 'badge-threshold-125', psm: '10', bytes: await prepareBadgeVariant(badgeRaw, { threshold: 125 }) },
+          { label: 'badge-threshold-175', psm: '10', bytes: await prepareBadgeVariant(badgeRaw, { threshold: 175 }) },
+          { label: 'badge-inverted-clahe', psm: '10', bytes: await prepareBadgeVariant(badgeRaw, { clahe: true, negate: true }) }
+        ].slice(0, clamp(badgePasses, 2, 5));
 
         const tightLeft = Math.max(0, Math.round(col * colPitch + colPitch * 0.045));
         const tightTop = Math.max(sectionTop, Math.round(sectionTop + colPitch * 0.045 + row * rowPitch));
@@ -691,37 +771,47 @@ export async function buildGameWithCardCells(bytes, layout, {
           {
             label: 'tight-normal',
             psm: '7',
-            bytes: await prepareTitleVariant(tightRaw, { width: 1080 })
+            bytes: await prepareTitleVariant(tightRaw, { width: 1280 })
           },
           {
             label: 'tight-clahe',
             psm: '7',
-            bytes: await prepareTitleVariant(tightRaw, { width: 1080, clahe: true })
+            bytes: await prepareTitleVariant(tightRaw, { width: 1280, clahe: true })
           },
           {
             label: `tight-threshold-${softThreshold}`,
             psm: '7',
-            bytes: await prepareTitleVariant(tightRaw, { width: 1080, threshold: softThreshold })
+            bytes: await prepareTitleVariant(tightRaw, { width: 1280, threshold: softThreshold })
           },
           {
             label: `wide-threshold-${strongThreshold}`,
             psm: '7',
-            bytes: await prepareTitleVariant(wideRaw, { width: 1080, threshold: strongThreshold })
+            bytes: await prepareTitleVariant(wideRaw, { width: 1280, threshold: strongThreshold })
           },
           {
             label: 'wide-raw-line',
             psm: '13',
-            bytes: await prepareTitleVariant(wideRaw, { width: 1080, clahe: true, linear: { a: 1.15, b: -12 } })
+            bytes: await prepareTitleVariant(wideRaw, { width: 1280, clahe: true, linear: { a: 1.15, b: -12 } })
+          },
+          {
+            label: 'wide-clahe-line',
+            psm: '7',
+            bytes: await prepareTitleVariant(wideRaw, { width: 1280, clahe: true })
+          },
+          {
+            label: 'tight-raw-line',
+            psm: '13',
+            bytes: await prepareTitleVariant(tightRaw, { width: 1280, linear: { a: 1.12, b: -8 } })
           }
-        ].slice(0, clamp(passesPerCard, 1, 5));
+        ].slice(0, clamp(passesPerCard, 1, 7));
 
         cells.push({ kind, row, col, variants, badgeVariants, badgeMetrics });
       }
     }
   };
 
-  await addSection('demand', demandTop, demandBottom, inferRows(demandTop, demandBottom));
-  await addSection('supply', supplyTop, supplyBottom, inferRows(supplyTop, supplyBottom));
+  await addSection('demand', demandTop, demandBottom);
+  await addSection('supply', supplyTop, supplyBottom);
   return cells;
 }
 
@@ -821,10 +911,11 @@ export async function createTradeImageOcr({
   enabled = true,
   maxImagesPerPost = 4,
   maxNewImagesPerRun = 200,
-  maxCandidatePasses = 10,
-  gameWithPassesPerCard = 5,
-  gameWithBadgePasses = 3,
+  maxCandidatePasses = 12,
+  gameWithPassesPerCard = 7,
+  gameWithBadgePasses = 5,
   requireVerifiedStar2 = true,
+  processingBudgetMs = 10_800_000,
   upscaleMinWidth = 1800,
   upscaleMaxWidth = 3200,
   timeoutMs = 30_000,
@@ -859,6 +950,9 @@ export async function createTradeImageOcr({
   let gameWithStar2VerifiedCells = 0;
   let gameWithRejectedRarityCells = 0;
   let genericRejectedNoStar2 = 0;
+  let genericRejectedSale = 0;
+  let ocrProcessingMs = 0;
+  let processingBudgetSkips = 0;
 
   const freshEnough = item => {
     const t = item?.checkedAt ? new Date(item.checkedAt).getTime() : 0;
@@ -900,8 +994,12 @@ export async function createTradeImageOcr({
       cacheHits++;
       return cached;
     }
-    if (newImages >= maxNewImagesPerRun) return { skipped: 'run-limit', demand: [], supply: [], explicit: false };
+    if (newImages >= maxNewImagesPerRun) {
+      return { skipped: 'run-limit', demand: [], supply: [], explicit: false };
+    }
     newImages++;
+    const processStartedAt = Date.now();
+    let detectedGameWith = false;
 
     try {
       const res = await fetchImpl(url, {
@@ -918,8 +1016,24 @@ export async function createTradeImageOcr({
       if (bytes.byteLength > 12_000_000) throw new Error('image too large');
       if (contentType && !contentType.startsWith('image/')) throw new Error(`not image: ${contentType}`);
 
-      const w = await ensureWorker();
       const gameWithLayout = await detectGameWithTradeLayout(bytes);
+      detectedGameWith = Boolean(gameWithLayout);
+
+      // Layout detection is cheap. Even after the OCR time budget is exhausted,
+      // detect GameWith so the caller knows the image is authoritative and does
+      // not fall back to conflicting post text.
+      if (ocrProcessingMs >= processingBudgetMs) {
+        processingBudgetSkips++;
+        return {
+          skipped: 'processing-budget',
+          demand: [],
+          supply: [],
+          explicit: false,
+          layout: gameWithLayout ? 'gamewith-budget-skip' : 'generic-budget-skip'
+        };
+      }
+
+      const w = await ensureWorker();
 
       if (gameWithLayout) {
         gameWithImages++;
@@ -1040,11 +1154,14 @@ export async function createTradeImageOcr({
       }
 
       const genericStar2Verified = recognized.some(hasExplicitStar2Marker);
+      const genericSaleDetected = recognized.some(hasCardSaleMarker);
       const demandGroups = [];
       const supplyGroups = [];
       let explicit = false;
 
-      if (!requireVerifiedStar2 || genericStar2Verified) {
+      if (genericSaleDetected) {
+        genericRejectedSale++;
+      } else if (!requireVerifiedStar2 || genericStar2Verified) {
         for (const text of recognized) {
           const dual = parseTradeImageText(text, cards, aliases);
           if (dual.explicit && (dual.demand.length || dual.supply.length)) {
@@ -1074,8 +1191,9 @@ export async function createTradeImageOcr({
         demand,
         supply,
         candidatePasses: candidates.length,
-        layout: 'generic',
+        layout: genericSaleDetected ? 'generic-sale-rejected' : 'generic',
         star2Verified: genericStar2Verified,
+        saleRejected: genericSaleDetected,
         requireVerifiedStar2
       };
       cache[url] = item;
@@ -1090,34 +1208,81 @@ export async function createTradeImageOcr({
         explicit: false,
         demand: [],
         supply: [],
+        layout: detectedGameWith ? 'gamewith-error' : 'error',
         error: String(err?.message ?? err)
       };
       cache[url] = item;
       dirty = true;
       return item;
+    } finally {
+      ocrProcessingMs += Math.max(0, Date.now() - processStartedAt);
     }
   };
 
   const parseEntryImages = async (entry, body = '') => {
     const urls = extractImageUrlsFromEntry(entry).slice(0, maxImagesPerPost);
     if (!enabled || !urls.length || !likelyTradeImagePost(body, urls)) {
-      return { demand: [], supply: [], explicit: false, urls: [] };
+      return {
+        demand: [],
+        supply: [],
+        explicit: false,
+        urls: [],
+        gameWithDetected: false,
+        authoritative: false
+      };
     }
 
-    const demandGroups = [];
-    const supplyGroups = [];
-    let explicit = false;
+    const gameWithDemandGroups = [];
+    const gameWithSupplyGroups = [];
+    const otherDemandGroups = [];
+    const otherSupplyGroups = [];
+    let gameWithDetected = false;
+    let gameWithExplicit = false;
+    let otherExplicit = false;
+
     for (const url of urls) {
       const result = await recognizeUrl(url);
-      if (result.explicit) explicit = true;
-      if ((result.demand ?? []).length) demandGroups.push(result.demand);
-      if ((result.supply ?? []).length) supplyGroups.push(result.supply);
+      const isGameWith = String(result?.layout ?? '').startsWith('gamewith');
+
+      if (isGameWith) {
+        gameWithDetected = true;
+        if (result.explicit) gameWithExplicit = true;
+        if ((result.demand ?? []).length) gameWithDemandGroups.push(result.demand);
+        if ((result.supply ?? []).length) gameWithSupplyGroups.push(result.supply);
+      } else {
+        if (result.explicit) otherExplicit = true;
+        if ((result.demand ?? []).length) otherDemandGroups.push(result.demand);
+        if ((result.supply ?? []).length) otherSupplyGroups.push(result.supply);
+      }
     }
 
-    const demand = mergeMentionGroups(demandGroups);
-    const supply = mergeMentionGroups(supplyGroups);
-    if (explicit && (demand.length || supply.length)) postsFromImages++;
-    return { demand, supply, explicit, urls };
+    if (gameWithDetected) {
+      const demand = mergeMentionGroups(gameWithDemandGroups);
+      const supply = mergeMentionGroups(gameWithSupplyGroups);
+      const explicit = gameWithExplicit && (demand.length > 0 || supply.length > 0);
+      if (explicit) postsFromImages++;
+      return {
+        demand,
+        supply,
+        explicit,
+        urls,
+        gameWithDetected: true,
+        authoritative: true
+      };
+    }
+
+    const demand = mergeMentionGroups(otherDemandGroups);
+    const supply = mergeMentionGroups(otherSupplyGroups);
+    const explicit = otherExplicit && (demand.length > 0 || supply.length > 0);
+    if (explicit) postsFromImages++;
+    return {
+      demand,
+      supply,
+      explicit,
+      urls,
+      gameWithDetected: false,
+      authoritative: false
+    };
   };
 
   const finalize = async () => {
@@ -1143,6 +1308,10 @@ export async function createTradeImageOcr({
     gameWithBadgePasses,
     requireVerifiedStar2,
     genericRejectedNoStar2,
+    genericRejectedSale,
+    ocrProcessingMs,
+    processingBudgetMs,
+    processingBudgetSkips,
     maxNewImagesPerRun,
     maxCandidatePasses
   });

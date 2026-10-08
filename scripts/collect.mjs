@@ -17,15 +17,16 @@ const imageOcr = await createTradeImageOcr({
   enabled: historyConfig.imageOcrEnabled ?? true,
   maxImagesPerPost: historyConfig.imageOcrMaxImagesPerPost ?? 4,
   maxNewImagesPerRun: historyConfig.imageOcrMaxNewImagesPerRun ?? 200,
-  maxCandidatePasses: historyConfig.imageOcrMaxCandidatePasses ?? 8,
-  gameWithPassesPerCard: historyConfig.imageOcrGameWithPassesPerCard ?? 5,
-  gameWithBadgePasses: historyConfig.imageOcrGameWithBadgePasses ?? 3,
+  maxCandidatePasses: historyConfig.imageOcrMaxCandidatePasses ?? 12,
+  gameWithPassesPerCard: historyConfig.imageOcrGameWithPassesPerCard ?? 7,
+  gameWithBadgePasses: historyConfig.imageOcrGameWithBadgePasses ?? 5,
   requireVerifiedStar2: historyConfig.imageOcrRequireVerifiedStar2 ?? true,
-  upscaleMinWidth: historyConfig.imageOcrUpscaleMinWidth ?? 1800,
-  upscaleMaxWidth: historyConfig.imageOcrUpscaleMaxWidth ?? 3200,
+  processingBudgetMs: historyConfig.imageOcrProcessingBudgetMs ?? 10_800_000,
+  upscaleMinWidth: historyConfig.imageOcrUpscaleMinWidth ?? 2400,
+  upscaleMaxWidth: historyConfig.imageOcrUpscaleMaxWidth ?? 4200,
   timeoutMs: historyConfig.imageOcrTimeoutMs ?? 30_000,
   cacheHours: historyConfig.imageOcrCacheHours ?? 720,
-  cacheVersion: historyConfig.imageOcrCacheVersion ?? 7
+  cacheVersion: historyConfig.imageOcrCacheVersion ?? 9
 });
 
 const recentSince = new Date(now.getTime() - 24 * 3600_000);

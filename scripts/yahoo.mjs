@@ -16,6 +16,22 @@ export function stripYahooHighlight(value = '') {
     .replace(/\\t\s*END\s*\\t/gi, ''));
 }
 
+export function isCardSalePost(rawText = '') {
+  let text = String(rawText).normalize('NFKC');
+
+  // Allow trade posts that explicitly say they do NOT buy/sell.
+  text = text
+    .replace(/(?:販売|売買|買取|買い取り|購入)\s*(?:不可|NG|なし|無し|しません|してません|ではありません|ではない|お断り)/gi, ' ')
+    .replace(/(?:現金|金銭)\s*(?:不可|NG|なし|無し|しません|ではありません|ではない)/gi, ' ');
+
+  const saleWords =
+    /(?:販売|売却|売ります|売る予定|買取|買い取り|買います|購入希望|購入します|出品|即決|価格|値段|値下げ|相場|現金|銀行振込|振込|PayPay|ペイペイ|メルカリ|ヤフオク|ラクマ|通販|送料|買取表)/i;
+  const money =
+    /(?:[¥￥]\s*[1-9][0-9,]*|[1-9][0-9,]*\s*円|[1-9][0-9]*(?:\.[0-9]+)?\s*万円)/i;
+
+  return saleWords.test(text) || money.test(text);
+}
+
 export function createdAtFromEntry(entry = {}) {
   const n = Number(entry.createdAt);
   if (Number.isFinite(n) && n > 0) {
@@ -33,6 +49,7 @@ export function parseYahooTimelineEntry(entry, query, cards, aliases = {}) {
   if (!createdAt) return null;
 
   const body = stripYahooHighlight(entry.displayTextBody ?? entry.text ?? '');
+  if (isCardSalePost(body)) return null;
   const parsed = parseTradeText(body, cards, aliases);
   if (!parsed.explicit || (parsed.demand.length === 0 && parsed.supply.length === 0)) return null;
 
@@ -50,7 +67,6 @@ export function parseYahooTimelineEntry(entry, query, cards, aliases = {}) {
   };
 }
 
-
 export async function parseYahooTimelineEntryWithImages(entry, query, cards, aliases = {}, imageOcr = null) {
   if (!entry?.id) return null;
   const id = String(entry.id);
@@ -58,16 +74,47 @@ export async function parseYahooTimelineEntryWithImages(entry, query, cards, ali
   if (!createdAt) return null;
 
   const body = stripYahooHighlight(entry.displayTextBody ?? entry.text ?? '');
+  // Reject monetary buying/selling before spending any OCR time.
+  if (isCardSalePost(body)) return null;
   const textParsed = parseTradeText(body, cards, aliases);
-  let imageParsed = { demand: [], supply: [], explicit: false, urls: [] };
+  let imageParsed = {
+    demand: [],
+    supply: [],
+    explicit: false,
+    urls: [],
+    gameWithDetected: false,
+    authoritative: false
+  };
 
   if (imageOcr) {
     imageParsed = await imageOcr.parseEntryImages(entry, body);
   }
 
-  const demand = mergeMentionCounts(textParsed.demand, imageParsed.demand);
-  const supply = mergeMentionCounts(textParsed.supply, imageParsed.supply);
-  const explicit = textParsed.explicit || imageParsed.explicit;
+  let demand;
+  let supply;
+  let explicit;
+  let parsedFrom;
+
+  // GameWith trade-maker images are authoritative. If text and image disagree,
+  // never mix text into the image result. If the image is detected but cannot
+  // be verified with enough confidence, skip the post rather than falling back
+  // to text. This deliberately favors precision over recall.
+  if (imageParsed.gameWithDetected || imageParsed.authoritative) {
+    demand = imageParsed.demand ?? [];
+    supply = imageParsed.supply ?? [];
+    explicit = Boolean(imageParsed.explicit);
+    parsedFrom = 'gamewith-image-priority';
+  } else {
+    demand = mergeMentionCounts(textParsed.demand, imageParsed.demand);
+    supply = mergeMentionCounts(textParsed.supply, imageParsed.supply);
+    explicit = textParsed.explicit || imageParsed.explicit;
+    parsedFrom = textParsed.explicit && imageParsed.explicit
+      ? 'text+image'
+      : imageParsed.explicit
+        ? 'image'
+        : 'text';
+  }
+
   if (!explicit || (demand.length === 0 && supply.length === 0)) return null;
 
   const candidateUrl = normalizeXUrl(entry.url) || (entry.screenName ? `https://x.com/${entry.screenName}/status/${id}` : null);
@@ -81,8 +128,10 @@ export async function parseYahooTimelineEntryWithImages(entry, query, cards, ali
     demand,
     supply,
     query,
-    parsedFrom: textParsed.explicit && imageParsed.explicit ? 'text+image' : imageParsed.explicit ? 'image' : 'text',
-    imageCount: imageParsed.urls?.length ?? 0
+    parsedFrom,
+    imageCount: imageParsed.urls?.length ?? 0,
+    gameWithDetected: Boolean(imageParsed.gameWithDetected),
+    imageAuthoritative: Boolean(imageParsed.authoritative)
   };
 }
 
@@ -94,14 +143,19 @@ export async function parseYahooTimelineResponseWithImages(data, query, cards, a
     const post = await parseYahooTimelineEntryWithImages(entry, query, cards, aliases, imageOcr);
     if (post) posts.push(post);
   }
-  const nextCursor = timeline.head?.oldestTweetId ? String(timeline.head.oldestTweetId) : (entries.at(-1)?.id ? String(entries.at(-1).id) : null);
+  const nextCursor = timeline.head?.oldestTweetId
+    ? String(timeline.head.oldestTweetId)
+    : (entries.at(-1)?.id ? String(entries.at(-1).id) : null);
   return { entries, posts, nextCursor, head: timeline.head ?? {} };
 }
+
 export function parseYahooTimelineResponse(data, query, cards, aliases = {}) {
   const timeline = data?.timeline ?? {};
   const entries = Array.isArray(timeline.entry) ? timeline.entry : [];
   const posts = entries.map(e => parseYahooTimelineEntry(e, query, cards, aliases)).filter(Boolean);
-  const nextCursor = timeline.head?.oldestTweetId ? String(timeline.head.oldestTweetId) : (entries.at(-1)?.id ? String(entries.at(-1).id) : null);
+  const nextCursor = timeline.head?.oldestTweetId
+    ? String(timeline.head.oldestTweetId)
+    : (entries.at(-1)?.id ? String(entries.at(-1).id) : null);
   return { entries, posts, nextCursor, head: timeline.head ?? {} };
 }
 
