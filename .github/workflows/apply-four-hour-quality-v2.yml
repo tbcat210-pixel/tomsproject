@@ -1,0 +1,389 @@
+name: Apply 4-hour upgrade v2 (permission-safe)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pokepoke-data-write
+  cancel-in-progress: false
+
+jobs:
+  upgrade:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Apply 4-hour upgrade
+        shell: bash
+        run: |
+          python3 - <<'PYCODE'
+          #!/usr/bin/env python3
+          """Apply ranking and Yahoo-budget optimizations without editing GitHub workflow files.
+          
+          Runs within a checked-out repository. Aborts before writing when expected source
+          anchors are missing, so upstream changes do not silently cause a partial patch.
+          """
+          from pathlib import Path
+          import json
+          
+          
+          def replace_once(text, old, new, name):
+              count = text.count(old)
+              if count != 1:
+                  raise RuntimeError(f'{name}: expected one source anchor, found {count}: {old[:100]!r}')
+              return text.replace(old, new, 1)
+          
+          
+          # The default GITHUB_TOKEN cannot push edits to .github/workflows/*.yml.
+          # The 4-hour cron must be changed manually after this job succeeds.
+          collector = Path('scripts/collect.mjs')
+          yahoo = Path('scripts/yahoo.mjs')
+          budget_file = Path('scripts/request-budget.mjs')
+          test_file = Path('tests/request-budget.test.mjs')
+          period_test_file = Path('tests/ranking-periods.test.mjs')
+          ranking_library = Path('scripts/lib.mjs')
+          app_script = Path('docs/app.js')
+          page_html = Path('docs/index.html')
+          public_rankings = Path('docs/data/rankings.json')
+          
+          if budget_file.exists() or test_file.exists() or period_test_file.exists():
+              raise RuntimeError('An earlier version of this upgrade exists; stop and inspect it before reapplying.')
+          
+          collect = collector.read_text('utf-8')
+          y = yahoo.read_text('utf-8')
+          lib = ranking_library.read_text('utf-8')
+          app = app_script.read_text('utf-8')
+          html = page_html.read_text('utf-8')
+          raw_rankings = public_rankings.read_text('utf-8')
+          existing_rankings = json.loads(raw_rankings)
+          if not isinstance(existing_rankings.get('windows'), dict) or not all(
+              key in existing_rankings['windows'] for key in ('24h', '48h', '168h')
+          ):
+              raise RuntimeError('Existing public ranking data missing expected periods.')
+          
+          collect = replace_once(collect,
+              "import { createTradeImageOcr } from './image-ocr.mjs';",
+              """import { createTradeImageOcr } from './image-ocr.mjs';
+          import {
+            MAX_YAHOO_REQUESTS_PER_RUN,
+            MAX_YAHOO_REQUESTS_PER_24_HOURS,
+            requestsWithin24Hours,
+            pagesForQuery
+          } from './request-budget.mjs';""",
+              'collector imports')
+          collect = replace_once(collect,
+              "const oldPosts = await readJson(paths.posts, []);",
+              """const oldPosts = await readJson(paths.posts, []);
+          // Reuse only already-accepted, fully parsed posts. New/unrecognized posts
+          // still run through the exact same image OCR and text classifiers.
+          const knownPostsById = new Map();
+          for (const post of oldPosts) {
+            if (post?.id && Array.isArray(post.demand) && Array.isArray(post.supply) && !knownPostsById.has(String(post.id))) {
+              knownPostsById.set(String(post.id), post);
+            }
+          }
+          // Count actual attempted Yahoo pages, not only successful responses.
+          const recentRequestTimes = requestsWithin24Hours(state.yahooRequestTimes, now);
+          const thisRunRequestTimes = [];
+          const queryStats = [];""",
+              'state initialization')
+          collect = replace_once(collect,
+              """for (let i = 0; i < queryConfig.queries.length; i++) {
+            const query = queryConfig.queries[i];
+            try {""",
+              """for (let i = 0; i < queryConfig.queries.length; i++) {
+            const query = queryConfig.queries[i];
+            const maxPages = pagesForQuery({
+              remainingRun: MAX_YAHOO_REQUESTS_PER_RUN - thisRunRequestTimes.length,
+              remainingDay: MAX_YAHOO_REQUESTS_PER_24_HOURS - recentRequestTimes.length - thisRunRequestTimes.length,
+              queriesLeft: queryConfig.queries.length - i,
+              maxPagesPerQuery: historyConfig.recentPagesPerQuery ?? 3
+            });
+            if (maxPages === 0) {
+              console.warn(`[budget] Skipping Yahoo query until request quota replenishes: ${query}`);
+              queryStats.push({ query, pages: 0, skipped: 'Yahoo 24-hour request cap' });
+              continue;
+            }
+            try {""",
+              'collection loop')
+          collect = replace_once(collect,
+              "maxPages: historyConfig.recentPagesPerQuery ?? 3,",
+              "maxPages,",
+              'query page cap')
+          collect = replace_once(collect,
+              """      retryCount: historyConfig.retryCount ?? 0,
+                onPage:""",
+              """      retryCount: historyConfig.retryCount ?? 0,
+                cachedPostsById: knownPostsById,
+                onRequest: () => thisRunRequestTimes.push(new Date().toISOString()),
+                onPage:""",
+              'request accounting and reuse')
+          collect = replace_once(collect,
+              """    discovered.push(...result.posts);
+            } catch (err) {""",
+              """    discovered.push(...result.posts);
+              queryStats.push(result.stats);
+            } catch (err) {""",
+              'per-query statistics')
+          collect = replace_once(collect,
+              """    errors.push({ mode: 'recent', query, message });
+              console.error(""",
+              """    errors.push({ mode: 'recent', query, message });
+              queryStats.push({ query, pages: 0, error: message });
+              console.error(""",
+              'query errors')
+          collect = replace_once(collect,
+              """const nextState = { ...state, lastBackfill, imageOcr: { ...ocrStats, lastRunAt: now.toISOString() } };""",
+              """const nextState = {
+            ...state,
+            lastBackfill,
+            imageOcr: { ...ocrStats, lastRunAt: now.toISOString() },
+            yahooRequestTimes: [...recentRequestTimes, ...thisRunRequestTimes],
+            yahooCollection: {
+              requestsThisRun: thisRunRequestTimes.length,
+              requestsIn24HourWindow: recentRequestTimes.length + thisRunRequestTimes.length,
+              maxPerRun: MAX_YAHOO_REQUESTS_PER_RUN,
+              maxPer24Hours: MAX_YAHOO_REQUESTS_PER_24_HOURS,
+              queries: queryStats
+            }
+          };
+          console.log(`[budget] Yahoo requests this run=${thisRunRequestTimes.length}, 24h=${nextState.yahooCollection.requestsIn24HourWindow}/${MAX_YAHOO_REQUESTS_PER_24_HOURS}`);""",
+              'saved budget metadata')
+          
+          y = replace_once(y,
+              'export async function parseYahooTimelineResponseWithImages(data, query, cards, aliases = {}, imageOcr = null) {',
+              'export async function parseYahooTimelineResponseWithImages(data, query, cards, aliases = {}, imageOcr = null, cachedPostsById = null) {',
+              'image timeline signature')
+          y = replace_once(y,
+              """  for (const entry of entries) {
+              const post = await parseYahooTimelineEntryWithImages(entry, query, cards, aliases, imageOcr);
+              if (post) posts.push(post);
+            }""",
+              """  for (const entry of entries) {
+              const id = String(entry?.id ?? '');
+              const cached = cachedPostsById?.get(id);
+              const body = stripYahooHighlight(entry?.displayTextBody ?? entry?.text ?? '');
+              // Reused entries still contribute exactly as before. Reject newly detected
+              // sale text; never reuse a cached positive when the current text is for sale.
+              const post = cached && !isCardSalePost(body)
+                ? cached
+                : await parseYahooTimelineEntryWithImages(entry, query, cards, aliases, imageOcr);
+              if (post) {
+                posts.push(post);
+                cachedPostsById?.set(id, post);
+              }
+            }""",
+              'parsed post reuse')
+          y = replace_once(y,
+              """  onPage = null,
+            imageOcr = null
+          }) {""",
+              """  onPage = null,
+            onRequest = null,
+            cachedPostsById = null,
+            imageOcr = null
+          }) {""",
+              'query signature')
+          y = replace_once(y,
+              """    const data = await fetchYahooTimelinePage(query, { cursor, results: resultsPerPage, retryCount, fetchImpl });""",
+              """    onRequest?.({ query, page: page + 1 });
+              const data = await fetchYahooTimelinePage(query, { cursor, results: resultsPerPage, retryCount, fetchImpl });""",
+              'request callback')
+          y = replace_once(y,
+              """      ? await parseYahooTimelineResponseWithImages(data, query, cards, aliases, imageOcr)""",
+              """      ? await parseYahooTimelineResponseWithImages(data, query, cards, aliases, imageOcr, cachedPostsById)""",
+              'reuse forwarding')
+          
+          
+          # Remove the 12-hour view from both output and the user interface.
+          lib = replace_once(lib,
+              "    { key: '12h', hours: 12, label: '12時間' },\n",
+              '',
+              '12-hour ranking window')
+          app = replace_once(app,
+              "const state={data:null,window:'12h',",
+              "const state={data:null,window:'24h',",
+              '24-hour initial selection')
+          html = replace_once(html,
+              '需要供給比を12時間・24時間・48時間・1週間で比較します。',
+              '需要供給比を24時間・48時間・1週間で比較します。',
+              'three-period page copy')
+          html = replace_once(html,
+              '        <button data-window="12h" class="active">12時間</button>\n        <button data-window="24h">24時間</button>',
+              '        <button data-window="24h" class="active">24時間</button>',
+              'three-period selector')
+          html = replace_once(html,
+              '<h2 id="periodTitle">12時間ランキング</h2>',
+              '<h2 id="periodTitle">24時間ランキング</h2>',
+              'three-period heading')
+          if html.count('v=20261007-12h') != 2:
+              raise RuntimeError('Expected cache-busting asset markers not found exactly twice.')
+          html = html.replace('v=20261007-12h', 'v=20261010-three-periods')
+          # Immediately remove historical 12h output; next collection rebuilds the same 3 keys.
+          existing_rankings['windows'].pop('12h', None)
+          updated_public_rankings = json.dumps(existing_rankings, ensure_ascii=False, indent=2) + '\n'
+          
+          budget = """// Rolling 24-hour page budget based on the former four daily runs (~18 pages each).
+          // New 4-hour schedule: six runs/day, at most 12 Yahoo requests each.
+          export const MAX_YAHOO_REQUESTS_PER_RUN = 12;
+          export const MAX_YAHOO_REQUESTS_PER_24_HOURS = 72;
+          const DAY_MS = 24 * 3600_000;
+          
+          export function requestsWithin24Hours(requestTimes = [], now = new Date()) {
+            const end = now.getTime();
+            return (Array.isArray(requestTimes) ? requestTimes : []).filter(value => {
+              const at = new Date(value).getTime();
+              return Number.isFinite(at) && at > end - DAY_MS && at <= end;
+            });
+          }
+          
+          export function pagesForQuery({ remainingRun, remainingDay, queriesLeft, maxPagesPerQuery }) {
+            const left = Math.max(0, Math.floor(Number(queriesLeft) || 0));
+            const quota = Math.max(0, Math.floor(Math.min(Number(remainingRun) || 0, Number(remainingDay) || 0)));
+            const maximum = Math.max(0, Math.floor(Number(maxPagesPerQuery) || 0));
+            if (!left || !quota || !maximum) return 0;
+          
+            // Cover all eight search terms before spending the spare four pages on depth.
+            const reserve = left - 1;
+            return Math.min(maximum, Math.max(1, quota - reserve));
+          }
+          """
+          
+          tests = """import test from 'node:test';
+          import assert from 'node:assert/strict';
+          import { pagesForQuery, requestsWithin24Hours } from '../scripts/request-budget.mjs';
+          import { collectYahooQuery } from '../scripts/yahoo.mjs';
+          
+          const budget = (remainingRun, remainingDay, queriesLeft, maxPagesPerQuery = 10) =>
+            pagesForQuery({ remainingRun, remainingDay, queriesLeft, maxPagesPerQuery });
+          
+          test('four-hour run keeps eight search phrases and never exceeds 12 requests', () => {
+            let spent = 0;
+            const allocated = [];
+            for (let i = 0; i < 8; i++) {
+              const n = budget(12 - spent, 72 - spent, 8 - i);
+              allocated.push(n);
+              spent += n;
+            }
+            assert.deepEqual(allocated, [5, 1, 1, 1, 1, 1, 1, 1]);
+            assert.equal(spent, 12);
+          });
+          
+          test('exhausted rolling daily quota skips fetches instead of exceeding it', () => {
+            assert.equal(budget(12, 0, 8), 0);
+            assert.equal(budget(12, 3, 8), 1);
+            assert.equal(budget(10, 9, 8), 2);
+          });
+          
+          test('rolling request timestamps exclude entries over 24h old', () => {
+            const now = new Date('2026-10-10T10:00:00Z');
+            assert.deepEqual(requestsWithin24Hours([
+              '2026-10-09T09:59:59Z',
+              '2026-10-09T10:00:01Z',
+              '2026-10-10T09:59:59Z',
+              '2026-10-10T10:01:00Z',
+              'bad time'
+            ], now), ['2026-10-09T10:00:01Z', '2026-10-10T09:59:59Z']);
+          });
+          
+          test('cached accepted post saves OCR calls but preserves collected counts', async () => {
+            const existing = {
+              id: '2000000000000000000',
+              createdAt: '2026-10-09T06:00:00.000Z',
+              demand: ['ナツメ', 'ナツメ'],
+              supply: ['カスミ']
+            };
+            const cache = new Map([[existing.id, existing]]);
+            let imageCalls = 0;
+            let pageCalls = 0;
+            const data = { timeline: { entry: [{
+              id: existing.id,
+              createdAt: 1791525600,
+              displayTextBody: '求: ナツメ 譲: カスミ',
+              url: 'https://x.com/a/status/' + existing.id
+            }] } };
+            const result = await collectYahooQuery({
+              query: '#ポケポケトレード',
+              cards: ['ナツメ', 'カスミ'],
+              maxPages: 1,
+              throttleMs: 0,
+              imageOcr: { parseEntryImages: async () => { imageCalls++; throw Error('No OCR expected'); } },
+              cachedPostsById: cache,
+              onRequest: () => pageCalls++,
+              fetchImpl: async () => ({ ok: true, json: async () => data })
+            });
+            assert.equal(pageCalls, 1);
+            assert.equal(imageCalls, 0);
+            assert.deepEqual(result.posts[0].demand, ['ナツメ', 'ナツメ']);
+            assert.deepEqual(result.posts[0].supply, ['カスミ']);
+          });
+          """
+          
+          
+          period_tests = """import test from 'node:test';
+          import assert from 'node:assert/strict';
+          import { buildRankings } from '../scripts/lib.mjs';
+          
+          test('only 24-hour, 48-hour and 1-week ranking windows are published', () => {
+            const posts = [{ createdAt: '2026-10-10T09:00:00Z', demand: ['ナツメ'], supply: ['カスミ'] }];
+            const windows = buildRankings(posts, ['ナツメ', 'カスミ'], new Date('2026-10-10T10:00:00Z'));
+            assert.deepEqual(Object.keys(windows), ['24h', '48h', '168h']);
+            assert.equal(windows['24h'].rankings.find(x => x.name === 'ナツメ').demand, 1);
+          });
+          """
+          
+          # Write only after all source replacements have succeeded.
+          collector.write_text(collect, encoding='utf-8')
+          yahoo.write_text(y, encoding='utf-8')
+          budget_file.write_text(budget, encoding='utf-8')
+          test_file.write_text(tests, encoding='utf-8')
+          ranking_library.write_text(lib, encoding='utf-8')
+          app_script.write_text(app, encoding='utf-8')
+          page_html.write_text(html, encoding='utf-8')
+          public_rankings.write_text(updated_public_rankings, encoding='utf-8')
+          period_test_file.write_text(period_tests, encoding='utf-8')
+          print('Ranking and Yahoo optimization prepared. Change the 4-hour cron manually after this workflow succeeds.')
+          PYCODE
+      - name: Run project tests
+        run: |
+          npm install --no-audit --no-fund
+          npm test
+      - name: Commit and deploy upgrade
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Do not stage workflow changes; GitHub restricts GITHUB_TOKEN writes to workflow files.
+          git add scripts/collect.mjs scripts/yahoo.mjs scripts/request-budget.mjs tests/request-budget.test.mjs scripts/lib.mjs docs/index.html docs/app.js docs/data/rankings.json tests/ranking-periods.test.mjs
+          if git diff --cached --quiet; then
+            echo "No upgrade changes to commit."
+            exit 0
+          fi
+          git commit -m "feat: 4h Yahoo-safe collection with 24h 48h 1w rankings"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
+      - name: Explain final manual schedule change
+        shell: bash
+        run: |
+          {
+            echo '### 最後の手順: 4時間更新を有効にする'
+            echo ''
+            echo 'この実行で検索予算・OCR再利用・ランキング3期間・トップ文章を反映しました。'
+            echo 'GitHub権限制限により、以下の1行だけは手動変更してください。'
+            echo ''
+            echo 'ファイル: `.github/workflows/collect.yml`'
+            echo ''
+            echo "変更前: \`- cron: '17 */6 * * *'\`"
+            echo "変更後: \`- cron: '17 */4 * * *'\`"
+          } >> "$GITHUB_STEP_SUMMARY"
