@@ -1,4 +1,4 @@
-const state={data:null,window:'12h',query:'',min:0,sources:null,sourcesOpen:false,sourceLimit:100,sourceCard:null};
+const state={data:null,window:'24h',query:'',min:0,sources:null,sourcesOpen:false,sourceLimit:100,sourceCard:null};
 const $=s=>document.querySelector(s);
 const fmt=n=>new Intl.NumberFormat('ja-JP').format(n??0);
 const dt=s=>s?new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}).format(new Date(s)):'—';

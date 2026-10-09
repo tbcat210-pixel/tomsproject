@@ -135,13 +135,23 @@ export async function parseYahooTimelineEntryWithImages(entry, query, cards, ali
   };
 }
 
-export async function parseYahooTimelineResponseWithImages(data, query, cards, aliases = {}, imageOcr = null) {
+export async function parseYahooTimelineResponseWithImages(data, query, cards, aliases = {}, imageOcr = null, cachedPostsById = null) {
   const timeline = data?.timeline ?? {};
   const entries = Array.isArray(timeline.entry) ? timeline.entry : [];
   const posts = [];
   for (const entry of entries) {
-    const post = await parseYahooTimelineEntryWithImages(entry, query, cards, aliases, imageOcr);
-    if (post) posts.push(post);
+    const id = String(entry?.id ?? '');
+    const cached = cachedPostsById?.get(id);
+    const body = stripYahooHighlight(entry?.displayTextBody ?? entry?.text ?? '');
+    // Reused entries still contribute exactly as before. Reject newly detected
+    // sale text; never reuse a cached positive when the current text is for sale.
+    const post = cached && !isCardSalePost(body)
+      ? cached
+      : await parseYahooTimelineEntryWithImages(entry, query, cards, aliases, imageOcr);
+    if (post) {
+      posts.push(post);
+      cachedPostsById?.set(id, post);
+    }
   }
   const nextCursor = timeline.head?.oldestTweetId
     ? String(timeline.head.oldestTweetId)
@@ -202,6 +212,8 @@ export async function collectYahooQuery({
   retryCount = 0,
   fetchImpl = fetch,
   onPage = null,
+  onRequest = null,
+  cachedPostsById = null,
   imageOcr = null
 }) {
   const sinceMs = since ? new Date(since).getTime() : -Infinity;
@@ -214,9 +226,10 @@ export async function collectYahooQuery({
   let exhausted = false;
 
   for (let page = 0; page < maxPages; page++) {
+    onRequest?.({ query, page: page + 1 });
     const data = await fetchYahooTimelinePage(query, { cursor, results: resultsPerPage, retryCount, fetchImpl });
     const parsed = imageOcr
-      ? await parseYahooTimelineResponseWithImages(data, query, cards, aliases, imageOcr)
+      ? await parseYahooTimelineResponseWithImages(data, query, cards, aliases, imageOcr, cachedPostsById)
       : parseYahooTimelineResponse(data, query, cards, aliases);
     pages++;
     totalEntries += parsed.entries.length;

@@ -114,7 +114,6 @@ export function ratioData(demand, supply) {
 
 export function buildRankings(posts, cards, now = new Date()) {
   const windows = [
-    { key: '12h', hours: 12, label: '12時間' },
     { key: '24h', hours: 24, label: '24時間' },
     { key: '48h', hours: 48, label: '48時間' },
     { key: '168h', hours: 168, label: '1週間' }
