@@ -255,7 +255,9 @@ jobs:
             if (!left || !quota || !maximum) return 0;
           
             // Cover all eight search terms before spending the spare four pages on depth.
-            const reserve = quota >= left ? left - 1 : 0;
+            const reserve = quota >= left ? left - 1；
+            
+      
             return Math.min(maximum, Math.max(1, quota - reserve));
           }
           """
