@@ -1,7 +1,7 @@
 {
   "firstSuccessfulCollectionAt": "2026-10-03T03:26:18.391Z",
-  "lastRunAt": "2026-10-10T12:40:25.933Z",
-  "lastRunDiscovered": 24,
+  "lastRunAt": "2026-10-10T16:33:54.402Z",
+  "lastRunDiscovered": 0,
   "lastRunErrors": [],
   "lastBackfill": {
     "mode": "rolling-7d",
@@ -22,42 +22,38 @@
   "imageOcr": {
     "enabled": true,
     "cacheVersion": 10,
-    "newImages": 403,
-    "cacheHits": 519,
-    "recognizedImages": 213,
-    "failedImages": 3,
+    "newImages": 0,
+    "cacheHits": 0,
+    "recognizedImages": 0,
+    "failedImages": 0,
     "postsFromImages": 0,
-    "candidatePasses": 20016,
-    "gameWithImages": 104,
-    "gameWithCells": 2265,
+    "candidatePasses": 0,
+    "gameWithImages": 0,
+    "gameWithCells": 0,
     "gameWithMatchedCells": 0,
-    "gameWithStar2VerifiedCells": 1053,
-    "gameWithRejectedRarityCells": 1212,
+    "gameWithStar2VerifiedCells": 0,
+    "gameWithRejectedRarityCells": 0,
     "gameWithPassesPerCard": 7,
     "gameWithBadgePasses": 5,
     "requireVerifiedStar2": true,
-    "genericRejectedNoStar2": 93,
-    "genericRejectedSale": 17,
+    "genericRejectedNoStar2": 0,
+    "genericRejectedSale": 0,
     "imageMatchedCells": 0,
     "imageStrongOnlyCells": 0,
     "imageOcrAgreedCells": 0,
     "imageConflictCells": 0,
-    "imageUncertainCells": 1053,
+    "imageUncertainCells": 0,
     "imageMatcher": {
       "enabled": true,
-      "ready": true,
-      "references": 90,
-      "uniqueCards": 82,
-      "refreshed": true,
-      "downloaded": 0,
-      "refreshError": null
+      "ready": false,
+      "references": 0
     },
-    "ocrProcessingMs": 10851755,
+    "ocrProcessingMs": 0,
     "processingBudgetMs": 10800000,
-    "processingBudgetSkips": 187,
+    "processingBudgetSkips": 0,
     "maxNewImagesPerRun": 1000,
     "maxCandidatePasses": 12,
-    "lastRunAt": "2026-10-10T12:40:25.933Z"
+    "lastRunAt": "2026-10-10T16:33:54.402Z"
   },
   "yahooRequestTimes": [
     "2026-10-09T17:04:33.917Z",
@@ -134,90 +130,50 @@
     "2026-10-10T16:14:18.087Z"
   ],
   "yahooCollection": {
-    "requestsThisRun": 12,
+    "requestsThisRun": 0,
     "requestsIn24HourWindow": 72,
     "maxPerRun": 12,
     "maxPer24Hours": 72,
     "queries": [
       {
         "query": "#ポケポケトレード",
-        "pages": 5,
-        "totalEntries": 200,
-        "parsedPosts": 3,
-        "oldestSeenAt": "2026-10-10T05:44:18.000Z",
-        "reachedCutoff": false,
-        "exhausted": false,
-        "capped": true
+        "pages": 0,
+        "skipped": "Yahoo 24-hour request cap"
       },
       {
         "query": "#ポケポケ交換",
-        "pages": 1,
-        "totalEntries": 40,
-        "parsedPosts": 1,
-        "oldestSeenAt": "2026-10-10T08:16:40.000Z",
-        "reachedCutoff": false,
-        "exhausted": false,
-        "capped": true
+        "pages": 0,
+        "skipped": "Yahoo 24-hour request cap"
       },
       {
         "query": "ポケポケ トレード 求 譲",
-        "pages": 1,
-        "totalEntries": 40,
-        "parsedPosts": 6,
-        "oldestSeenAt": "2026-10-07T06:35:36.000Z",
-        "reachedCutoff": true,
-        "exhausted": false,
-        "capped": false
+        "pages": 0,
+        "skipped": "Yahoo 24-hour request cap"
       },
       {
         "query": "ポケポケ トレード 求 出",
-        "pages": 1,
-        "totalEntries": 40,
-        "parsedPosts": 10,
-        "oldestSeenAt": "2026-10-04T14:07:07.000Z",
-        "reachedCutoff": true,
-        "exhausted": false,
-        "capped": false
+        "pages": 0,
+        "skipped": "Yahoo 24-hour request cap"
       },
       {
         "query": "ポケポケ ★2 トレード",
-        "pages": 1,
-        "totalEntries": 40,
-        "parsedPosts": 1,
-        "oldestSeenAt": "2026-10-10T00:53:42.000Z",
-        "reachedCutoff": false,
-        "exhausted": false,
-        "capped": true
+        "pages": 0,
+        "skipped": "Yahoo 24-hour request cap"
       },
       {
         "query": "ポケポケ ☆2 トレード",
-        "pages": 1,
-        "totalEntries": 40,
-        "parsedPosts": 1,
-        "oldestSeenAt": "2026-10-10T00:53:42.000Z",
-        "reachedCutoff": false,
-        "exhausted": false,
-        "capped": true
+        "pages": 0,
+        "skipped": "Yahoo 24-hour request cap"
       },
       {
         "query": "ポケポケ 星2 トレード",
-        "pages": 1,
-        "totalEntries": 40,
-        "parsedPosts": 1,
-        "oldestSeenAt": "2026-09-28T12:06:55.000Z",
-        "reachedCutoff": true,
-        "exhausted": false,
-        "capped": false
+        "pages": 0,
+        "skipped": "Yahoo 24-hour request cap"
       },
       {
         "query": "ポケポケ サポート トレード",
-        "pages": 1,
-        "totalEntries": 40,
-        "parsedPosts": 1,
-        "oldestSeenAt": "2026-09-12T21:32:00.000Z",
-        "reachedCutoff": true,
-        "exhausted": false,
-        "capped": false
+        "pages": 0,
+        "skipped": "Yahoo 24-hour request cap"
       }
     ]
   }
